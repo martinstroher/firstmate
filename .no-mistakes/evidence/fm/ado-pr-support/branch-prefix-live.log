@@ -1,0 +1,26 @@
+$ bin/fm-brief.sh task-ship demo --mode direct-PR --branch-prefix users/martinstroher
+scaffolded: /var/folders/nt/kj4kjys959590_chhscrql800000gn/T/tmp.58NRzkC35k/home/data/task-ship/brief.md (ship, mode=direct-PR; replace {TASK} and {FIRSTMATE_SPEC})
+
+$ grep -n "git checkout -b\|Never push to the default branch" "$HOME_DIR/data/task-ship/brief.md"
+22:1. First action: create your branch: `git checkout -b users/martinstroher/task-ship`
+25:1. Never push to the default branch (push only your `users/martinstroher/task-ship` branch). Never merge a PR.
+
+$ bin/fm-brief.sh task-scout demo --scout
+$ bin/fm-promote.sh task-scout --mode no-mistakes --yolo off --branch-prefix users/martinstroher
+●━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+●  WATCHER DOWN - SUPERVISION IS OFF
+●  1 task(s) in flight, but no watcher has a fresh beacon (last beat: never, grace 300s).
+●  Trust the emitted supervision protocol for this harness; do not use shell & for watcher repair.
+●  This is a supervision warning only; the guarded operation WILL still run.
+●  repair a missing or failed watcher cycle with the Pi tool fm_watch_arm_pi, or restart Pi with -e /Users/martinstroher/dev/firstmate/data/ado-pr-support/nm/worktrees/06cd0fe1b137/01M2H5S9E9Q9XHZCFQ3HMRFJZN/.pi/extensions/fm-primary-turnend-guard.ts -e /Users/martinstroher/dev/firstmate/data/ado-pr-support/nm/worktrees/06cd0fe1b137/01M2H5S9E9Q9XHZCFQ3HMRFJZN/.pi/extensions/fm-primary-pi-watch.ts if the extensions are not loaded.
+●━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+promoted task-scout to ship mode=no-mistakes yolo=off (teardown protection restored)
+wrote ship instructions for mode=no-mistakes: /var/folders/nt/kj4kjys959590_chhscrql800000gn/T/tmp.58NRzkC35k/home/data/task-scout/ship-instructions.md
+next: FM_HOME=/var/folders/nt/kj4kjys959590_chhscrql800000gn/T/tmp.58NRzkC35k/home bin/fm-send.sh fm-task-scout "$(cat /var/folders/nt/kj4kjys959590_chhscrql800000gn/T/tmp.58NRzkC35k/home/data/task-scout/ship-instructions.md)"
+
+$ grep -n "git checkout -b" "$HOME_DIR/data/task-scout/ship-instructions.md"
+10:3. Return to a clean default-branch base, then create your branch: `git checkout -b users/martinstroher/task-scout`.
+
+$ bin/fm-brief.sh task-local demo --mode local-only --branch-prefix users/martinstroher
+error: --branch-prefix is unavailable for mode=local-only; local-only delivery always uses fm/<task-id>
+[exit 1]

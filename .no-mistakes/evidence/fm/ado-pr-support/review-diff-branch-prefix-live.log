@@ -1,0 +1,24 @@
+$ git init --bare origin.git
+$ seed origin/main with feature.txt=base
+warning: You appear to have cloned an empty repository.
+$ clone project and add task worktree
+$ keep stale fm/task-x1 but work on users/martinstroher/task-x1
+$ FM_ROOT_OVERRIDE=/Users/martinstroher/dev/firstmate/data/ado-pr-support/nm/worktrees/06cd0fe1b137/01M2H5S9E9Q9XHZCFQ3HMRFJZN FM_STATE_OVERRIDE=/var/folders/nt/kj4kjys959590_chhscrql800000gn/T/tmp.z6TGGRLy46/case/state bin/fm-review-diff.sh task-x1
+●━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+●  WATCHER DOWN - SUPERVISION IS OFF
+●  1 task(s) in flight, but no live watcher process holds this home lock (last beat: 0s ago).
+●  Trust the emitted supervision protocol for this harness; do not use shell & for watcher repair.
+●  This is a supervision warning only; the guarded operation WILL still run.
+●  repair a missing or failed watcher cycle with the Pi tool fm_watch_arm_pi, or restart Pi with -e /Users/martinstroher/dev/firstmate/data/ado-pr-support/nm/worktrees/06cd0fe1b137/01M2H5S9E9Q9XHZCFQ3HMRFJZN/.pi/extensions/fm-primary-turnend-guard.ts -e /Users/martinstroher/dev/firstmate/data/ado-pr-support/nm/worktrees/06cd0fe1b137/01M2H5S9E9Q9XHZCFQ3HMRFJZN/.pi/extensions/fm-primary-pi-watch.ts if the extensions are not loaded.
+●━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+diff base: origin/main
+ feature.txt | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+diff --git a/feature.txt b/feature.txt
+index df967b9..ca1ab5c 100644
+--- a/feature.txt
++++ b/feature.txt
+@@ -1 +1 @@
+-base
++branch-prefix-live

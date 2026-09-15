@@ -1,0 +1,14 @@
+$ create project/worktree with pushed task branch and Azure https origin using mixed-case host + :443
+warning: You appear to have cloned an empty repository.
+$ env -u NO_MISTAKES_GATE FM_ROOT_OVERRIDE=/Users/martinstroher/dev/firstmate/data/ado-pr-support/nm/worktrees/06cd0fe1b137/01M2H5S9E9Q9XHZCFQ3HMRFJZN FM_STATE_OVERRIDE=/var/folders/nt/kj4kjys959590_chhscrql800000gn/T/tmp.4WADybnM1z/case/state FM_DATA_OVERRIDE=/var/folders/nt/kj4kjys959590_chhscrql800000gn/T/tmp.4WADybnM1z/case/data FM_CONFIG_OVERRIDE=/var/folders/nt/kj4kjys959590_chhscrql800000gn/T/tmp.4WADybnM1z/case/config bin/fm-teardown.sh task-x1
+●━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+●  WATCHER DOWN - SUPERVISION IS OFF
+●  1 task(s) in flight, but no live watcher process holds this home lock (last beat: 1s ago).
+●  Trust the emitted supervision protocol for this harness; do not use shell & for watcher repair.
+●  This is a supervision warning only; the guarded operation WILL still run.
+●  repair a missing or failed watcher cycle with the Pi tool fm_watch_arm_pi, or restart Pi with -e /Users/martinstroher/dev/firstmate/data/ado-pr-support/nm/worktrees/06cd0fe1b137/01M2H5S9E9Q9XHZCFQ3HMRFJZN/.pi/extensions/fm-primary-turnend-guard.ts -e /Users/martinstroher/dev/firstmate/data/ado-pr-support/nm/worktrees/06cd0fe1b137/01M2H5S9E9Q9XHZCFQ3HMRFJZN/.pi/extensions/fm-primary-pi-watch.ts if the extensions are not loaded.
+●━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+REFUSED: Azure task has no registered PR URL; completion cannot be confirmed.
+[exit 1]
+$ test -e state/task-x1.meta && test -d wt
+[preserved worktree and task record]
