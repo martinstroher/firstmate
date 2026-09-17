@@ -1,0 +1,783 @@
+$ /bin/bash --version
+exit=0
+stdout:
+GNU bash, version 3.2.57(1)-release (arm64-apple-darwin25)
+Copyright (C) 2007 Free Software Foundation, Inc.
+$ tmux -V
+exit=0
+stdout:
+tmux 3.7b
+$ treehouse --version
+exit=0
+stdout:
+v2.1.0
+
+=== base-herdr-task-missing ===
+tmux before:
+@0 keeper 49772 /Users/martinstroher/.no-mistakes-worktrees/bash-adapter-refusal/01M2R8HPK0FPEKD7YN8ENJSJA0
+FM_HOME=/Users/martinstroher/.no-mistakes-worktrees/bash-adapter-refusal/01M2R8HPK0FPEKD7YN8ENJSJA0/.adapter-validation/live-cases/base-herdr-task-missing/home FM_ROOT_OVERRIDE=/Users/martinstroher/.no-mistakes-worktrees/bash-adapter-refusal/01M2R8HPK0FPEKD7YN8ENJSJA0/.adapter-validation/base-code
+$ /bin/bash /Users/martinstroher/.no-mistakes-worktrees/bash-adapter-refusal/01M2R8HPK0FPEKD7YN8ENJSJA0/.adapter-validation/base-code/bin/fm-teardown.sh task-x1
+exit=0
+stderr:
+/Users/martinstroher/.no-mistakes-worktrees/bash-adapter-refusal/01M2R8HPK0FPEKD7YN8ENJSJA0/.adapter-validation/base-code/bin/fm-backend.sh: line 633: /Users/martinstroher/.no-mistakes-worktrees/bash-adapter-refusal/01M2R8HPK0FPEKD7YN8ENJSJA0/.adapter-validation/base-code/bin/backends/herdr.sh: No such file or directory
+Observed preservation: every protected path mode/content, Git refs/branch/status, both task processes, and the full private tmux window inventory are unchanged; no pending-close marker.
+
+=== tmux-task-missing ===
+tmux before:
+@0 keeper 49772 /Users/martinstroher/.no-mistakes-worktrees/bash-adapter-refusal/01M2R8HPK0FPEKD7YN8ENJSJA0
+@1 fm-task-x1 50271 /Users/martinstroher/.no-mistakes-worktrees/bash-adapter-refusal/01M2R8HPK0FPEKD7YN8ENJSJA0/.adapter-validation/live-cases/tmux-task-missing/wt
+FM_HOME=/Users/martinstroher/.no-mistakes-worktrees/bash-adapter-refusal/01M2R8HPK0FPEKD7YN8ENJSJA0/.adapter-validation/live-cases/tmux-task-missing/home FM_ROOT_OVERRIDE=/Users/martinstroher/.no-mistakes-worktrees/bash-adapter-refusal/01M2R8HPK0FPEKD7YN8ENJSJA0/.adapter-validation/live-code
+$ /bin/bash /Users/martinstroher/.no-mistakes-worktrees/bash-adapter-refusal/01M2R8HPK0FPEKD7YN8ENJSJA0/.adapter-validation/live-code/bin/fm-teardown.sh task-x1
+exit=1
+stderr:
+error: tmux teardown prerequisites are unavailable for task-x1; nothing was changed - restore the adapter and rerun teardown
+Observed preservation: every protected path mode/content, Git refs/branch/status, both task processes, and the full private tmux window inventory are unchanged; no pending-close marker.
+
+=== tmux-task-unreadable ===
+tmux before:
+@0 keeper 49772 /Users/martinstroher/.no-mistakes-worktrees/bash-adapter-refusal/01M2R8HPK0FPEKD7YN8ENJSJA0
+@2 fm-task-x1 50696 /Users/martinstroher/.no-mistakes-worktrees/bash-adapter-refusal/01M2R8HPK0FPEKD7YN8ENJSJA0/.adapter-validation/live-cases/tmux-task-unreadable/wt
+FM_HOME=/Users/martinstroher/.no-mistakes-worktrees/bash-adapter-refusal/01M2R8HPK0FPEKD7YN8ENJSJA0/.adapter-validation/live-cases/tmux-task-unreadable/home FM_ROOT_OVERRIDE=/Users/martinstroher/.no-mistakes-worktrees/bash-adapter-refusal/01M2R8HPK0FPEKD7YN8ENJSJA0/.adapter-validation/live-code
+$ /bin/bash /Users/martinstroher/.no-mistakes-worktrees/bash-adapter-refusal/01M2R8HPK0FPEKD7YN8ENJSJA0/.adapter-validation/live-code/bin/fm-teardown.sh task-x1
+exit=1
+stderr:
+error: tmux teardown prerequisites are unavailable for task-x1; nothing was changed - restore the adapter and rerun teardown
+Observed preservation: every protected path mode/content, Git refs/branch/status, both task processes, and the full private tmux window inventory are unchanged; no pending-close marker.
+
+=== tmux-forced-task-missing ===
+tmux before:
+@0 keeper 49772 /Users/martinstroher/.no-mistakes-worktrees/bash-adapter-refusal/01M2R8HPK0FPEKD7YN8ENJSJA0
+@3 fm-task-x1 51125 /Users/martinstroher/.no-mistakes-worktrees/bash-adapter-refusal/01M2R8HPK0FPEKD7YN8ENJSJA0/.adapter-validation/live-cases/tmux-forced-task-missing/wt
+FM_HOME=/Users/martinstroher/.no-mistakes-worktrees/bash-adapter-refusal/01M2R8HPK0FPEKD7YN8ENJSJA0/.adapter-validation/live-cases/tmux-forced-task-missing/home FM_ROOT_OVERRIDE=/Users/martinstroher/.no-mistakes-worktrees/bash-adapter-refusal/01M2R8HPK0FPEKD7YN8ENJSJA0/.adapter-validation/live-code
+$ /bin/bash /Users/martinstroher/.no-mistakes-worktrees/bash-adapter-refusal/01M2R8HPK0FPEKD7YN8ENJSJA0/.adapter-validation/live-code/bin/fm-teardown.sh task-x1 --force
+exit=1
+stderr:
+error: tmux teardown prerequisites are unavailable for task-x1; nothing was changed - restore the adapter and rerun teardown
+Observed preservation: every protected path mode/content, Git refs/branch/status, both task processes, and the full private tmux window inventory are unchanged; no pending-close marker.
+
+=== tmux-forced-task-unreadable ===
+tmux before:
+@0 keeper 49772 /Users/martinstroher/.no-mistakes-worktrees/bash-adapter-refusal/01M2R8HPK0FPEKD7YN8ENJSJA0
+@4 fm-task-x1 51554 /Users/martinstroher/.no-mistakes-worktrees/bash-adapter-refusal/01M2R8HPK0FPEKD7YN8ENJSJA0/.adapter-validation/live-cases/tmux-forced-task-unreadable/wt
+FM_HOME=/Users/martinstroher/.no-mistakes-worktrees/bash-adapter-refusal/01M2R8HPK0FPEKD7YN8ENJSJA0/.adapter-validation/live-cases/tmux-forced-task-unreadable/home FM_ROOT_OVERRIDE=/Users/martinstroher/.no-mistakes-worktrees/bash-adapter-refusal/01M2R8HPK0FPEKD7YN8ENJSJA0/.adapter-validation/live-code
+$ /bin/bash /Users/martinstroher/.no-mistakes-worktrees/bash-adapter-refusal/01M2R8HPK0FPEKD7YN8ENJSJA0/.adapter-validation/live-code/bin/fm-teardown.sh task-x1 --force
+exit=1
+stderr:
+error: tmux teardown prerequisites are unavailable for task-x1; nothing was changed - restore the adapter and rerun teardown
+Observed preservation: every protected path mode/content, Git refs/branch/status, both task processes, and the full private tmux window inventory are unchanged; no pending-close marker.
+
+=== tmux-forced-parent-missing ===
+tmux before:
+@0 keeper 49772 /Users/martinstroher/.no-mistakes-worktrees/bash-adapter-refusal/01M2R8HPK0FPEKD7YN8ENJSJA0
+@5 fm-task-x1 51978 /Users/martinstroher/.no-mistakes-worktrees/bash-adapter-refusal/01M2R8HPK0FPEKD7YN8ENJSJA0/.adapter-validation/live-cases/tmux-forced-parent-missing/secondmate-home
+FM_HOME=/Users/martinstroher/.no-mistakes-worktrees/bash-adapter-refusal/01M2R8HPK0FPEKD7YN8ENJSJA0/.adapter-validation/live-cases/tmux-forced-parent-missing/home FM_ROOT_OVERRIDE=/Users/martinstroher/.no-mistakes-worktrees/bash-adapter-refusal/01M2R8HPK0FPEKD7YN8ENJSJA0/.adapter-validation/live-code
+$ /bin/bash /Users/martinstroher/.no-mistakes-worktrees/bash-adapter-refusal/01M2R8HPK0FPEKD7YN8ENJSJA0/.adapter-validation/live-code/bin/fm-teardown.sh task-x1 --force
+exit=1
+stderr:
+error: tmux teardown prerequisites are unavailable for task-x1; nothing was changed - restore the adapter and rerun teardown
+Observed preservation: every protected path mode/content, Git refs/branch/status, both task processes, and the full private tmux window inventory are unchanged; no pending-close marker.
+
+=== tmux-forced-parent-unreadable ===
+tmux before:
+@0 keeper 49772 /Users/martinstroher/.no-mistakes-worktrees/bash-adapter-refusal/01M2R8HPK0FPEKD7YN8ENJSJA0
+@6 fm-task-x1 52496 /Users/martinstroher/.no-mistakes-worktrees/bash-adapter-refusal/01M2R8HPK0FPEKD7YN8ENJSJA0/.adapter-validation/live-cases/tmux-forced-parent-unreadable/secondmate-home
+FM_HOME=/Users/martinstroher/.no-mistakes-worktrees/bash-adapter-refusal/01M2R8HPK0FPEKD7YN8ENJSJA0/.adapter-validation/live-cases/tmux-forced-parent-unreadable/home FM_ROOT_OVERRIDE=/Users/martinstroher/.no-mistakes-worktrees/bash-adapter-refusal/01M2R8HPK0FPEKD7YN8ENJSJA0/.adapter-validation/live-code
+$ /bin/bash /Users/martinstroher/.no-mistakes-worktrees/bash-adapter-refusal/01M2R8HPK0FPEKD7YN8ENJSJA0/.adapter-validation/live-code/bin/fm-teardown.sh task-x1 --force
+exit=1
+stderr:
+error: tmux teardown prerequisites are unavailable for task-x1; nothing was changed - restore the adapter and rerun teardown
+Observed preservation: every protected path mode/content, Git refs/branch/status, both task processes, and the full private tmux window inventory are unchanged; no pending-close marker.
+
+=== tmux-child-missing ===
+tmux before:
+@0 keeper 49772 /Users/martinstroher/.no-mistakes-worktrees/bash-adapter-refusal/01M2R8HPK0FPEKD7YN8ENJSJA0
+@7 fm-z-broken 53123 /Users/martinstroher/.no-mistakes-worktrees/bash-adapter-refusal/01M2R8HPK0FPEKD7YN8ENJSJA0/.adapter-validation/live-cases/tmux-child-missing/wt
+FM_HOME=/Users/martinstroher/.no-mistakes-worktrees/bash-adapter-refusal/01M2R8HPK0FPEKD7YN8ENJSJA0/.adapter-validation/live-cases/tmux-child-missing/home FM_ROOT_OVERRIDE=/Users/martinstroher/.no-mistakes-worktrees/bash-adapter-refusal/01M2R8HPK0FPEKD7YN8ENJSJA0/.adapter-validation/live-code
+$ /bin/bash /Users/martinstroher/.no-mistakes-worktrees/bash-adapter-refusal/01M2R8HPK0FPEKD7YN8ENJSJA0/.adapter-validation/live-code/bin/fm-teardown.sh task-x1 --force
+exit=1
+stderr:
+error: tmux teardown prerequisites are unavailable for z-broken; nothing was changed - restore the adapter and rerun teardown
+Observed preservation: every protected path mode/content, Git refs/branch/status, both task processes, and the full private tmux window inventory are unchanged; no pending-close marker.
+
+=== tmux-child-unreadable ===
+tmux before:
+@0 keeper 49772 /Users/martinstroher/.no-mistakes-worktrees/bash-adapter-refusal/01M2R8HPK0FPEKD7YN8ENJSJA0
+@8 fm-z-broken 54520 /Users/martinstroher/.no-mistakes-worktrees/bash-adapter-refusal/01M2R8HPK0FPEKD7YN8ENJSJA0/.adapter-validation/live-cases/tmux-child-unreadable/wt
+FM_HOME=/Users/martinstroher/.no-mistakes-worktrees/bash-adapter-refusal/01M2R8HPK0FPEKD7YN8ENJSJA0/.adapter-validation/live-cases/tmux-child-unreadable/home FM_ROOT_OVERRIDE=/Users/martinstroher/.no-mistakes-worktrees/bash-adapter-refusal/01M2R8HPK0FPEKD7YN8ENJSJA0/.adapter-validation/live-code
+$ /bin/bash /Users/martinstroher/.no-mistakes-worktrees/bash-adapter-refusal/01M2R8HPK0FPEKD7YN8ENJSJA0/.adapter-validation/live-code/bin/fm-teardown.sh task-x1 --force
+exit=1
+stderr:
+error: tmux teardown prerequisites are unavailable for z-broken; nothing was changed - restore the adapter and rerun teardown
+Observed preservation: every protected path mode/content, Git refs/branch/status, both task processes, and the full private tmux window inventory are unchanged; no pending-close marker.
+
+=== tmux-grandchild-missing ===
+tmux before:
+@0 keeper 49772 /Users/martinstroher/.no-mistakes-worktrees/bash-adapter-refusal/01M2R8HPK0FPEKD7YN8ENJSJA0
+@9 fm-z-broken 55266 /Users/martinstroher/.no-mistakes-worktrees/bash-adapter-refusal/01M2R8HPK0FPEKD7YN8ENJSJA0/.adapter-validation/live-cases/tmux-grandchild-missing/wt
+FM_HOME=/Users/martinstroher/.no-mistakes-worktrees/bash-adapter-refusal/01M2R8HPK0FPEKD7YN8ENJSJA0/.adapter-validation/live-cases/tmux-grandchild-missing/home FM_ROOT_OVERRIDE=/Users/martinstroher/.no-mistakes-worktrees/bash-adapter-refusal/01M2R8HPK0FPEKD7YN8ENJSJA0/.adapter-validation/live-code
+$ /bin/bash /Users/martinstroher/.no-mistakes-worktrees/bash-adapter-refusal/01M2R8HPK0FPEKD7YN8ENJSJA0/.adapter-validation/live-code/bin/fm-teardown.sh task-x1 --force
+exit=1
+stderr:
+error: tmux teardown prerequisites are unavailable for z-broken; nothing was changed - restore the adapter and rerun teardown
+Observed preservation: every protected path mode/content, Git refs/branch/status, both task processes, and the full private tmux window inventory are unchanged; no pending-close marker.
+
+=== tmux-grandchild-unreadable ===
+tmux before:
+@0 keeper 49772 /Users/martinstroher/.no-mistakes-worktrees/bash-adapter-refusal/01M2R8HPK0FPEKD7YN8ENJSJA0
+@10 fm-z-broken 55780 /Users/martinstroher/.no-mistakes-worktrees/bash-adapter-refusal/01M2R8HPK0FPEKD7YN8ENJSJA0/.adapter-validation/live-cases/tmux-grandchild-unreadable/wt
+FM_HOME=/Users/martinstroher/.no-mistakes-worktrees/bash-adapter-refusal/01M2R8HPK0FPEKD7YN8ENJSJA0/.adapter-validation/live-cases/tmux-grandchild-unreadable/home FM_ROOT_OVERRIDE=/Users/martinstroher/.no-mistakes-worktrees/bash-adapter-refusal/01M2R8HPK0FPEKD7YN8ENJSJA0/.adapter-validation/live-code
+$ /bin/bash /Users/martinstroher/.no-mistakes-worktrees/bash-adapter-refusal/01M2R8HPK0FPEKD7YN8ENJSJA0/.adapter-validation/live-code/bin/fm-teardown.sh task-x1 --force
+exit=1
+stderr:
+error: tmux teardown prerequisites are unavailable for z-broken; nothing was changed - restore the adapter and rerun teardown
+Observed preservation: every protected path mode/content, Git refs/branch/status, both task processes, and the full private tmux window inventory are unchanged; no pending-close marker.
+
+=== herdr-task-missing ===
+tmux before:
+@0 keeper 49772 /Users/martinstroher/.no-mistakes-worktrees/bash-adapter-refusal/01M2R8HPK0FPEKD7YN8ENJSJA0
+FM_HOME=/Users/martinstroher/.no-mistakes-worktrees/bash-adapter-refusal/01M2R8HPK0FPEKD7YN8ENJSJA0/.adapter-validation/live-cases/herdr-task-missing/home FM_ROOT_OVERRIDE=/Users/martinstroher/.no-mistakes-worktrees/bash-adapter-refusal/01M2R8HPK0FPEKD7YN8ENJSJA0/.adapter-validation/live-code
+$ /bin/bash /Users/martinstroher/.no-mistakes-worktrees/bash-adapter-refusal/01M2R8HPK0FPEKD7YN8ENJSJA0/.adapter-validation/live-code/bin/fm-teardown.sh task-x1
+exit=1
+stderr:
+error: herdr teardown prerequisites are unavailable for task-x1; nothing was changed - restore the adapter and rerun teardown
+Observed preservation: every protected path mode/content, Git refs/branch/status, both task processes, and the full private tmux window inventory are unchanged; no pending-close marker.
+
+=== herdr-task-unreadable ===
+tmux before:
+@0 keeper 49772 /Users/martinstroher/.no-mistakes-worktrees/bash-adapter-refusal/01M2R8HPK0FPEKD7YN8ENJSJA0
+FM_HOME=/Users/martinstroher/.no-mistakes-worktrees/bash-adapter-refusal/01M2R8HPK0FPEKD7YN8ENJSJA0/.adapter-validation/live-cases/herdr-task-unreadable/home FM_ROOT_OVERRIDE=/Users/martinstroher/.no-mistakes-worktrees/bash-adapter-refusal/01M2R8HPK0FPEKD7YN8ENJSJA0/.adapter-validation/live-code
+$ /bin/bash /Users/martinstroher/.no-mistakes-worktrees/bash-adapter-refusal/01M2R8HPK0FPEKD7YN8ENJSJA0/.adapter-validation/live-code/bin/fm-teardown.sh task-x1
+exit=1
+stderr:
+error: herdr teardown prerequisites are unavailable for task-x1; nothing was changed - restore the adapter and rerun teardown
+Observed preservation: every protected path mode/content, Git refs/branch/status, both task processes, and the full private tmux window inventory are unchanged; no pending-close marker.
+
+=== herdr-forced-task-missing ===
+tmux before:
+@0 keeper 49772 /Users/martinstroher/.no-mistakes-worktrees/bash-adapter-refusal/01M2R8HPK0FPEKD7YN8ENJSJA0
+FM_HOME=/Users/martinstroher/.no-mistakes-worktrees/bash-adapter-refusal/01M2R8HPK0FPEKD7YN8ENJSJA0/.adapter-validation/live-cases/herdr-forced-task-missing/home FM_ROOT_OVERRIDE=/Users/martinstroher/.no-mistakes-worktrees/bash-adapter-refusal/01M2R8HPK0FPEKD7YN8ENJSJA0/.adapter-validation/live-code
+$ /bin/bash /Users/martinstroher/.no-mistakes-worktrees/bash-adapter-refusal/01M2R8HPK0FPEKD7YN8ENJSJA0/.adapter-validation/live-code/bin/fm-teardown.sh task-x1 --force
+exit=1
+stderr:
+error: herdr teardown prerequisites are unavailable for task-x1; nothing was changed - restore the adapter and rerun teardown
+Observed preservation: every protected path mode/content, Git refs/branch/status, both task processes, and the full private tmux window inventory are unchanged; no pending-close marker.
+
+=== herdr-forced-task-unreadable ===
+tmux before:
+@0 keeper 49772 /Users/martinstroher/.no-mistakes-worktrees/bash-adapter-refusal/01M2R8HPK0FPEKD7YN8ENJSJA0
+FM_HOME=/Users/martinstroher/.no-mistakes-worktrees/bash-adapter-refusal/01M2R8HPK0FPEKD7YN8ENJSJA0/.adapter-validation/live-cases/herdr-forced-task-unreadable/home FM_ROOT_OVERRIDE=/Users/martinstroher/.no-mistakes-worktrees/bash-adapter-refusal/01M2R8HPK0FPEKD7YN8ENJSJA0/.adapter-validation/live-code
+$ /bin/bash /Users/martinstroher/.no-mistakes-worktrees/bash-adapter-refusal/01M2R8HPK0FPEKD7YN8ENJSJA0/.adapter-validation/live-code/bin/fm-teardown.sh task-x1 --force
+exit=1
+stderr:
+error: herdr teardown prerequisites are unavailable for task-x1; nothing was changed - restore the adapter and rerun teardown
+Observed preservation: every protected path mode/content, Git refs/branch/status, both task processes, and the full private tmux window inventory are unchanged; no pending-close marker.
+
+=== herdr-forced-parent-missing ===
+tmux before:
+@0 keeper 49772 /Users/martinstroher/.no-mistakes-worktrees/bash-adapter-refusal/01M2R8HPK0FPEKD7YN8ENJSJA0
+@11 fm-a-healthy 58091 /Users/martinstroher/.no-mistakes-worktrees/bash-adapter-refusal/01M2R8HPK0FPEKD7YN8ENJSJA0/.adapter-validation/live-cases/herdr-forced-parent-missing/sibling-wt
+FM_HOME=/Users/martinstroher/.no-mistakes-worktrees/bash-adapter-refusal/01M2R8HPK0FPEKD7YN8ENJSJA0/.adapter-validation/live-cases/herdr-forced-parent-missing/home FM_ROOT_OVERRIDE=/Users/martinstroher/.no-mistakes-worktrees/bash-adapter-refusal/01M2R8HPK0FPEKD7YN8ENJSJA0/.adapter-validation/live-code
+$ /bin/bash /Users/martinstroher/.no-mistakes-worktrees/bash-adapter-refusal/01M2R8HPK0FPEKD7YN8ENJSJA0/.adapter-validation/live-code/bin/fm-teardown.sh task-x1 --force
+exit=1
+stderr:
+error: herdr teardown prerequisites are unavailable for task-x1; nothing was changed - restore the adapter and rerun teardown
+Observed preservation: every protected path mode/content, Git refs/branch/status, both task processes, and the full private tmux window inventory are unchanged; no pending-close marker.
+
+=== herdr-forced-parent-unreadable ===
+tmux before:
+@0 keeper 49772 /Users/martinstroher/.no-mistakes-worktrees/bash-adapter-refusal/01M2R8HPK0FPEKD7YN8ENJSJA0
+@12 fm-a-healthy 58331 /Users/martinstroher/.no-mistakes-worktrees/bash-adapter-refusal/01M2R8HPK0FPEKD7YN8ENJSJA0/.adapter-validation/live-cases/herdr-forced-parent-unreadable/sibling-wt
+FM_HOME=/Users/martinstroher/.no-mistakes-worktrees/bash-adapter-refusal/01M2R8HPK0FPEKD7YN8ENJSJA0/.adapter-validation/live-cases/herdr-forced-parent-unreadable/home FM_ROOT_OVERRIDE=/Users/martinstroher/.no-mistakes-worktrees/bash-adapter-refusal/01M2R8HPK0FPEKD7YN8ENJSJA0/.adapter-validation/live-code
+$ /bin/bash /Users/martinstroher/.no-mistakes-worktrees/bash-adapter-refusal/01M2R8HPK0FPEKD7YN8ENJSJA0/.adapter-validation/live-code/bin/fm-teardown.sh task-x1 --force
+exit=1
+stderr:
+error: herdr teardown prerequisites are unavailable for task-x1; nothing was changed - restore the adapter and rerun teardown
+Observed preservation: every protected path mode/content, Git refs/branch/status, both task processes, and the full private tmux window inventory are unchanged; no pending-close marker.
+
+=== herdr-child-missing ===
+tmux before:
+@0 keeper 49772 /Users/martinstroher/.no-mistakes-worktrees/bash-adapter-refusal/01M2R8HPK0FPEKD7YN8ENJSJA0
+@13 fm-a-healthy 58573 /Users/martinstroher/.no-mistakes-worktrees/bash-adapter-refusal/01M2R8HPK0FPEKD7YN8ENJSJA0/.adapter-validation/live-cases/herdr-child-missing/sibling-wt
+@14 fm-task-x1 58576 /Users/martinstroher/.no-mistakes-worktrees/bash-adapter-refusal/01M2R8HPK0FPEKD7YN8ENJSJA0/.adapter-validation/live-cases/herdr-child-missing/secondmate-home
+FM_HOME=/Users/martinstroher/.no-mistakes-worktrees/bash-adapter-refusal/01M2R8HPK0FPEKD7YN8ENJSJA0/.adapter-validation/live-cases/herdr-child-missing/home FM_ROOT_OVERRIDE=/Users/martinstroher/.no-mistakes-worktrees/bash-adapter-refusal/01M2R8HPK0FPEKD7YN8ENJSJA0/.adapter-validation/live-code
+$ /bin/bash /Users/martinstroher/.no-mistakes-worktrees/bash-adapter-refusal/01M2R8HPK0FPEKD7YN8ENJSJA0/.adapter-validation/live-code/bin/fm-teardown.sh task-x1 --force
+exit=1
+stderr:
+error: herdr teardown prerequisites are unavailable for z-broken; nothing was changed - restore the adapter and rerun teardown
+Observed preservation: every protected path mode/content, Git refs/branch/status, both task processes, and the full private tmux window inventory are unchanged; no pending-close marker.
+
+=== herdr-child-unreadable ===
+tmux before:
+@0 keeper 49772 /Users/martinstroher/.no-mistakes-worktrees/bash-adapter-refusal/01M2R8HPK0FPEKD7YN8ENJSJA0
+@15 fm-a-healthy 59007 /Users/martinstroher/.no-mistakes-worktrees/bash-adapter-refusal/01M2R8HPK0FPEKD7YN8ENJSJA0/.adapter-validation/live-cases/herdr-child-unreadable/sibling-wt
+@16 fm-task-x1 59010 /Users/martinstroher/.no-mistakes-worktrees/bash-adapter-refusal/01M2R8HPK0FPEKD7YN8ENJSJA0/.adapter-validation/live-cases/herdr-child-unreadable/secondmate-home
+FM_HOME=/Users/martinstroher/.no-mistakes-worktrees/bash-adapter-refusal/01M2R8HPK0FPEKD7YN8ENJSJA0/.adapter-validation/live-cases/herdr-child-unreadable/home FM_ROOT_OVERRIDE=/Users/martinstroher/.no-mistakes-worktrees/bash-adapter-refusal/01M2R8HPK0FPEKD7YN8ENJSJA0/.adapter-validation/live-code
+$ /bin/bash /Users/martinstroher/.no-mistakes-worktrees/bash-adapter-refusal/01M2R8HPK0FPEKD7YN8ENJSJA0/.adapter-validation/live-code/bin/fm-teardown.sh task-x1 --force
+exit=1
+stderr:
+error: herdr teardown prerequisites are unavailable for z-broken; nothing was changed - restore the adapter and rerun teardown
+Observed preservation: every protected path mode/content, Git refs/branch/status, both task processes, and the full private tmux window inventory are unchanged; no pending-close marker.
+
+=== herdr-grandchild-missing ===
+tmux before:
+@0 keeper 49772 /Users/martinstroher/.no-mistakes-worktrees/bash-adapter-refusal/01M2R8HPK0FPEKD7YN8ENJSJA0
+@17 fm-a-healthy 59442 /Users/martinstroher/.no-mistakes-worktrees/bash-adapter-refusal/01M2R8HPK0FPEKD7YN8ENJSJA0/.adapter-validation/live-cases/herdr-grandchild-missing/sibling-wt
+@18 fm-task-x1 59445 /Users/martinstroher/.no-mistakes-worktrees/bash-adapter-refusal/01M2R8HPK0FPEKD7YN8ENJSJA0/.adapter-validation/live-cases/herdr-grandchild-missing/secondmate-home
+@19 fm-nested-sm 59448 /Users/martinstroher/.no-mistakes-worktrees/bash-adapter-refusal/01M2R8HPK0FPEKD7YN8ENJSJA0/.adapter-validation/live-cases/herdr-grandchild-missing/secondmate-home/nested-home
+FM_HOME=/Users/martinstroher/.no-mistakes-worktrees/bash-adapter-refusal/01M2R8HPK0FPEKD7YN8ENJSJA0/.adapter-validation/live-cases/herdr-grandchild-missing/home FM_ROOT_OVERRIDE=/Users/martinstroher/.no-mistakes-worktrees/bash-adapter-refusal/01M2R8HPK0FPEKD7YN8ENJSJA0/.adapter-validation/live-code
+$ /bin/bash /Users/martinstroher/.no-mistakes-worktrees/bash-adapter-refusal/01M2R8HPK0FPEKD7YN8ENJSJA0/.adapter-validation/live-code/bin/fm-teardown.sh task-x1 --force
+exit=1
+stderr:
+error: herdr teardown prerequisites are unavailable for z-broken; nothing was changed - restore the adapter and rerun teardown
+Observed preservation: every protected path mode/content, Git refs/branch/status, both task processes, and the full private tmux window inventory are unchanged; no pending-close marker.
+
+=== herdr-grandchild-unreadable ===
+tmux before:
+@0 keeper 49772 /Users/martinstroher/.no-mistakes-worktrees/bash-adapter-refusal/01M2R8HPK0FPEKD7YN8ENJSJA0
+@20 fm-a-healthy 59902 /Users/martinstroher/.no-mistakes-worktrees/bash-adapter-refusal/01M2R8HPK0FPEKD7YN8ENJSJA0/.adapter-validation/live-cases/herdr-grandchild-unreadable/sibling-wt
+@21 fm-task-x1 59905 /Users/martinstroher/.no-mistakes-worktrees/bash-adapter-refusal/01M2R8HPK0FPEKD7YN8ENJSJA0/.adapter-validation/live-cases/herdr-grandchild-unreadable/secondmate-home
+@22 fm-nested-sm 59908 /Users/martinstroher/.no-mistakes-worktrees/bash-adapter-refusal/01M2R8HPK0FPEKD7YN8ENJSJA0/.adapter-validation/live-cases/herdr-grandchild-unreadable/secondmate-home/nested-home
+FM_HOME=/Users/martinstroher/.no-mistakes-worktrees/bash-adapter-refusal/01M2R8HPK0FPEKD7YN8ENJSJA0/.adapter-validation/live-cases/herdr-grandchild-unreadable/home FM_ROOT_OVERRIDE=/Users/martinstroher/.no-mistakes-worktrees/bash-adapter-refusal/01M2R8HPK0FPEKD7YN8ENJSJA0/.adapter-validation/live-code
+$ /bin/bash /Users/martinstroher/.no-mistakes-worktrees/bash-adapter-refusal/01M2R8HPK0FPEKD7YN8ENJSJA0/.adapter-validation/live-code/bin/fm-teardown.sh task-x1 --force
+exit=1
+stderr:
+error: herdr teardown prerequisites are unavailable for z-broken; nothing was changed - restore the adapter and rerun teardown
+Observed preservation: every protected path mode/content, Git refs/branch/status, both task processes, and the full private tmux window inventory are unchanged; no pending-close marker.
+
+=== zellij-task-missing ===
+tmux before:
+@0 keeper 49772 /Users/martinstroher/.no-mistakes-worktrees/bash-adapter-refusal/01M2R8HPK0FPEKD7YN8ENJSJA0
+FM_HOME=/Users/martinstroher/.no-mistakes-worktrees/bash-adapter-refusal/01M2R8HPK0FPEKD7YN8ENJSJA0/.adapter-validation/live-cases/zellij-task-missing/home FM_ROOT_OVERRIDE=/Users/martinstroher/.no-mistakes-worktrees/bash-adapter-refusal/01M2R8HPK0FPEKD7YN8ENJSJA0/.adapter-validation/live-code
+$ /bin/bash /Users/martinstroher/.no-mistakes-worktrees/bash-adapter-refusal/01M2R8HPK0FPEKD7YN8ENJSJA0/.adapter-validation/live-code/bin/fm-teardown.sh task-x1
+exit=1
+stderr:
+error: zellij teardown prerequisites are unavailable for task-x1; nothing was changed - restore the adapter and rerun teardown
+Observed preservation: every protected path mode/content, Git refs/branch/status, both task processes, and the full private tmux window inventory are unchanged; no pending-close marker.
+
+=== zellij-task-unreadable ===
+tmux before:
+@0 keeper 49772 /Users/martinstroher/.no-mistakes-worktrees/bash-adapter-refusal/01M2R8HPK0FPEKD7YN8ENJSJA0
+FM_HOME=/Users/martinstroher/.no-mistakes-worktrees/bash-adapter-refusal/01M2R8HPK0FPEKD7YN8ENJSJA0/.adapter-validation/live-cases/zellij-task-unreadable/home FM_ROOT_OVERRIDE=/Users/martinstroher/.no-mistakes-worktrees/bash-adapter-refusal/01M2R8HPK0FPEKD7YN8ENJSJA0/.adapter-validation/live-code
+$ /bin/bash /Users/martinstroher/.no-mistakes-worktrees/bash-adapter-refusal/01M2R8HPK0FPEKD7YN8ENJSJA0/.adapter-validation/live-code/bin/fm-teardown.sh task-x1
+exit=1
+stderr:
+error: zellij teardown prerequisites are unavailable for task-x1; nothing was changed - restore the adapter and rerun teardown
+Observed preservation: every protected path mode/content, Git refs/branch/status, both task processes, and the full private tmux window inventory are unchanged; no pending-close marker.
+
+=== zellij-forced-task-missing ===
+tmux before:
+@0 keeper 49772 /Users/martinstroher/.no-mistakes-worktrees/bash-adapter-refusal/01M2R8HPK0FPEKD7YN8ENJSJA0
+FM_HOME=/Users/martinstroher/.no-mistakes-worktrees/bash-adapter-refusal/01M2R8HPK0FPEKD7YN8ENJSJA0/.adapter-validation/live-cases/zellij-forced-task-missing/home FM_ROOT_OVERRIDE=/Users/martinstroher/.no-mistakes-worktrees/bash-adapter-refusal/01M2R8HPK0FPEKD7YN8ENJSJA0/.adapter-validation/live-code
+$ /bin/bash /Users/martinstroher/.no-mistakes-worktrees/bash-adapter-refusal/01M2R8HPK0FPEKD7YN8ENJSJA0/.adapter-validation/live-code/bin/fm-teardown.sh task-x1 --force
+exit=1
+stderr:
+error: zellij teardown prerequisites are unavailable for task-x1; nothing was changed - restore the adapter and rerun teardown
+Observed preservation: every protected path mode/content, Git refs/branch/status, both task processes, and the full private tmux window inventory are unchanged; no pending-close marker.
+
+=== zellij-forced-task-unreadable ===
+tmux before:
+@0 keeper 49772 /Users/martinstroher/.no-mistakes-worktrees/bash-adapter-refusal/01M2R8HPK0FPEKD7YN8ENJSJA0
+FM_HOME=/Users/martinstroher/.no-mistakes-worktrees/bash-adapter-refusal/01M2R8HPK0FPEKD7YN8ENJSJA0/.adapter-validation/live-cases/zellij-forced-task-unreadable/home FM_ROOT_OVERRIDE=/Users/martinstroher/.no-mistakes-worktrees/bash-adapter-refusal/01M2R8HPK0FPEKD7YN8ENJSJA0/.adapter-validation/live-code
+$ /bin/bash /Users/martinstroher/.no-mistakes-worktrees/bash-adapter-refusal/01M2R8HPK0FPEKD7YN8ENJSJA0/.adapter-validation/live-code/bin/fm-teardown.sh task-x1 --force
+exit=1
+stderr:
+error: zellij teardown prerequisites are unavailable for task-x1; nothing was changed - restore the adapter and rerun teardown
+Observed preservation: every protected path mode/content, Git refs/branch/status, both task processes, and the full private tmux window inventory are unchanged; no pending-close marker.
+
+=== zellij-forced-parent-missing ===
+tmux before:
+@0 keeper 49772 /Users/martinstroher/.no-mistakes-worktrees/bash-adapter-refusal/01M2R8HPK0FPEKD7YN8ENJSJA0
+@23 fm-a-healthy 64097 /Users/martinstroher/.no-mistakes-worktrees/bash-adapter-refusal/01M2R8HPK0FPEKD7YN8ENJSJA0/.adapter-validation/live-cases/zellij-forced-parent-missing/sibling-wt
+FM_HOME=/Users/martinstroher/.no-mistakes-worktrees/bash-adapter-refusal/01M2R8HPK0FPEKD7YN8ENJSJA0/.adapter-validation/live-cases/zellij-forced-parent-missing/home FM_ROOT_OVERRIDE=/Users/martinstroher/.no-mistakes-worktrees/bash-adapter-refusal/01M2R8HPK0FPEKD7YN8ENJSJA0/.adapter-validation/live-code
+$ /bin/bash /Users/martinstroher/.no-mistakes-worktrees/bash-adapter-refusal/01M2R8HPK0FPEKD7YN8ENJSJA0/.adapter-validation/live-code/bin/fm-teardown.sh task-x1 --force
+exit=1
+stderr:
+error: zellij teardown prerequisites are unavailable for task-x1; nothing was changed - restore the adapter and rerun teardown
+Observed preservation: every protected path mode/content, Git refs/branch/status, both task processes, and the full private tmux window inventory are unchanged; no pending-close marker.
+
+=== zellij-forced-parent-unreadable ===
+tmux before:
+@0 keeper 49772 /Users/martinstroher/.no-mistakes-worktrees/bash-adapter-refusal/01M2R8HPK0FPEKD7YN8ENJSJA0
+@24 fm-a-healthy 64334 /Users/martinstroher/.no-mistakes-worktrees/bash-adapter-refusal/01M2R8HPK0FPEKD7YN8ENJSJA0/.adapter-validation/live-cases/zellij-forced-parent-unreadable/sibling-wt
+FM_HOME=/Users/martinstroher/.no-mistakes-worktrees/bash-adapter-refusal/01M2R8HPK0FPEKD7YN8ENJSJA0/.adapter-validation/live-cases/zellij-forced-parent-unreadable/home FM_ROOT_OVERRIDE=/Users/martinstroher/.no-mistakes-worktrees/bash-adapter-refusal/01M2R8HPK0FPEKD7YN8ENJSJA0/.adapter-validation/live-code
+$ /bin/bash /Users/martinstroher/.no-mistakes-worktrees/bash-adapter-refusal/01M2R8HPK0FPEKD7YN8ENJSJA0/.adapter-validation/live-code/bin/fm-teardown.sh task-x1 --force
+exit=1
+stderr:
+error: zellij teardown prerequisites are unavailable for task-x1; nothing was changed - restore the adapter and rerun teardown
+Observed preservation: every protected path mode/content, Git refs/branch/status, both task processes, and the full private tmux window inventory are unchanged; no pending-close marker.
+
+=== zellij-child-missing ===
+tmux before:
+@0 keeper 49772 /Users/martinstroher/.no-mistakes-worktrees/bash-adapter-refusal/01M2R8HPK0FPEKD7YN8ENJSJA0
+@25 fm-a-healthy 64571 /Users/martinstroher/.no-mistakes-worktrees/bash-adapter-refusal/01M2R8HPK0FPEKD7YN8ENJSJA0/.adapter-validation/live-cases/zellij-child-missing/sibling-wt
+@26 fm-task-x1 64574 /Users/martinstroher/.no-mistakes-worktrees/bash-adapter-refusal/01M2R8HPK0FPEKD7YN8ENJSJA0/.adapter-validation/live-cases/zellij-child-missing/secondmate-home
+FM_HOME=/Users/martinstroher/.no-mistakes-worktrees/bash-adapter-refusal/01M2R8HPK0FPEKD7YN8ENJSJA0/.adapter-validation/live-cases/zellij-child-missing/home FM_ROOT_OVERRIDE=/Users/martinstroher/.no-mistakes-worktrees/bash-adapter-refusal/01M2R8HPK0FPEKD7YN8ENJSJA0/.adapter-validation/live-code
+$ /bin/bash /Users/martinstroher/.no-mistakes-worktrees/bash-adapter-refusal/01M2R8HPK0FPEKD7YN8ENJSJA0/.adapter-validation/live-code/bin/fm-teardown.sh task-x1 --force
+exit=1
+stderr:
+error: zellij teardown prerequisites are unavailable for z-broken; nothing was changed - restore the adapter and rerun teardown
+Observed preservation: every protected path mode/content, Git refs/branch/status, both task processes, and the full private tmux window inventory are unchanged; no pending-close marker.
+
+=== zellij-child-unreadable ===
+tmux before:
+@0 keeper 49772 /Users/martinstroher/.no-mistakes-worktrees/bash-adapter-refusal/01M2R8HPK0FPEKD7YN8ENJSJA0
+@27 fm-a-healthy 64996 /Users/martinstroher/.no-mistakes-worktrees/bash-adapter-refusal/01M2R8HPK0FPEKD7YN8ENJSJA0/.adapter-validation/live-cases/zellij-child-unreadable/sibling-wt
+@28 fm-task-x1 64999 /Users/martinstroher/.no-mistakes-worktrees/bash-adapter-refusal/01M2R8HPK0FPEKD7YN8ENJSJA0/.adapter-validation/live-cases/zellij-child-unreadable/secondmate-home
+FM_HOME=/Users/martinstroher/.no-mistakes-worktrees/bash-adapter-refusal/01M2R8HPK0FPEKD7YN8ENJSJA0/.adapter-validation/live-cases/zellij-child-unreadable/home FM_ROOT_OVERRIDE=/Users/martinstroher/.no-mistakes-worktrees/bash-adapter-refusal/01M2R8HPK0FPEKD7YN8ENJSJA0/.adapter-validation/live-code
+$ /bin/bash /Users/martinstroher/.no-mistakes-worktrees/bash-adapter-refusal/01M2R8HPK0FPEKD7YN8ENJSJA0/.adapter-validation/live-code/bin/fm-teardown.sh task-x1 --force
+exit=1
+stderr:
+error: zellij teardown prerequisites are unavailable for z-broken; nothing was changed - restore the adapter and rerun teardown
+Observed preservation: every protected path mode/content, Git refs/branch/status, both task processes, and the full private tmux window inventory are unchanged; no pending-close marker.
+
+=== zellij-grandchild-missing ===
+tmux before:
+@0 keeper 49772 /Users/martinstroher/.no-mistakes-worktrees/bash-adapter-refusal/01M2R8HPK0FPEKD7YN8ENJSJA0
+@29 fm-a-healthy 65422 /Users/martinstroher/.no-mistakes-worktrees/bash-adapter-refusal/01M2R8HPK0FPEKD7YN8ENJSJA0/.adapter-validation/live-cases/zellij-grandchild-missing/sibling-wt
+@30 fm-task-x1 65425 /Users/martinstroher/.no-mistakes-worktrees/bash-adapter-refusal/01M2R8HPK0FPEKD7YN8ENJSJA0/.adapter-validation/live-cases/zellij-grandchild-missing/secondmate-home
+@31 fm-nested-sm 65428 /Users/martinstroher/.no-mistakes-worktrees/bash-adapter-refusal/01M2R8HPK0FPEKD7YN8ENJSJA0/.adapter-validation/live-cases/zellij-grandchild-missing/secondmate-home/nested-home
+FM_HOME=/Users/martinstroher/.no-mistakes-worktrees/bash-adapter-refusal/01M2R8HPK0FPEKD7YN8ENJSJA0/.adapter-validation/live-cases/zellij-grandchild-missing/home FM_ROOT_OVERRIDE=/Users/martinstroher/.no-mistakes-worktrees/bash-adapter-refusal/01M2R8HPK0FPEKD7YN8ENJSJA0/.adapter-validation/live-code
+$ /bin/bash /Users/martinstroher/.no-mistakes-worktrees/bash-adapter-refusal/01M2R8HPK0FPEKD7YN8ENJSJA0/.adapter-validation/live-code/bin/fm-teardown.sh task-x1 --force
+exit=1
+stderr:
+error: zellij teardown prerequisites are unavailable for z-broken; nothing was changed - restore the adapter and rerun teardown
+Observed preservation: every protected path mode/content, Git refs/branch/status, both task processes, and the full private tmux window inventory are unchanged; no pending-close marker.
+
+=== zellij-grandchild-unreadable ===
+tmux before:
+@0 keeper 49772 /Users/martinstroher/.no-mistakes-worktrees/bash-adapter-refusal/01M2R8HPK0FPEKD7YN8ENJSJA0
+@32 fm-a-healthy 65879 /Users/martinstroher/.no-mistakes-worktrees/bash-adapter-refusal/01M2R8HPK0FPEKD7YN8ENJSJA0/.adapter-validation/live-cases/zellij-grandchild-unreadable/sibling-wt
+@33 fm-task-x1 65882 /Users/martinstroher/.no-mistakes-worktrees/bash-adapter-refusal/01M2R8HPK0FPEKD7YN8ENJSJA0/.adapter-validation/live-cases/zellij-grandchild-unreadable/secondmate-home
+@34 fm-nested-sm 65885 /Users/martinstroher/.no-mistakes-worktrees/bash-adapter-refusal/01M2R8HPK0FPEKD7YN8ENJSJA0/.adapter-validation/live-cases/zellij-grandchild-unreadable/secondmate-home/nested-home
+FM_HOME=/Users/martinstroher/.no-mistakes-worktrees/bash-adapter-refusal/01M2R8HPK0FPEKD7YN8ENJSJA0/.adapter-validation/live-cases/zellij-grandchild-unreadable/home FM_ROOT_OVERRIDE=/Users/martinstroher/.no-mistakes-worktrees/bash-adapter-refusal/01M2R8HPK0FPEKD7YN8ENJSJA0/.adapter-validation/live-code
+$ /bin/bash /Users/martinstroher/.no-mistakes-worktrees/bash-adapter-refusal/01M2R8HPK0FPEKD7YN8ENJSJA0/.adapter-validation/live-code/bin/fm-teardown.sh task-x1 --force
+exit=1
+stderr:
+error: zellij teardown prerequisites are unavailable for z-broken; nothing was changed - restore the adapter and rerun teardown
+Observed preservation: every protected path mode/content, Git refs/branch/status, both task processes, and the full private tmux window inventory are unchanged; no pending-close marker.
+
+=== cmux-task-missing ===
+tmux before:
+@0 keeper 49772 /Users/martinstroher/.no-mistakes-worktrees/bash-adapter-refusal/01M2R8HPK0FPEKD7YN8ENJSJA0
+FM_HOME=/Users/martinstroher/.no-mistakes-worktrees/bash-adapter-refusal/01M2R8HPK0FPEKD7YN8ENJSJA0/.adapter-validation/live-cases/cmux-task-missing/home FM_ROOT_OVERRIDE=/Users/martinstroher/.no-mistakes-worktrees/bash-adapter-refusal/01M2R8HPK0FPEKD7YN8ENJSJA0/.adapter-validation/live-code
+$ /bin/bash /Users/martinstroher/.no-mistakes-worktrees/bash-adapter-refusal/01M2R8HPK0FPEKD7YN8ENJSJA0/.adapter-validation/live-code/bin/fm-teardown.sh task-x1
+exit=1
+stderr:
+error: cmux teardown prerequisites are unavailable for task-x1; nothing was changed - restore the adapter and rerun teardown
+Observed preservation: every protected path mode/content, Git refs/branch/status, both task processes, and the full private tmux window inventory are unchanged; no pending-close marker.
+
+=== cmux-task-unreadable ===
+tmux before:
+@0 keeper 49772 /Users/martinstroher/.no-mistakes-worktrees/bash-adapter-refusal/01M2R8HPK0FPEKD7YN8ENJSJA0
+FM_HOME=/Users/martinstroher/.no-mistakes-worktrees/bash-adapter-refusal/01M2R8HPK0FPEKD7YN8ENJSJA0/.adapter-validation/live-cases/cmux-task-unreadable/home FM_ROOT_OVERRIDE=/Users/martinstroher/.no-mistakes-worktrees/bash-adapter-refusal/01M2R8HPK0FPEKD7YN8ENJSJA0/.adapter-validation/live-code
+$ /bin/bash /Users/martinstroher/.no-mistakes-worktrees/bash-adapter-refusal/01M2R8HPK0FPEKD7YN8ENJSJA0/.adapter-validation/live-code/bin/fm-teardown.sh task-x1
+exit=1
+stderr:
+error: cmux teardown prerequisites are unavailable for task-x1; nothing was changed - restore the adapter and rerun teardown
+Observed preservation: every protected path mode/content, Git refs/branch/status, both task processes, and the full private tmux window inventory are unchanged; no pending-close marker.
+
+=== cmux-forced-task-missing ===
+tmux before:
+@0 keeper 49772 /Users/martinstroher/.no-mistakes-worktrees/bash-adapter-refusal/01M2R8HPK0FPEKD7YN8ENJSJA0
+FM_HOME=/Users/martinstroher/.no-mistakes-worktrees/bash-adapter-refusal/01M2R8HPK0FPEKD7YN8ENJSJA0/.adapter-validation/live-cases/cmux-forced-task-missing/home FM_ROOT_OVERRIDE=/Users/martinstroher/.no-mistakes-worktrees/bash-adapter-refusal/01M2R8HPK0FPEKD7YN8ENJSJA0/.adapter-validation/live-code
+$ /bin/bash /Users/martinstroher/.no-mistakes-worktrees/bash-adapter-refusal/01M2R8HPK0FPEKD7YN8ENJSJA0/.adapter-validation/live-code/bin/fm-teardown.sh task-x1 --force
+exit=1
+stderr:
+error: cmux teardown prerequisites are unavailable for task-x1; nothing was changed - restore the adapter and rerun teardown
+Observed preservation: every protected path mode/content, Git refs/branch/status, both task processes, and the full private tmux window inventory are unchanged; no pending-close marker.
+
+=== cmux-forced-task-unreadable ===
+tmux before:
+@0 keeper 49772 /Users/martinstroher/.no-mistakes-worktrees/bash-adapter-refusal/01M2R8HPK0FPEKD7YN8ENJSJA0
+FM_HOME=/Users/martinstroher/.no-mistakes-worktrees/bash-adapter-refusal/01M2R8HPK0FPEKD7YN8ENJSJA0/.adapter-validation/live-cases/cmux-forced-task-unreadable/home FM_ROOT_OVERRIDE=/Users/martinstroher/.no-mistakes-worktrees/bash-adapter-refusal/01M2R8HPK0FPEKD7YN8ENJSJA0/.adapter-validation/live-code
+$ /bin/bash /Users/martinstroher/.no-mistakes-worktrees/bash-adapter-refusal/01M2R8HPK0FPEKD7YN8ENJSJA0/.adapter-validation/live-code/bin/fm-teardown.sh task-x1 --force
+exit=1
+stderr:
+error: cmux teardown prerequisites are unavailable for task-x1; nothing was changed - restore the adapter and rerun teardown
+Observed preservation: every protected path mode/content, Git refs/branch/status, both task processes, and the full private tmux window inventory are unchanged; no pending-close marker.
+
+=== cmux-forced-parent-missing ===
+tmux before:
+@0 keeper 49772 /Users/martinstroher/.no-mistakes-worktrees/bash-adapter-refusal/01M2R8HPK0FPEKD7YN8ENJSJA0
+@35 fm-a-healthy 68084 /Users/martinstroher/.no-mistakes-worktrees/bash-adapter-refusal/01M2R8HPK0FPEKD7YN8ENJSJA0/.adapter-validation/live-cases/cmux-forced-parent-missing/sibling-wt
+FM_HOME=/Users/martinstroher/.no-mistakes-worktrees/bash-adapter-refusal/01M2R8HPK0FPEKD7YN8ENJSJA0/.adapter-validation/live-cases/cmux-forced-parent-missing/home FM_ROOT_OVERRIDE=/Users/martinstroher/.no-mistakes-worktrees/bash-adapter-refusal/01M2R8HPK0FPEKD7YN8ENJSJA0/.adapter-validation/live-code
+$ /bin/bash /Users/martinstroher/.no-mistakes-worktrees/bash-adapter-refusal/01M2R8HPK0FPEKD7YN8ENJSJA0/.adapter-validation/live-code/bin/fm-teardown.sh task-x1 --force
+exit=1
+stderr:
+error: cmux teardown prerequisites are unavailable for task-x1; nothing was changed - restore the adapter and rerun teardown
+Observed preservation: every protected path mode/content, Git refs/branch/status, both task processes, and the full private tmux window inventory are unchanged; no pending-close marker.
+
+=== cmux-forced-parent-unreadable ===
+tmux before:
+@0 keeper 49772 /Users/martinstroher/.no-mistakes-worktrees/bash-adapter-refusal/01M2R8HPK0FPEKD7YN8ENJSJA0
+@36 fm-a-healthy 68313 /Users/martinstroher/.no-mistakes-worktrees/bash-adapter-refusal/01M2R8HPK0FPEKD7YN8ENJSJA0/.adapter-validation/live-cases/cmux-forced-parent-unreadable/sibling-wt
+FM_HOME=/Users/martinstroher/.no-mistakes-worktrees/bash-adapter-refusal/01M2R8HPK0FPEKD7YN8ENJSJA0/.adapter-validation/live-cases/cmux-forced-parent-unreadable/home FM_ROOT_OVERRIDE=/Users/martinstroher/.no-mistakes-worktrees/bash-adapter-refusal/01M2R8HPK0FPEKD7YN8ENJSJA0/.adapter-validation/live-code
+$ /bin/bash /Users/martinstroher/.no-mistakes-worktrees/bash-adapter-refusal/01M2R8HPK0FPEKD7YN8ENJSJA0/.adapter-validation/live-code/bin/fm-teardown.sh task-x1 --force
+exit=1
+stderr:
+error: cmux teardown prerequisites are unavailable for task-x1; nothing was changed - restore the adapter and rerun teardown
+Observed preservation: every protected path mode/content, Git refs/branch/status, both task processes, and the full private tmux window inventory are unchanged; no pending-close marker.
+
+=== cmux-child-missing ===
+tmux before:
+@0 keeper 49772 /Users/martinstroher/.no-mistakes-worktrees/bash-adapter-refusal/01M2R8HPK0FPEKD7YN8ENJSJA0
+@37 fm-a-healthy 68542 /Users/martinstroher/.no-mistakes-worktrees/bash-adapter-refusal/01M2R8HPK0FPEKD7YN8ENJSJA0/.adapter-validation/live-cases/cmux-child-missing/sibling-wt
+@38 fm-task-x1 68545 /Users/martinstroher/.no-mistakes-worktrees/bash-adapter-refusal/01M2R8HPK0FPEKD7YN8ENJSJA0/.adapter-validation/live-cases/cmux-child-missing/secondmate-home
+FM_HOME=/Users/martinstroher/.no-mistakes-worktrees/bash-adapter-refusal/01M2R8HPK0FPEKD7YN8ENJSJA0/.adapter-validation/live-cases/cmux-child-missing/home FM_ROOT_OVERRIDE=/Users/martinstroher/.no-mistakes-worktrees/bash-adapter-refusal/01M2R8HPK0FPEKD7YN8ENJSJA0/.adapter-validation/live-code
+$ /bin/bash /Users/martinstroher/.no-mistakes-worktrees/bash-adapter-refusal/01M2R8HPK0FPEKD7YN8ENJSJA0/.adapter-validation/live-code/bin/fm-teardown.sh task-x1 --force
+exit=1
+stderr:
+error: cmux teardown prerequisites are unavailable for z-broken; nothing was changed - restore the adapter and rerun teardown
+Observed preservation: every protected path mode/content, Git refs/branch/status, both task processes, and the full private tmux window inventory are unchanged; no pending-close marker.
+
+=== cmux-child-unreadable ===
+tmux before:
+@0 keeper 49772 /Users/martinstroher/.no-mistakes-worktrees/bash-adapter-refusal/01M2R8HPK0FPEKD7YN8ENJSJA0
+@39 fm-a-healthy 68996 /Users/martinstroher/.no-mistakes-worktrees/bash-adapter-refusal/01M2R8HPK0FPEKD7YN8ENJSJA0/.adapter-validation/live-cases/cmux-child-unreadable/sibling-wt
+@40 fm-task-x1 69007 /Users/martinstroher/.no-mistakes-worktrees/bash-adapter-refusal/01M2R8HPK0FPEKD7YN8ENJSJA0/.adapter-validation/live-cases/cmux-child-unreadable/secondmate-home
+FM_HOME=/Users/martinstroher/.no-mistakes-worktrees/bash-adapter-refusal/01M2R8HPK0FPEKD7YN8ENJSJA0/.adapter-validation/live-cases/cmux-child-unreadable/home FM_ROOT_OVERRIDE=/Users/martinstroher/.no-mistakes-worktrees/bash-adapter-refusal/01M2R8HPK0FPEKD7YN8ENJSJA0/.adapter-validation/live-code
+$ /bin/bash /Users/martinstroher/.no-mistakes-worktrees/bash-adapter-refusal/01M2R8HPK0FPEKD7YN8ENJSJA0/.adapter-validation/live-code/bin/fm-teardown.sh task-x1 --force
+exit=1
+stderr:
+error: cmux teardown prerequisites are unavailable for z-broken; nothing was changed - restore the adapter and rerun teardown
+Observed preservation: every protected path mode/content, Git refs/branch/status, both task processes, and the full private tmux window inventory are unchanged; no pending-close marker.
+
+=== cmux-grandchild-missing ===
+tmux before:
+@0 keeper 49772 /Users/martinstroher/.no-mistakes-worktrees/bash-adapter-refusal/01M2R8HPK0FPEKD7YN8ENJSJA0
+@41 fm-a-healthy 69822 /Users/martinstroher/.no-mistakes-worktrees/bash-adapter-refusal/01M2R8HPK0FPEKD7YN8ENJSJA0/.adapter-validation/live-cases/cmux-grandchild-missing/sibling-wt
+@42 fm-task-x1 69825 /Users/martinstroher/.no-mistakes-worktrees/bash-adapter-refusal/01M2R8HPK0FPEKD7YN8ENJSJA0/.adapter-validation/live-cases/cmux-grandchild-missing/secondmate-home
+@43 fm-nested-sm 69828 /Users/martinstroher/.no-mistakes-worktrees/bash-adapter-refusal/01M2R8HPK0FPEKD7YN8ENJSJA0/.adapter-validation/live-cases/cmux-grandchild-missing/secondmate-home/nested-home
+FM_HOME=/Users/martinstroher/.no-mistakes-worktrees/bash-adapter-refusal/01M2R8HPK0FPEKD7YN8ENJSJA0/.adapter-validation/live-cases/cmux-grandchild-missing/home FM_ROOT_OVERRIDE=/Users/martinstroher/.no-mistakes-worktrees/bash-adapter-refusal/01M2R8HPK0FPEKD7YN8ENJSJA0/.adapter-validation/live-code
+$ /bin/bash /Users/martinstroher/.no-mistakes-worktrees/bash-adapter-refusal/01M2R8HPK0FPEKD7YN8ENJSJA0/.adapter-validation/live-code/bin/fm-teardown.sh task-x1 --force
+exit=1
+stderr:
+error: cmux teardown prerequisites are unavailable for z-broken; nothing was changed - restore the adapter and rerun teardown
+Observed preservation: every protected path mode/content, Git refs/branch/status, both task processes, and the full private tmux window inventory are unchanged; no pending-close marker.
+
+=== cmux-grandchild-unreadable ===
+tmux before:
+@0 keeper 49772 /Users/martinstroher/.no-mistakes-worktrees/bash-adapter-refusal/01M2R8HPK0FPEKD7YN8ENJSJA0
+@44 fm-a-healthy 70277 /Users/martinstroher/.no-mistakes-worktrees/bash-adapter-refusal/01M2R8HPK0FPEKD7YN8ENJSJA0/.adapter-validation/live-cases/cmux-grandchild-unreadable/sibling-wt
+@45 fm-task-x1 70282 /Users/martinstroher/.no-mistakes-worktrees/bash-adapter-refusal/01M2R8HPK0FPEKD7YN8ENJSJA0/.adapter-validation/live-cases/cmux-grandchild-unreadable/secondmate-home
+@46 fm-nested-sm 70285 /Users/martinstroher/.no-mistakes-worktrees/bash-adapter-refusal/01M2R8HPK0FPEKD7YN8ENJSJA0/.adapter-validation/live-cases/cmux-grandchild-unreadable/secondmate-home/nested-home
+FM_HOME=/Users/martinstroher/.no-mistakes-worktrees/bash-adapter-refusal/01M2R8HPK0FPEKD7YN8ENJSJA0/.adapter-validation/live-cases/cmux-grandchild-unreadable/home FM_ROOT_OVERRIDE=/Users/martinstroher/.no-mistakes-worktrees/bash-adapter-refusal/01M2R8HPK0FPEKD7YN8ENJSJA0/.adapter-validation/live-code
+$ /bin/bash /Users/martinstroher/.no-mistakes-worktrees/bash-adapter-refusal/01M2R8HPK0FPEKD7YN8ENJSJA0/.adapter-validation/live-code/bin/fm-teardown.sh task-x1 --force
+exit=1
+stderr:
+error: cmux teardown prerequisites are unavailable for z-broken; nothing was changed - restore the adapter and rerun teardown
+Observed preservation: every protected path mode/content, Git refs/branch/status, both task processes, and the full private tmux window inventory are unchanged; no pending-close marker.
+
+=== orca-task-missing ===
+tmux before:
+@0 keeper 49772 /Users/martinstroher/.no-mistakes-worktrees/bash-adapter-refusal/01M2R8HPK0FPEKD7YN8ENJSJA0
+FM_HOME=/Users/martinstroher/.no-mistakes-worktrees/bash-adapter-refusal/01M2R8HPK0FPEKD7YN8ENJSJA0/.adapter-validation/live-cases/orca-task-missing/home FM_ROOT_OVERRIDE=/Users/martinstroher/.no-mistakes-worktrees/bash-adapter-refusal/01M2R8HPK0FPEKD7YN8ENJSJA0/.adapter-validation/live-code
+$ /bin/bash /Users/martinstroher/.no-mistakes-worktrees/bash-adapter-refusal/01M2R8HPK0FPEKD7YN8ENJSJA0/.adapter-validation/live-code/bin/fm-teardown.sh task-x1
+exit=1
+stderr:
+error: orca teardown prerequisites are unavailable for task-x1; nothing was changed - restore the adapter and rerun teardown
+Observed preservation: every protected path mode/content, Git refs/branch/status, both task processes, and the full private tmux window inventory are unchanged; no pending-close marker.
+
+=== orca-task-unreadable ===
+tmux before:
+@0 keeper 49772 /Users/martinstroher/.no-mistakes-worktrees/bash-adapter-refusal/01M2R8HPK0FPEKD7YN8ENJSJA0
+FM_HOME=/Users/martinstroher/.no-mistakes-worktrees/bash-adapter-refusal/01M2R8HPK0FPEKD7YN8ENJSJA0/.adapter-validation/live-cases/orca-task-unreadable/home FM_ROOT_OVERRIDE=/Users/martinstroher/.no-mistakes-worktrees/bash-adapter-refusal/01M2R8HPK0FPEKD7YN8ENJSJA0/.adapter-validation/live-code
+$ /bin/bash /Users/martinstroher/.no-mistakes-worktrees/bash-adapter-refusal/01M2R8HPK0FPEKD7YN8ENJSJA0/.adapter-validation/live-code/bin/fm-teardown.sh task-x1
+exit=1
+stderr:
+error: orca teardown prerequisites are unavailable for task-x1; nothing was changed - restore the adapter and rerun teardown
+Observed preservation: every protected path mode/content, Git refs/branch/status, both task processes, and the full private tmux window inventory are unchanged; no pending-close marker.
+
+=== orca-forced-task-missing ===
+tmux before:
+@0 keeper 49772 /Users/martinstroher/.no-mistakes-worktrees/bash-adapter-refusal/01M2R8HPK0FPEKD7YN8ENJSJA0
+FM_HOME=/Users/martinstroher/.no-mistakes-worktrees/bash-adapter-refusal/01M2R8HPK0FPEKD7YN8ENJSJA0/.adapter-validation/live-cases/orca-forced-task-missing/home FM_ROOT_OVERRIDE=/Users/martinstroher/.no-mistakes-worktrees/bash-adapter-refusal/01M2R8HPK0FPEKD7YN8ENJSJA0/.adapter-validation/live-code
+$ /bin/bash /Users/martinstroher/.no-mistakes-worktrees/bash-adapter-refusal/01M2R8HPK0FPEKD7YN8ENJSJA0/.adapter-validation/live-code/bin/fm-teardown.sh task-x1 --force
+exit=1
+stderr:
+error: orca teardown prerequisites are unavailable for task-x1; nothing was changed - restore the adapter and rerun teardown
+Observed preservation: every protected path mode/content, Git refs/branch/status, both task processes, and the full private tmux window inventory are unchanged; no pending-close marker.
+
+=== orca-forced-task-unreadable ===
+tmux before:
+@0 keeper 49772 /Users/martinstroher/.no-mistakes-worktrees/bash-adapter-refusal/01M2R8HPK0FPEKD7YN8ENJSJA0
+FM_HOME=/Users/martinstroher/.no-mistakes-worktrees/bash-adapter-refusal/01M2R8HPK0FPEKD7YN8ENJSJA0/.adapter-validation/live-cases/orca-forced-task-unreadable/home FM_ROOT_OVERRIDE=/Users/martinstroher/.no-mistakes-worktrees/bash-adapter-refusal/01M2R8HPK0FPEKD7YN8ENJSJA0/.adapter-validation/live-code
+$ /bin/bash /Users/martinstroher/.no-mistakes-worktrees/bash-adapter-refusal/01M2R8HPK0FPEKD7YN8ENJSJA0/.adapter-validation/live-code/bin/fm-teardown.sh task-x1 --force
+exit=1
+stderr:
+error: orca teardown prerequisites are unavailable for task-x1; nothing was changed - restore the adapter and rerun teardown
+Observed preservation: every protected path mode/content, Git refs/branch/status, both task processes, and the full private tmux window inventory are unchanged; no pending-close marker.
+
+=== orca-child-missing ===
+tmux before:
+@0 keeper 49772 /Users/martinstroher/.no-mistakes-worktrees/bash-adapter-refusal/01M2R8HPK0FPEKD7YN8ENJSJA0
+@47 fm-a-healthy 72463 /Users/martinstroher/.no-mistakes-worktrees/bash-adapter-refusal/01M2R8HPK0FPEKD7YN8ENJSJA0/.adapter-validation/live-cases/orca-child-missing/sibling-wt
+@48 fm-task-x1 72466 /Users/martinstroher/.no-mistakes-worktrees/bash-adapter-refusal/01M2R8HPK0FPEKD7YN8ENJSJA0/.adapter-validation/live-cases/orca-child-missing/secondmate-home
+FM_HOME=/Users/martinstroher/.no-mistakes-worktrees/bash-adapter-refusal/01M2R8HPK0FPEKD7YN8ENJSJA0/.adapter-validation/live-cases/orca-child-missing/home FM_ROOT_OVERRIDE=/Users/martinstroher/.no-mistakes-worktrees/bash-adapter-refusal/01M2R8HPK0FPEKD7YN8ENJSJA0/.adapter-validation/live-code
+$ /bin/bash /Users/martinstroher/.no-mistakes-worktrees/bash-adapter-refusal/01M2R8HPK0FPEKD7YN8ENJSJA0/.adapter-validation/live-code/bin/fm-teardown.sh task-x1 --force
+exit=1
+stderr:
+error: orca teardown prerequisites are unavailable for z-broken; nothing was changed - restore the adapter and rerun teardown
+Observed preservation: every protected path mode/content, Git refs/branch/status, both task processes, and the full private tmux window inventory are unchanged; no pending-close marker.
+
+=== orca-child-unreadable ===
+tmux before:
+@0 keeper 49772 /Users/martinstroher/.no-mistakes-worktrees/bash-adapter-refusal/01M2R8HPK0FPEKD7YN8ENJSJA0
+@49 fm-a-healthy 72885 /Users/martinstroher/.no-mistakes-worktrees/bash-adapter-refusal/01M2R8HPK0FPEKD7YN8ENJSJA0/.adapter-validation/live-cases/orca-child-unreadable/sibling-wt
+@50 fm-task-x1 72888 /Users/martinstroher/.no-mistakes-worktrees/bash-adapter-refusal/01M2R8HPK0FPEKD7YN8ENJSJA0/.adapter-validation/live-cases/orca-child-unreadable/secondmate-home
+FM_HOME=/Users/martinstroher/.no-mistakes-worktrees/bash-adapter-refusal/01M2R8HPK0FPEKD7YN8ENJSJA0/.adapter-validation/live-cases/orca-child-unreadable/home FM_ROOT_OVERRIDE=/Users/martinstroher/.no-mistakes-worktrees/bash-adapter-refusal/01M2R8HPK0FPEKD7YN8ENJSJA0/.adapter-validation/live-code
+$ /bin/bash /Users/martinstroher/.no-mistakes-worktrees/bash-adapter-refusal/01M2R8HPK0FPEKD7YN8ENJSJA0/.adapter-validation/live-code/bin/fm-teardown.sh task-x1 --force
+exit=1
+stderr:
+error: orca teardown prerequisites are unavailable for z-broken; nothing was changed - restore the adapter and rerun teardown
+Observed preservation: every protected path mode/content, Git refs/branch/status, both task processes, and the full private tmux window inventory are unchanged; no pending-close marker.
+
+=== orca-grandchild-missing ===
+tmux before:
+@0 keeper 49772 /Users/martinstroher/.no-mistakes-worktrees/bash-adapter-refusal/01M2R8HPK0FPEKD7YN8ENJSJA0
+@51 fm-a-healthy 73307 /Users/martinstroher/.no-mistakes-worktrees/bash-adapter-refusal/01M2R8HPK0FPEKD7YN8ENJSJA0/.adapter-validation/live-cases/orca-grandchild-missing/sibling-wt
+@52 fm-task-x1 73310 /Users/martinstroher/.no-mistakes-worktrees/bash-adapter-refusal/01M2R8HPK0FPEKD7YN8ENJSJA0/.adapter-validation/live-cases/orca-grandchild-missing/secondmate-home
+@53 fm-nested-sm 73313 /Users/martinstroher/.no-mistakes-worktrees/bash-adapter-refusal/01M2R8HPK0FPEKD7YN8ENJSJA0/.adapter-validation/live-cases/orca-grandchild-missing/secondmate-home/nested-home
+FM_HOME=/Users/martinstroher/.no-mistakes-worktrees/bash-adapter-refusal/01M2R8HPK0FPEKD7YN8ENJSJA0/.adapter-validation/live-cases/orca-grandchild-missing/home FM_ROOT_OVERRIDE=/Users/martinstroher/.no-mistakes-worktrees/bash-adapter-refusal/01M2R8HPK0FPEKD7YN8ENJSJA0/.adapter-validation/live-code
+$ /bin/bash /Users/martinstroher/.no-mistakes-worktrees/bash-adapter-refusal/01M2R8HPK0FPEKD7YN8ENJSJA0/.adapter-validation/live-code/bin/fm-teardown.sh task-x1 --force
+exit=1
+stderr:
+error: orca teardown prerequisites are unavailable for z-broken; nothing was changed - restore the adapter and rerun teardown
+Observed preservation: every protected path mode/content, Git refs/branch/status, both task processes, and the full private tmux window inventory are unchanged; no pending-close marker.
+
+=== orca-grandchild-unreadable ===
+tmux before:
+@0 keeper 49772 /Users/martinstroher/.no-mistakes-worktrees/bash-adapter-refusal/01M2R8HPK0FPEKD7YN8ENJSJA0
+@54 fm-a-healthy 73757 /Users/martinstroher/.no-mistakes-worktrees/bash-adapter-refusal/01M2R8HPK0FPEKD7YN8ENJSJA0/.adapter-validation/live-cases/orca-grandchild-unreadable/sibling-wt
+@55 fm-task-x1 73760 /Users/martinstroher/.no-mistakes-worktrees/bash-adapter-refusal/01M2R8HPK0FPEKD7YN8ENJSJA0/.adapter-validation/live-cases/orca-grandchild-unreadable/secondmate-home
+@56 fm-nested-sm 73763 /Users/martinstroher/.no-mistakes-worktrees/bash-adapter-refusal/01M2R8HPK0FPEKD7YN8ENJSJA0/.adapter-validation/live-cases/orca-grandchild-unreadable/secondmate-home/nested-home
+FM_HOME=/Users/martinstroher/.no-mistakes-worktrees/bash-adapter-refusal/01M2R8HPK0FPEKD7YN8ENJSJA0/.adapter-validation/live-cases/orca-grandchild-unreadable/home FM_ROOT_OVERRIDE=/Users/martinstroher/.no-mistakes-worktrees/bash-adapter-refusal/01M2R8HPK0FPEKD7YN8ENJSJA0/.adapter-validation/live-code
+$ /bin/bash /Users/martinstroher/.no-mistakes-worktrees/bash-adapter-refusal/01M2R8HPK0FPEKD7YN8ENJSJA0/.adapter-validation/live-code/bin/fm-teardown.sh task-x1 --force
+exit=1
+stderr:
+error: orca teardown prerequisites are unavailable for z-broken; nothing was changed - restore the adapter and rerun teardown
+Observed preservation: every protected path mode/content, Git refs/branch/status, both task processes, and the full private tmux window inventory are unchanged; no pending-close marker.
+
+=== tmux-task-valid ===
+$ treehouse get --lease --lease-holder tmux-task-valid --json
+exit=0
+stdout:
+{"path":"/Users/martinstroher/.no-mistakes-worktrees/bash-adapter-refusal/01M2R8HPK0FPEKD7YN8ENJSJA0/.adapter-validation/live-cases/tmux-task-valid/project/.treehouse/project-4ef9ce/1/project","lease_id":"cec60279cb990b89038e2ce078e557e0","lease_holder":"tmux-task-valid","leased_at":"2026-09-17T15:19:26.039928-03:00"}
+stderr:
+A new version of treehouse is available: v2.1.0 → v2.3.0
+Run "treehouse update" to update
+
+🌳 Setting up worktree...
+🌳 Leased worktree at /Users/martinstroher/.no-mistakes-worktrees/bash-adapter-refusal/01M2R8HPK0FPEKD7YN8ENJSJA0/.adapter-validation/live-cases/tmux-task-valid/project/.treehouse/project-4ef9ce/1/project. Run 'treehouse return /Users/martinstroher/.no-mistakes-worktrees/bash-adapter-refusal/01M2R8HPK0FPEKD7YN8ENJSJA0/.adapter-validation/live-cases/tmux-task-valid/project/.treehouse/project-4ef9ce/1/project' to release it.
+tmux before:
+@0 keeper 49772 /Users/martinstroher/.no-mistakes-worktrees/bash-adapter-refusal/01M2R8HPK0FPEKD7YN8ENJSJA0
+@57 fm-task-x1 74213 /Users/martinstroher/.no-mistakes-worktrees/bash-adapter-refusal/01M2R8HPK0FPEKD7YN8ENJSJA0/.adapter-validation/live-cases/tmux-task-valid/project/.treehouse/project-4ef9ce/1/project
+FM_HOME=/Users/martinstroher/.no-mistakes-worktrees/bash-adapter-refusal/01M2R8HPK0FPEKD7YN8ENJSJA0/.adapter-validation/live-cases/tmux-task-valid/home FM_ROOT_OVERRIDE=/Users/martinstroher/.no-mistakes-worktrees/bash-adapter-refusal/01M2R8HPK0FPEKD7YN8ENJSJA0/.adapter-validation/live-code
+$ /bin/bash /Users/martinstroher/.no-mistakes-worktrees/bash-adapter-refusal/01M2R8HPK0FPEKD7YN8ENJSJA0/.adapter-validation/live-code/bin/fm-teardown.sh task-x1
+exit=0
+stdout:
+A new version of treehouse is available: v2.1.0 → v2.3.0
+Run "treehouse update" to update
+
+🌳 Worktree returned to pool.
+teardown task-x1 complete (window adapter-live:fm-task-x1, worktree /Users/martinstroher/.no-mistakes-worktrees/bash-adapter-refusal/01M2R8HPK0FPEKD7YN8ENJSJA0/.adapter-validation/live-cases/tmux-task-valid/project/.treehouse/project-4ef9ce/1/project)
+Backlog: task-x1 is closed in /Users/martinstroher/.no-mistakes-worktrees/bash-adapter-refusal/01M2R8HPK0FPEKD7YN8ENJSJA0/.adapter-validation/live-cases/tmux-task-valid/home/data/backlog.md. Run bin/fm-tasks-axi.sh ready for dependency-cleared candidates, check date gates, and dispatch only work whose blockers are gone and date is due.
+stderr:
+teardown: reaping leaked worktree process(es) for task-x1: 74213 74215 74216
+tmux after:
+@0 keeper 49772 /Users/martinstroher/.no-mistakes-worktrees/bash-adapter-refusal/01M2R8HPK0FPEKD7YN8ENJSJA0
+$ tasks-axi show task-x1 --file /Users/martinstroher/.no-mistakes-worktrees/bash-adapter-refusal/01M2R8HPK0FPEKD7YN8ENJSJA0/.adapter-validation/live-cases/tmux-task-valid/home/data/backlog.md
+exit=0
+stdout:
+task:
+  id: task-x1
+  title: Adapter refusal task
+  state: done
+  blocked: no
+  blocked_by: none
+  held: no
+  hold_reason: "-"
+  hold_kind: "-"
+  hold_until: "-"
+  kind: ship
+  repo: "-"
+  priority: "-"
+  created: "-"
+  closed: 2026-09-17
+  deps: none
+  links: none
+  body: local main
+Treehouse persisted state after cleanup:
+{
+  "worktrees": [
+    {
+      "name": "1",
+      "path": "/Users/martinstroher/.no-mistakes-worktrees/bash-adapter-refusal/01M2R8HPK0FPEKD7YN8ENJSJA0/.adapter-validation/live-cases/tmux-task-valid/project/.treehouse/project-4ef9ce/1/project",
+      "created_at": "2026-09-17T15:19:26.039921-03:00"
+    }
+  ]
+}
+Observed cleanup: task processes stopped, tasktmp and hook removed, branch deleted, pool lease released, endpoint closed, metadata removed, backlog done. Treehouse retains ignored cache files in its reusable slot.
+
+=== tmux-forced-task-valid ===
+$ treehouse get --lease --lease-holder tmux-forced-task-valid --json
+exit=0
+stdout:
+{"path":"/Users/martinstroher/.no-mistakes-worktrees/bash-adapter-refusal/01M2R8HPK0FPEKD7YN8ENJSJA0/.adapter-validation/live-cases/tmux-forced-task-valid/project/.treehouse/project-6444d6/1/project","lease_id":"410b04aea98998eafe5a4f823305d58f","lease_holder":"tmux-forced-task-valid","leased_at":"2026-09-17T15:19:34.403649-03:00"}
+stderr:
+A new version of treehouse is available: v2.1.0 → v2.3.0
+Run "treehouse update" to update
+
+🌳 Setting up worktree...
+🌳 Leased worktree at /Users/martinstroher/.no-mistakes-worktrees/bash-adapter-refusal/01M2R8HPK0FPEKD7YN8ENJSJA0/.adapter-validation/live-cases/tmux-forced-task-valid/project/.treehouse/project-6444d6/1/project. Run 'treehouse return /Users/martinstroher/.no-mistakes-worktrees/bash-adapter-refusal/01M2R8HPK0FPEKD7YN8ENJSJA0/.adapter-validation/live-cases/tmux-forced-task-valid/project/.treehouse/project-6444d6/1/project' to release it.
+tmux before:
+@0 keeper 49772 /Users/martinstroher/.no-mistakes-worktrees/bash-adapter-refusal/01M2R8HPK0FPEKD7YN8ENJSJA0
+@58 fm-task-x1 76973 /Users/martinstroher/.no-mistakes-worktrees/bash-adapter-refusal/01M2R8HPK0FPEKD7YN8ENJSJA0/.adapter-validation/live-cases/tmux-forced-task-valid/project/.treehouse/project-6444d6/1/project
+FM_HOME=/Users/martinstroher/.no-mistakes-worktrees/bash-adapter-refusal/01M2R8HPK0FPEKD7YN8ENJSJA0/.adapter-validation/live-cases/tmux-forced-task-valid/home FM_ROOT_OVERRIDE=/Users/martinstroher/.no-mistakes-worktrees/bash-adapter-refusal/01M2R8HPK0FPEKD7YN8ENJSJA0/.adapter-validation/live-code
+$ /bin/bash /Users/martinstroher/.no-mistakes-worktrees/bash-adapter-refusal/01M2R8HPK0FPEKD7YN8ENJSJA0/.adapter-validation/live-code/bin/fm-teardown.sh task-x1 --force
+exit=0
+stdout:
+A new version of treehouse is available: v2.1.0 → v2.3.0
+Run "treehouse update" to update
+
+🌳 Worktree returned to pool.
+teardown task-x1 complete (window adapter-live:fm-task-x1, worktree /Users/martinstroher/.no-mistakes-worktrees/bash-adapter-refusal/01M2R8HPK0FPEKD7YN8ENJSJA0/.adapter-validation/live-cases/tmux-forced-task-valid/project/.treehouse/project-6444d6/1/project)
+Backlog: task-x1 is closed in /Users/martinstroher/.no-mistakes-worktrees/bash-adapter-refusal/01M2R8HPK0FPEKD7YN8ENJSJA0/.adapter-validation/live-cases/tmux-forced-task-valid/home/data/backlog.md. Run bin/fm-tasks-axi.sh ready for dependency-cleared candidates, check date gates, and dispatch only work whose blockers are gone and date is due.
+stderr:
+teardown: reaping leaked worktree process(es) for task-x1: 76973 76975 76976
+tmux after:
+@0 keeper 49772 /Users/martinstroher/.no-mistakes-worktrees/bash-adapter-refusal/01M2R8HPK0FPEKD7YN8ENJSJA0
+$ tasks-axi show task-x1 --file /Users/martinstroher/.no-mistakes-worktrees/bash-adapter-refusal/01M2R8HPK0FPEKD7YN8ENJSJA0/.adapter-validation/live-cases/tmux-forced-task-valid/home/data/backlog.md
+exit=0
+stdout:
+task:
+  id: task-x1
+  title: Adapter refusal task
+  state: done
+  blocked: no
+  blocked_by: none
+  held: no
+  hold_reason: "-"
+  hold_kind: "-"
+  hold_until: "-"
+  kind: ship
+  repo: "-"
+  priority: "-"
+  created: "-"
+  closed: 2026-09-17
+  deps: none
+  links: none
+  body: local main
+Treehouse persisted state after cleanup:
+{
+  "worktrees": [
+    {
+      "name": "1",
+      "path": "/Users/martinstroher/.no-mistakes-worktrees/bash-adapter-refusal/01M2R8HPK0FPEKD7YN8ENJSJA0/.adapter-validation/live-cases/tmux-forced-task-valid/project/.treehouse/project-6444d6/1/project",
+      "created_at": "2026-09-17T15:19:34.403641-03:00"
+    }
+  ]
+}
+Observed cleanup: task processes stopped, tasktmp and hook removed, branch deleted, pool lease released, endpoint closed, metadata removed, backlog done. Treehouse retains ignored cache files in its reusable slot.
+
+=== tmux-forced-parent-valid ===
+$ treehouse get --lease --lease-holder tmux-forced-parent-valid --json
+exit=0
+stdout:
+{"path":"/Users/martinstroher/.no-mistakes-worktrees/bash-adapter-refusal/01M2R8HPK0FPEKD7YN8ENJSJA0/.adapter-validation/live-cases/tmux-forced-parent-valid/project/.treehouse/project-ed3957/1/project","lease_id":"68c5a0e0f20b0be253f48cb2021af450","lease_holder":"tmux-forced-parent-valid","leased_at":"2026-09-17T15:19:40.575811-03:00"}
+stderr:
+A new version of treehouse is available: v2.1.0 → v2.3.0
+Run "treehouse update" to update
+
+🌳 Setting up worktree...
+🌳 Leased worktree at /Users/martinstroher/.no-mistakes-worktrees/bash-adapter-refusal/01M2R8HPK0FPEKD7YN8ENJSJA0/.adapter-validation/live-cases/tmux-forced-parent-valid/project/.treehouse/project-ed3957/1/project. Run 'treehouse return /Users/martinstroher/.no-mistakes-worktrees/bash-adapter-refusal/01M2R8HPK0FPEKD7YN8ENJSJA0/.adapter-validation/live-cases/tmux-forced-parent-valid/project/.treehouse/project-ed3957/1/project' to release it.
+tmux before:
+@0 keeper 49772 /Users/martinstroher/.no-mistakes-worktrees/bash-adapter-refusal/01M2R8HPK0FPEKD7YN8ENJSJA0
+@59 fm-a-healthy 79719 /Users/martinstroher/.no-mistakes-worktrees/bash-adapter-refusal/01M2R8HPK0FPEKD7YN8ENJSJA0/.adapter-validation/live-cases/tmux-forced-parent-valid/sibling-wt
+@60 fm-task-x1 79722 /Users/martinstroher/.no-mistakes-worktrees/bash-adapter-refusal/01M2R8HPK0FPEKD7YN8ENJSJA0/.adapter-validation/live-cases/tmux-forced-parent-valid/secondmate-home
+FM_HOME=/Users/martinstroher/.no-mistakes-worktrees/bash-adapter-refusal/01M2R8HPK0FPEKD7YN8ENJSJA0/.adapter-validation/live-cases/tmux-forced-parent-valid/home FM_ROOT_OVERRIDE=/Users/martinstroher/.no-mistakes-worktrees/bash-adapter-refusal/01M2R8HPK0FPEKD7YN8ENJSJA0/.adapter-validation/live-code
+$ /bin/bash /Users/martinstroher/.no-mistakes-worktrees/bash-adapter-refusal/01M2R8HPK0FPEKD7YN8ENJSJA0/.adapter-validation/live-code/bin/fm-teardown.sh task-x1 --force
+exit=0
+stdout:
+teardown task-x1 complete (window adapter-live:fm-task-x1, worktree /Users/martinstroher/.no-mistakes-worktrees/bash-adapter-refusal/01M2R8HPK0FPEKD7YN8ENJSJA0/.adapter-validation/live-cases/tmux-forced-parent-valid/secondmate-home)
+stderr:
+A new version of treehouse is available: v2.1.0 → v2.3.0
+Run "treehouse update" to update
+
+worktree /Users/martinstroher/.no-mistakes-worktrees/bash-adapter-refusal/01M2R8HPK0FPEKD7YN8ENJSJA0/.adapter-validation/live-cases/tmux-forced-parent-valid/sibling-wt is not managed by treehouse
+tmux after:
+@0 keeper 49772 /Users/martinstroher/.no-mistakes-worktrees/bash-adapter-refusal/01M2R8HPK0FPEKD7YN8ENJSJA0
+Observed forced retirement: secondmate home and healthy sibling copy removed; all recorded tmux endpoints closed; parent metadata retired.
+
+=== tmux-child-valid ===
+$ treehouse get --lease --lease-holder tmux-child-valid --json
+exit=0
+stdout:
+{"path":"/Users/martinstroher/.no-mistakes-worktrees/bash-adapter-refusal/01M2R8HPK0FPEKD7YN8ENJSJA0/.adapter-validation/live-cases/tmux-child-valid/project/.treehouse/project-f41d5d/1/project","lease_id":"6bfce98ec37556b535703bf30438c6d0","lease_holder":"tmux-child-valid","leased_at":"2026-09-17T15:19:43.362395-03:00"}
+stderr:
+A new version of treehouse is available: v2.1.0 → v2.3.0
+Run "treehouse update" to update
+
+🌳 Setting up worktree...
+🌳 Leased worktree at /Users/martinstroher/.no-mistakes-worktrees/bash-adapter-refusal/01M2R8HPK0FPEKD7YN8ENJSJA0/.adapter-validation/live-cases/tmux-child-valid/project/.treehouse/project-f41d5d/1/project. Run 'treehouse return /Users/martinstroher/.no-mistakes-worktrees/bash-adapter-refusal/01M2R8HPK0FPEKD7YN8ENJSJA0/.adapter-validation/live-cases/tmux-child-valid/project/.treehouse/project-f41d5d/1/project' to release it.
+tmux before:
+@0 keeper 49772 /Users/martinstroher/.no-mistakes-worktrees/bash-adapter-refusal/01M2R8HPK0FPEKD7YN8ENJSJA0
+@61 fm-a-healthy 82341 /Users/martinstroher/.no-mistakes-worktrees/bash-adapter-refusal/01M2R8HPK0FPEKD7YN8ENJSJA0/.adapter-validation/live-cases/tmux-child-valid/sibling-wt
+@62 fm-task-x1 82344 /Users/martinstroher/.no-mistakes-worktrees/bash-adapter-refusal/01M2R8HPK0FPEKD7YN8ENJSJA0/.adapter-validation/live-cases/tmux-child-valid/secondmate-home
+@63 fm-z-broken 82347 /Users/martinstroher/.no-mistakes-worktrees/bash-adapter-refusal/01M2R8HPK0FPEKD7YN8ENJSJA0/.adapter-validation/live-cases/tmux-child-valid/project/.treehouse/project-f41d5d/1/project
+FM_HOME=/Users/martinstroher/.no-mistakes-worktrees/bash-adapter-refusal/01M2R8HPK0FPEKD7YN8ENJSJA0/.adapter-validation/live-cases/tmux-child-valid/home FM_ROOT_OVERRIDE=/Users/martinstroher/.no-mistakes-worktrees/bash-adapter-refusal/01M2R8HPK0FPEKD7YN8ENJSJA0/.adapter-validation/live-code
+$ /bin/bash /Users/martinstroher/.no-mistakes-worktrees/bash-adapter-refusal/01M2R8HPK0FPEKD7YN8ENJSJA0/.adapter-validation/live-code/bin/fm-teardown.sh task-x1 --force
+exit=0
+stdout:
+A new version of treehouse is available: v2.1.0 → v2.3.0
+Run "treehouse update" to update
+
+🌳 Terminated lingering processes: sleep (82349)
+🌳 Worktree returned to pool.
+teardown task-x1 complete (window adapter-live:fm-task-x1, worktree /Users/martinstroher/.no-mistakes-worktrees/bash-adapter-refusal/01M2R8HPK0FPEKD7YN8ENJSJA0/.adapter-validation/live-cases/tmux-child-valid/secondmate-home)
+stderr:
+A new version of treehouse is available: v2.1.0 → v2.3.0
+Run "treehouse update" to update
+
+worktree /Users/martinstroher/.no-mistakes-worktrees/bash-adapter-refusal/01M2R8HPK0FPEKD7YN8ENJSJA0/.adapter-validation/live-cases/tmux-child-valid/sibling-wt is not managed by treehouse
+tmux after:
+@0 keeper 49772 /Users/martinstroher/.no-mistakes-worktrees/bash-adapter-refusal/01M2R8HPK0FPEKD7YN8ENJSJA0
+Observed forced retirement: secondmate home and healthy sibling copy removed; all recorded tmux endpoints closed; parent metadata retired.
+
+=== tmux-grandchild-valid ===
+$ treehouse get --lease --lease-holder tmux-grandchild-valid --json
+exit=0
+stdout:
+{"path":"/Users/martinstroher/.no-mistakes-worktrees/bash-adapter-refusal/01M2R8HPK0FPEKD7YN8ENJSJA0/.adapter-validation/live-cases/tmux-grandchild-valid/project/.treehouse/project-ca8956/1/project","lease_id":"cd8e5ee66cd5528a17ad63071c2c160f","lease_holder":"tmux-grandchild-valid","leased_at":"2026-09-17T15:19:49.333541-03:00"}
+stderr:
+A new version of treehouse is available: v2.1.0 → v2.3.0
+Run "treehouse update" to update
+
+🌳 Setting up worktree...
+🌳 Leased worktree at /Users/martinstroher/.no-mistakes-worktrees/bash-adapter-refusal/01M2R8HPK0FPEKD7YN8ENJSJA0/.adapter-validation/live-cases/tmux-grandchild-valid/project/.treehouse/project-ca8956/1/project. Run 'treehouse return /Users/martinstroher/.no-mistakes-worktrees/bash-adapter-refusal/01M2R8HPK0FPEKD7YN8ENJSJA0/.adapter-validation/live-cases/tmux-grandchild-valid/project/.treehouse/project-ca8956/1/project' to release it.
+tmux before:
+@0 keeper 49772 /Users/martinstroher/.no-mistakes-worktrees/bash-adapter-refusal/01M2R8HPK0FPEKD7YN8ENJSJA0
+@64 fm-a-healthy 88885 /Users/martinstroher/.no-mistakes-worktrees/bash-adapter-refusal/01M2R8HPK0FPEKD7YN8ENJSJA0/.adapter-validation/live-cases/tmux-grandchild-valid/sibling-wt
+@65 fm-task-x1 88888 /Users/martinstroher/.no-mistakes-worktrees/bash-adapter-refusal/01M2R8HPK0FPEKD7YN8ENJSJA0/.adapter-validation/live-cases/tmux-grandchild-valid/secondmate-home
+@66 fm-nested-sm 88891 /Users/martinstroher/.no-mistakes-worktrees/bash-adapter-refusal/01M2R8HPK0FPEKD7YN8ENJSJA0/.adapter-validation/live-cases/tmux-grandchild-valid/secondmate-home/nested-home
+@67 fm-z-broken 88894 /Users/martinstroher/.no-mistakes-worktrees/bash-adapter-refusal/01M2R8HPK0FPEKD7YN8ENJSJA0/.adapter-validation/live-cases/tmux-grandchild-valid/project/.treehouse/project-ca8956/1/project
+FM_HOME=/Users/martinstroher/.no-mistakes-worktrees/bash-adapter-refusal/01M2R8HPK0FPEKD7YN8ENJSJA0/.adapter-validation/live-cases/tmux-grandchild-valid/home FM_ROOT_OVERRIDE=/Users/martinstroher/.no-mistakes-worktrees/bash-adapter-refusal/01M2R8HPK0FPEKD7YN8ENJSJA0/.adapter-validation/live-code
+$ /bin/bash /Users/martinstroher/.no-mistakes-worktrees/bash-adapter-refusal/01M2R8HPK0FPEKD7YN8ENJSJA0/.adapter-validation/live-code/bin/fm-teardown.sh task-x1 --force
+exit=0
+stdout:
+A new version of treehouse is available: v2.1.0 → v2.3.0
+Run "treehouse update" to update
+
+🌳 Terminated lingering processes: sleep (88896)
+🌳 Worktree returned to pool.
+teardown task-x1 complete (window adapter-live:fm-task-x1, worktree /Users/martinstroher/.no-mistakes-worktrees/bash-adapter-refusal/01M2R8HPK0FPEKD7YN8ENJSJA0/.adapter-validation/live-cases/tmux-grandchild-valid/secondmate-home)
+stderr:
+A new version of treehouse is available: v2.1.0 → v2.3.0
+Run "treehouse update" to update
+
+worktree /Users/martinstroher/.no-mistakes-worktrees/bash-adapter-refusal/01M2R8HPK0FPEKD7YN8ENJSJA0/.adapter-validation/live-cases/tmux-grandchild-valid/sibling-wt is not managed by treehouse
+tmux after:
+@0 keeper 49772 /Users/martinstroher/.no-mistakes-worktrees/bash-adapter-refusal/01M2R8HPK0FPEKD7YN8ENJSJA0
+Observed forced retirement: secondmate home and healthy sibling copy removed; all recorded tmux endpoints closed; parent metadata retired.
+
+All targeted real-CLI checks passed.

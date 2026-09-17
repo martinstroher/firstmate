@@ -1,0 +1,93 @@
+Product CLI evidence excerpts. Full invocations and output: live-cli-transcript.log.
+All candidate refusal checks execute the unmodified teardown CLI from an isolated code copy.
+Only the adapter under test is removed or chmod 000; no runtime CLI is mocked.
+Non-tmux refusal cases exercise the recorded endpoint input without launching that backend.
+
+=== base-herdr-task-missing ===
+$ /bin/bash /Users/martinstroher/.no-mistakes-worktrees/bash-adapter-refusal/01M2R8HPK0FPEKD7YN8ENJSJA0/.adapter-validation/base-code/bin/fm-teardown.sh task-x1
+exit=0
+stdout:
+
+stderr:
+/Users/martinstroher/.no-mistakes-worktrees/bash-adapter-refusal/01M2R8HPK0FPEKD7YN8ENJSJA0/.adapter-validation/base-code/bin/fm-backend.sh: line 633: /Users/martinstroher/.no-mistakes-worktrees/bash-adapter-refusal/01M2R8HPK0FPEKD7YN8ENJSJA0/.adapter-validation/base-code/bin/backends/herdr.sh: No such file or directory
+
+Protected path modes and content hashes unchanged: True
+Task processes preserved: True
+Real private tmux inventory unchanged: True
+Git refs, branch and working status unchanged: True
+=== herdr-task-missing ===
+$ /bin/bash /Users/martinstroher/.no-mistakes-worktrees/bash-adapter-refusal/01M2R8HPK0FPEKD7YN8ENJSJA0/.adapter-validation/live-code/bin/fm-teardown.sh task-x1
+exit=1
+stdout:
+
+stderr:
+error: herdr teardown prerequisites are unavailable for task-x1; nothing was changed - restore the adapter and rerun teardown
+
+Protected path modes and content hashes unchanged: True
+Task processes preserved: True
+Real private tmux inventory unchanged: True
+Git refs, branch and working status unchanged: True
+=== tmux-forced-task-unreadable ===
+$ /bin/bash /Users/martinstroher/.no-mistakes-worktrees/bash-adapter-refusal/01M2R8HPK0FPEKD7YN8ENJSJA0/.adapter-validation/live-code/bin/fm-teardown.sh task-x1 --force
+exit=1
+stdout:
+
+stderr:
+error: tmux teardown prerequisites are unavailable for task-x1; nothing was changed - restore the adapter and rerun teardown
+
+Protected path modes and content hashes unchanged: True
+Task processes preserved: True
+Real private tmux inventory unchanged: True
+Git refs, branch and working status unchanged: True
+=== herdr-grandchild-missing ===
+$ /bin/bash /Users/martinstroher/.no-mistakes-worktrees/bash-adapter-refusal/01M2R8HPK0FPEKD7YN8ENJSJA0/.adapter-validation/live-code/bin/fm-teardown.sh task-x1 --force
+exit=1
+stdout:
+
+stderr:
+error: herdr teardown prerequisites are unavailable for z-broken; nothing was changed - restore the adapter and rerun teardown
+
+Protected path modes and content hashes unchanged: True
+Task processes preserved: True
+Real private tmux inventory unchanged: True
+Git refs, branch and working status unchanged: True
+=== tmux-task-valid ===
+$ /bin/bash /Users/martinstroher/.no-mistakes-worktrees/bash-adapter-refusal/01M2R8HPK0FPEKD7YN8ENJSJA0/.adapter-validation/live-code/bin/fm-teardown.sh task-x1
+exit=0
+stdout:
+A new version of treehouse is available: v2.1.0 → v2.3.0
+Run "treehouse update" to update
+
+🌳 Worktree returned to pool.
+teardown task-x1 complete (window adapter-live:fm-task-x1, worktree /Users/martinstroher/.no-mistakes-worktrees/bash-adapter-refusal/01M2R8HPK0FPEKD7YN8ENJSJA0/.adapter-validation/live-cases/tmux-task-valid/project/.treehouse/project-4ef9ce/1/project)
+Backlog: task-x1 is closed in /Users/martinstroher/.no-mistakes-worktrees/bash-adapter-refusal/01M2R8HPK0FPEKD7YN8ENJSJA0/.adapter-validation/live-cases/tmux-task-valid/home/data/backlog.md. Run bin/fm-tasks-axi.sh ready for dependency-cleared candidates, check date gates, and dispatch only work whose blockers are gone and date is due.
+
+stderr:
+teardown: reaping leaked worktree process(es) for task-x1: 74213 74215 74216
+
+=== tmux-grandchild-valid ===
+$ /bin/bash /Users/martinstroher/.no-mistakes-worktrees/bash-adapter-refusal/01M2R8HPK0FPEKD7YN8ENJSJA0/.adapter-validation/live-code/bin/fm-teardown.sh task-x1 --force
+exit=0
+stdout:
+A new version of treehouse is available: v2.1.0 → v2.3.0
+Run "treehouse update" to update
+
+🌳 Terminated lingering processes: sleep (88896)
+🌳 Worktree returned to pool.
+teardown task-x1 complete (window adapter-live:fm-task-x1, worktree /Users/martinstroher/.no-mistakes-worktrees/bash-adapter-refusal/01M2R8HPK0FPEKD7YN8ENJSJA0/.adapter-validation/live-cases/tmux-grandchild-valid/secondmate-home)
+
+stderr:
+A new version of treehouse is available: v2.1.0 → v2.3.0
+Run "treehouse update" to update
+
+worktree /Users/martinstroher/.no-mistakes-worktrees/bash-adapter-refusal/01M2R8HPK0FPEKD7YN8ENJSJA0/.adapter-validation/live-cases/tmux-grandchild-valid/sibling-wt is not managed by treehouse
+
+
+Additional-runtime capability checks:
+Herdr isolated lab prepare: exit 1; fm-herdr-lab: fleet-state tripwire requires exactly one running default session
+Resolved runtime CLIs: {'tmux': '/opt/homebrew/bin/tmux', 'herdr': '/Users/martinstroher/.local/bin/herdr', 'zellij': None, 'cmux': None, 'orca': '/usr/local/bin/orca'}
+Orca was not invoked: provisioning an Orca-managed terminal/worktree would intentionally modify application state outside the allowed worktree.
+
+Setup-only retries: added the installed Node executable to the private PATH for tasks-axi; corrected nested-home and composite Orca persisted metadata; corrected the expected Treehouse return behavior (ignored cache files remain in reusable pool slots). All affected checks were re-driven. No product code changed.
+
+Only targeted adapter regression functions were run, not the repository test suite. The existing fixture controls use fake runtime CLIs and are supplementary, not live endpoint validation. No linter, formatter, static analyzer, pipeline control, push, PR, or CI command was run.

@@ -1,0 +1,533 @@
+ok - tmux task missing adapter: exit status and cleanup preservation
+ok - tmux task unreadable adapter: exit status and cleanup preservation
+tests/.nm-adapter-targeted.sh: line 2234: 61308 Terminated: 15          ( cd "$case_dir/wt" && exec sleep 120 )
+tests/.nm-adapter-targeted.sh: line 2234: 61309 Terminated: 15          ( cd "$case_dir/tasktmp" && exec sleep 120 )
+ok - tmux task valid adapter: exit status and cleanup preservation
+ok - tmux forced-task missing adapter: exit status and cleanup preservation
+ok - tmux forced-task unreadable adapter: exit status and cleanup preservation
+tests/.nm-adapter-targeted.sh: line 2234: 65554 Terminated: 15          ( cd "$case_dir/wt" && exec sleep 120 )
+tests/.nm-adapter-targeted.sh: line 2234: 65555 Terminated: 15          ( cd "$case_dir/tasktmp" && exec sleep 120 )
+ok - tmux forced-task valid adapter: exit status and cleanup preservation
+ok - tmux forced-parent missing adapter: exit status and cleanup preservation
+ok - tmux forced-parent unreadable adapter: exit status and cleanup preservation
+ok - tmux forced-parent valid adapter: exit status and cleanup preservation
+ok - tmux child missing adapter: exit status and cleanup preservation
+ok - tmux child unreadable adapter: exit status and cleanup preservation
+ok - tmux child valid adapter: exit status and cleanup preservation
+ok - tmux grandchild missing adapter: exit status and cleanup preservation
+ok - tmux grandchild unreadable adapter: exit status and cleanup preservation
+ok - tmux grandchild valid adapter: exit status and cleanup preservation
+ok - zellij task missing adapter: exit status and cleanup preservation
+ok - zellij task unreadable adapter: exit status and cleanup preservation
+tests/.nm-adapter-targeted.sh: line 2234: 78580 Terminated: 15          ( cd "$case_dir/wt" && exec sleep 120 )
+tests/.nm-adapter-targeted.sh: line 2234: 78581 Terminated: 15          ( cd "$case_dir/tasktmp" && exec sleep 120 )
+ok - zellij task valid adapter: exit status and cleanup preservation
+ok - zellij forced-task missing adapter: exit status and cleanup preservation
+ok - zellij forced-task unreadable adapter: exit status and cleanup preservation
+tests/.nm-adapter-targeted.sh: line 2234: 82608 Terminated: 15          ( cd "$case_dir/wt" && exec sleep 120 )
+tests/.nm-adapter-targeted.sh: line 2234: 82609 Terminated: 15          ( cd "$case_dir/tasktmp" && exec sleep 120 )
+ok - zellij forced-task valid adapter: exit status and cleanup preservation
+ok - zellij forced-parent missing adapter: exit status and cleanup preservation
+ok - zellij forced-parent unreadable adapter: exit status and cleanup preservation
+ok - zellij forced-parent valid adapter: exit status and cleanup preservation
+ok - zellij child missing adapter: exit status and cleanup preservation
+ok - zellij child unreadable adapter: exit status and cleanup preservation
+ok - zellij child valid adapter: exit status and cleanup preservation
+ok - zellij grandchild missing adapter: exit status and cleanup preservation
+ok - zellij grandchild unreadable adapter: exit status and cleanup preservation
+ok - zellij grandchild valid adapter: exit status and cleanup preservation
+ok - cmux task missing adapter: exit status and cleanup preservation
+ok - cmux task unreadable adapter: exit status and cleanup preservation
+tests/.nm-adapter-targeted.sh: line 2234: 97487 Terminated: 15          ( cd "$case_dir/wt" && exec sleep 120 )
+tests/.nm-adapter-targeted.sh: line 2234: 97488 Terminated: 15          ( cd "$case_dir/tasktmp" && exec sleep 120 )
+ok - cmux task valid adapter: exit status and cleanup preservation
+ok - cmux forced-task missing adapter: exit status and cleanup preservation
+ok - cmux forced-task unreadable adapter: exit status and cleanup preservation
+tests/.nm-adapter-targeted.sh: line 2234:  3069 Terminated: 15          ( cd "$case_dir/wt" && exec sleep 120 )
+tests/.nm-adapter-targeted.sh: line 2234:  3070 Terminated: 15          ( cd "$case_dir/tasktmp" && exec sleep 120 )
+ok - cmux forced-task valid adapter: exit status and cleanup preservation
+ok - cmux forced-parent missing adapter: exit status and cleanup preservation
+ok - cmux forced-parent unreadable adapter: exit status and cleanup preservation
+ok - cmux forced-parent valid adapter: exit status and cleanup preservation
+ok - cmux child missing adapter: exit status and cleanup preservation
+ok - cmux child unreadable adapter: exit status and cleanup preservation
+ok - cmux child valid adapter: exit status and cleanup preservation
+ok - cmux grandchild missing adapter: exit status and cleanup preservation
+ok - cmux grandchild unreadable adapter: exit status and cleanup preservation
+ok - cmux grandchild valid adapter: exit status and cleanup preservation
+ok - herdr task missing adapter: exit status and cleanup preservation
+ok - herdr task unreadable adapter: exit status and cleanup preservation
+tests/.nm-adapter-targeted.sh: line 2234: 16599 Terminated: 15          ( cd "$case_dir/wt" && exec sleep 120 )
+tests/.nm-adapter-targeted.sh: line 2234: 16600 Terminated: 15          ( cd "$case_dir/tasktmp" && exec sleep 120 )
+ok - herdr task valid adapter: exit status and cleanup preservation
+ok - herdr forced-task missing adapter: exit status and cleanup preservation
+ok - herdr forced-task unreadable adapter: exit status and cleanup preservation
+tests/.nm-adapter-targeted.sh: line 2234: 19350 Terminated: 15          ( cd "$case_dir/wt" && exec sleep 120 )
+tests/.nm-adapter-targeted.sh: line 2234: 19351 Terminated: 15          ( cd "$case_dir/tasktmp" && exec sleep 120 )
+ok - herdr forced-task valid adapter: exit status and cleanup preservation
+ok - herdr forced-parent missing adapter: exit status and cleanup preservation
+ok - herdr forced-parent unreadable adapter: exit status and cleanup preservation
+ok - herdr forced-parent valid adapter: exit status and cleanup preservation
+ok - herdr child missing adapter: exit status and cleanup preservation
+ok - herdr child unreadable adapter: exit status and cleanup preservation
+ok - herdr child valid adapter: exit status and cleanup preservation
+ok - herdr grandchild missing adapter: exit status and cleanup preservation
+ok - herdr grandchild unreadable adapter: exit status and cleanup preservation
+ok - herdr grandchild valid adapter: exit status and cleanup preservation
+ok - orca task missing adapter: exit status and cleanup preservation
+ok - orca task unreadable adapter: exit status and cleanup preservation
+tests/.nm-adapter-targeted.sh: line 2234: 33221 Terminated: 15          ( cd "$case_dir/wt" && exec sleep 120 )
+tests/.nm-adapter-targeted.sh: line 2234: 33223 Terminated: 15          ( cd "$case_dir/tasktmp" && exec sleep 120 )
+ok - orca task valid adapter: exit status and cleanup preservation
+ok - orca forced-task missing adapter: exit status and cleanup preservation
+ok - orca forced-task unreadable adapter: exit status and cleanup preservation
+tests/.nm-adapter-targeted.sh: line 2234: 36128 Terminated: 15          ( cd "$case_dir/wt" && exec sleep 120 )
+tests/.nm-adapter-targeted.sh: line 2234: 36129 Terminated: 15          ( cd "$case_dir/tasktmp" && exec sleep 120 )
+ok - orca forced-task valid adapter: exit status and cleanup preservation
+ok - orca child missing adapter: exit status and cleanup preservation
+ok - orca child unreadable adapter: exit status and cleanup preservation
+ok - orca child valid adapter: exit status and cleanup preservation
+ok - orca grandchild missing adapter: exit status and cleanup preservation
+ok - orca grandchild unreadable adapter: exit status and cleanup preservation
+ok - orca grandchild valid adapter: exit status and cleanup preservation
+ok - herdr flat teardown preflight refuses before every destructive change
+
+=== adapter-cmux-child-missing ===
+stdout:
+stderr:
+error: cmux teardown prerequisites are unavailable for task-x1; nothing was changed - restore the adapter and rerun teardown
+
+=== adapter-cmux-child-unreadable ===
+stdout:
+stderr:
+error: cmux teardown prerequisites are unavailable for task-x1; nothing was changed - restore the adapter and rerun teardown
+
+=== adapter-cmux-child-valid ===
+stdout:
+teardown task-x1 complete (window firstmate:fm-task-x1, worktree /Users/martinstroher/.no-mistakes-worktrees/bash-adapter-refusal/01M2R8HPK0FPEKD7YN8ENJSJA0/.adapter-validation/tmp/fm-teardown-tests.hFutRD/adapter-cmux-child-valid/secondmate-home)
+stderr:
+
+=== adapter-cmux-forced-parent-missing ===
+stdout:
+stderr:
+error: cmux teardown prerequisites are unavailable for task-x1; nothing was changed - restore the adapter and rerun teardown
+
+=== adapter-cmux-forced-parent-unreadable ===
+stdout:
+stderr:
+error: cmux teardown prerequisites are unavailable for task-x1; nothing was changed - restore the adapter and rerun teardown
+
+=== adapter-cmux-forced-parent-valid ===
+stdout:
+teardown task-x1 complete (window workspace-1:surface-1, worktree /Users/martinstroher/.no-mistakes-worktrees/bash-adapter-refusal/01M2R8HPK0FPEKD7YN8ENJSJA0/.adapter-validation/tmp/fm-teardown-tests.hFutRD/adapter-cmux-forced-parent-valid/secondmate-home)
+stderr:
+
+=== adapter-cmux-forced-task-missing ===
+stdout:
+stderr:
+error: cmux teardown prerequisites are unavailable for task-x1; nothing was changed - restore the adapter and rerun teardown
+
+=== adapter-cmux-forced-task-unreadable ===
+stdout:
+stderr:
+error: cmux teardown prerequisites are unavailable for task-x1; nothing was changed - restore the adapter and rerun teardown
+
+=== adapter-cmux-forced-task-valid ===
+stdout:
+teardown task-x1 complete (window workspace-1:surface-1, worktree /Users/martinstroher/.no-mistakes-worktrees/bash-adapter-refusal/01M2R8HPK0FPEKD7YN8ENJSJA0/.adapter-validation/tmp/fm-teardown-tests.hFutRD/adapter-cmux-forced-task-valid/wt)
+Backlog: task-x1 is closed in /Users/martinstroher/.no-mistakes-worktrees/bash-adapter-refusal/01M2R8HPK0FPEKD7YN8ENJSJA0/.adapter-validation/tmp/fm-teardown-tests.hFutRD/adapter-cmux-forced-task-valid/data/backlog.md. Run bin/fm-tasks-axi.sh ready for dependency-cleared candidates, check date gates, and dispatch only work whose blockers are gone and date is due.
+stderr:
+teardown: reaping leaked worktree process(es) for task-x1: 3069 3070
+
+=== adapter-cmux-grandchild-missing ===
+stdout:
+stderr:
+error: cmux teardown prerequisites are unavailable for task-x1; nothing was changed - restore the adapter and rerun teardown
+
+=== adapter-cmux-grandchild-unreadable ===
+stdout:
+stderr:
+error: cmux teardown prerequisites are unavailable for task-x1; nothing was changed - restore the adapter and rerun teardown
+
+=== adapter-cmux-grandchild-valid ===
+stdout:
+teardown task-x1 complete (window firstmate:fm-task-x1, worktree /Users/martinstroher/.no-mistakes-worktrees/bash-adapter-refusal/01M2R8HPK0FPEKD7YN8ENJSJA0/.adapter-validation/tmp/fm-teardown-tests.hFutRD/adapter-cmux-grandchild-valid/secondmate-home)
+stderr:
+
+=== adapter-cmux-task-missing ===
+stdout:
+stderr:
+error: cmux teardown prerequisites are unavailable for task-x1; nothing was changed - restore the adapter and rerun teardown
+
+=== adapter-cmux-task-unreadable ===
+stdout:
+stderr:
+error: cmux teardown prerequisites are unavailable for task-x1; nothing was changed - restore the adapter and rerun teardown
+
+=== adapter-cmux-task-valid ===
+stdout:
+teardown task-x1 complete (window workspace-1:surface-1, worktree /Users/martinstroher/.no-mistakes-worktrees/bash-adapter-refusal/01M2R8HPK0FPEKD7YN8ENJSJA0/.adapter-validation/tmp/fm-teardown-tests.hFutRD/adapter-cmux-task-valid/wt)
+Backlog: task-x1 is closed in /Users/martinstroher/.no-mistakes-worktrees/bash-adapter-refusal/01M2R8HPK0FPEKD7YN8ENJSJA0/.adapter-validation/tmp/fm-teardown-tests.hFutRD/adapter-cmux-task-valid/data/backlog.md. Run bin/fm-tasks-axi.sh ready for dependency-cleared candidates, check date gates, and dispatch only work whose blockers are gone and date is due.
+stderr:
+teardown: reaping leaked worktree process(es) for task-x1: 97487 97488
+
+=== adapter-herdr-child-missing ===
+stdout:
+stderr:
+error: herdr teardown prerequisites are unavailable for task-x1; nothing was changed - restore the adapter and rerun teardown
+
+=== adapter-herdr-child-unreadable ===
+stdout:
+stderr:
+error: herdr teardown prerequisites are unavailable for task-x1; nothing was changed - restore the adapter and rerun teardown
+
+=== adapter-herdr-child-valid ===
+stdout:
+teardown task-x1 complete (window firstmate:fm-task-x1, worktree /Users/martinstroher/.no-mistakes-worktrees/bash-adapter-refusal/01M2R8HPK0FPEKD7YN8ENJSJA0/.adapter-validation/tmp/fm-teardown-tests.hFutRD/adapter-herdr-child-valid/secondmate-home)
+stderr:
+
+=== adapter-herdr-forced-parent-missing ===
+stdout:
+stderr:
+error: herdr teardown prerequisites are unavailable for task-x1; nothing was changed - restore the adapter and rerun teardown
+
+=== adapter-herdr-forced-parent-unreadable ===
+stdout:
+stderr:
+error: herdr teardown prerequisites are unavailable for task-x1; nothing was changed - restore the adapter and rerun teardown
+
+=== adapter-herdr-forced-parent-valid ===
+stdout:
+teardown task-x1 complete (window fixture:w1:p1, worktree /Users/martinstroher/.no-mistakes-worktrees/bash-adapter-refusal/01M2R8HPK0FPEKD7YN8ENJSJA0/.adapter-validation/tmp/fm-teardown-tests.hFutRD/adapter-herdr-forced-parent-valid/secondmate-home)
+stderr:
+
+=== adapter-herdr-forced-task-missing ===
+stdout:
+stderr:
+error: herdr teardown prerequisites are unavailable for task-x1; nothing was changed - restore the adapter and rerun teardown
+
+=== adapter-herdr-forced-task-unreadable ===
+stdout:
+stderr:
+error: herdr teardown prerequisites are unavailable for task-x1; nothing was changed - restore the adapter and rerun teardown
+
+=== adapter-herdr-forced-task-valid ===
+stdout:
+teardown task-x1 complete (window fixture:w1:p1, worktree /Users/martinstroher/.no-mistakes-worktrees/bash-adapter-refusal/01M2R8HPK0FPEKD7YN8ENJSJA0/.adapter-validation/tmp/fm-teardown-tests.hFutRD/adapter-herdr-forced-task-valid/wt)
+Backlog: task-x1 is closed in /Users/martinstroher/.no-mistakes-worktrees/bash-adapter-refusal/01M2R8HPK0FPEKD7YN8ENJSJA0/.adapter-validation/tmp/fm-teardown-tests.hFutRD/adapter-herdr-forced-task-valid/data/backlog.md. Run bin/fm-tasks-axi.sh ready for dependency-cleared candidates, check date gates, and dispatch only work whose blockers are gone and date is due.
+stderr:
+teardown: reaping leaked worktree process(es) for task-x1: 19350 19351
+
+=== adapter-herdr-grandchild-missing ===
+stdout:
+stderr:
+error: herdr teardown prerequisites are unavailable for task-x1; nothing was changed - restore the adapter and rerun teardown
+
+=== adapter-herdr-grandchild-unreadable ===
+stdout:
+stderr:
+error: herdr teardown prerequisites are unavailable for task-x1; nothing was changed - restore the adapter and rerun teardown
+
+=== adapter-herdr-grandchild-valid ===
+stdout:
+teardown task-x1 complete (window firstmate:fm-task-x1, worktree /Users/martinstroher/.no-mistakes-worktrees/bash-adapter-refusal/01M2R8HPK0FPEKD7YN8ENJSJA0/.adapter-validation/tmp/fm-teardown-tests.hFutRD/adapter-herdr-grandchild-valid/secondmate-home)
+stderr:
+
+=== adapter-herdr-task-missing ===
+stdout:
+stderr:
+error: herdr teardown prerequisites are unavailable for task-x1; nothing was changed - restore the adapter and rerun teardown
+
+=== adapter-herdr-task-unreadable ===
+stdout:
+stderr:
+error: herdr teardown prerequisites are unavailable for task-x1; nothing was changed - restore the adapter and rerun teardown
+
+=== adapter-herdr-task-valid ===
+stdout:
+teardown task-x1 complete (window fixture:w1:p1, worktree /Users/martinstroher/.no-mistakes-worktrees/bash-adapter-refusal/01M2R8HPK0FPEKD7YN8ENJSJA0/.adapter-validation/tmp/fm-teardown-tests.hFutRD/adapter-herdr-task-valid/wt)
+Backlog: task-x1 is closed in /Users/martinstroher/.no-mistakes-worktrees/bash-adapter-refusal/01M2R8HPK0FPEKD7YN8ENJSJA0/.adapter-validation/tmp/fm-teardown-tests.hFutRD/adapter-herdr-task-valid/data/backlog.md. Run bin/fm-tasks-axi.sh ready for dependency-cleared candidates, check date gates, and dispatch only work whose blockers are gone and date is due.
+stderr:
+teardown: reaping leaked worktree process(es) for task-x1: 16599 16600
+
+=== adapter-orca-child-missing ===
+stdout:
+stderr:
+error: orca teardown prerequisites are unavailable for task-x1; nothing was changed - restore the adapter and rerun teardown
+
+=== adapter-orca-child-unreadable ===
+stdout:
+stderr:
+error: orca teardown prerequisites are unavailable for task-x1; nothing was changed - restore the adapter and rerun teardown
+
+=== adapter-orca-child-valid ===
+stdout:
+teardown task-x1 complete (window firstmate:fm-task-x1, worktree /Users/martinstroher/.no-mistakes-worktrees/bash-adapter-refusal/01M2R8HPK0FPEKD7YN8ENJSJA0/.adapter-validation/tmp/fm-teardown-tests.hFutRD/adapter-orca-child-valid/secondmate-home)
+stderr:
+
+=== adapter-orca-forced-task-missing ===
+stdout:
+stderr:
+error: orca teardown prerequisites are unavailable for task-x1; nothing was changed - restore the adapter and rerun teardown
+
+=== adapter-orca-forced-task-unreadable ===
+stdout:
+stderr:
+error: orca teardown prerequisites are unavailable for task-x1; nothing was changed - restore the adapter and rerun teardown
+
+=== adapter-orca-forced-task-valid ===
+stdout:
+teardown task-x1 complete (window term-task-x1, worktree /Users/martinstroher/.no-mistakes-worktrees/bash-adapter-refusal/01M2R8HPK0FPEKD7YN8ENJSJA0/.adapter-validation/tmp/fm-teardown-tests.hFutRD/adapter-orca-forced-task-valid/wt)
+Backlog: task-x1 is closed in /Users/martinstroher/.no-mistakes-worktrees/bash-adapter-refusal/01M2R8HPK0FPEKD7YN8ENJSJA0/.adapter-validation/tmp/fm-teardown-tests.hFutRD/adapter-orca-forced-task-valid/data/backlog.md. Run bin/fm-tasks-axi.sh ready for dependency-cleared candidates, check date gates, and dispatch only work whose blockers are gone and date is due.
+stderr:
+teardown: reaping leaked worktree process(es) for task-x1: 36128 36129
+
+=== adapter-orca-grandchild-missing ===
+stdout:
+stderr:
+error: orca teardown prerequisites are unavailable for task-x1; nothing was changed - restore the adapter and rerun teardown
+
+=== adapter-orca-grandchild-unreadable ===
+stdout:
+stderr:
+error: orca teardown prerequisites are unavailable for task-x1; nothing was changed - restore the adapter and rerun teardown
+
+=== adapter-orca-grandchild-valid ===
+stdout:
+teardown task-x1 complete (window firstmate:fm-task-x1, worktree /Users/martinstroher/.no-mistakes-worktrees/bash-adapter-refusal/01M2R8HPK0FPEKD7YN8ENJSJA0/.adapter-validation/tmp/fm-teardown-tests.hFutRD/adapter-orca-grandchild-valid/secondmate-home)
+stderr:
+
+=== adapter-orca-task-missing ===
+stdout:
+stderr:
+error: orca teardown prerequisites are unavailable for task-x1; nothing was changed - restore the adapter and rerun teardown
+
+=== adapter-orca-task-unreadable ===
+stdout:
+stderr:
+error: orca teardown prerequisites are unavailable for task-x1; nothing was changed - restore the adapter and rerun teardown
+
+=== adapter-orca-task-valid ===
+stdout:
+teardown task-x1 complete (window term-task-x1, worktree /Users/martinstroher/.no-mistakes-worktrees/bash-adapter-refusal/01M2R8HPK0FPEKD7YN8ENJSJA0/.adapter-validation/tmp/fm-teardown-tests.hFutRD/adapter-orca-task-valid/wt)
+Backlog: task-x1 is closed in /Users/martinstroher/.no-mistakes-worktrees/bash-adapter-refusal/01M2R8HPK0FPEKD7YN8ENJSJA0/.adapter-validation/tmp/fm-teardown-tests.hFutRD/adapter-orca-task-valid/data/backlog.md. Run bin/fm-tasks-axi.sh ready for dependency-cleared candidates, check date gates, and dispatch only work whose blockers are gone and date is due.
+stderr:
+teardown: reaping leaked worktree process(es) for task-x1: 33221 33223
+
+=== adapter-tmux-child-missing ===
+stdout:
+stderr:
+error: tmux teardown prerequisites are unavailable for task-x1; nothing was changed - restore the adapter and rerun teardown
+
+=== adapter-tmux-child-unreadable ===
+stdout:
+stderr:
+error: tmux teardown prerequisites are unavailable for task-x1; nothing was changed - restore the adapter and rerun teardown
+
+=== adapter-tmux-child-valid ===
+stdout:
+teardown task-x1 complete (window fixture-task-x1:7, worktree /Users/martinstroher/.no-mistakes-worktrees/bash-adapter-refusal/01M2R8HPK0FPEKD7YN8ENJSJA0/.adapter-validation/tmp/fm-teardown-tests.hFutRD/adapter-tmux-child-valid/secondmate-home)
+stderr:
+
+=== adapter-tmux-forced-parent-missing ===
+stdout:
+stderr:
+error: tmux teardown prerequisites are unavailable for task-x1; nothing was changed - restore the adapter and rerun teardown
+
+=== adapter-tmux-forced-parent-unreadable ===
+stdout:
+stderr:
+error: tmux teardown prerequisites are unavailable for task-x1; nothing was changed - restore the adapter and rerun teardown
+
+=== adapter-tmux-forced-parent-valid ===
+stdout:
+teardown task-x1 complete (window firstmate:fm-task-x1, worktree /Users/martinstroher/.no-mistakes-worktrees/bash-adapter-refusal/01M2R8HPK0FPEKD7YN8ENJSJA0/.adapter-validation/tmp/fm-teardown-tests.hFutRD/adapter-tmux-forced-parent-valid/secondmate-home)
+stderr:
+
+=== adapter-tmux-forced-task-missing ===
+stdout:
+stderr:
+error: tmux teardown prerequisites are unavailable for task-x1; nothing was changed - restore the adapter and rerun teardown
+
+=== adapter-tmux-forced-task-unreadable ===
+stdout:
+stderr:
+error: tmux teardown prerequisites are unavailable for task-x1; nothing was changed - restore the adapter and rerun teardown
+
+=== adapter-tmux-forced-task-valid ===
+stdout:
+teardown task-x1 complete (window firstmate:fm-task-x1, worktree /Users/martinstroher/.no-mistakes-worktrees/bash-adapter-refusal/01M2R8HPK0FPEKD7YN8ENJSJA0/.adapter-validation/tmp/fm-teardown-tests.hFutRD/adapter-tmux-forced-task-valid/wt)
+Backlog: task-x1 is closed in /Users/martinstroher/.no-mistakes-worktrees/bash-adapter-refusal/01M2R8HPK0FPEKD7YN8ENJSJA0/.adapter-validation/tmp/fm-teardown-tests.hFutRD/adapter-tmux-forced-task-valid/data/backlog.md. Run bin/fm-tasks-axi.sh ready for dependency-cleared candidates, check date gates, and dispatch only work whose blockers are gone and date is due.
+stderr:
+teardown: reaping leaked worktree process(es) for task-x1: 65554 65555
+
+=== adapter-tmux-grandchild-missing ===
+stdout:
+stderr:
+error: tmux teardown prerequisites are unavailable for task-x1; nothing was changed - restore the adapter and rerun teardown
+
+=== adapter-tmux-grandchild-unreadable ===
+stdout:
+stderr:
+error: tmux teardown prerequisites are unavailable for task-x1; nothing was changed - restore the adapter and rerun teardown
+
+=== adapter-tmux-grandchild-valid ===
+stdout:
+teardown task-x1 complete (window fixture-task-x1:7, worktree /Users/martinstroher/.no-mistakes-worktrees/bash-adapter-refusal/01M2R8HPK0FPEKD7YN8ENJSJA0/.adapter-validation/tmp/fm-teardown-tests.hFutRD/adapter-tmux-grandchild-valid/secondmate-home)
+stderr:
+
+=== adapter-tmux-task-missing ===
+stdout:
+stderr:
+error: tmux teardown prerequisites are unavailable for task-x1; nothing was changed - restore the adapter and rerun teardown
+
+=== adapter-tmux-task-unreadable ===
+stdout:
+stderr:
+error: tmux teardown prerequisites are unavailable for task-x1; nothing was changed - restore the adapter and rerun teardown
+
+=== adapter-tmux-task-valid ===
+stdout:
+teardown task-x1 complete (window firstmate:fm-task-x1, worktree /Users/martinstroher/.no-mistakes-worktrees/bash-adapter-refusal/01M2R8HPK0FPEKD7YN8ENJSJA0/.adapter-validation/tmp/fm-teardown-tests.hFutRD/adapter-tmux-task-valid/wt)
+Backlog: task-x1 is closed in /Users/martinstroher/.no-mistakes-worktrees/bash-adapter-refusal/01M2R8HPK0FPEKD7YN8ENJSJA0/.adapter-validation/tmp/fm-teardown-tests.hFutRD/adapter-tmux-task-valid/data/backlog.md. Run bin/fm-tasks-axi.sh ready for dependency-cleared candidates, check date gates, and dispatch only work whose blockers are gone and date is due.
+stderr:
+teardown: reaping leaked worktree process(es) for task-x1: 61308 61309
+
+=== adapter-zellij-child-missing ===
+stdout:
+stderr:
+error: zellij teardown prerequisites are unavailable for task-x1; nothing was changed - restore the adapter and rerun teardown
+
+=== adapter-zellij-child-unreadable ===
+stdout:
+stderr:
+error: zellij teardown prerequisites are unavailable for task-x1; nothing was changed - restore the adapter and rerun teardown
+
+=== adapter-zellij-child-valid ===
+stdout:
+teardown task-x1 complete (window firstmate:fm-task-x1, worktree /Users/martinstroher/.no-mistakes-worktrees/bash-adapter-refusal/01M2R8HPK0FPEKD7YN8ENJSJA0/.adapter-validation/tmp/fm-teardown-tests.hFutRD/adapter-zellij-child-valid/secondmate-home)
+stderr:
+
+=== adapter-zellij-forced-parent-missing ===
+stdout:
+stderr:
+error: zellij teardown prerequisites are unavailable for task-x1; nothing was changed - restore the adapter and rerun teardown
+
+=== adapter-zellij-forced-parent-unreadable ===
+stdout:
+stderr:
+error: zellij teardown prerequisites are unavailable for task-x1; nothing was changed - restore the adapter and rerun teardown
+
+=== adapter-zellij-forced-parent-valid ===
+stdout:
+teardown task-x1 complete (window fixture-task-x1:7, worktree /Users/martinstroher/.no-mistakes-worktrees/bash-adapter-refusal/01M2R8HPK0FPEKD7YN8ENJSJA0/.adapter-validation/tmp/fm-teardown-tests.hFutRD/adapter-zellij-forced-parent-valid/secondmate-home)
+stderr:
+
+=== adapter-zellij-forced-task-missing ===
+stdout:
+stderr:
+error: zellij teardown prerequisites are unavailable for task-x1; nothing was changed - restore the adapter and rerun teardown
+
+=== adapter-zellij-forced-task-unreadable ===
+stdout:
+stderr:
+error: zellij teardown prerequisites are unavailable for task-x1; nothing was changed - restore the adapter and rerun teardown
+
+=== adapter-zellij-forced-task-valid ===
+stdout:
+teardown task-x1 complete (window fixture-task-x1:7, worktree /Users/martinstroher/.no-mistakes-worktrees/bash-adapter-refusal/01M2R8HPK0FPEKD7YN8ENJSJA0/.adapter-validation/tmp/fm-teardown-tests.hFutRD/adapter-zellij-forced-task-valid/wt)
+Backlog: task-x1 is closed in /Users/martinstroher/.no-mistakes-worktrees/bash-adapter-refusal/01M2R8HPK0FPEKD7YN8ENJSJA0/.adapter-validation/tmp/fm-teardown-tests.hFutRD/adapter-zellij-forced-task-valid/data/backlog.md. Run bin/fm-tasks-axi.sh ready for dependency-cleared candidates, check date gates, and dispatch only work whose blockers are gone and date is due.
+stderr:
+teardown: reaping leaked worktree process(es) for task-x1: 82608 82609
+
+=== adapter-zellij-grandchild-missing ===
+stdout:
+stderr:
+error: zellij teardown prerequisites are unavailable for task-x1; nothing was changed - restore the adapter and rerun teardown
+
+=== adapter-zellij-grandchild-unreadable ===
+stdout:
+stderr:
+error: zellij teardown prerequisites are unavailable for task-x1; nothing was changed - restore the adapter and rerun teardown
+
+=== adapter-zellij-grandchild-valid ===
+stdout:
+teardown task-x1 complete (window firstmate:fm-task-x1, worktree /Users/martinstroher/.no-mistakes-worktrees/bash-adapter-refusal/01M2R8HPK0FPEKD7YN8ENJSJA0/.adapter-validation/tmp/fm-teardown-tests.hFutRD/adapter-zellij-grandchild-valid/secondmate-home)
+stderr:
+
+=== adapter-zellij-task-missing ===
+stdout:
+stderr:
+error: zellij teardown prerequisites are unavailable for task-x1; nothing was changed - restore the adapter and rerun teardown
+
+=== adapter-zellij-task-unreadable ===
+stdout:
+stderr:
+error: zellij teardown prerequisites are unavailable for task-x1; nothing was changed - restore the adapter and rerun teardown
+
+=== adapter-zellij-task-valid ===
+stdout:
+teardown task-x1 complete (window fixture-task-x1:7, worktree /Users/martinstroher/.no-mistakes-worktrees/bash-adapter-refusal/01M2R8HPK0FPEKD7YN8ENJSJA0/.adapter-validation/tmp/fm-teardown-tests.hFutRD/adapter-zellij-task-valid/wt)
+Backlog: task-x1 is closed in /Users/martinstroher/.no-mistakes-worktrees/bash-adapter-refusal/01M2R8HPK0FPEKD7YN8ENJSJA0/.adapter-validation/tmp/fm-teardown-tests.hFutRD/adapter-zellij-task-valid/data/backlog.md. Run bin/fm-tasks-axi.sh ready for dependency-cleared candidates, check date gates, and dispatch only work whose blockers are gone and date is due.
+stderr:
+teardown: reaping leaked worktree process(es) for task-x1: 78580 78581
+
+=== herdr-preflight-missing-adapter ===
+stdout:
+stderr:
+●━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+●  WATCHER DOWN - SUPERVISION IS OFF
+●  1 task(s) in flight, but no live watcher process holds this home lock (last beat: 2s ago).
+●  Trust the emitted supervision protocol for this harness; do not use shell & for watcher repair.
+●  This is a supervision warning only; the guarded operation WILL still run.
+●  repair a missing or failed watcher cycle with the Pi tool fm_watch_arm_pi, or restart Pi with -e /Users/martinstroher/.no-mistakes-worktrees/bash-adapter-refusal/01M2R8HPK0FPEKD7YN8ENJSJA0/.pi/extensions/fm-primary-turnend-guard.ts -e /Users/martinstroher/.no-mistakes-worktrees/bash-adapter-refusal/01M2R8HPK0FPEKD7YN8ENJSJA0/.pi/extensions/fm-primary-pi-watch.ts if the extensions are not loaded.
+●━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+error: herdr teardown prerequisites are unavailable for task-x1; nothing was changed - restore the adapter and rerun teardown
+
+=== herdr-preflight-missing-explicit-close-helper ===
+stdout:
+stderr:
+●━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+●  WATCHER DOWN - SUPERVISION IS OFF
+●  1 task(s) in flight, but no live watcher process holds this home lock (last beat: 1s ago).
+●  Trust the emitted supervision protocol for this harness; do not use shell & for watcher repair.
+●  This is a supervision warning only; the guarded operation WILL still run.
+●  repair a missing or failed watcher cycle with the Pi tool fm_watch_arm_pi, or restart Pi with -e /Users/martinstroher/.no-mistakes-worktrees/bash-adapter-refusal/01M2R8HPK0FPEKD7YN8ENJSJA0/.pi/extensions/fm-primary-turnend-guard.ts -e /Users/martinstroher/.no-mistakes-worktrees/bash-adapter-refusal/01M2R8HPK0FPEKD7YN8ENJSJA0/.pi/extensions/fm-primary-pi-watch.ts if the extensions are not loaded.
+●━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+error: herdr teardown prerequisites are unavailable for task-x1; nothing was changed - restore the adapter and rerun teardown
+
+=== herdr-preflight-missing-parser ===
+stdout:
+stderr:
+●━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+●  WATCHER DOWN - SUPERVISION IS OFF
+●  1 task(s) in flight, but no live watcher process holds this home lock (last beat: 1s ago).
+●  Trust the emitted supervision protocol for this harness; do not use shell & for watcher repair.
+●  This is a supervision warning only; the guarded operation WILL still run.
+●  repair a missing or failed watcher cycle with the Pi tool fm_watch_arm_pi, or restart Pi with -e /Users/martinstroher/.no-mistakes-worktrees/bash-adapter-refusal/01M2R8HPK0FPEKD7YN8ENJSJA0/.pi/extensions/fm-primary-turnend-guard.ts -e /Users/martinstroher/.no-mistakes-worktrees/bash-adapter-refusal/01M2R8HPK0FPEKD7YN8ENJSJA0/.pi/extensions/fm-primary-pi-watch.ts if the extensions are not loaded.
+●━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+error: herdr teardown prerequisites are unavailable for task-x1; nothing was changed - restore the adapter and rerun teardown
+
+=== herdr-preflight-missing-unreadable-adapter ===
+stdout:
+stderr:
+●━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+●  WATCHER DOWN - SUPERVISION IS OFF
+●  1 task(s) in flight, but no live watcher process holds this home lock (last beat: 1s ago).
+●  Trust the emitted supervision protocol for this harness; do not use shell & for watcher repair.
+●  This is a supervision warning only; the guarded operation WILL still run.
+●  repair a missing or failed watcher cycle with the Pi tool fm_watch_arm_pi, or restart Pi with -e /Users/martinstroher/.no-mistakes-worktrees/bash-adapter-refusal/01M2R8HPK0FPEKD7YN8ENJSJA0/.pi/extensions/fm-primary-turnend-guard.ts -e /Users/martinstroher/.no-mistakes-worktrees/bash-adapter-refusal/01M2R8HPK0FPEKD7YN8ENJSJA0/.pi/extensions/fm-primary-pi-watch.ts if the extensions are not loaded.
+●━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+error: herdr teardown prerequisites are unavailable for task-x1; nothing was changed - restore the adapter and rerun teardown
+
+=== herdr-preflight-unresolvable-lock ===
+stdout:
+stderr:
+●━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+●  WATCHER DOWN - SUPERVISION IS OFF
+●  1 task(s) in flight, but no live watcher process holds this home lock (last beat: 1s ago).
+●  Trust the emitted supervision protocol for this harness; do not use shell & for watcher repair.
+●  This is a supervision warning only; the guarded operation WILL still run.
+●  repair a missing or failed watcher cycle with the Pi tool fm_watch_arm_pi, or restart Pi with -e /Users/martinstroher/.no-mistakes-worktrees/bash-adapter-refusal/01M2R8HPK0FPEKD7YN8ENJSJA0/.pi/extensions/fm-primary-turnend-guard.ts -e /Users/martinstroher/.no-mistakes-worktrees/bash-adapter-refusal/01M2R8HPK0FPEKD7YN8ENJSJA0/.pi/extensions/fm-primary-pi-watch.ts if the extensions are not loaded.
+●━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+error: herdr session presentation lock could not be resolved for task-x1; nothing was changed - rerun teardown once the session is reachable and unambiguous
