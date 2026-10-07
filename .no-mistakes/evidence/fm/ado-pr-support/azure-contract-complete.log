@@ -1,0 +1,58 @@
+test_ambiguous_method_needs_selection (__main__.AzureContract.test_ambiguous_method_needs_selection) ... ok
+test_arbitrary_legacy_collections_refuse_before_transport (__main__.AzureContract.test_arbitrary_legacy_collections_refuse_before_transport) ... ok
+test_auth_network_json_and_partial_errors (__main__.AzureContract.test_auth_network_json_and_partial_errors) ... ok
+test_changed_head_and_server_race (__main__.AzureContract.test_changed_head_and_server_race) ... ok
+test_check_refusals_and_unresolved_discussions_without_policy (__main__.AzureContract.test_check_refusals_and_unresolved_discussions_without_policy) ... ok
+test_completed_not_abandoned_poll (__main__.AzureContract.test_completed_not_abandoned_poll) ... ok
+test_crew_disposition_read_is_bounded (__main__.AzureContract.test_crew_disposition_read_is_bounded) ... ok
+test_crew_green_monitor_disposition (__main__.AzureContract.test_crew_green_monitor_disposition) ... ok
+test_crew_passed_disposition (__main__.AzureContract.test_crew_passed_disposition) ... ok
+test_crew_unreadable_and_skipped_disposition (__main__.AzureContract.test_crew_unreadable_and_skipped_disposition) ... ok
+test_current_check_supersedes_old_record (__main__.AzureContract.test_current_check_supersedes_old_record) ... ok
+test_head_uses_current_iteration_source (__main__.AzureContract.test_head_uses_current_iteration_source) ... ok
+test_identity_routes (__main__.AzureContract.test_identity_routes) ... ok
+test_landed_identity_is_actual_merge_result_not_source_snapshot (__main__.AzureContract.test_landed_identity_is_actual_merge_result_not_source_snapshot) ... ok
+test_legacy_collection_transport_uses_root_organization_url (__main__.AzureContract.test_legacy_collection_transport_uses_root_organization_url) ... ok
+test_malformed_identity (__main__.AzureContract.test_malformed_identity) ... ok
+test_merge_reregistration_keeps_completion_draft_guard (__main__.AzureContract.test_merge_reregistration_keeps_completion_draft_guard) ... ok
+test_no_waivers_or_async_success (__main__.AzureContract.test_no_waivers_or_async_success) ... ok
+test_policy_refusal_matrix (__main__.AzureContract.test_policy_refusal_matrix) ... ok
+test_push_only_policies_do_not_require_pr_evaluations (__main__.AzureContract.test_push_only_policies_do_not_require_pr_evaluations) ... ok
+test_refusal_matrix (__main__.AzureContract.test_refusal_matrix) ... ok
+test_registration_accepts_non_draft_or_unknown_draft_field (__main__.AzureContract.test_registration_accepts_non_draft_or_unknown_draft_field) ... ok
+test_registration_and_guarded_merge (__main__.AzureContract.test_registration_and_guarded_merge) ... ERROR
+test_registration_refuses_draft_transition_before_publication (__main__.AzureContract.test_registration_refuses_draft_transition_before_publication) ... ok
+test_required_build_exact_revision (__main__.AzureContract.test_required_build_exact_revision) ... ok
+test_revision_bound_completion (__main__.AzureContract.test_revision_bound_completion) ... ok
+test_status_policy_record_is_revision_bound (__main__.AzureContract.test_status_policy_record_is_revision_bound) ... ok
+
+======================================================================
+ERROR: test_registration_and_guarded_merge (__main__.AzureContract.test_registration_and_guarded_merge)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/martinstroher/dev/firstmate/data/ado-pr-support/nm/worktrees/324a78b3a755/01M49K3325XCG3AZXM5D4E3AZ6/tests/azure-pr-contract.py", line 520, in test_registration_and_guarded_merge
+    p = self.script("fm-pr-merge.sh", "task", URL)
+  File "/Users/martinstroher/dev/firstmate/data/ado-pr-support/nm/worktrees/324a78b3a755/01M49K3325XCG3AZXM5D4E3AZ6/tests/azure-pr-contract.py", line 129, in script
+    return subprocess.run([str(ROOT / "bin" / script), *args], env=self.env,
+           ~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+                          text=True, capture_output=True, timeout=30)
+                          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/homebrew/Cellar/python@3.14/3.14.6/Frameworks/Python.framework/Versions/3.14/lib/python3.14/subprocess.py", line 557, in run
+    stdout, stderr = process.communicate(input, timeout=timeout)
+                     ~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/homebrew/Cellar/python@3.14/3.14.6/Frameworks/Python.framework/Versions/3.14/lib/python3.14/subprocess.py", line 1221, in communicate
+    stdout, stderr = self._communicate(input, endtime, timeout)
+                     ~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/homebrew/Cellar/python@3.14/3.14.6/Frameworks/Python.framework/Versions/3.14/lib/python3.14/subprocess.py", line 2154, in _communicate
+    self._check_timeout(endtime, orig_timeout, stdout, stderr)
+    ~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/homebrew/Cellar/python@3.14/3.14.6/Frameworks/Python.framework/Versions/3.14/lib/python3.14/subprocess.py", line 1268, in _check_timeout
+    raise TimeoutExpired(
+    ...<2 lines>...
+            stderr=b''.join(stderr_seq) if stderr_seq else None)
+subprocess.TimeoutExpired: Command '['/Users/martinstroher/dev/firstmate/data/ado-pr-support/nm/worktrees/324a78b3a755/01M49K3325XCG3AZXM5D4E3AZ6/bin/fm-pr-merge.sh', 'task', 'https://dev.azure.com/example/Project/_git/repo/pullrequest/7']' timed out after 30 seconds
+
+----------------------------------------------------------------------
+Ran 27 tests in 325.783s
+
+FAILED (errors=1)

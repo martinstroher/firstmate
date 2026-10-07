@@ -1,0 +1,4 @@
+Switched to a new branch '$(touch${IFS}/private/tmp/fm-task-delivery.QGczXZ/promote-branch-shell-safe-marker)/promote-branch-safe-e3'
+ok - fm-promote: ref-format-valid shell metacharacters stay literal in promotion branch commands
+ok - project-specific branch prefixes reach scaffold, promotion and DOD; unsafe prefixes refuse
+ok - fm-spawn: a ship branch that deviates from the registered prefix is announced, never blocked

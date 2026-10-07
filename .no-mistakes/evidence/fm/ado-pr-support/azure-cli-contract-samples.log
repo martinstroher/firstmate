@@ -1,0 +1,34 @@
+URL parsing below uses the real CLI without any transport mock or Azure API request.
+
+$ python3 bin/fm-azure-pr.py parse https://dev.azure.com/example/Team%20Project/_git/repo/pullrequest/7
+dev.azure.com
+example/Team%20Project/_git/repo
+7
+exit=0
+
+$ python3 bin/fm-azure-pr.py parse https://dev.azure.com/example/Team%20Project/_git/repo/pullrequest/7?ambiguous=1
+error: invalid Azure PR URL
+exit=1
+
+$ python3 bin/fm-azure-pr.py parse https://dev.azure.com/example/A%2FB/_git/repo/pullrequest/7
+error: invalid Azure path segment
+exit=1
+
+$ python3 bin/fm-azure-pr.py parse https://dev.azure.com.evil/example/Team%20Project/_git/repo/pullrequest/7
+error: unsupported Azure Services host or route
+exit=1
+
+The following are SYNTHETIC transport checks; NOT live Azure evidence.
+
+Required colleague vote=0:
+error: Azure required reviewer has not supplied an approval
+exit=1
+
+Required colleague vote=10:
+accepted
+exit=0
+Observed completion request at synthetic Azure CLI boundary:
+{"status": "completed", "lastMergeSourceCommit": {"commitId": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa"}, "completionOptions": {"mergeStrategy": "squash", "bypassPolicy": false, "deleteSourceBranch": false, "transitionWorkItems": false}}
+disposition status=active: open (exit=0)
+disposition status=abandoned: closed (exit=0)
+disposition status=completed: merged (exit=0)

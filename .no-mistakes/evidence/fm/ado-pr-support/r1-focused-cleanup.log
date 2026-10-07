@@ -1,0 +1,46 @@
+..........
+----------------------------------------------------------------------
+Ran 10 tests in 0.186s
+
+OK
+Automatic merge went well; stopped before committing as requested
+Preparing worktree (detached HEAD 227f97e)
+Rebasing (1/1)Successfully rebased and updated detached HEAD.
+scenario=merge-main-upstream route=pr expected=0 observed=0
+Automatic merge went well; stopped before committing as requested
+Preparing worktree (detached HEAD 4a7af95)
+Rebasing (1/1)Successfully rebased and updated detached HEAD.
+scenario=merge-main-upstream route=default expected=0 observed=0
+Automatic merge went well; stopped before committing as requested
+Preparing worktree (detached HEAD 70da16e)
+Rebasing (1/1)Successfully rebased and updated detached HEAD.
+scenario=merge-main-same-file route=pr expected=0 observed=0
+Automatic merge went well; stopped before committing as requested
+Preparing worktree (detached HEAD be35311)
+Rebasing (1/1)Successfully rebased and updated detached HEAD.
+scenario=merge-main-same-file route=default expected=0 observed=0
+Automatic merge went well; stopped before committing as requested
+Preparing worktree (detached HEAD 41ab5ac)
+Rebasing (1/1)Successfully rebased and updated detached HEAD.
+scenario=merge-main-resolution route=pr expected=1 observed=1
+Automatic merge went well; stopped before committing as requested
+Preparing worktree (detached HEAD 42cc8bb)
+Rebasing (1/1)Successfully rebased and updated detached HEAD.
+scenario=merge-main-resolution route=default expected=1 observed=1
+Automatic merge went well; stopped before committing as requested
+Preparing worktree (detached HEAD cbfe691)
+Rebasing (1/1)Successfully rebased and updated detached HEAD.
+scenario=merge-main-merge-restoration route=pr expected=1 observed=1
+Automatic merge went well; stopped before committing as requested
+Preparing worktree (detached HEAD 2aec8d7)
+Rebasing (1/1)Successfully rebased and updated detached HEAD.
+scenario=merge-main-merge-restoration route=default expected=1 observed=1
+Automatic merge went well; stopped before committing as requested
+Preparing worktree (detached HEAD ce696cf)
+Rebasing (1/1)Successfully rebased and updated detached HEAD.
+scenario=merge-main-local-restoration route=pr expected=1 observed=1
+Automatic merge went well; stopped before committing as requested
+Preparing worktree (detached HEAD 2df5eaf)
+Rebasing (1/1)Successfully rebased and updated detached HEAD.
+scenario=merge-main-local-restoration route=default expected=1 observed=1
+ok - R1 merge-from-main histories pass both PR and default routes, including merge resolutions and restorations

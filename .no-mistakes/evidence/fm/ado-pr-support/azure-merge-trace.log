@@ -1,0 +1,2217 @@
++ set -eu
++++ dirname /Users/martinstroher/dev/firstmate/data/ado-pr-support/nm/worktrees/324a78b3a755/01M49K3325XCG3AZXM5D4E3AZ6/bin/fm-pr-merge.sh
+++ cd /Users/martinstroher/dev/firstmate/data/ado-pr-support/nm/worktrees/324a78b3a755/01M49K3325XCG3AZXM5D4E3AZ6/bin
+++ pwd
++ SCRIPT_DIR=/Users/martinstroher/dev/firstmate/data/ado-pr-support/nm/worktrees/324a78b3a755/01M49K3325XCG3AZXM5D4E3AZ6/bin
++ FM_ROOT=/tmp/fm-azure-contract-qsr7zclv
++ FM_HOME=/tmp/fm-azure-contract-qsr7zclv
++ STATE=/tmp/fm-azure-contract-qsr7zclv/state
++ . /Users/martinstroher/dev/firstmate/data/ado-pr-support/nm/worktrees/324a78b3a755/01M49K3325XCG3AZXM5D4E3AZ6/bin/fm-pr-lib.sh
+++ FM_PR_PROVIDER=
+++ FM_PR_URL=
+++ FM_PR_HOST=
+++ FM_PR_PATH=
+++ FM_PR_OWNER=
+++ FM_PR_REPO=
+++ FM_PR_NUMBER=
+++ FM_PR_DATA_PROVIDER=
+++ FM_PR_DATA_URL=
+++ FM_PR_DATA_HOST=
+++ FM_PR_DATA_PATH=
+++ FM_PR_DATA_NUMBER=
+++ FM_PR_META_PROVIDER=
+++ FM_PR_META_URL=
+++ FM_PR_META_HOST=
+++ FM_PR_META_PATH=
+++ FM_PR_META_NUMBER=
+++ FM_PR_REG_ID=
+++ FM_PR_REG_PROVIDER=
+++ FM_PR_REG_URL=
+++ FM_PR_REG_HOST=
+++ FM_PR_REG_PATH=
+++ FM_PR_REG_NUMBER=
+++ FM_PR_REG_DATA_HASH=
+++ FM_PR_REG_TEMPLATE_HASH=
+++ FM_PR_REG_DATA_IDENTITY=
+++ FM_PR_REG_CHECK_IDENTITY=
+++ FM_PR_POLL_DATA_TMP=
+++ FM_PR_POLL_CHECK_TMP=
+++ FM_PR_POLL_REG_TMP=
+++ FM_PR_POLL_DATA_DEST=
+++ FM_PR_POLL_CHECK_DEST=
+++ FM_PR_POLL_REG_DEST=
+++ FM_PR_POLL_EXPECT_ID=
+++ FM_PR_POLL_EXPECT_PROVIDER=
+++ FM_PR_POLL_EXPECT_URL=
+++ FM_PR_POLL_EXPECT_HOST=
+++ FM_PR_POLL_EXPECT_PATH=
+++ FM_PR_POLL_EXPECT_NUMBER=
+++ FM_PR_POLL_EXPECT_DATA_HASH=
+++ FM_PR_POLL_EXPECT_TEMPLATE_HASH=
+++ FM_PR_POLL_EXPECT_DATA_IDENTITY=
+++ FM_PR_POLL_EXPECT_CHECK_IDENTITY=
+++ FM_PR_POLL_TEMPLATE=
+++ FM_PR_POLL_STATE_DEVICE=
+++ FM_PR_POLL_SNAPSHOT_ID=
+++ FM_PR_POLL_SNAPSHOT_PROVIDER=
+++ FM_PR_POLL_SNAPSHOT_URL=
+++ FM_PR_POLL_SNAPSHOT_HOST=
+++ FM_PR_POLL_SNAPSHOT_PATH=
+++ FM_PR_POLL_SNAPSHOT_NUMBER=
+++ FM_PR_POLL_SNAPSHOT_DATA_HASH=
+++ FM_PR_POLL_SNAPSHOT_TEMPLATE_HASH=
+++ FM_PR_POLL_SNAPSHOT_DATA_IDENTITY=
+++ FM_PR_POLL_SNAPSHOT_CHECK_IDENTITY=
+++ FM_PR_POLL_SNAPSHOT_REG_HASH=
+++ FM_PR_POLL_SNAPSHOT_REG_IDENTITY=
+++ FM_PR_POLL_REARM_DATA_IDENTITY=
+++ FM_PR_POLL_REARM_CHECK_IDENTITY=
+++ FM_PR_RETIRE_ID=
+++ FM_PR_RETIRE_PROVIDER=
+++ FM_PR_RETIRE_URL=
+++ FM_PR_RETIRE_HOST=
+++ FM_PR_RETIRE_PATH=
+++ FM_PR_RETIRE_NUMBER=
+++ FM_PR_RETIRE_DATA_HASH=
+++ FM_PR_RETIRE_TEMPLATE_HASH=
+++ FM_PR_RETIRE_DATA_IDENTITY=
+++ FM_PR_RETIRE_CHECK_IDENTITY=
+++ FM_PR_RETIRE_REG_HASH=
+++ FM_PR_RETIRE_REG_IDENTITY=
+++ FM_PR_RETIRE_RECEIPT_HASH=
+++ FM_PR_RETIRE_RECEIPT_IDENTITY=
+++ FM_PR_RECORD_STATE=
+++ FM_PR_RECORD_MERGED=
+++ FM_PR_POLL_RETIREMENT_REJECTED=
++ . /Users/martinstroher/dev/firstmate/data/ado-pr-support/nm/worktrees/324a78b3a755/01M49K3325XCG3AZXM5D4E3AZ6/bin/fm-backlog-transition-lib.sh
+++ FM_BACKLOG_TRANSITION_SKIP=
+++ FM_BACKLOG_TRANSITION_ERROR=
+++ FM_BACKLOG_ROW_RESULT=
+++ FM_BACKLOG_ROW_STATE=
+++ FM_BACKLOG_ROW_ERROR=
+++ FM_BACKLOG_ROW_HOLD_KIND=
+++ FM_BACKLOG_CLOSE_REPLAY_RESULT=
+++++ dirname /Users/martinstroher/dev/firstmate/data/ado-pr-support/nm/worktrees/324a78b3a755/01M49K3325XCG3AZXM5D4E3AZ6/bin/fm-backlog-transition-lib.sh
++++ cd /Users/martinstroher/dev/firstmate/data/ado-pr-support/nm/worktrees/324a78b3a755/01M49K3325XCG3AZXM5D4E3AZ6/bin
++++ pwd
+++ . /Users/martinstroher/dev/firstmate/data/ado-pr-support/nm/worktrees/324a78b3a755/01M49K3325XCG3AZXM5D4E3AZ6/bin/fm-timeout-lib.sh
++++ set -u
+++ declare -F fm_pr_url_parse
+++ FM_BACKLOG_ROW_SHOW_WEDGED=0
++ . /Users/martinstroher/dev/firstmate/data/ado-pr-support/nm/worktrees/324a78b3a755/01M49K3325XCG3AZXM5D4E3AZ6/bin/fm-merge-outcome-lib.sh
+++++ dirname /Users/martinstroher/dev/firstmate/data/ado-pr-support/nm/worktrees/324a78b3a755/01M49K3325XCG3AZXM5D4E3AZ6/bin/fm-merge-outcome-lib.sh
++++ cd /Users/martinstroher/dev/firstmate/data/ado-pr-support/nm/worktrees/324a78b3a755/01M49K3325XCG3AZXM5D4E3AZ6/bin
++++ pwd
+++ _FM_MERGE_OUTCOME_LIB_DIR=/Users/martinstroher/dev/firstmate/data/ado-pr-support/nm/worktrees/324a78b3a755/01M49K3325XCG3AZXM5D4E3AZ6/bin
+++ . /Users/martinstroher/dev/firstmate/data/ado-pr-support/nm/worktrees/324a78b3a755/01M49K3325XCG3AZXM5D4E3AZ6/bin/fm-pr-lib.sh
++++ FM_PR_PROVIDER=
++++ FM_PR_URL=
++++ FM_PR_HOST=
++++ FM_PR_PATH=
++++ FM_PR_OWNER=
++++ FM_PR_REPO=
++++ FM_PR_NUMBER=
++++ FM_PR_DATA_PROVIDER=
++++ FM_PR_DATA_URL=
++++ FM_PR_DATA_HOST=
++++ FM_PR_DATA_PATH=
++++ FM_PR_DATA_NUMBER=
++++ FM_PR_META_PROVIDER=
++++ FM_PR_META_URL=
++++ FM_PR_META_HOST=
++++ FM_PR_META_PATH=
++++ FM_PR_META_NUMBER=
++++ FM_PR_REG_ID=
++++ FM_PR_REG_PROVIDER=
++++ FM_PR_REG_URL=
++++ FM_PR_REG_HOST=
++++ FM_PR_REG_PATH=
++++ FM_PR_REG_NUMBER=
++++ FM_PR_REG_DATA_HASH=
++++ FM_PR_REG_TEMPLATE_HASH=
++++ FM_PR_REG_DATA_IDENTITY=
++++ FM_PR_REG_CHECK_IDENTITY=
++++ FM_PR_POLL_DATA_TMP=
++++ FM_PR_POLL_CHECK_TMP=
++++ FM_PR_POLL_REG_TMP=
++++ FM_PR_POLL_DATA_DEST=
++++ FM_PR_POLL_CHECK_DEST=
++++ FM_PR_POLL_REG_DEST=
++++ FM_PR_POLL_EXPECT_ID=
++++ FM_PR_POLL_EXPECT_PROVIDER=
++++ FM_PR_POLL_EXPECT_URL=
++++ FM_PR_POLL_EXPECT_HOST=
++++ FM_PR_POLL_EXPECT_PATH=
++++ FM_PR_POLL_EXPECT_NUMBER=
++++ FM_PR_POLL_EXPECT_DATA_HASH=
++++ FM_PR_POLL_EXPECT_TEMPLATE_HASH=
++++ FM_PR_POLL_EXPECT_DATA_IDENTITY=
++++ FM_PR_POLL_EXPECT_CHECK_IDENTITY=
++++ FM_PR_POLL_TEMPLATE=
++++ FM_PR_POLL_STATE_DEVICE=
++++ FM_PR_POLL_SNAPSHOT_ID=
++++ FM_PR_POLL_SNAPSHOT_PROVIDER=
++++ FM_PR_POLL_SNAPSHOT_URL=
++++ FM_PR_POLL_SNAPSHOT_HOST=
++++ FM_PR_POLL_SNAPSHOT_PATH=
++++ FM_PR_POLL_SNAPSHOT_NUMBER=
++++ FM_PR_POLL_SNAPSHOT_DATA_HASH=
++++ FM_PR_POLL_SNAPSHOT_TEMPLATE_HASH=
++++ FM_PR_POLL_SNAPSHOT_DATA_IDENTITY=
++++ FM_PR_POLL_SNAPSHOT_CHECK_IDENTITY=
++++ FM_PR_POLL_SNAPSHOT_REG_HASH=
++++ FM_PR_POLL_SNAPSHOT_REG_IDENTITY=
++++ FM_PR_POLL_REARM_DATA_IDENTITY=
++++ FM_PR_POLL_REARM_CHECK_IDENTITY=
++++ FM_PR_RETIRE_ID=
++++ FM_PR_RETIRE_PROVIDER=
++++ FM_PR_RETIRE_URL=
++++ FM_PR_RETIRE_HOST=
++++ FM_PR_RETIRE_PATH=
++++ FM_PR_RETIRE_NUMBER=
++++ FM_PR_RETIRE_DATA_HASH=
++++ FM_PR_RETIRE_TEMPLATE_HASH=
++++ FM_PR_RETIRE_DATA_IDENTITY=
++++ FM_PR_RETIRE_CHECK_IDENTITY=
++++ FM_PR_RETIRE_REG_HASH=
++++ FM_PR_RETIRE_REG_IDENTITY=
++++ FM_PR_RETIRE_RECEIPT_HASH=
++++ FM_PR_RETIRE_RECEIPT_IDENTITY=
++++ FM_PR_RECORD_STATE=
++++ FM_PR_RECORD_MERGED=
++++ FM_PR_POLL_RETIREMENT_REJECTED=
+++ . /Users/martinstroher/dev/firstmate/data/ado-pr-support/nm/worktrees/324a78b3a755/01M49K3325XCG3AZXM5D4E3AZ6/bin/fm-parent-channel-lib.sh
+++++ d=/Users/martinstroher/dev/firstmate/data/ado-pr-support/nm/worktrees/324a78b3a755/01M49K3325XCG3AZXM5D4E3AZ6/bin
+++++ '[' /Users/martinstroher/dev/firstmate/data/ado-pr-support/nm/worktrees/324a78b3a755/01M49K3325XCG3AZXM5D4E3AZ6/bin '!=' /Users/martinstroher/dev/firstmate/data/ado-pr-support/nm/worktrees/324a78b3a755/01M49K3325XCG3AZXM5D4E3AZ6/bin/fm-parent-channel-lib.sh ']'
+++++ cd /Users/martinstroher/dev/firstmate/data/ado-pr-support/nm/worktrees/324a78b3a755/01M49K3325XCG3AZXM5D4E3AZ6/bin
+++++ pwd
++++ _FM_PARENT_CHANNEL_LIB_DIR=/Users/martinstroher/dev/firstmate/data/ado-pr-support/nm/worktrees/324a78b3a755/01M49K3325XCG3AZXM5D4E3AZ6/bin
++++ . /Users/martinstroher/dev/firstmate/data/ado-pr-support/nm/worktrees/324a78b3a755/01M49K3325XCG3AZXM5D4E3AZ6/bin/fm-secondmate-parent-lib.sh
++++ . /Users/martinstroher/dev/firstmate/data/ado-pr-support/nm/worktrees/324a78b3a755/01M49K3325XCG3AZXM5D4E3AZ6/bin/fm-classify-lib.sh
++++++ d=/Users/martinstroher/dev/firstmate/data/ado-pr-support/nm/worktrees/324a78b3a755/01M49K3325XCG3AZXM5D4E3AZ6/bin
++++++ '[' /Users/martinstroher/dev/firstmate/data/ado-pr-support/nm/worktrees/324a78b3a755/01M49K3325XCG3AZXM5D4E3AZ6/bin '!=' /Users/martinstroher/dev/firstmate/data/ado-pr-support/nm/worktrees/324a78b3a755/01M49K3325XCG3AZXM5D4E3AZ6/bin/fm-classify-lib.sh ']'
++++++ cd /Users/martinstroher/dev/firstmate/data/ado-pr-support/nm/worktrees/324a78b3a755/01M49K3325XCG3AZXM5D4E3AZ6/bin
++++++ pwd
+++++ _FM_CLASSIFY_LIB_DIR=/Users/martinstroher/dev/firstmate/data/ado-pr-support/nm/worktrees/324a78b3a755/01M49K3325XCG3AZXM5D4E3AZ6/bin
++++++ uname -s
+++++ _FM_CLASSIFY_UNAME_S=Darwin
+++++ FM_CREW_STATE_BIN=/Users/martinstroher/dev/firstmate/data/ado-pr-support/nm/worktrees/324a78b3a755/01M49K3325XCG3AZXM5D4E3AZ6/bin/fm-crew-state.sh
+++++ case $- in
+++++ _fm_classify_nounset=on
+++++ . /Users/martinstroher/dev/firstmate/data/ado-pr-support/nm/worktrees/324a78b3a755/01M49K3325XCG3AZXM5D4E3AZ6/bin/fm-timeout-lib.sh
++++++ set -u
+++++ '[' on = on ']'
+++++ unset _fm_classify_nounset
+++++ FM_CLASSIFY_CAPTAIN_RE_DEFAULT='done:|needs-decision:|blocked:|failed:|PR ready|checks green|ready in branch|merged'
+++++ FM_CLASSIFY_PAUSED_VERB_DEFAULT=paused
+++++ FM_PAUSE_RESURFACE_SECS_DEFAULT=14400
+++++ FM_CLASSIFY_RESOLVE_VERB_DEFAULT=resolved
+++++ FM_CLASSIFY_CAPTAIN_HELD_VERB_DEFAULT=captain-held
+++++ FM_CLASSIFY_EVENT_WINDOW_LINES=200
+++++ FM_CLASSIFY_RESERVED_KEY_PREFIXES_DEFAULT=pending-reply-
+++++ FM_OPEN_DECISIONS_FOLD_VERSION=9
+++++ FM_STATUS_SNAPSHOT_EVENT_LINE=
+++++ FM_STATUS_SNAPSHOT_EVENT_MTIME=
+++++ FM_STATUS_SNAPSHOT_EVENT_ENDPOINT=
+++++ STATUS_PRESENTATION_REPORTED=
+++++ STATUS_PRESENTATION_CLASSIFIED=
+++++ _FM_CLASSIFY_KEYLESS_PHASE=$'\036default'
+++++ FM_GATE_HUMAN_DECISION='ask-user: authority decision'
+++++ FM_WORKTREE_WRITE_PRUNE='.git node_modules .venv venv __pycache__ .mypy_cache .pytest_cache .ruff_cache .tox target dist build .next .cache vendor'
+++++ FM_WORKTREE_WRITE_MAXDEPTH=6
+++++ FM_WORKTREE_WRITE_TIMEOUT=10
++++ FM_PARENT_CHANNEL_ID=
++++ FM_PARENT_CHANNEL_ROUTE=
+++ FM_MERGE_OUTCOME_ALREADY_RECORDED=false
++ . /Users/martinstroher/dev/firstmate/data/ado-pr-support/nm/worktrees/324a78b3a755/01M49K3325XCG3AZXM5D4E3AZ6/bin/fm-merge-authority-lib.sh
+++++ dirname /Users/martinstroher/dev/firstmate/data/ado-pr-support/nm/worktrees/324a78b3a755/01M49K3325XCG3AZXM5D4E3AZ6/bin/fm-merge-authority-lib.sh
++++ cd /Users/martinstroher/dev/firstmate/data/ado-pr-support/nm/worktrees/324a78b3a755/01M49K3325XCG3AZXM5D4E3AZ6/bin
++++ pwd
+++ _FM_MERGE_AUTHORITY_LIB_DIR=/Users/martinstroher/dev/firstmate/data/ado-pr-support/nm/worktrees/324a78b3a755/01M49K3325XCG3AZXM5D4E3AZ6/bin
+++ . /Users/martinstroher/dev/firstmate/data/ado-pr-support/nm/worktrees/324a78b3a755/01M49K3325XCG3AZXM5D4E3AZ6/bin/fm-pr-lib.sh
++++ FM_PR_PROVIDER=
++++ FM_PR_URL=
++++ FM_PR_HOST=
++++ FM_PR_PATH=
++++ FM_PR_OWNER=
++++ FM_PR_REPO=
++++ FM_PR_NUMBER=
++++ FM_PR_DATA_PROVIDER=
++++ FM_PR_DATA_URL=
++++ FM_PR_DATA_HOST=
++++ FM_PR_DATA_PATH=
++++ FM_PR_DATA_NUMBER=
++++ FM_PR_META_PROVIDER=
++++ FM_PR_META_URL=
++++ FM_PR_META_HOST=
++++ FM_PR_META_PATH=
++++ FM_PR_META_NUMBER=
++++ FM_PR_REG_ID=
++++ FM_PR_REG_PROVIDER=
++++ FM_PR_REG_URL=
++++ FM_PR_REG_HOST=
++++ FM_PR_REG_PATH=
++++ FM_PR_REG_NUMBER=
++++ FM_PR_REG_DATA_HASH=
++++ FM_PR_REG_TEMPLATE_HASH=
++++ FM_PR_REG_DATA_IDENTITY=
++++ FM_PR_REG_CHECK_IDENTITY=
++++ FM_PR_POLL_DATA_TMP=
++++ FM_PR_POLL_CHECK_TMP=
++++ FM_PR_POLL_REG_TMP=
++++ FM_PR_POLL_DATA_DEST=
++++ FM_PR_POLL_CHECK_DEST=
++++ FM_PR_POLL_REG_DEST=
++++ FM_PR_POLL_EXPECT_ID=
++++ FM_PR_POLL_EXPECT_PROVIDER=
++++ FM_PR_POLL_EXPECT_URL=
++++ FM_PR_POLL_EXPECT_HOST=
++++ FM_PR_POLL_EXPECT_PATH=
++++ FM_PR_POLL_EXPECT_NUMBER=
++++ FM_PR_POLL_EXPECT_DATA_HASH=
++++ FM_PR_POLL_EXPECT_TEMPLATE_HASH=
++++ FM_PR_POLL_EXPECT_DATA_IDENTITY=
++++ FM_PR_POLL_EXPECT_CHECK_IDENTITY=
++++ FM_PR_POLL_TEMPLATE=
++++ FM_PR_POLL_STATE_DEVICE=
++++ FM_PR_POLL_SNAPSHOT_ID=
++++ FM_PR_POLL_SNAPSHOT_PROVIDER=
++++ FM_PR_POLL_SNAPSHOT_URL=
++++ FM_PR_POLL_SNAPSHOT_HOST=
++++ FM_PR_POLL_SNAPSHOT_PATH=
++++ FM_PR_POLL_SNAPSHOT_NUMBER=
++++ FM_PR_POLL_SNAPSHOT_DATA_HASH=
++++ FM_PR_POLL_SNAPSHOT_TEMPLATE_HASH=
++++ FM_PR_POLL_SNAPSHOT_DATA_IDENTITY=
++++ FM_PR_POLL_SNAPSHOT_CHECK_IDENTITY=
++++ FM_PR_POLL_SNAPSHOT_REG_HASH=
++++ FM_PR_POLL_SNAPSHOT_REG_IDENTITY=
++++ FM_PR_POLL_REARM_DATA_IDENTITY=
++++ FM_PR_POLL_REARM_CHECK_IDENTITY=
++++ FM_PR_RETIRE_ID=
++++ FM_PR_RETIRE_PROVIDER=
++++ FM_PR_RETIRE_URL=
++++ FM_PR_RETIRE_HOST=
++++ FM_PR_RETIRE_PATH=
++++ FM_PR_RETIRE_NUMBER=
++++ FM_PR_RETIRE_DATA_HASH=
++++ FM_PR_RETIRE_TEMPLATE_HASH=
++++ FM_PR_RETIRE_DATA_IDENTITY=
++++ FM_PR_RETIRE_CHECK_IDENTITY=
++++ FM_PR_RETIRE_REG_HASH=
++++ FM_PR_RETIRE_REG_IDENTITY=
++++ FM_PR_RETIRE_RECEIPT_HASH=
++++ FM_PR_RETIRE_RECEIPT_IDENTITY=
++++ FM_PR_RECORD_STATE=
++++ FM_PR_RECORD_MERGED=
++++ FM_PR_POLL_RETIREMENT_REJECTED=
+++ . /Users/martinstroher/dev/firstmate/data/ado-pr-support/nm/worktrees/324a78b3a755/01M49K3325XCG3AZXM5D4E3AZ6/bin/fm-afk-contract.sh
++++ set -u
++++++ dirname /Users/martinstroher/dev/firstmate/data/ado-pr-support/nm/worktrees/324a78b3a755/01M49K3325XCG3AZXM5D4E3AZ6/bin/fm-afk-contract.sh
+++++ cd /Users/martinstroher/dev/firstmate/data/ado-pr-support/nm/worktrees/324a78b3a755/01M49K3325XCG3AZXM5D4E3AZ6/bin
+++++ pwd
++++ FM_AFK_CONTRACT_DIR=/Users/martinstroher/dev/firstmate/data/ado-pr-support/nm/worktrees/324a78b3a755/01M49K3325XCG3AZXM5D4E3AZ6/bin
++++ FM_ROOT=/tmp/fm-azure-contract-qsr7zclv
++++ FM_HOME=/tmp/fm-azure-contract-qsr7zclv
++++ FM_AFK_CONTRACT_STATE=/tmp/fm-azure-contract-qsr7zclv/state
++++ . /Users/martinstroher/dev/firstmate/data/ado-pr-support/nm/worktrees/324a78b3a755/01M49K3325XCG3AZXM5D4E3AZ6/bin/fm-classify-lib.sh
++++++ d=/Users/martinstroher/dev/firstmate/data/ado-pr-support/nm/worktrees/324a78b3a755/01M49K3325XCG3AZXM5D4E3AZ6/bin
++++++ '[' /Users/martinstroher/dev/firstmate/data/ado-pr-support/nm/worktrees/324a78b3a755/01M49K3325XCG3AZXM5D4E3AZ6/bin '!=' /Users/martinstroher/dev/firstmate/data/ado-pr-support/nm/worktrees/324a78b3a755/01M49K3325XCG3AZXM5D4E3AZ6/bin/fm-classify-lib.sh ']'
++++++ cd /Users/martinstroher/dev/firstmate/data/ado-pr-support/nm/worktrees/324a78b3a755/01M49K3325XCG3AZXM5D4E3AZ6/bin
++++++ pwd
+++++ _FM_CLASSIFY_LIB_DIR=/Users/martinstroher/dev/firstmate/data/ado-pr-support/nm/worktrees/324a78b3a755/01M49K3325XCG3AZXM5D4E3AZ6/bin
++++++ uname -s
+++++ _FM_CLASSIFY_UNAME_S=Darwin
+++++ FM_CREW_STATE_BIN=/Users/martinstroher/dev/firstmate/data/ado-pr-support/nm/worktrees/324a78b3a755/01M49K3325XCG3AZXM5D4E3AZ6/bin/fm-crew-state.sh
+++++ case $- in
+++++ _fm_classify_nounset=on
+++++ . /Users/martinstroher/dev/firstmate/data/ado-pr-support/nm/worktrees/324a78b3a755/01M49K3325XCG3AZXM5D4E3AZ6/bin/fm-timeout-lib.sh
++++++ set -u
+++++ '[' on = on ']'
+++++ unset _fm_classify_nounset
+++++ FM_CLASSIFY_CAPTAIN_RE_DEFAULT='done:|needs-decision:|blocked:|failed:|PR ready|checks green|ready in branch|merged'
+++++ FM_CLASSIFY_PAUSED_VERB_DEFAULT=paused
+++++ FM_PAUSE_RESURFACE_SECS_DEFAULT=14400
+++++ FM_CLASSIFY_RESOLVE_VERB_DEFAULT=resolved
+++++ FM_CLASSIFY_CAPTAIN_HELD_VERB_DEFAULT=captain-held
+++++ FM_CLASSIFY_EVENT_WINDOW_LINES=200
+++++ FM_CLASSIFY_RESERVED_KEY_PREFIXES_DEFAULT=pending-reply-
+++++ FM_OPEN_DECISIONS_FOLD_VERSION=9
+++++ FM_STATUS_SNAPSHOT_EVENT_LINE=
+++++ FM_STATUS_SNAPSHOT_EVENT_MTIME=
+++++ FM_STATUS_SNAPSHOT_EVENT_ENDPOINT=
+++++ STATUS_PRESENTATION_REPORTED=
+++++ STATUS_PRESENTATION_CLASSIFIED=
+++++ _FM_CLASSIFY_KEYLESS_PHASE=$'\036default'
+++++ FM_GATE_HUMAN_DECISION='ask-user: authority decision'
+++++ FM_WORKTREE_WRITE_PRUNE='.git node_modules .venv venv __pycache__ .mypy_cache .pytest_cache .ruff_cache .tox target dist build .next .cache vendor'
+++++ FM_WORKTREE_WRITE_MAXDEPTH=6
+++++ FM_WORKTREE_WRITE_TIMEOUT=10
++++ FM_AFK_CONTRACT_VERSION=2
++++ FM_AFK_CONTRACT_READABLE_VERSIONS='1 2'
++++ FM_AFK_CONTRACT_REACH_ANNOUNCED='No phone channel is configured; anything that needs you waits for your return.'
++++ FM_AFK_CONTRACT_SPEND_DEFAULT=4
++++ FM_AFK_CONTRACT_QUIET_HOLDS_NOTHING='you are present, so nothing waits for your return: every action you ask for, a local landing or a merge included, proceeds now under ordinary attended authority, and quiet mode changes only which updates reach this conversation.'
++++ _FM_AFK_CONTRACT_LOCK_TIMEOUT=120
++++ FM_AFK_CONTRACT_LOCK_HELD=
++++ '[' /Users/martinstroher/dev/firstmate/data/ado-pr-support/nm/worktrees/324a78b3a755/01M49K3325XCG3AZXM5D4E3AZ6/bin/fm-afk-contract.sh = /Users/martinstroher/dev/firstmate/data/ado-pr-support/nm/worktrees/324a78b3a755/01M49K3325XCG3AZXM5D4E3AZ6/bin/fm-pr-merge.sh ']'
+++ FM_MERGE_AUTHORITY=
+++ FM_MERGE_AUTHORITY_REASON=
+++ FM_MERGE_AUTHORITY_RECORD_IDENTITY=
++ . /Users/martinstroher/dev/firstmate/data/ado-pr-support/nm/worktrees/324a78b3a755/01M49K3325XCG3AZXM5D4E3AZ6/bin/fm-afk-contract.sh
+++ set -u
+++++ dirname /Users/martinstroher/dev/firstmate/data/ado-pr-support/nm/worktrees/324a78b3a755/01M49K3325XCG3AZXM5D4E3AZ6/bin/fm-afk-contract.sh
++++ cd /Users/martinstroher/dev/firstmate/data/ado-pr-support/nm/worktrees/324a78b3a755/01M49K3325XCG3AZXM5D4E3AZ6/bin
++++ pwd
+++ FM_AFK_CONTRACT_DIR=/Users/martinstroher/dev/firstmate/data/ado-pr-support/nm/worktrees/324a78b3a755/01M49K3325XCG3AZXM5D4E3AZ6/bin
+++ FM_ROOT=/tmp/fm-azure-contract-qsr7zclv
+++ FM_HOME=/tmp/fm-azure-contract-qsr7zclv
+++ FM_AFK_CONTRACT_STATE=/tmp/fm-azure-contract-qsr7zclv/state
+++ . /Users/martinstroher/dev/firstmate/data/ado-pr-support/nm/worktrees/324a78b3a755/01M49K3325XCG3AZXM5D4E3AZ6/bin/fm-classify-lib.sh
+++++ d=/Users/martinstroher/dev/firstmate/data/ado-pr-support/nm/worktrees/324a78b3a755/01M49K3325XCG3AZXM5D4E3AZ6/bin
+++++ '[' /Users/martinstroher/dev/firstmate/data/ado-pr-support/nm/worktrees/324a78b3a755/01M49K3325XCG3AZXM5D4E3AZ6/bin '!=' /Users/martinstroher/dev/firstmate/data/ado-pr-support/nm/worktrees/324a78b3a755/01M49K3325XCG3AZXM5D4E3AZ6/bin/fm-classify-lib.sh ']'
+++++ cd /Users/martinstroher/dev/firstmate/data/ado-pr-support/nm/worktrees/324a78b3a755/01M49K3325XCG3AZXM5D4E3AZ6/bin
+++++ pwd
++++ _FM_CLASSIFY_LIB_DIR=/Users/martinstroher/dev/firstmate/data/ado-pr-support/nm/worktrees/324a78b3a755/01M49K3325XCG3AZXM5D4E3AZ6/bin
+++++ uname -s
++++ _FM_CLASSIFY_UNAME_S=Darwin
++++ FM_CREW_STATE_BIN=/Users/martinstroher/dev/firstmate/data/ado-pr-support/nm/worktrees/324a78b3a755/01M49K3325XCG3AZXM5D4E3AZ6/bin/fm-crew-state.sh
++++ case $- in
++++ _fm_classify_nounset=on
++++ . /Users/martinstroher/dev/firstmate/data/ado-pr-support/nm/worktrees/324a78b3a755/01M49K3325XCG3AZXM5D4E3AZ6/bin/fm-timeout-lib.sh
+++++ set -u
++++ '[' on = on ']'
++++ unset _fm_classify_nounset
++++ FM_CLASSIFY_CAPTAIN_RE_DEFAULT='done:|needs-decision:|blocked:|failed:|PR ready|checks green|ready in branch|merged'
++++ FM_CLASSIFY_PAUSED_VERB_DEFAULT=paused
++++ FM_PAUSE_RESURFACE_SECS_DEFAULT=14400
++++ FM_CLASSIFY_RESOLVE_VERB_DEFAULT=resolved
++++ FM_CLASSIFY_CAPTAIN_HELD_VERB_DEFAULT=captain-held
++++ FM_CLASSIFY_EVENT_WINDOW_LINES=200
++++ FM_CLASSIFY_RESERVED_KEY_PREFIXES_DEFAULT=pending-reply-
++++ FM_OPEN_DECISIONS_FOLD_VERSION=9
++++ FM_STATUS_SNAPSHOT_EVENT_LINE=
++++ FM_STATUS_SNAPSHOT_EVENT_MTIME=
++++ FM_STATUS_SNAPSHOT_EVENT_ENDPOINT=
++++ STATUS_PRESENTATION_REPORTED=
++++ STATUS_PRESENTATION_CLASSIFIED=
++++ _FM_CLASSIFY_KEYLESS_PHASE=$'\036default'
++++ FM_GATE_HUMAN_DECISION='ask-user: authority decision'
++++ FM_WORKTREE_WRITE_PRUNE='.git node_modules .venv venv __pycache__ .mypy_cache .pytest_cache .ruff_cache .tox target dist build .next .cache vendor'
++++ FM_WORKTREE_WRITE_MAXDEPTH=6
++++ FM_WORKTREE_WRITE_TIMEOUT=10
+++ FM_AFK_CONTRACT_VERSION=2
+++ FM_AFK_CONTRACT_READABLE_VERSIONS='1 2'
+++ FM_AFK_CONTRACT_REACH_ANNOUNCED='No phone channel is configured; anything that needs you waits for your return.'
+++ FM_AFK_CONTRACT_SPEND_DEFAULT=4
+++ FM_AFK_CONTRACT_QUIET_HOLDS_NOTHING='you are present, so nothing waits for your return: every action you ask for, a local landing or a merge included, proceeds now under ordinary attended authority, and quiet mode changes only which updates reach this conversation.'
+++ _FM_AFK_CONTRACT_LOCK_TIMEOUT=120
+++ FM_AFK_CONTRACT_LOCK_HELD=
+++ '[' /Users/martinstroher/dev/firstmate/data/ado-pr-support/nm/worktrees/324a78b3a755/01M49K3325XCG3AZXM5D4E3AZ6/bin/fm-afk-contract.sh = /Users/martinstroher/dev/firstmate/data/ado-pr-support/nm/worktrees/324a78b3a755/01M49K3325XCG3AZXM5D4E3AZ6/bin/fm-pr-merge.sh ']'
++ '[' 2 -lt 2 ']'
++ ID=task
++ RAW_URL=https://dev.azure.com/example/Project/_git/repo/pullrequest/7
++ fm_pr_task_id_valid task
++ local id=task
++ fm_task_id_path_safe task
++ local id=task
++ local LC_ALL=C
++ case "$id" in
++ fm_pr_url_parse https://dev.azure.com/example/Project/_git/repo/pullrequest/7
++ local raw=https://dev.azure.com/example/Project/_git/repo/pullrequest/7 pattern host path azure
++ local LC_ALL=C
++ FM_PR_PROVIDER=
++ FM_PR_URL=
++ FM_PR_HOST=
++ FM_PR_PATH=
++ FM_PR_OWNER=
++ FM_PR_REPO=
++ FM_PR_NUMBER=
++ pattern='^https://github\.com/([A-Za-z0-9]|[A-Za-z0-9][A-Za-z0-9-]{0,37}[A-Za-z0-9])/([A-Za-z0-9._-]{1,100})/pull/([1-9][0-9]*)$'
++ [[ https://dev.azure.com/example/Project/_git/repo/pullrequest/7 =~ ^https://github\.com/([A-Za-z0-9]|[A-Za-z0-9][A-Za-z0-9-]{0,37}[A-Za-z0-9])/([A-Za-z0-9._-]{1,100})/pull/([1-9][0-9]*)$ ]]
++ case "$raw" in
+++++ dirname /Users/martinstroher/dev/firstmate/data/ado-pr-support/nm/worktrees/324a78b3a755/01M49K3325XCG3AZXM5D4E3AZ6/bin/fm-pr-lib.sh
++++ cd /Users/martinstroher/dev/firstmate/data/ado-pr-support/nm/worktrees/324a78b3a755/01M49K3325XCG3AZXM5D4E3AZ6/bin
++++ pwd
+++ python3 /Users/martinstroher/dev/firstmate/data/ado-pr-support/nm/worktrees/324a78b3a755/01M49K3325XCG3AZXM5D4E3AZ6/bin/fm-azure-pr.py parse https://dev.azure.com/example/Project/_git/repo/pullrequest/7
++ azure='dev.azure.com
+example/Project/_git/repo
+7'
++ FM_PR_PROVIDER=azuredevops
++ FM_PR_URL=https://dev.azure.com/example/Project/_git/repo/pullrequest/7
++ FM_PR_HOST=dev.azure.com
++ azure='example/Project/_git/repo
+7'
++ FM_PR_PATH=example/Project/_git/repo
++ FM_PR_NUMBER=7
++ return 0
++ URL=https://dev.azure.com/example/Project/_git/repo/pullrequest/7
++ PROVIDER=azuredevops
++ PR_HOST=dev.azure.com
++ PR_PATH=example/Project/_git/repo
++ PR_OWNER=
++ PR_REPO=
++ PR_NUMBER=7
++ PROJECT_URL=https://dev.azure.com/example/Project/_git/repo
++ '[' azuredevops = gerrit ']'
++ shift 2
++ ATTENDED_OVERRIDE=false
++ ALLOW_RED=()
++ ALLOW_MISSING=()
++ '[' 0 -gt 0 ']'
++ '[' 0 -gt 0 ']'
++ '[' 0 -gt 0 ']'
++ '[' azuredevops = azuredevops ']'
++ '[' 0 -ne 0 ']'
++ '[' 0 -gt 0 ']'
++ '[' 0 -gt 0 ']'
++ reject_repo_overrides
++ local arg
++ reject_head_overrides
++ local arg
++ reject_protected_forge_args
++ local arg
++ '[' false = true ']'
++ FM_PR_GITHUB_AUTO_REQUESTED=false
++ '[' azuredevops = github ']'
++ FM_PR_GITLAB_ASYNC_REQUESTED=false
++ '[' azuredevops = gitlab ']'
++ FM_PR_AWAY_POSTURE=false
++ fm_backlog_directory_present /tmp/fm-azure-contract-qsr7zclv/state 'state directory'
++ local path=/tmp/fm-azure-contract-qsr7zclv/state 'label=state directory' check=/tmp/fm-azure-contract-qsr7zclv/state
++ '[' /tmp/fm-azure-contract-qsr7zclv/state '!=' / ']'
++ '[' /tmp/fm-azure-contract-qsr7zclv/state '!=' /tmp/fm-azure-contract-qsr7zclv/state ']'
++ '[' '!' -d /tmp/fm-azure-contract-qsr7zclv/state ']'
++ '[' -L /tmp/fm-azure-contract-qsr7zclv/state ']'
++ META=/tmp/fm-azure-contract-qsr7zclv/state/task.meta
++ . /Users/martinstroher/dev/firstmate/data/ado-pr-support/nm/worktrees/324a78b3a755/01M49K3325XCG3AZXM5D4E3AZ6/bin/fm-wake-lib.sh
++++ d=/Users/martinstroher/dev/firstmate/data/ado-pr-support/nm/worktrees/324a78b3a755/01M49K3325XCG3AZXM5D4E3AZ6/bin
++++ '[' /Users/martinstroher/dev/firstmate/data/ado-pr-support/nm/worktrees/324a78b3a755/01M49K3325XCG3AZXM5D4E3AZ6/bin '!=' /Users/martinstroher/dev/firstmate/data/ado-pr-support/nm/worktrees/324a78b3a755/01M49K3325XCG3AZXM5D4E3AZ6/bin/fm-wake-lib.sh ']'
++++ cd /Users/martinstroher/dev/firstmate/data/ado-pr-support/nm/worktrees/324a78b3a755/01M49K3325XCG3AZXM5D4E3AZ6/bin
++++ pwd
+++ FM_WAKE_LIB_DIR=/Users/martinstroher/dev/firstmate/data/ado-pr-support/nm/worktrees/324a78b3a755/01M49K3325XCG3AZXM5D4E3AZ6/bin
++++ cd /Users/martinstroher/dev/firstmate/data/ado-pr-support/nm/worktrees/324a78b3a755/01M49K3325XCG3AZXM5D4E3AZ6/bin/..
++++ pwd
+++ FM_WAKE_DEFAULT_ROOT=/Users/martinstroher/dev/firstmate/data/ado-pr-support/nm/worktrees/324a78b3a755/01M49K3325XCG3AZXM5D4E3AZ6
+++ FM_ROOT=/tmp/fm-azure-contract-qsr7zclv
+++ FM_HOME=/tmp/fm-azure-contract-qsr7zclv
+++ STATE=/tmp/fm-azure-contract-qsr7zclv/state
+++ FM_WAKE_QUEUE=/tmp/fm-azure-contract-qsr7zclv/state/.wake-queue
+++ FM_WAKE_QUEUE_LOCK=/tmp/fm-azure-contract-qsr7zclv/state/.wake-queue.lock
+++ FM_LOCK_STALE_AFTER=2
+++ . /Users/martinstroher/dev/firstmate/data/ado-pr-support/nm/worktrees/324a78b3a755/01M49K3325XCG3AZXM5D4E3AZ6/bin/fm-path-lib.sh
++++ uname
+++ _FM_UNAME=Darwin
+++ mkdir -p /tmp/fm-azure-contract-qsr7zclv/state
+++ '[' 3 -gt 4 ']'
+++ '[' 3 -eq 4 ']'
+++ FM_WATCHER_MATCHED_IDENTITY=
+++ FM_WATCHER_HEALTHY_PID=
+++ FM_WATCHER_HEALTHY_IDENTITY=
+++ FM_WATCHER_VERDICT_OK=false
+++ FM_WATCHER_VERDICT_REASON=stale-beacon
+++ FM_RECOVERY_MARKER_TOKEN=
+++ FM_RECOVERY_MARKER_ACTION=none
+++ FM_RECOVERY_MARKER_WRITTEN_TOKEN=
+++ FM_WAKE_APPEND_RECOVERY_PREVIOUS_TOKEN=
+++ FM_WAKE_APPEND_RECOVERY_PUBLISHED_TOKEN=
+++ FM_RECOVERY_HANDOVER_TOKEN=
+++ FM_RECOVERY_HANDOVER_SEQ=
+++ FM_WAKE_STATUS_KEY=
+++ FM_WAKE_STATUS_HISTORICAL=false
+++ FM_WAKE_EVENT_LINE=
+++ FM_WAKE_UNREAD_LINES=
++ . /Users/martinstroher/dev/firstmate/data/ado-pr-support/nm/worktrees/324a78b3a755/01M49K3325XCG3AZXM5D4E3AZ6/bin/fm-lease-lib.sh
+++ FM_LEASE_REFUSE_EXIT=6
++++ d=/Users/martinstroher/dev/firstmate/data/ado-pr-support/nm/worktrees/324a78b3a755/01M49K3325XCG3AZXM5D4E3AZ6/bin
++++ '[' /Users/martinstroher/dev/firstmate/data/ado-pr-support/nm/worktrees/324a78b3a755/01M49K3325XCG3AZXM5D4E3AZ6/bin '!=' /Users/martinstroher/dev/firstmate/data/ado-pr-support/nm/worktrees/324a78b3a755/01M49K3325XCG3AZXM5D4E3AZ6/bin/fm-lease-lib.sh ']'
++++ cd /Users/martinstroher/dev/firstmate/data/ado-pr-support/nm/worktrees/324a78b3a755/01M49K3325XCG3AZXM5D4E3AZ6/bin
++++ pwd
+++ FM_LEASE_LIB_DIR=/Users/martinstroher/dev/firstmate/data/ado-pr-support/nm/worktrees/324a78b3a755/01M49K3325XCG3AZXM5D4E3AZ6/bin
+++ FM_LEASE_GUARD_LOCK=
++ fm_lease_forbid_branch 'PR merge (fm-pr-merge)' --away-relocated
++ local 'action=PR merge (fm-pr-merge)' relocatable=--away-relocated actor
+++ fm_lease_actor
+++ local actor=main
+++ case "$actor" in
+++ printf '%s\n' main
++ actor=main
++ '[' main = branch ']'
++ return 0
++ '[' '!' -f /tmp/fm-azure-contract-qsr7zclv/state/task.meta ']'
++ '[' -L /tmp/fm-azure-contract-qsr7zclv/state/task.meta ']'
++ fm_backlog_meta_spawn_gen_optional /tmp/fm-azure-contract-qsr7zclv/state/task.meta /tmp/fm-azure-contract-qsr7zclv/state
++ local meta=/tmp/fm-azure-contract-qsr7zclv/state/task.meta state=/tmp/fm-azure-contract-qsr7zclv/state count
++ FM_BACKLOG_META_SPAWN_GEN=
++ fm_backlog_record_present /tmp/fm-azure-contract-qsr7zclv/state/task.meta 'task record' /tmp/fm-azure-contract-qsr7zclv/state
++ local path=/tmp/fm-azure-contract-qsr7zclv/state/task.meta 'label=task record' root=/tmp/fm-azure-contract-qsr7zclv/state
++ fm_backlog_record_parent_authorized /tmp/fm-azure-contract-qsr7zclv/state/task.meta 'task record' /tmp/fm-azure-contract-qsr7zclv/state
++ local path=/tmp/fm-azure-contract-qsr7zclv/state/task.meta 'label=task record' root=/tmp/fm-azure-contract-qsr7zclv/state parent_only= parent base parent_resolved expected_path
++ local path_resolved root_resolved root_prefix home_resolved final_matches=1
++ parent=/tmp/fm-azure-contract-qsr7zclv/state
++ '[' /tmp/fm-azure-contract-qsr7zclv/state '!=' /tmp/fm-azure-contract-qsr7zclv/state/task.meta ']'
++ base=task.meta
+++ fm_backlog_canonical_existing /tmp/fm-azure-contract-qsr7zclv/state
+++ LC_ALL=C
+++ perl -MCwd=realpath -e '
+    my $resolved = realpath($ARGV[0]);
+    exit 1 unless defined $resolved;
+    print $resolved;
+  ' /tmp/fm-azure-contract-qsr7zclv/state
++ root_resolved=/private/tmp/fm-azure-contract-qsr7zclv/state
++ '[' -d /private/tmp/fm-azure-contract-qsr7zclv/state ']'
++ '[' -n /tmp/fm-azure-contract-qsr7zclv ']'
++ case "$root" in
+++ fm_backlog_canonical_existing /tmp/fm-azure-contract-qsr7zclv
+++ LC_ALL=C
+++ perl -MCwd=realpath -e '
+    my $resolved = realpath($ARGV[0]);
+    exit 1 unless defined $resolved;
+    print $resolved;
+  ' /tmp/fm-azure-contract-qsr7zclv
++ home_resolved=/private/tmp/fm-azure-contract-qsr7zclv
++ case "$root_resolved" in
+++ fm_backlog_canonical_existing /tmp/fm-azure-contract-qsr7zclv/state
+++ LC_ALL=C
+++ perl -MCwd=realpath -e '
+    my $resolved = realpath($ARGV[0]);
+    exit 1 unless defined $resolved;
+    print $resolved;
+  ' /tmp/fm-azure-contract-qsr7zclv/state
++ parent_resolved=/private/tmp/fm-azure-contract-qsr7zclv/state
++ expected_path=/private/tmp/fm-azure-contract-qsr7zclv/state/task.meta
++ '[' -z '' ']'
++ '[' -e /tmp/fm-azure-contract-qsr7zclv/state/task.meta ']'
+++ fm_backlog_canonical_existing /tmp/fm-azure-contract-qsr7zclv/state/task.meta
+++ LC_ALL=C
+++ perl -MCwd=realpath -e '
+    my $resolved = realpath($ARGV[0]);
+    exit 1 unless defined $resolved;
+    print $resolved;
+  ' /tmp/fm-azure-contract-qsr7zclv/state/task.meta
++ path_resolved=/private/tmp/fm-azure-contract-qsr7zclv/state/task.meta
++ '[' /private/tmp/fm-azure-contract-qsr7zclv/state/task.meta = /private/tmp/fm-azure-contract-qsr7zclv/state/task.meta ']'
++ root_prefix=/private/tmp/fm-azure-contract-qsr7zclv/state/
++ case "$path_resolved" in
++ '[' 1 '!=' 1 ']'
++ '[' '!' -f /tmp/fm-azure-contract-qsr7zclv/state/task.meta ']'
++ return 0
+++ LC_ALL=C
+++ awk -F= '$1 == "spawn_gen" { count++ } END { print count + 0 }' /tmp/fm-azure-contract-qsr7zclv/state/task.meta
++ count=0
++ '[' 0 -ne 0 ']'
++ return 0
++ MERGE_EXPECTED_SPAWN_GEN=
++ MERGE_CONTROL_LOCK=
++ MERGE_META_LOCK=
++ trap merge_control_cleanup EXIT
++ MERGE_CONTROL_LOCK=/tmp/fm-azure-contract-qsr7zclv/state/.control-task.lock
++ fm_lock_acquire_wait /tmp/fm-azure-contract-qsr7zclv/state/.control-task.lock
++ local lockdir=/tmp/fm-azure-contract-qsr7zclv/state/.control-task.lock
++ fm_lock_try_acquire /tmp/fm-azure-contract-qsr7zclv/state/.control-task.lock
++ local lockdir=/tmp/fm-azure-contract-qsr7zclv/state/.control-task.lock pid steal cur rc steal_owner primary_owner current
++ FM_LOCK_HELD_PID=
++ FM_LOCK_OWNER_DIR=
++ FM_LOCK_RECOVERED_PID=
++ fm_lock_try_create /tmp/fm-azure-contract-qsr7zclv/state/.control-task.lock
++ local lockdir=/tmp/fm-azure-contract-qsr7zclv/state/.control-task.lock allowed_steal_owner= ownerdir
++ FM_LOCK_OWNER_DIR=
+++ fm_lock_owner_dir /tmp/fm-azure-contract-qsr7zclv/state/.control-task.lock
+++ local lockdir=/tmp/fm-azure-contract-qsr7zclv/state/.control-task.lock lock_abs
++++ fm_lock_abs_path /tmp/fm-azure-contract-qsr7zclv/state/.control-task.lock
++++ local path=/tmp/fm-azure-contract-qsr7zclv/state/.control-task.lock dir base
++++ fm_dirname_to dir /tmp/fm-azure-contract-qsr7zclv/state/.control-task.lock
++++ local fm_path=/tmp/fm-azure-contract-qsr7zclv/state/.control-task.lock
++++ case "$fm_path" in
++++ fm_path=/tmp/fm-azure-contract-qsr7zclv/state/.control-task.lock
++++ case "$fm_path" in
++++ fm_path=/tmp/fm-azure-contract-qsr7zclv/state
++++ fm_path=/tmp/fm-azure-contract-qsr7zclv/state
++++ '[' -n /tmp/fm-azure-contract-qsr7zclv/state ']'
++++ '[' /tmp/fm-azure-contract-qsr7zclv/state '!=' /tmp/fm-azure-contract-qsr7zclv/state ']'
++++ printf -v dir %s /tmp/fm-azure-contract-qsr7zclv/state
++++ fm_basename_to base /tmp/fm-azure-contract-qsr7zclv/state/.control-task.lock
++++ local fm_path=/tmp/fm-azure-contract-qsr7zclv/state/.control-task.lock
++++ case "$fm_path" in
++++ fm_path=/tmp/fm-azure-contract-qsr7zclv/state/.control-task.lock
++++ fm_path=.control-task.lock
++++ '[' .control-task.lock '!=' .control-task.lock ']'
++++ printf -v base %s .control-task.lock
+++++ cd /tmp/fm-azure-contract-qsr7zclv/state
+++++ pwd -P
++++ dir=/private/tmp/fm-azure-contract-qsr7zclv/state
++++ printf '%s/%s\n' /private/tmp/fm-azure-contract-qsr7zclv/state .control-task.lock
+++ lock_abs=/private/tmp/fm-azure-contract-qsr7zclv/state/.control-task.lock
+++ mktemp -d /private/tmp/fm-azure-contract-qsr7zclv/state/.control-task.lock.owner.XXXXXX
++ ownerdir=/private/tmp/fm-azure-contract-qsr7zclv/state/.control-task.lock.owner.STl7c4
++ '[' -e /tmp/fm-azure-contract-qsr7zclv/state/.control-task.lock ']'
++ '[' -L /tmp/fm-azure-contract-qsr7zclv/state/.control-task.lock ']'
++ fm_lock_prepare_owner /private/tmp/fm-azure-contract-qsr7zclv/state/.control-task.lock.owner.STl7c4
++ local ownerdir=/private/tmp/fm-azure-contract-qsr7zclv/state/.control-task.lock.owner.STl7c4 mypid back
++ fm_current_pid mypid
++ local fm_pid
+++ exec sh -c 'printf "%s\n" "$PPID"'
++ fm_pid=41872
++ case "$fm_pid" in
++ '[' 1 -gt 0 ']'
++ printf -v mypid %s 41872
++ printf '%s\n' 41872
+++ cat /private/tmp/fm-azure-contract-qsr7zclv/state/.control-task.lock.owner.STl7c4/pid
++ back=41872
++ '[' 41872 = 41872 ']'
++ ln -s /private/tmp/fm-azure-contract-qsr7zclv/state/.control-task.lock.owner.STl7c4 /tmp/fm-azure-contract-qsr7zclv/state/.control-task.lock
++ fm_lock_points_to_owner /tmp/fm-azure-contract-qsr7zclv/state/.control-task.lock /private/tmp/fm-azure-contract-qsr7zclv/state/.control-task.lock.owner.STl7c4
++ local lockdir=/tmp/fm-azure-contract-qsr7zclv/state/.control-task.lock ownerdir=/private/tmp/fm-azure-contract-qsr7zclv/state/.control-task.lock.owner.STl7c4 actual
+++ readlink /tmp/fm-azure-contract-qsr7zclv/state/.control-task.lock
++ actual=/private/tmp/fm-azure-contract-qsr7zclv/state/.control-task.lock.owner.STl7c4
++ '[' /private/tmp/fm-azure-contract-qsr7zclv/state/.control-task.lock.owner.STl7c4 = /private/tmp/fm-azure-contract-qsr7zclv/state/.control-task.lock.owner.STl7c4 ']'
++ fm_lock_claim /tmp/fm-azure-contract-qsr7zclv/state/.control-task.lock /private/tmp/fm-azure-contract-qsr7zclv/state/.control-task.lock.owner.STl7c4 ''
++ local lockdir=/tmp/fm-azure-contract-qsr7zclv/state/.control-task.lock ownerdir=/private/tmp/fm-azure-contract-qsr7zclv/state/.control-task.lock.owner.STl7c4 allowed_steal_owner= mypid back
++ fm_current_pid mypid
++ local fm_pid
+++ exec sh -c 'printf "%s\n" "$PPID"'
++ fm_pid=41872
++ case "$fm_pid" in
++ '[' 1 -gt 0 ']'
++ printf -v mypid %s 41872
+++ cat /private/tmp/fm-azure-contract-qsr7zclv/state/.control-task.lock.owner.STl7c4/pid
++ back=41872
++ '[' 41872 '!=' 41872 ']'
++ fm_lock_points_to_owner /tmp/fm-azure-contract-qsr7zclv/state/.control-task.lock /private/tmp/fm-azure-contract-qsr7zclv/state/.control-task.lock.owner.STl7c4
++ local lockdir=/tmp/fm-azure-contract-qsr7zclv/state/.control-task.lock ownerdir=/private/tmp/fm-azure-contract-qsr7zclv/state/.control-task.lock.owner.STl7c4 actual
+++ readlink /tmp/fm-azure-contract-qsr7zclv/state/.control-task.lock
++ actual=/private/tmp/fm-azure-contract-qsr7zclv/state/.control-task.lock.owner.STl7c4
++ '[' /private/tmp/fm-azure-contract-qsr7zclv/state/.control-task.lock.owner.STl7c4 = /private/tmp/fm-azure-contract-qsr7zclv/state/.control-task.lock.owner.STl7c4 ']'
++ fm_lock_claim_blocked_by_steal /tmp/fm-azure-contract-qsr7zclv/state/.control-task.lock ''
++ local lockdir=/tmp/fm-azure-contract-qsr7zclv/state/.control-task.lock allowed_steal_owner= steal
++ steal=/tmp/fm-azure-contract-qsr7zclv/state/.control-task.lock.steal
++ '[' -e /tmp/fm-azure-contract-qsr7zclv/state/.control-task.lock.steal ']'
++ '[' -L /tmp/fm-azure-contract-qsr7zclv/state/.control-task.lock.steal ']'
++ return 1
++ return 0
++ FM_LOCK_OWNER_DIR=/private/tmp/fm-azure-contract-qsr7zclv/state/.control-task.lock.owner.STl7c4
++ return 0
++ return 0
++ fm_backlog_meta_spawn_gen_optional /tmp/fm-azure-contract-qsr7zclv/state/task.meta /tmp/fm-azure-contract-qsr7zclv/state
++ local meta=/tmp/fm-azure-contract-qsr7zclv/state/task.meta state=/tmp/fm-azure-contract-qsr7zclv/state count
++ FM_BACKLOG_META_SPAWN_GEN=
++ fm_backlog_record_present /tmp/fm-azure-contract-qsr7zclv/state/task.meta 'task record' /tmp/fm-azure-contract-qsr7zclv/state
++ local path=/tmp/fm-azure-contract-qsr7zclv/state/task.meta 'label=task record' root=/tmp/fm-azure-contract-qsr7zclv/state
++ fm_backlog_record_parent_authorized /tmp/fm-azure-contract-qsr7zclv/state/task.meta 'task record' /tmp/fm-azure-contract-qsr7zclv/state
++ local path=/tmp/fm-azure-contract-qsr7zclv/state/task.meta 'label=task record' root=/tmp/fm-azure-contract-qsr7zclv/state parent_only= parent base parent_resolved expected_path
++ local path_resolved root_resolved root_prefix home_resolved final_matches=1
++ parent=/tmp/fm-azure-contract-qsr7zclv/state
++ '[' /tmp/fm-azure-contract-qsr7zclv/state '!=' /tmp/fm-azure-contract-qsr7zclv/state/task.meta ']'
++ base=task.meta
+++ fm_backlog_canonical_existing /tmp/fm-azure-contract-qsr7zclv/state
+++ LC_ALL=C
+++ perl -MCwd=realpath -e '
+    my $resolved = realpath($ARGV[0]);
+    exit 1 unless defined $resolved;
+    print $resolved;
+  ' /tmp/fm-azure-contract-qsr7zclv/state
++ root_resolved=/private/tmp/fm-azure-contract-qsr7zclv/state
++ '[' -d /private/tmp/fm-azure-contract-qsr7zclv/state ']'
++ '[' -n /tmp/fm-azure-contract-qsr7zclv ']'
++ case "$root" in
+++ fm_backlog_canonical_existing /tmp/fm-azure-contract-qsr7zclv
+++ LC_ALL=C
+++ perl -MCwd=realpath -e '
+    my $resolved = realpath($ARGV[0]);
+    exit 1 unless defined $resolved;
+    print $resolved;
+  ' /tmp/fm-azure-contract-qsr7zclv
++ home_resolved=/private/tmp/fm-azure-contract-qsr7zclv
++ case "$root_resolved" in
+++ fm_backlog_canonical_existing /tmp/fm-azure-contract-qsr7zclv/state
+++ LC_ALL=C
+++ perl -MCwd=realpath -e '
+    my $resolved = realpath($ARGV[0]);
+    exit 1 unless defined $resolved;
+    print $resolved;
+  ' /tmp/fm-azure-contract-qsr7zclv/state
++ parent_resolved=/private/tmp/fm-azure-contract-qsr7zclv/state
++ expected_path=/private/tmp/fm-azure-contract-qsr7zclv/state/task.meta
++ '[' -z '' ']'
++ '[' -e /tmp/fm-azure-contract-qsr7zclv/state/task.meta ']'
+++ fm_backlog_canonical_existing /tmp/fm-azure-contract-qsr7zclv/state/task.meta
+++ LC_ALL=C
+++ perl -MCwd=realpath -e '
+    my $resolved = realpath($ARGV[0]);
+    exit 1 unless defined $resolved;
+    print $resolved;
+  ' /tmp/fm-azure-contract-qsr7zclv/state/task.meta
++ path_resolved=/private/tmp/fm-azure-contract-qsr7zclv/state/task.meta
++ '[' /private/tmp/fm-azure-contract-qsr7zclv/state/task.meta = /private/tmp/fm-azure-contract-qsr7zclv/state/task.meta ']'
++ root_prefix=/private/tmp/fm-azure-contract-qsr7zclv/state/
++ case "$path_resolved" in
++ '[' 1 '!=' 1 ']'
++ '[' '!' -f /tmp/fm-azure-contract-qsr7zclv/state/task.meta ']'
++ return 0
+++ LC_ALL=C
+++ awk -F= '$1 == "spawn_gen" { count++ } END { print count + 0 }' /tmp/fm-azure-contract-qsr7zclv/state/task.meta
++ count=0
++ '[' 0 -ne 0 ']'
++ return 0
++ '[' '' '!=' '' ']'
++ GITLAB_MISSING=
++ '[' azuredevops = gitlab ']'
++ GITHUB_MISSING=
++ '[' azuredevops = github ']'
++ RECORDED_HEAD=
++ '[' azuredevops = gitlab ']'
++ FM_PR_MERGE_HEAD=
++ FM_PR_GITLAB_ASYNC_CONFIGURED=false
++ FM_PR_GITHUB_REQUIRED=
++ FM_PR_GITHUB_REQUIRED_ERROR=
++ FM_PR_GITHUB_STATE=
++ FM_PR_GITHUB_MERGED=
++ FM_PR_GITHUB_QUEUED=
++ FM_PR_GITHUB_BASE=
++ FM_PR_GITHUB_QUEUE_OBSERVED=false
++ FM_PR_GITHUB_QUEUE_METHOD=
++ FM_PR_GITHUB_QUEUE_METHODS=
++ FM_PR_GITHUB_QUEUE_STATUS=unreadable
++ FM_PR_MERGE_AUTHORITY=
++ FM_PR_GITHUB_MERGE_ACCEPTED=false
++ FM_PR_GITHUB_CALLER_METHOD=
++ away_status=0
++ require_current_away_authority
++ FM_PR_AWAY_POSTURE=false
++ fm_afk_contract_away_present /tmp/fm-azure-contract-qsr7zclv/state
+++ fm_afk_contract_mode /tmp/fm-azure-contract-qsr7zclv/state
+++ local path
++++ fm_afk_contract_path /tmp/fm-azure-contract-qsr7zclv/state
++++ printf %s/.afk-contract /tmp/fm-azure-contract-qsr7zclv/state
+++ path=/tmp/fm-azure-contract-qsr7zclv/state/.afk-contract
+++ '[' -f /tmp/fm-azure-contract-qsr7zclv/state/.afk-contract ']'
+++ return 1
++ '[' '' = away ']'
++ fm_lease_forbid_branch 'PR merge (fm-pr-merge)' --away-relocated
++ local 'action=PR merge (fm-pr-merge)' relocatable=--away-relocated actor
+++ fm_lease_actor
+++ local actor=main
+++ case "$actor" in
+++ printf '%s\n' main
++ actor=main
++ '[' main = branch ']'
++ return 0
++ resolve_merge_authority
++ FM_PR_MERGE_AUTHORITY=
++ fm_merge_authority_resolve /tmp/fm-azure-contract-qsr7zclv /tmp/fm-azure-contract-qsr7zclv/state /tmp/fm-azure-contract-qsr7zclv/state/task.meta task
++ local home=/tmp/fm-azure-contract-qsr7zclv state=/tmp/fm-azure-contract-qsr7zclv/state meta=/tmp/fm-azure-contract-qsr7zclv/state/task.meta id=task
++ FM_MERGE_AUTHORITY=
++ FM_MERGE_AUTHORITY_REASON=invalid
++ '[' -n /tmp/fm-azure-contract-qsr7zclv ']'
++ '[' -n /tmp/fm-azure-contract-qsr7zclv/state ']'
++ '[' -n /tmp/fm-azure-contract-qsr7zclv/state/task.meta ']'
++ '[' -n task ']'
++ fm_afk_contract_present /tmp/fm-azure-contract-qsr7zclv/state
+++ fm_afk_contract_path /tmp/fm-azure-contract-qsr7zclv/state
+++ printf %s/.afk-contract /tmp/fm-azure-contract-qsr7zclv/state
++ '[' -f /tmp/fm-azure-contract-qsr7zclv/state/.afk-contract ']'
++ FM_MERGE_AUTHORITY=attended
++ FM_MERGE_AUTHORITY_REASON=attended
++ return 0
++ FM_PR_MERGE_AUTHORITY=attended
++ return 0
++ '[' false = true ']'
++ '[' false = true ']'
++ '[' 0 -eq 0 ']'
++ require_recorded_pr_identity
++ local existing
+++ grep '^pr=' /tmp/fm-azure-contract-qsr7zclv/state/task.meta
+++ tail -1
+++ cut -d= -f2-
++ existing=
++ '[' -n '' ']'
++ return 0
++ record_pr_metadata
++ FM_PR_CHECK_MERGE=1
++ /Users/martinstroher/dev/firstmate/data/ado-pr-support/nm/worktrees/324a78b3a755/01M49K3325XCG3AZXM5D4E3AZ6/bin/fm-pr-check.sh task https://dev.azure.com/example/Project/_git/repo/pullrequest/7
+armed: state/task.check.sh
++ grep -qxF pr=https://dev.azure.com/example/Project/_git/repo/pullrequest/7 /tmp/fm-azure-contract-qsr7zclv/state/task.meta
++ require_released_captain_hold
++ local hold_status=0
++ FM_HOME=/tmp/fm-azure-contract-qsr7zclv
++ FM_STATE_OVERRIDE=/tmp/fm-azure-contract-qsr7zclv/state
++ /Users/martinstroher/dev/firstmate/data/ado-pr-support/nm/worktrees/324a78b3a755/01M49K3325XCG3AZXM5D4E3AZ6/bin/fm-captain-hold.sh open task --distinguish-absent
++ hold_status=3
++ case "$hold_status" in
++ return 0
++ case "$PROVIDER" in
++ hold_away_record_for_merge
++ fm_afk_contract_lock_hold /tmp/fm-azure-contract-qsr7zclv/state
++ local lock rc=0 STATE timeout
++ STATE=/tmp/fm-azure-contract-qsr7zclv/state
+++ fm_afk_contract_lock_path /tmp/fm-azure-contract-qsr7zclv/state
+++ printf %s/.afk-contract.lock /tmp/fm-azure-contract-qsr7zclv/state
++ lock=/tmp/fm-azure-contract-qsr7zclv/state/.afk-contract.lock
++ timeout=120
++ fm_afk_contract_lock_helpers
++ command -v fm_lock_acquire_wait_bounded
++ return 0
++ fm_lock_acquire_wait_bounded /tmp/fm-azure-contract-qsr7zclv/state/.afk-contract.lock 120
++ local lockdir=/tmp/fm-azure-contract-qsr7zclv/state/.afk-contract.lock seconds=120 caller_pid rc owner_pid
++ case "$seconds" in
++ _fm_wake_require_timeout
++ command -v fm_run_timed
++ return 0
++ fm_lock_try_acquire /tmp/fm-azure-contract-qsr7zclv/state/.afk-contract.lock
++ local lockdir=/tmp/fm-azure-contract-qsr7zclv/state/.afk-contract.lock pid steal cur rc steal_owner primary_owner current
++ FM_LOCK_HELD_PID=
++ FM_LOCK_OWNER_DIR=
++ FM_LOCK_RECOVERED_PID=
++ fm_lock_try_create /tmp/fm-azure-contract-qsr7zclv/state/.afk-contract.lock
++ local lockdir=/tmp/fm-azure-contract-qsr7zclv/state/.afk-contract.lock allowed_steal_owner= ownerdir
++ FM_LOCK_OWNER_DIR=
+++ fm_lock_owner_dir /tmp/fm-azure-contract-qsr7zclv/state/.afk-contract.lock
+++ local lockdir=/tmp/fm-azure-contract-qsr7zclv/state/.afk-contract.lock lock_abs
++++ fm_lock_abs_path /tmp/fm-azure-contract-qsr7zclv/state/.afk-contract.lock
++++ local path=/tmp/fm-azure-contract-qsr7zclv/state/.afk-contract.lock dir base
++++ fm_dirname_to dir /tmp/fm-azure-contract-qsr7zclv/state/.afk-contract.lock
++++ local fm_path=/tmp/fm-azure-contract-qsr7zclv/state/.afk-contract.lock
++++ case "$fm_path" in
++++ fm_path=/tmp/fm-azure-contract-qsr7zclv/state/.afk-contract.lock
++++ case "$fm_path" in
++++ fm_path=/tmp/fm-azure-contract-qsr7zclv/state
++++ fm_path=/tmp/fm-azure-contract-qsr7zclv/state
++++ '[' -n /tmp/fm-azure-contract-qsr7zclv/state ']'
++++ '[' /tmp/fm-azure-contract-qsr7zclv/state '!=' /tmp/fm-azure-contract-qsr7zclv/state ']'
++++ printf -v dir %s /tmp/fm-azure-contract-qsr7zclv/state
++++ fm_basename_to base /tmp/fm-azure-contract-qsr7zclv/state/.afk-contract.lock
++++ local fm_path=/tmp/fm-azure-contract-qsr7zclv/state/.afk-contract.lock
++++ case "$fm_path" in
++++ fm_path=/tmp/fm-azure-contract-qsr7zclv/state/.afk-contract.lock
++++ fm_path=.afk-contract.lock
++++ '[' .afk-contract.lock '!=' .afk-contract.lock ']'
++++ printf -v base %s .afk-contract.lock
+++++ cd /tmp/fm-azure-contract-qsr7zclv/state
+++++ pwd -P
++++ dir=/private/tmp/fm-azure-contract-qsr7zclv/state
++++ printf '%s/%s\n' /private/tmp/fm-azure-contract-qsr7zclv/state .afk-contract.lock
+++ lock_abs=/private/tmp/fm-azure-contract-qsr7zclv/state/.afk-contract.lock
+++ mktemp -d /private/tmp/fm-azure-contract-qsr7zclv/state/.afk-contract.lock.owner.XXXXXX
++ ownerdir=/private/tmp/fm-azure-contract-qsr7zclv/state/.afk-contract.lock.owner.EqOSnW
++ '[' -e /tmp/fm-azure-contract-qsr7zclv/state/.afk-contract.lock ']'
++ '[' -L /tmp/fm-azure-contract-qsr7zclv/state/.afk-contract.lock ']'
++ fm_lock_prepare_owner /private/tmp/fm-azure-contract-qsr7zclv/state/.afk-contract.lock.owner.EqOSnW
++ local ownerdir=/private/tmp/fm-azure-contract-qsr7zclv/state/.afk-contract.lock.owner.EqOSnW mypid back
++ fm_current_pid mypid
++ local fm_pid
+++ exec sh -c 'printf "%s\n" "$PPID"'
++ fm_pid=41872
++ case "$fm_pid" in
++ '[' 1 -gt 0 ']'
++ printf -v mypid %s 41872
++ printf '%s\n' 41872
+++ cat /private/tmp/fm-azure-contract-qsr7zclv/state/.afk-contract.lock.owner.EqOSnW/pid
++ back=41872
++ '[' 41872 = 41872 ']'
++ ln -s /private/tmp/fm-azure-contract-qsr7zclv/state/.afk-contract.lock.owner.EqOSnW /tmp/fm-azure-contract-qsr7zclv/state/.afk-contract.lock
++ fm_lock_points_to_owner /tmp/fm-azure-contract-qsr7zclv/state/.afk-contract.lock /private/tmp/fm-azure-contract-qsr7zclv/state/.afk-contract.lock.owner.EqOSnW
++ local lockdir=/tmp/fm-azure-contract-qsr7zclv/state/.afk-contract.lock ownerdir=/private/tmp/fm-azure-contract-qsr7zclv/state/.afk-contract.lock.owner.EqOSnW actual
+++ readlink /tmp/fm-azure-contract-qsr7zclv/state/.afk-contract.lock
++ actual=/private/tmp/fm-azure-contract-qsr7zclv/state/.afk-contract.lock.owner.EqOSnW
++ '[' /private/tmp/fm-azure-contract-qsr7zclv/state/.afk-contract.lock.owner.EqOSnW = /private/tmp/fm-azure-contract-qsr7zclv/state/.afk-contract.lock.owner.EqOSnW ']'
++ fm_lock_claim /tmp/fm-azure-contract-qsr7zclv/state/.afk-contract.lock /private/tmp/fm-azure-contract-qsr7zclv/state/.afk-contract.lock.owner.EqOSnW ''
++ local lockdir=/tmp/fm-azure-contract-qsr7zclv/state/.afk-contract.lock ownerdir=/private/tmp/fm-azure-contract-qsr7zclv/state/.afk-contract.lock.owner.EqOSnW allowed_steal_owner= mypid back
++ fm_current_pid mypid
++ local fm_pid
+++ exec sh -c 'printf "%s\n" "$PPID"'
++ fm_pid=41872
++ case "$fm_pid" in
++ '[' 1 -gt 0 ']'
++ printf -v mypid %s 41872
+++ cat /private/tmp/fm-azure-contract-qsr7zclv/state/.afk-contract.lock.owner.EqOSnW/pid
++ back=41872
++ '[' 41872 '!=' 41872 ']'
++ fm_lock_points_to_owner /tmp/fm-azure-contract-qsr7zclv/state/.afk-contract.lock /private/tmp/fm-azure-contract-qsr7zclv/state/.afk-contract.lock.owner.EqOSnW
++ local lockdir=/tmp/fm-azure-contract-qsr7zclv/state/.afk-contract.lock ownerdir=/private/tmp/fm-azure-contract-qsr7zclv/state/.afk-contract.lock.owner.EqOSnW actual
+++ readlink /tmp/fm-azure-contract-qsr7zclv/state/.afk-contract.lock
++ actual=/private/tmp/fm-azure-contract-qsr7zclv/state/.afk-contract.lock.owner.EqOSnW
++ '[' /private/tmp/fm-azure-contract-qsr7zclv/state/.afk-contract.lock.owner.EqOSnW = /private/tmp/fm-azure-contract-qsr7zclv/state/.afk-contract.lock.owner.EqOSnW ']'
++ fm_lock_claim_blocked_by_steal /tmp/fm-azure-contract-qsr7zclv/state/.afk-contract.lock ''
++ local lockdir=/tmp/fm-azure-contract-qsr7zclv/state/.afk-contract.lock allowed_steal_owner= steal
++ steal=/tmp/fm-azure-contract-qsr7zclv/state/.afk-contract.lock.steal
++ '[' -e /tmp/fm-azure-contract-qsr7zclv/state/.afk-contract.lock.steal ']'
++ '[' -L /tmp/fm-azure-contract-qsr7zclv/state/.afk-contract.lock.steal ']'
++ return 1
++ return 0
++ FM_LOCK_OWNER_DIR=/private/tmp/fm-azure-contract-qsr7zclv/state/.afk-contract.lock.owner.EqOSnW
++ return 0
++ return 0
++ return 0
++ '[' 0 -ne 0 ']'
++ FM_AFK_CONTRACT_LOCK_HELD=/tmp/fm-azure-contract-qsr7zclv/state/.afk-contract.lock
++ return 0
++ require_current_away_authority
++ FM_PR_AWAY_POSTURE=false
++ fm_afk_contract_away_present /tmp/fm-azure-contract-qsr7zclv/state
+++ fm_afk_contract_mode /tmp/fm-azure-contract-qsr7zclv/state
+++ local path
++++ fm_afk_contract_path /tmp/fm-azure-contract-qsr7zclv/state
++++ printf %s/.afk-contract /tmp/fm-azure-contract-qsr7zclv/state
+++ path=/tmp/fm-azure-contract-qsr7zclv/state/.afk-contract
+++ '[' -f /tmp/fm-azure-contract-qsr7zclv/state/.afk-contract ']'
+++ return 1
++ '[' '' = away ']'
++ fm_lease_forbid_branch 'PR merge (fm-pr-merge)' --away-relocated
++ local 'action=PR merge (fm-pr-merge)' relocatable=--away-relocated actor
+++ fm_lease_actor
+++ local actor=main
+++ case "$actor" in
+++ printf '%s\n' main
++ actor=main
++ '[' main = branch ']'
++ return 0
++ resolve_merge_authority
++ FM_PR_MERGE_AUTHORITY=
++ fm_merge_authority_resolve /tmp/fm-azure-contract-qsr7zclv /tmp/fm-azure-contract-qsr7zclv/state /tmp/fm-azure-contract-qsr7zclv/state/task.meta task
++ local home=/tmp/fm-azure-contract-qsr7zclv state=/tmp/fm-azure-contract-qsr7zclv/state meta=/tmp/fm-azure-contract-qsr7zclv/state/task.meta id=task
++ FM_MERGE_AUTHORITY=
++ FM_MERGE_AUTHORITY_REASON=invalid
++ '[' -n /tmp/fm-azure-contract-qsr7zclv ']'
++ '[' -n /tmp/fm-azure-contract-qsr7zclv/state ']'
++ '[' -n /tmp/fm-azure-contract-qsr7zclv/state/task.meta ']'
++ '[' -n task ']'
++ fm_afk_contract_present /tmp/fm-azure-contract-qsr7zclv/state
+++ fm_afk_contract_path /tmp/fm-azure-contract-qsr7zclv/state
+++ printf %s/.afk-contract /tmp/fm-azure-contract-qsr7zclv/state
++ '[' -f /tmp/fm-azure-contract-qsr7zclv/state/.afk-contract ']'
++ FM_MERGE_AUTHORITY=attended
++ FM_MERGE_AUTHORITY_REASON=attended
++ return 0
++ FM_PR_MERGE_AUTHORITY=attended
++ return 0
++ '[' false = true ']'
++ '[' false = true ']'
++ python3 /Users/martinstroher/dev/firstmate/data/ado-pr-support/nm/worktrees/324a78b3a755/01M49K3325XCG3AZXM5D4E3AZ6/bin/fm-azure-pr.py complete https://dev.azure.com/example/Project/_git/repo/pullrequest/7
+accepted
++ persist_accepted_merge_authority
++ local status=0
+++ fm_meta_lock_path /tmp/fm-azure-contract-qsr7zclv/state/task.meta
+++ local meta=/tmp/fm-azure-contract-qsr7zclv/state/task.meta dir base id
+++ dir=/tmp/fm-azure-contract-qsr7zclv/state
+++ base=task.meta
+++ '[' /tmp/fm-azure-contract-qsr7zclv/state '!=' /tmp/fm-azure-contract-qsr7zclv/state/task.meta ']'
+++ case "$base" in
+++ id=task
+++ case "$id" in
+++ printf '%s/.meta-%s.lock\n' /tmp/fm-azure-contract-qsr7zclv/state task
++ MERGE_META_LOCK=/tmp/fm-azure-contract-qsr7zclv/state/.meta-task.lock
++ fm_lock_acquire_wait /tmp/fm-azure-contract-qsr7zclv/state/.meta-task.lock
++ local lockdir=/tmp/fm-azure-contract-qsr7zclv/state/.meta-task.lock
++ fm_lock_try_acquire /tmp/fm-azure-contract-qsr7zclv/state/.meta-task.lock
++ local lockdir=/tmp/fm-azure-contract-qsr7zclv/state/.meta-task.lock pid steal cur rc steal_owner primary_owner current
++ FM_LOCK_HELD_PID=
++ FM_LOCK_OWNER_DIR=
++ FM_LOCK_RECOVERED_PID=
++ fm_lock_try_create /tmp/fm-azure-contract-qsr7zclv/state/.meta-task.lock
++ local lockdir=/tmp/fm-azure-contract-qsr7zclv/state/.meta-task.lock allowed_steal_owner= ownerdir
++ FM_LOCK_OWNER_DIR=
+++ fm_lock_owner_dir /tmp/fm-azure-contract-qsr7zclv/state/.meta-task.lock
+++ local lockdir=/tmp/fm-azure-contract-qsr7zclv/state/.meta-task.lock lock_abs
++++ fm_lock_abs_path /tmp/fm-azure-contract-qsr7zclv/state/.meta-task.lock
++++ local path=/tmp/fm-azure-contract-qsr7zclv/state/.meta-task.lock dir base
++++ fm_dirname_to dir /tmp/fm-azure-contract-qsr7zclv/state/.meta-task.lock
++++ local fm_path=/tmp/fm-azure-contract-qsr7zclv/state/.meta-task.lock
++++ case "$fm_path" in
++++ fm_path=/tmp/fm-azure-contract-qsr7zclv/state/.meta-task.lock
++++ case "$fm_path" in
++++ fm_path=/tmp/fm-azure-contract-qsr7zclv/state
++++ fm_path=/tmp/fm-azure-contract-qsr7zclv/state
++++ '[' -n /tmp/fm-azure-contract-qsr7zclv/state ']'
++++ '[' /tmp/fm-azure-contract-qsr7zclv/state '!=' /tmp/fm-azure-contract-qsr7zclv/state ']'
++++ printf -v dir %s /tmp/fm-azure-contract-qsr7zclv/state
++++ fm_basename_to base /tmp/fm-azure-contract-qsr7zclv/state/.meta-task.lock
++++ local fm_path=/tmp/fm-azure-contract-qsr7zclv/state/.meta-task.lock
++++ case "$fm_path" in
++++ fm_path=/tmp/fm-azure-contract-qsr7zclv/state/.meta-task.lock
++++ fm_path=.meta-task.lock
++++ '[' .meta-task.lock '!=' .meta-task.lock ']'
++++ printf -v base %s .meta-task.lock
+++++ cd /tmp/fm-azure-contract-qsr7zclv/state
+++++ pwd -P
++++ dir=/private/tmp/fm-azure-contract-qsr7zclv/state
++++ printf '%s/%s\n' /private/tmp/fm-azure-contract-qsr7zclv/state .meta-task.lock
+++ lock_abs=/private/tmp/fm-azure-contract-qsr7zclv/state/.meta-task.lock
+++ mktemp -d /private/tmp/fm-azure-contract-qsr7zclv/state/.meta-task.lock.owner.XXXXXX
++ ownerdir=/private/tmp/fm-azure-contract-qsr7zclv/state/.meta-task.lock.owner.rfOGdE
++ '[' -e /tmp/fm-azure-contract-qsr7zclv/state/.meta-task.lock ']'
++ '[' -L /tmp/fm-azure-contract-qsr7zclv/state/.meta-task.lock ']'
++ fm_lock_prepare_owner /private/tmp/fm-azure-contract-qsr7zclv/state/.meta-task.lock.owner.rfOGdE
++ local ownerdir=/private/tmp/fm-azure-contract-qsr7zclv/state/.meta-task.lock.owner.rfOGdE mypid back
++ fm_current_pid mypid
++ local fm_pid
+++ exec sh -c 'printf "%s\n" "$PPID"'
++ fm_pid=41872
++ case "$fm_pid" in
++ '[' 1 -gt 0 ']'
++ printf -v mypid %s 41872
++ printf '%s\n' 41872
+++ cat /private/tmp/fm-azure-contract-qsr7zclv/state/.meta-task.lock.owner.rfOGdE/pid
++ back=41872
++ '[' 41872 = 41872 ']'
++ ln -s /private/tmp/fm-azure-contract-qsr7zclv/state/.meta-task.lock.owner.rfOGdE /tmp/fm-azure-contract-qsr7zclv/state/.meta-task.lock
++ fm_lock_points_to_owner /tmp/fm-azure-contract-qsr7zclv/state/.meta-task.lock /private/tmp/fm-azure-contract-qsr7zclv/state/.meta-task.lock.owner.rfOGdE
++ local lockdir=/tmp/fm-azure-contract-qsr7zclv/state/.meta-task.lock ownerdir=/private/tmp/fm-azure-contract-qsr7zclv/state/.meta-task.lock.owner.rfOGdE actual
+++ readlink /tmp/fm-azure-contract-qsr7zclv/state/.meta-task.lock
++ actual=/private/tmp/fm-azure-contract-qsr7zclv/state/.meta-task.lock.owner.rfOGdE
++ '[' /private/tmp/fm-azure-contract-qsr7zclv/state/.meta-task.lock.owner.rfOGdE = /private/tmp/fm-azure-contract-qsr7zclv/state/.meta-task.lock.owner.rfOGdE ']'
++ fm_lock_claim /tmp/fm-azure-contract-qsr7zclv/state/.meta-task.lock /private/tmp/fm-azure-contract-qsr7zclv/state/.meta-task.lock.owner.rfOGdE ''
++ local lockdir=/tmp/fm-azure-contract-qsr7zclv/state/.meta-task.lock ownerdir=/private/tmp/fm-azure-contract-qsr7zclv/state/.meta-task.lock.owner.rfOGdE allowed_steal_owner= mypid back
++ fm_current_pid mypid
++ local fm_pid
+++ exec sh -c 'printf "%s\n" "$PPID"'
++ fm_pid=41872
++ case "$fm_pid" in
++ '[' 1 -gt 0 ']'
++ printf -v mypid %s 41872
+++ cat /private/tmp/fm-azure-contract-qsr7zclv/state/.meta-task.lock.owner.rfOGdE/pid
++ back=41872
++ '[' 41872 '!=' 41872 ']'
++ fm_lock_points_to_owner /tmp/fm-azure-contract-qsr7zclv/state/.meta-task.lock /private/tmp/fm-azure-contract-qsr7zclv/state/.meta-task.lock.owner.rfOGdE
++ local lockdir=/tmp/fm-azure-contract-qsr7zclv/state/.meta-task.lock ownerdir=/private/tmp/fm-azure-contract-qsr7zclv/state/.meta-task.lock.owner.rfOGdE actual
+++ readlink /tmp/fm-azure-contract-qsr7zclv/state/.meta-task.lock
++ actual=/private/tmp/fm-azure-contract-qsr7zclv/state/.meta-task.lock.owner.rfOGdE
++ '[' /private/tmp/fm-azure-contract-qsr7zclv/state/.meta-task.lock.owner.rfOGdE = /private/tmp/fm-azure-contract-qsr7zclv/state/.meta-task.lock.owner.rfOGdE ']'
++ fm_lock_claim_blocked_by_steal /tmp/fm-azure-contract-qsr7zclv/state/.meta-task.lock ''
++ local lockdir=/tmp/fm-azure-contract-qsr7zclv/state/.meta-task.lock allowed_steal_owner= steal
++ steal=/tmp/fm-azure-contract-qsr7zclv/state/.meta-task.lock.steal
++ '[' -e /tmp/fm-azure-contract-qsr7zclv/state/.meta-task.lock.steal ']'
++ '[' -L /tmp/fm-azure-contract-qsr7zclv/state/.meta-task.lock.steal ']'
++ return 1
++ return 0
++ FM_LOCK_OWNER_DIR=/private/tmp/fm-azure-contract-qsr7zclv/state/.meta-task.lock.owner.rfOGdE
++ return 0
++ return 0
++ fm_merge_authority_persist /tmp/fm-azure-contract-qsr7zclv/state task /tmp/fm-azure-contract-qsr7zclv/state/task.meta azuredevops dev.azure.com example/Project/_git/repo 7 attended
++ local state=/tmp/fm-azure-contract-qsr7zclv/state id=task meta=/tmp/fm-azure-contract-qsr7zclv/state/task.meta provider=azuredevops host=dev.azure.com path=example/Project/_git/repo number=7 authority=attended
++ local record tmp= state_device lock status=0
++ fm_pr_task_id_valid task
++ local id=task
++ fm_task_id_path_safe task
++ local id=task
++ local LC_ALL=C
++ case "$id" in
++ case "$authority" in
++ '[' -d /tmp/fm-azure-contract-qsr7zclv/state ']'
++ '[' '!' -L /tmp/fm-azure-contract-qsr7zclv/state ']'
+++ fm_pr_file_device /tmp/fm-azure-contract-qsr7zclv/state
++++ uname
+++ '[' Darwin = Darwin ']'
+++ /usr/bin/stat -f %d /tmp/fm-azure-contract-qsr7zclv/state
++ state_device=16777233
++ fm_pr_metadata_identity_parse /tmp/fm-azure-contract-qsr7zclv/state/task.meta
++ local file=/tmp/fm-azure-contract-qsr7zclv/state/task.meta line value pr_count=0 seen_pr=0 post_pr_invalid=0
++ FM_PR_META_PROVIDER=
++ FM_PR_META_URL=
++ FM_PR_META_HOST=
++ FM_PR_META_PATH=
++ FM_PR_META_NUMBER=
++ '[' -f /tmp/fm-azure-contract-qsr7zclv/state/task.meta ']'
++ '[' '!' -L /tmp/fm-azure-contract-qsr7zclv/state/task.meta ']'
+++ fm_pr_file_link_count /tmp/fm-azure-contract-qsr7zclv/state/task.meta
++++ uname
+++ '[' Darwin = Darwin ']'
+++ /usr/bin/stat -f %l /tmp/fm-azure-contract-qsr7zclv/state/task.meta
++ '[' 1 = 1 ']'
++ IFS=
++ read -r line
++ case "$line" in
++ '[' 0 -eq 0 ']'
++ IFS=
++ read -r line
++ case "$line" in
++ '[' 0 -eq 0 ']'
++ IFS=
++ read -r line
++ case "$line" in
++ '[' 0 -eq 0 ']'
++ IFS=
++ read -r line
++ case "$line" in
++ pr_count=1
++ '[' 1 -eq 1 ']'
++ value=https://dev.azure.com/example/Project/_git/repo/pullrequest/7
++ fm_pr_url_parse https://dev.azure.com/example/Project/_git/repo/pullrequest/7
++ local raw=https://dev.azure.com/example/Project/_git/repo/pullrequest/7 pattern host path azure
++ local LC_ALL=C
++ FM_PR_PROVIDER=
++ FM_PR_URL=
++ FM_PR_HOST=
++ FM_PR_PATH=
++ FM_PR_OWNER=
++ FM_PR_REPO=
++ FM_PR_NUMBER=
++ pattern='^https://github\.com/([A-Za-z0-9]|[A-Za-z0-9][A-Za-z0-9-]{0,37}[A-Za-z0-9])/([A-Za-z0-9._-]{1,100})/pull/([1-9][0-9]*)$'
++ [[ https://dev.azure.com/example/Project/_git/repo/pullrequest/7 =~ ^https://github\.com/([A-Za-z0-9]|[A-Za-z0-9][A-Za-z0-9-]{0,37}[A-Za-z0-9])/([A-Za-z0-9._-]{1,100})/pull/([1-9][0-9]*)$ ]]
++ case "$raw" in
+++++ dirname /Users/martinstroher/dev/firstmate/data/ado-pr-support/nm/worktrees/324a78b3a755/01M49K3325XCG3AZXM5D4E3AZ6/bin/fm-pr-lib.sh
++++ cd /Users/martinstroher/dev/firstmate/data/ado-pr-support/nm/worktrees/324a78b3a755/01M49K3325XCG3AZXM5D4E3AZ6/bin
++++ pwd
+++ python3 /Users/martinstroher/dev/firstmate/data/ado-pr-support/nm/worktrees/324a78b3a755/01M49K3325XCG3AZXM5D4E3AZ6/bin/fm-azure-pr.py parse https://dev.azure.com/example/Project/_git/repo/pullrequest/7
++ azure='dev.azure.com
+example/Project/_git/repo
+7'
++ FM_PR_PROVIDER=azuredevops
++ FM_PR_URL=https://dev.azure.com/example/Project/_git/repo/pullrequest/7
++ FM_PR_HOST=dev.azure.com
++ azure='example/Project/_git/repo
+7'
++ FM_PR_PATH=example/Project/_git/repo
++ FM_PR_NUMBER=7
++ return 0
++ FM_PR_META_PROVIDER=azuredevops
++ FM_PR_META_URL=https://dev.azure.com/example/Project/_git/repo/pullrequest/7
++ FM_PR_META_HOST=dev.azure.com
++ FM_PR_META_PATH=example/Project/_git/repo
++ FM_PR_META_NUMBER=7
++ seen_pr=1
++ IFS=
++ read -r line
++ case "$line" in
++ '[' 1 -eq 1 ']'
++ value=aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
++ fm_pr_head_valid aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
++ local head=aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
++ local LC_ALL=C
++ [[ aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa =~ ^[0-9a-f]{40}$|^[0-9a-f]{64}$ ]]
++ IFS=
++ read -r line
++ '[' -n '' ']'
++ '[' 1 -eq 1 ']'
++ '[' 0 -eq 0 ']'
++ '[' -n https://dev.azure.com/example/Project/_git/repo/pullrequest/7 ']'
++ '[' azuredevops = azuredevops ']'
++ '[' dev.azure.com = dev.azure.com ']'
++ '[' example/Project/_git/repo = example/Project/_git/repo ']'
++ '[' 7 = 7 ']'
++ record=/tmp/fm-azure-contract-qsr7zclv/state/task.merge-authority
++ lock=/tmp/fm-azure-contract-qsr7zclv/state/task.merge-authority.lock
++ fm_lock_acquire_wait /tmp/fm-azure-contract-qsr7zclv/state/task.merge-authority.lock
++ local lockdir=/tmp/fm-azure-contract-qsr7zclv/state/task.merge-authority.lock
++ fm_lock_try_acquire /tmp/fm-azure-contract-qsr7zclv/state/task.merge-authority.lock
++ local lockdir=/tmp/fm-azure-contract-qsr7zclv/state/task.merge-authority.lock pid steal cur rc steal_owner primary_owner current
++ FM_LOCK_HELD_PID=
++ FM_LOCK_OWNER_DIR=
++ FM_LOCK_RECOVERED_PID=
++ fm_lock_try_create /tmp/fm-azure-contract-qsr7zclv/state/task.merge-authority.lock
++ local lockdir=/tmp/fm-azure-contract-qsr7zclv/state/task.merge-authority.lock allowed_steal_owner= ownerdir
++ FM_LOCK_OWNER_DIR=
+++ fm_lock_owner_dir /tmp/fm-azure-contract-qsr7zclv/state/task.merge-authority.lock
+++ local lockdir=/tmp/fm-azure-contract-qsr7zclv/state/task.merge-authority.lock lock_abs
++++ fm_lock_abs_path /tmp/fm-azure-contract-qsr7zclv/state/task.merge-authority.lock
++++ local path=/tmp/fm-azure-contract-qsr7zclv/state/task.merge-authority.lock dir base
++++ fm_dirname_to dir /tmp/fm-azure-contract-qsr7zclv/state/task.merge-authority.lock
++++ local fm_path=/tmp/fm-azure-contract-qsr7zclv/state/task.merge-authority.lock
++++ case "$fm_path" in
++++ fm_path=/tmp/fm-azure-contract-qsr7zclv/state/task.merge-authority.lock
++++ case "$fm_path" in
++++ fm_path=/tmp/fm-azure-contract-qsr7zclv/state
++++ fm_path=/tmp/fm-azure-contract-qsr7zclv/state
++++ '[' -n /tmp/fm-azure-contract-qsr7zclv/state ']'
++++ '[' /tmp/fm-azure-contract-qsr7zclv/state '!=' /tmp/fm-azure-contract-qsr7zclv/state ']'
++++ printf -v dir %s /tmp/fm-azure-contract-qsr7zclv/state
++++ fm_basename_to base /tmp/fm-azure-contract-qsr7zclv/state/task.merge-authority.lock
++++ local fm_path=/tmp/fm-azure-contract-qsr7zclv/state/task.merge-authority.lock
++++ case "$fm_path" in
++++ fm_path=/tmp/fm-azure-contract-qsr7zclv/state/task.merge-authority.lock
++++ fm_path=task.merge-authority.lock
++++ '[' task.merge-authority.lock '!=' task.merge-authority.lock ']'
++++ printf -v base %s task.merge-authority.lock
+++++ cd /tmp/fm-azure-contract-qsr7zclv/state
+++++ pwd -P
++++ dir=/private/tmp/fm-azure-contract-qsr7zclv/state
++++ printf '%s/%s\n' /private/tmp/fm-azure-contract-qsr7zclv/state task.merge-authority.lock
+++ lock_abs=/private/tmp/fm-azure-contract-qsr7zclv/state/task.merge-authority.lock
+++ mktemp -d /private/tmp/fm-azure-contract-qsr7zclv/state/task.merge-authority.lock.owner.XXXXXX
++ ownerdir=/private/tmp/fm-azure-contract-qsr7zclv/state/task.merge-authority.lock.owner.LBqkwz
++ '[' -e /tmp/fm-azure-contract-qsr7zclv/state/task.merge-authority.lock ']'
++ '[' -L /tmp/fm-azure-contract-qsr7zclv/state/task.merge-authority.lock ']'
++ fm_lock_prepare_owner /private/tmp/fm-azure-contract-qsr7zclv/state/task.merge-authority.lock.owner.LBqkwz
++ local ownerdir=/private/tmp/fm-azure-contract-qsr7zclv/state/task.merge-authority.lock.owner.LBqkwz mypid back
++ fm_current_pid mypid
++ local fm_pid
+++ exec sh -c 'printf "%s\n" "$PPID"'
++ fm_pid=41872
++ case "$fm_pid" in
++ '[' 1 -gt 0 ']'
++ printf -v mypid %s 41872
++ printf '%s\n' 41872
+++ cat /private/tmp/fm-azure-contract-qsr7zclv/state/task.merge-authority.lock.owner.LBqkwz/pid
++ back=41872
++ '[' 41872 = 41872 ']'
++ ln -s /private/tmp/fm-azure-contract-qsr7zclv/state/task.merge-authority.lock.owner.LBqkwz /tmp/fm-azure-contract-qsr7zclv/state/task.merge-authority.lock
++ fm_lock_points_to_owner /tmp/fm-azure-contract-qsr7zclv/state/task.merge-authority.lock /private/tmp/fm-azure-contract-qsr7zclv/state/task.merge-authority.lock.owner.LBqkwz
++ local lockdir=/tmp/fm-azure-contract-qsr7zclv/state/task.merge-authority.lock ownerdir=/private/tmp/fm-azure-contract-qsr7zclv/state/task.merge-authority.lock.owner.LBqkwz actual
+++ readlink /tmp/fm-azure-contract-qsr7zclv/state/task.merge-authority.lock
++ actual=/private/tmp/fm-azure-contract-qsr7zclv/state/task.merge-authority.lock.owner.LBqkwz
++ '[' /private/tmp/fm-azure-contract-qsr7zclv/state/task.merge-authority.lock.owner.LBqkwz = /private/tmp/fm-azure-contract-qsr7zclv/state/task.merge-authority.lock.owner.LBqkwz ']'
++ fm_lock_claim /tmp/fm-azure-contract-qsr7zclv/state/task.merge-authority.lock /private/tmp/fm-azure-contract-qsr7zclv/state/task.merge-authority.lock.owner.LBqkwz ''
++ local lockdir=/tmp/fm-azure-contract-qsr7zclv/state/task.merge-authority.lock ownerdir=/private/tmp/fm-azure-contract-qsr7zclv/state/task.merge-authority.lock.owner.LBqkwz allowed_steal_owner= mypid back
++ fm_current_pid mypid
++ local fm_pid
+++ exec sh -c 'printf "%s\n" "$PPID"'
++ fm_pid=41872
++ case "$fm_pid" in
++ '[' 1 -gt 0 ']'
++ printf -v mypid %s 41872
+++ cat /private/tmp/fm-azure-contract-qsr7zclv/state/task.merge-authority.lock.owner.LBqkwz/pid
++ back=41872
++ '[' 41872 '!=' 41872 ']'
++ fm_lock_points_to_owner /tmp/fm-azure-contract-qsr7zclv/state/task.merge-authority.lock /private/tmp/fm-azure-contract-qsr7zclv/state/task.merge-authority.lock.owner.LBqkwz
++ local lockdir=/tmp/fm-azure-contract-qsr7zclv/state/task.merge-authority.lock ownerdir=/private/tmp/fm-azure-contract-qsr7zclv/state/task.merge-authority.lock.owner.LBqkwz actual
+++ readlink /tmp/fm-azure-contract-qsr7zclv/state/task.merge-authority.lock
++ actual=/private/tmp/fm-azure-contract-qsr7zclv/state/task.merge-authority.lock.owner.LBqkwz
++ '[' /private/tmp/fm-azure-contract-qsr7zclv/state/task.merge-authority.lock.owner.LBqkwz = /private/tmp/fm-azure-contract-qsr7zclv/state/task.merge-authority.lock.owner.LBqkwz ']'
++ fm_lock_claim_blocked_by_steal /tmp/fm-azure-contract-qsr7zclv/state/task.merge-authority.lock ''
++ local lockdir=/tmp/fm-azure-contract-qsr7zclv/state/task.merge-authority.lock allowed_steal_owner= steal
++ steal=/tmp/fm-azure-contract-qsr7zclv/state/task.merge-authority.lock.steal
++ '[' -e /tmp/fm-azure-contract-qsr7zclv/state/task.merge-authority.lock.steal ']'
++ '[' -L /tmp/fm-azure-contract-qsr7zclv/state/task.merge-authority.lock.steal ']'
++ return 1
++ return 0
++ FM_LOCK_OWNER_DIR=/private/tmp/fm-azure-contract-qsr7zclv/state/task.merge-authority.lock.owner.LBqkwz
++ return 0
++ return 0
++ fm_pr_regular_destination_on_device_or_absent /tmp/fm-azure-contract-qsr7zclv/state/task.merge-authority 16777233
++ local path=/tmp/fm-azure-contract-qsr7zclv/state/task.merge-authority device=16777233
++ fm_pr_regular_destination_or_absent /tmp/fm-azure-contract-qsr7zclv/state/task.merge-authority
++ local path=/tmp/fm-azure-contract-qsr7zclv/state/task.merge-authority
++ '[' '!' -L /tmp/fm-azure-contract-qsr7zclv/state/task.merge-authority ']'
++ '[' -e /tmp/fm-azure-contract-qsr7zclv/state/task.merge-authority ']'
++ '[' '!' -e /tmp/fm-azure-contract-qsr7zclv/state/task.merge-authority ']'
++ '[' 0 -eq 0 ']'
++ umask 077
+++ mktemp /tmp/fm-azure-contract-qsr7zclv/state/.fm-merge-authority.XXXXXX
++ tmp=/tmp/fm-azure-contract-qsr7zclv/state/.fm-merge-authority.NTFPDJ
++ '[' 0 -eq 0 ']'
++ printf '%s\n%s\n%s\n%s\n%s\n%s\n' fm-merge-authority-v1 azuredevops dev.azure.com example/Project/_git/repo 7 attended
++ '[' 0 -eq 0 ']'
++ chmod 0600 /tmp/fm-azure-contract-qsr7zclv/state/.fm-merge-authority.NTFPDJ
++ fm_merge_authority_record_matches /tmp/fm-azure-contract-qsr7zclv/state/.fm-merge-authority.NTFPDJ 16777233 azuredevops dev.azure.com example/Project/_git/repo 7
++ local record=/tmp/fm-azure-contract-qsr7zclv/state/.fm-merge-authority.NTFPDJ device=16777233 expected_provider=azuredevops expected_host=dev.azure.com expected_path=example/Project/_git/repo expected_number=7
++ local version provider host path number authority
++ fm_pr_private_file_valid /tmp/fm-azure-contract-qsr7zclv/state/.fm-merge-authority.NTFPDJ 600 16777233
++ local path=/tmp/fm-azure-contract-qsr7zclv/state/.fm-merge-authority.NTFPDJ mode=600 device=16777233
++ '[' -f /tmp/fm-azure-contract-qsr7zclv/state/.fm-merge-authority.NTFPDJ ']'
++ '[' '!' -L /tmp/fm-azure-contract-qsr7zclv/state/.fm-merge-authority.NTFPDJ ']'
+++ fm_pr_file_mode /tmp/fm-azure-contract-qsr7zclv/state/.fm-merge-authority.NTFPDJ
++++ uname
+++ '[' Darwin = Darwin ']'
+++ /usr/bin/stat -f %Lp /tmp/fm-azure-contract-qsr7zclv/state/.fm-merge-authority.NTFPDJ
++ '[' 600 = 600 ']'
+++ fm_pr_file_device /tmp/fm-azure-contract-qsr7zclv/state/.fm-merge-authority.NTFPDJ
++++ uname
+++ '[' Darwin = Darwin ']'
+++ /usr/bin/stat -f %d /tmp/fm-azure-contract-qsr7zclv/state/.fm-merge-authority.NTFPDJ
++ '[' 16777233 = 16777233 ']'
+++ fm_pr_file_link_count /tmp/fm-azure-contract-qsr7zclv/state/.fm-merge-authority.NTFPDJ
++++ uname
+++ '[' Darwin = Darwin ']'
+++ /usr/bin/stat -f %l /tmp/fm-azure-contract-qsr7zclv/state/.fm-merge-authority.NTFPDJ
++ '[' 1 = 1 ']'
++ exec
++ IFS=
++ read -r version
++ IFS=
++ read -r provider
++ IFS=
++ read -r host
++ IFS=
++ read -r path
++ IFS=
++ read -r number
++ IFS=
++ read -r authority
++ IFS=
++ read -r _extra
++ exec
++ case "$authority" in
++ '[' fm-merge-authority-v1 = fm-merge-authority-v1 ']'
++ '[' azuredevops = azuredevops ']'
++ '[' dev.azure.com = dev.azure.com ']'
++ '[' example/Project/_git/repo = example/Project/_git/repo ']'
++ '[' 7 = 7 ']'
++ FM_MERGE_AUTHORITY=attended
++ fm_pr_regular_destination_on_device_or_absent /tmp/fm-azure-contract-qsr7zclv/state/task.merge-authority 16777233
++ local path=/tmp/fm-azure-contract-qsr7zclv/state/task.merge-authority device=16777233
++ fm_pr_regular_destination_or_absent /tmp/fm-azure-contract-qsr7zclv/state/task.merge-authority
++ local path=/tmp/fm-azure-contract-qsr7zclv/state/task.merge-authority
++ '[' '!' -L /tmp/fm-azure-contract-qsr7zclv/state/task.merge-authority ']'
++ '[' -e /tmp/fm-azure-contract-qsr7zclv/state/task.merge-authority ']'
++ '[' '!' -e /tmp/fm-azure-contract-qsr7zclv/state/task.merge-authority ']'
++ mv -f -- /tmp/fm-azure-contract-qsr7zclv/state/.fm-merge-authority.NTFPDJ /tmp/fm-azure-contract-qsr7zclv/state/task.merge-authority
++ fm_merge_authority_record_matches /tmp/fm-azure-contract-qsr7zclv/state/task.merge-authority 16777233 azuredevops dev.azure.com example/Project/_git/repo 7
++ local record=/tmp/fm-azure-contract-qsr7zclv/state/task.merge-authority device=16777233 expected_provider=azuredevops expected_host=dev.azure.com expected_path=example/Project/_git/repo expected_number=7
++ local version provider host path number authority
++ fm_pr_private_file_valid /tmp/fm-azure-contract-qsr7zclv/state/task.merge-authority 600 16777233
++ local path=/tmp/fm-azure-contract-qsr7zclv/state/task.merge-authority mode=600 device=16777233
++ '[' -f /tmp/fm-azure-contract-qsr7zclv/state/task.merge-authority ']'
++ '[' '!' -L /tmp/fm-azure-contract-qsr7zclv/state/task.merge-authority ']'
+++ fm_pr_file_mode /tmp/fm-azure-contract-qsr7zclv/state/task.merge-authority
++++ uname
+++ '[' Darwin = Darwin ']'
+++ /usr/bin/stat -f %Lp /tmp/fm-azure-contract-qsr7zclv/state/task.merge-authority
++ '[' 600 = 600 ']'
+++ fm_pr_file_device /tmp/fm-azure-contract-qsr7zclv/state/task.merge-authority
++++ uname
+++ '[' Darwin = Darwin ']'
+++ /usr/bin/stat -f %d /tmp/fm-azure-contract-qsr7zclv/state/task.merge-authority
++ '[' 16777233 = 16777233 ']'
+++ fm_pr_file_link_count /tmp/fm-azure-contract-qsr7zclv/state/task.merge-authority
++++ uname
+++ '[' Darwin = Darwin ']'
+++ /usr/bin/stat -f %l /tmp/fm-azure-contract-qsr7zclv/state/task.merge-authority
++ '[' 1 = 1 ']'
++ exec
++ IFS=
++ read -r version
++ IFS=
++ read -r provider
++ IFS=
++ read -r host
++ IFS=
++ read -r path
++ IFS=
++ read -r number
++ IFS=
++ read -r authority
++ IFS=
++ read -r _extra
++ exec
++ case "$authority" in
++ '[' fm-merge-authority-v1 = fm-merge-authority-v1 ']'
++ '[' azuredevops = azuredevops ']'
++ '[' dev.azure.com = dev.azure.com ']'
++ '[' example/Project/_git/repo = example/Project/_git/repo ']'
++ '[' 7 = 7 ']'
++ FM_MERGE_AUTHORITY=attended
++ '[' 0 -eq 0 ']'
++ fm_lock_release /tmp/fm-azure-contract-qsr7zclv/state/task.merge-authority.lock
++ local lockdir=/tmp/fm-azure-contract-qsr7zclv/state/task.merge-authority.lock pid current ownerdir
++ fm_current_pid current
++ local fm_pid
+++ exec sh -c 'printf "%s\n" "$PPID"'
++ fm_pid=41872
++ case "$fm_pid" in
++ '[' 1 -gt 0 ']'
++ printf -v current %s 41872
++ '[' -L /tmp/fm-azure-contract-qsr7zclv/state/task.merge-authority.lock ']'
+++ fm_lock_link_owner /tmp/fm-azure-contract-qsr7zclv/state/task.merge-authority.lock
++ ownerdir=/private/tmp/fm-azure-contract-qsr7zclv/state/task.merge-authority.lock.owner.LBqkwz
++ '[' -n /private/tmp/fm-azure-contract-qsr7zclv/state/task.merge-authority.lock.owner.LBqkwz ']'
+++ cat /private/tmp/fm-azure-contract-qsr7zclv/state/task.merge-authority.lock.owner.LBqkwz/pid
++ pid=41872
++ '[' 41872 = 41872 ']'
++ fm_lock_points_to_owner /tmp/fm-azure-contract-qsr7zclv/state/task.merge-authority.lock /private/tmp/fm-azure-contract-qsr7zclv/state/task.merge-authority.lock.owner.LBqkwz
++ local lockdir=/tmp/fm-azure-contract-qsr7zclv/state/task.merge-authority.lock ownerdir=/private/tmp/fm-azure-contract-qsr7zclv/state/task.merge-authority.lock.owner.LBqkwz actual
+++ readlink /tmp/fm-azure-contract-qsr7zclv/state/task.merge-authority.lock
++ actual=/private/tmp/fm-azure-contract-qsr7zclv/state/task.merge-authority.lock.owner.LBqkwz
++ '[' /private/tmp/fm-azure-contract-qsr7zclv/state/task.merge-authority.lock.owner.LBqkwz = /private/tmp/fm-azure-contract-qsr7zclv/state/task.merge-authority.lock.owner.LBqkwz ']'
++ rm -f /tmp/fm-azure-contract-qsr7zclv/state/task.merge-authority.lock
++ fm_lock_discard_owner /private/tmp/fm-azure-contract-qsr7zclv/state/task.merge-authority.lock.owner.LBqkwz
++ local ownerdir=/private/tmp/fm-azure-contract-qsr7zclv/state/task.merge-authority.lock.owner.LBqkwz
++ '[' -n /private/tmp/fm-azure-contract-qsr7zclv/state/task.merge-authority.lock.owner.LBqkwz ']'
++ fm_lock_clean_known_files /private/tmp/fm-azure-contract-qsr7zclv/state/task.merge-authority.lock.owner.LBqkwz
++ local lockdir=/private/tmp/fm-azure-contract-qsr7zclv/state/task.merge-authority.lock.owner.LBqkwz
++ rm -f /private/tmp/fm-azure-contract-qsr7zclv/state/task.merge-authority.lock.owner.LBqkwz/pid /private/tmp/fm-azure-contract-qsr7zclv/state/task.merge-authority.lock.owner.LBqkwz/fm-home /private/tmp/fm-azure-contract-qsr7zclv/state/task.merge-authority.lock.owner.LBqkwz/pid-identity /private/tmp/fm-azure-contract-qsr7zclv/state/task.merge-authority.lock.owner.LBqkwz/role /private/tmp/fm-azure-contract-qsr7zclv/state/task.merge-authority.lock.owner.LBqkwz/watcher-path
++ rmdir /private/tmp/fm-azure-contract-qsr7zclv/state/task.merge-authority.lock.owner.LBqkwz
++ return 0
++ return 0
++ fm_lock_release /tmp/fm-azure-contract-qsr7zclv/state/.meta-task.lock
++ local lockdir=/tmp/fm-azure-contract-qsr7zclv/state/.meta-task.lock pid current ownerdir
++ fm_current_pid current
++ local fm_pid
+++ exec sh -c 'printf "%s\n" "$PPID"'
++ fm_pid=41872
++ case "$fm_pid" in
++ '[' 1 -gt 0 ']'
++ printf -v current %s 41872
++ '[' -L /tmp/fm-azure-contract-qsr7zclv/state/.meta-task.lock ']'
+++ fm_lock_link_owner /tmp/fm-azure-contract-qsr7zclv/state/.meta-task.lock
++ ownerdir=/private/tmp/fm-azure-contract-qsr7zclv/state/.meta-task.lock.owner.rfOGdE
++ '[' -n /private/tmp/fm-azure-contract-qsr7zclv/state/.meta-task.lock.owner.rfOGdE ']'
+++ cat /private/tmp/fm-azure-contract-qsr7zclv/state/.meta-task.lock.owner.rfOGdE/pid
++ pid=41872
++ '[' 41872 = 41872 ']'
++ fm_lock_points_to_owner /tmp/fm-azure-contract-qsr7zclv/state/.meta-task.lock /private/tmp/fm-azure-contract-qsr7zclv/state/.meta-task.lock.owner.rfOGdE
++ local lockdir=/tmp/fm-azure-contract-qsr7zclv/state/.meta-task.lock ownerdir=/private/tmp/fm-azure-contract-qsr7zclv/state/.meta-task.lock.owner.rfOGdE actual
+++ readlink /tmp/fm-azure-contract-qsr7zclv/state/.meta-task.lock
++ actual=/private/tmp/fm-azure-contract-qsr7zclv/state/.meta-task.lock.owner.rfOGdE
++ '[' /private/tmp/fm-azure-contract-qsr7zclv/state/.meta-task.lock.owner.rfOGdE = /private/tmp/fm-azure-contract-qsr7zclv/state/.meta-task.lock.owner.rfOGdE ']'
++ rm -f /tmp/fm-azure-contract-qsr7zclv/state/.meta-task.lock
++ fm_lock_discard_owner /private/tmp/fm-azure-contract-qsr7zclv/state/.meta-task.lock.owner.rfOGdE
++ local ownerdir=/private/tmp/fm-azure-contract-qsr7zclv/state/.meta-task.lock.owner.rfOGdE
++ '[' -n /private/tmp/fm-azure-contract-qsr7zclv/state/.meta-task.lock.owner.rfOGdE ']'
++ fm_lock_clean_known_files /private/tmp/fm-azure-contract-qsr7zclv/state/.meta-task.lock.owner.rfOGdE
++ local lockdir=/private/tmp/fm-azure-contract-qsr7zclv/state/.meta-task.lock.owner.rfOGdE
++ rm -f /private/tmp/fm-azure-contract-qsr7zclv/state/.meta-task.lock.owner.rfOGdE/pid /private/tmp/fm-azure-contract-qsr7zclv/state/.meta-task.lock.owner.rfOGdE/fm-home /private/tmp/fm-azure-contract-qsr7zclv/state/.meta-task.lock.owner.rfOGdE/pid-identity /private/tmp/fm-azure-contract-qsr7zclv/state/.meta-task.lock.owner.rfOGdE/role /private/tmp/fm-azure-contract-qsr7zclv/state/.meta-task.lock.owner.rfOGdE/watcher-path
++ rmdir /private/tmp/fm-azure-contract-qsr7zclv/state/.meta-task.lock.owner.rfOGdE
++ return 0
++ MERGE_META_LOCK=
++ '[' 0 -eq 0 ']'
++ return 0
++ fm_afk_contract_lock_release
++ local lock=/tmp/fm-azure-contract-qsr7zclv/state/.afk-contract.lock
++ '[' -n /tmp/fm-azure-contract-qsr7zclv/state/.afk-contract.lock ']'
++ FM_AFK_CONTRACT_LOCK_HELD=
++ fm_afk_contract_lock_helpers
++ command -v fm_lock_acquire_wait_bounded
++ return 0
++ fm_lock_release /tmp/fm-azure-contract-qsr7zclv/state/.afk-contract.lock
++ local lockdir=/tmp/fm-azure-contract-qsr7zclv/state/.afk-contract.lock pid current ownerdir
++ fm_current_pid current
++ local fm_pid
+++ exec sh -c 'printf "%s\n" "$PPID"'
++ fm_pid=41872
++ case "$fm_pid" in
++ '[' 1 -gt 0 ']'
++ printf -v current %s 41872
++ '[' -L /tmp/fm-azure-contract-qsr7zclv/state/.afk-contract.lock ']'
+++ fm_lock_link_owner /tmp/fm-azure-contract-qsr7zclv/state/.afk-contract.lock
++ ownerdir=/private/tmp/fm-azure-contract-qsr7zclv/state/.afk-contract.lock.owner.EqOSnW
++ '[' -n /private/tmp/fm-azure-contract-qsr7zclv/state/.afk-contract.lock.owner.EqOSnW ']'
+++ cat /private/tmp/fm-azure-contract-qsr7zclv/state/.afk-contract.lock.owner.EqOSnW/pid
++ pid=41872
++ '[' 41872 = 41872 ']'
++ fm_lock_points_to_owner /tmp/fm-azure-contract-qsr7zclv/state/.afk-contract.lock /private/tmp/fm-azure-contract-qsr7zclv/state/.afk-contract.lock.owner.EqOSnW
++ local lockdir=/tmp/fm-azure-contract-qsr7zclv/state/.afk-contract.lock ownerdir=/private/tmp/fm-azure-contract-qsr7zclv/state/.afk-contract.lock.owner.EqOSnW actual
+++ readlink /tmp/fm-azure-contract-qsr7zclv/state/.afk-contract.lock
++ actual=/private/tmp/fm-azure-contract-qsr7zclv/state/.afk-contract.lock.owner.EqOSnW
++ '[' /private/tmp/fm-azure-contract-qsr7zclv/state/.afk-contract.lock.owner.EqOSnW = /private/tmp/fm-azure-contract-qsr7zclv/state/.afk-contract.lock.owner.EqOSnW ']'
++ rm -f /tmp/fm-azure-contract-qsr7zclv/state/.afk-contract.lock
++ fm_lock_discard_owner /private/tmp/fm-azure-contract-qsr7zclv/state/.afk-contract.lock.owner.EqOSnW
++ local ownerdir=/private/tmp/fm-azure-contract-qsr7zclv/state/.afk-contract.lock.owner.EqOSnW
++ '[' -n /private/tmp/fm-azure-contract-qsr7zclv/state/.afk-contract.lock.owner.EqOSnW ']'
++ fm_lock_clean_known_files /private/tmp/fm-azure-contract-qsr7zclv/state/.afk-contract.lock.owner.EqOSnW
++ local lockdir=/private/tmp/fm-azure-contract-qsr7zclv/state/.afk-contract.lock.owner.EqOSnW
++ rm -f /private/tmp/fm-azure-contract-qsr7zclv/state/.afk-contract.lock.owner.EqOSnW/pid /private/tmp/fm-azure-contract-qsr7zclv/state/.afk-contract.lock.owner.EqOSnW/fm-home /private/tmp/fm-azure-contract-qsr7zclv/state/.afk-contract.lock.owner.EqOSnW/pid-identity /private/tmp/fm-azure-contract-qsr7zclv/state/.afk-contract.lock.owner.EqOSnW/role /private/tmp/fm-azure-contract-qsr7zclv/state/.afk-contract.lock.owner.EqOSnW/watcher-path
++ rmdir /private/tmp/fm-azure-contract-qsr7zclv/state/.afk-contract.lock.owner.EqOSnW
++ return 0
++ fm_lock_release /tmp/fm-azure-contract-qsr7zclv/state/.control-task.lock
++ local lockdir=/tmp/fm-azure-contract-qsr7zclv/state/.control-task.lock pid current ownerdir
++ fm_current_pid current
++ local fm_pid
+++ exec sh -c 'printf "%s\n" "$PPID"'
++ fm_pid=41872
++ case "$fm_pid" in
++ '[' 1 -gt 0 ']'
++ printf -v current %s 41872
++ '[' -L /tmp/fm-azure-contract-qsr7zclv/state/.control-task.lock ']'
+++ fm_lock_link_owner /tmp/fm-azure-contract-qsr7zclv/state/.control-task.lock
++ ownerdir=/private/tmp/fm-azure-contract-qsr7zclv/state/.control-task.lock.owner.STl7c4
++ '[' -n /private/tmp/fm-azure-contract-qsr7zclv/state/.control-task.lock.owner.STl7c4 ']'
+++ cat /private/tmp/fm-azure-contract-qsr7zclv/state/.control-task.lock.owner.STl7c4/pid
++ pid=41872
++ '[' 41872 = 41872 ']'
++ fm_lock_points_to_owner /tmp/fm-azure-contract-qsr7zclv/state/.control-task.lock /private/tmp/fm-azure-contract-qsr7zclv/state/.control-task.lock.owner.STl7c4
++ local lockdir=/tmp/fm-azure-contract-qsr7zclv/state/.control-task.lock ownerdir=/private/tmp/fm-azure-contract-qsr7zclv/state/.control-task.lock.owner.STl7c4 actual
+++ readlink /tmp/fm-azure-contract-qsr7zclv/state/.control-task.lock
++ actual=/private/tmp/fm-azure-contract-qsr7zclv/state/.control-task.lock.owner.STl7c4
++ '[' /private/tmp/fm-azure-contract-qsr7zclv/state/.control-task.lock.owner.STl7c4 = /private/tmp/fm-azure-contract-qsr7zclv/state/.control-task.lock.owner.STl7c4 ']'
++ rm -f /tmp/fm-azure-contract-qsr7zclv/state/.control-task.lock
++ fm_lock_discard_owner /private/tmp/fm-azure-contract-qsr7zclv/state/.control-task.lock.owner.STl7c4
++ local ownerdir=/private/tmp/fm-azure-contract-qsr7zclv/state/.control-task.lock.owner.STl7c4
++ '[' -n /private/tmp/fm-azure-contract-qsr7zclv/state/.control-task.lock.owner.STl7c4 ']'
++ fm_lock_clean_known_files /private/tmp/fm-azure-contract-qsr7zclv/state/.control-task.lock.owner.STl7c4
++ local lockdir=/private/tmp/fm-azure-contract-qsr7zclv/state/.control-task.lock.owner.STl7c4
++ rm -f /private/tmp/fm-azure-contract-qsr7zclv/state/.control-task.lock.owner.STl7c4/pid /private/tmp/fm-azure-contract-qsr7zclv/state/.control-task.lock.owner.STl7c4/fm-home /private/tmp/fm-azure-contract-qsr7zclv/state/.control-task.lock.owner.STl7c4/pid-identity /private/tmp/fm-azure-contract-qsr7zclv/state/.control-task.lock.owner.STl7c4/role /private/tmp/fm-azure-contract-qsr7zclv/state/.control-task.lock.owner.STl7c4/watcher-path
++ rmdir /private/tmp/fm-azure-contract-qsr7zclv/state/.control-task.lock.owner.STl7c4
++ return 0
++ MERGE_CONTROL_LOCK=
++ python3 /Users/martinstroher/dev/firstmate/data/ado-pr-support/nm/worktrees/324a78b3a755/01M49K3325XCG3AZXM5D4E3AZ6/bin/fm-azure-pr.py merged https://dev.azure.com/example/Project/_git/repo/pullrequest/7
+merged
++ outcome_rc=0
++ fm_merge_outcome_report /tmp/fm-azure-contract-qsr7zclv /tmp/fm-azure-contract-qsr7zclv/state task https://dev.azure.com/example/Project/_git/repo/pullrequest/7 self attended
++ local home=/tmp/fm-azure-contract-qsr7zclv state=/tmp/fm-azure-contract-qsr7zclv/state id=task url=https://dev.azure.com/example/Project/_git/repo/pullrequest/7 origin=self
++ local authority=attended suffix=
++ local self_rc=0 destination= line lock status=0
++ local provider host path number
++ local STATE FM_WAKE_QUEUE FM_WAKE_QUEUE_LOCK
++ FM_MERGE_OUTCOME_ALREADY_RECORDED=false
++ case "$origin" in
++ case "$authority" in
++ fm_pr_task_id_valid task
++ local id=task
++ fm_task_id_path_safe task
++ local id=task
++ local LC_ALL=C
++ case "$id" in
++ fm_pr_url_parse https://dev.azure.com/example/Project/_git/repo/pullrequest/7
++ local raw=https://dev.azure.com/example/Project/_git/repo/pullrequest/7 pattern host path azure
++ local LC_ALL=C
++ FM_PR_PROVIDER=
++ FM_PR_URL=
++ FM_PR_HOST=
++ FM_PR_PATH=
++ FM_PR_OWNER=
++ FM_PR_REPO=
++ FM_PR_NUMBER=
++ pattern='^https://github\.com/([A-Za-z0-9]|[A-Za-z0-9][A-Za-z0-9-]{0,37}[A-Za-z0-9])/([A-Za-z0-9._-]{1,100})/pull/([1-9][0-9]*)$'
++ [[ https://dev.azure.com/example/Project/_git/repo/pullrequest/7 =~ ^https://github\.com/([A-Za-z0-9]|[A-Za-z0-9][A-Za-z0-9-]{0,37}[A-Za-z0-9])/([A-Za-z0-9._-]{1,100})/pull/([1-9][0-9]*)$ ]]
++ case "$raw" in
+++++ dirname /Users/martinstroher/dev/firstmate/data/ado-pr-support/nm/worktrees/324a78b3a755/01M49K3325XCG3AZXM5D4E3AZ6/bin/fm-pr-lib.sh
++++ cd /Users/martinstroher/dev/firstmate/data/ado-pr-support/nm/worktrees/324a78b3a755/01M49K3325XCG3AZXM5D4E3AZ6/bin
++++ pwd
+++ python3 /Users/martinstroher/dev/firstmate/data/ado-pr-support/nm/worktrees/324a78b3a755/01M49K3325XCG3AZXM5D4E3AZ6/bin/fm-azure-pr.py parse https://dev.azure.com/example/Project/_git/repo/pullrequest/7
++ azure='dev.azure.com
+example/Project/_git/repo
+7'
++ FM_PR_PROVIDER=azuredevops
++ FM_PR_URL=https://dev.azure.com/example/Project/_git/repo/pullrequest/7
++ FM_PR_HOST=dev.azure.com
++ azure='example/Project/_git/repo
+7'
++ FM_PR_PATH=example/Project/_git/repo
++ FM_PR_NUMBER=7
++ return 0
++ provider=azuredevops
++ host=dev.azure.com
++ path=example/Project/_git/repo
++ number=7
++ '[' -d /tmp/fm-azure-contract-qsr7zclv/state ']'
++ '[' '!' -L /tmp/fm-azure-contract-qsr7zclv/state ']'
+++ fm_parent_channel_destination /tmp/fm-azure-contract-qsr7zclv /tmp/fm-azure-contract-qsr7zclv/state
+++ local home=/tmp/fm-azure-contract-qsr7zclv state=/tmp/fm-azure-contract-qsr7zclv/state id rc=0
+++ FM_PARENT_CHANNEL_ID=
+++ FM_PARENT_CHANNEL_ROUTE=
++++ fm_parent_channel_home_id /tmp/fm-azure-contract-qsr7zclv
++++ local home=/tmp/fm-azure-contract-qsr7zclv marker id
++++ marker=/tmp/fm-azure-contract-qsr7zclv/.fm-secondmate-home
++++ '[' '!' -e /tmp/fm-azure-contract-qsr7zclv/.fm-secondmate-home ']'
++++ '[' '!' -L /tmp/fm-azure-contract-qsr7zclv/.fm-secondmate-home ']'
++++ return 1
+++ id=
+++ rc=1
+++ '[' 1 -eq 0 ']'
+++ return 1
++ destination=
++ self_rc=1
++ '[' 1 -eq 1 ']'
++ destination=
++ STATE=/tmp/fm-azure-contract-qsr7zclv/state
++ . /Users/martinstroher/dev/firstmate/data/ado-pr-support/nm/worktrees/324a78b3a755/01M49K3325XCG3AZXM5D4E3AZ6/bin/fm-wake-lib.sh
++++ d=/Users/martinstroher/dev/firstmate/data/ado-pr-support/nm/worktrees/324a78b3a755/01M49K3325XCG3AZXM5D4E3AZ6/bin
++++ '[' /Users/martinstroher/dev/firstmate/data/ado-pr-support/nm/worktrees/324a78b3a755/01M49K3325XCG3AZXM5D4E3AZ6/bin '!=' /Users/martinstroher/dev/firstmate/data/ado-pr-support/nm/worktrees/324a78b3a755/01M49K3325XCG3AZXM5D4E3AZ6/bin/fm-wake-lib.sh ']'
++++ cd /Users/martinstroher/dev/firstmate/data/ado-pr-support/nm/worktrees/324a78b3a755/01M49K3325XCG3AZXM5D4E3AZ6/bin
++++ pwd
+++ FM_WAKE_LIB_DIR=/Users/martinstroher/dev/firstmate/data/ado-pr-support/nm/worktrees/324a78b3a755/01M49K3325XCG3AZXM5D4E3AZ6/bin
++++ cd /Users/martinstroher/dev/firstmate/data/ado-pr-support/nm/worktrees/324a78b3a755/01M49K3325XCG3AZXM5D4E3AZ6/bin/..
++++ pwd
+++ FM_WAKE_DEFAULT_ROOT=/Users/martinstroher/dev/firstmate/data/ado-pr-support/nm/worktrees/324a78b3a755/01M49K3325XCG3AZXM5D4E3AZ6
+++ FM_ROOT=/tmp/fm-azure-contract-qsr7zclv
+++ FM_HOME=/tmp/fm-azure-contract-qsr7zclv
+++ STATE=/tmp/fm-azure-contract-qsr7zclv/state
+++ FM_WAKE_QUEUE=/tmp/fm-azure-contract-qsr7zclv/state/.wake-queue
+++ FM_WAKE_QUEUE_LOCK=/tmp/fm-azure-contract-qsr7zclv/state/.wake-queue.lock
+++ FM_LOCK_STALE_AFTER=2
+++ . /Users/martinstroher/dev/firstmate/data/ado-pr-support/nm/worktrees/324a78b3a755/01M49K3325XCG3AZXM5D4E3AZ6/bin/fm-path-lib.sh
++++ uname
+++ _FM_UNAME=Darwin
+++ mkdir -p /tmp/fm-azure-contract-qsr7zclv/state
+++ '[' 3 -gt 4 ']'
+++ '[' 3 -eq 4 ']'
+++ FM_WATCHER_MATCHED_IDENTITY=
+++ FM_WATCHER_HEALTHY_PID=
+++ FM_WATCHER_HEALTHY_IDENTITY=
+++ FM_WATCHER_VERDICT_OK=false
+++ FM_WATCHER_VERDICT_REASON=stale-beacon
+++ FM_RECOVERY_MARKER_TOKEN=
+++ FM_RECOVERY_MARKER_ACTION=none
+++ FM_RECOVERY_MARKER_WRITTEN_TOKEN=
+++ FM_WAKE_APPEND_RECOVERY_PREVIOUS_TOKEN=
+++ FM_WAKE_APPEND_RECOVERY_PUBLISHED_TOKEN=
+++ FM_RECOVERY_HANDOVER_TOKEN=
+++ FM_RECOVERY_HANDOVER_SEQ=
+++ FM_WAKE_STATUS_KEY=
+++ FM_WAKE_STATUS_HISTORICAL=false
+++ FM_WAKE_EVENT_LINE=
+++ FM_WAKE_UNREAD_LINES=
++ lock=/tmp/fm-azure-contract-qsr7zclv/state/task.pr-poll-merge-notified.lock
++ fm_lock_acquire_wait /tmp/fm-azure-contract-qsr7zclv/state/task.pr-poll-merge-notified.lock
++ local lockdir=/tmp/fm-azure-contract-qsr7zclv/state/task.pr-poll-merge-notified.lock
++ fm_lock_try_acquire /tmp/fm-azure-contract-qsr7zclv/state/task.pr-poll-merge-notified.lock
++ local lockdir=/tmp/fm-azure-contract-qsr7zclv/state/task.pr-poll-merge-notified.lock pid steal cur rc steal_owner primary_owner current
++ FM_LOCK_HELD_PID=
++ FM_LOCK_OWNER_DIR=
++ FM_LOCK_RECOVERED_PID=
++ fm_lock_try_create /tmp/fm-azure-contract-qsr7zclv/state/task.pr-poll-merge-notified.lock
++ local lockdir=/tmp/fm-azure-contract-qsr7zclv/state/task.pr-poll-merge-notified.lock allowed_steal_owner= ownerdir
++ FM_LOCK_OWNER_DIR=
+++ fm_lock_owner_dir /tmp/fm-azure-contract-qsr7zclv/state/task.pr-poll-merge-notified.lock
+++ local lockdir=/tmp/fm-azure-contract-qsr7zclv/state/task.pr-poll-merge-notified.lock lock_abs
++++ fm_lock_abs_path /tmp/fm-azure-contract-qsr7zclv/state/task.pr-poll-merge-notified.lock
++++ local path=/tmp/fm-azure-contract-qsr7zclv/state/task.pr-poll-merge-notified.lock dir base
++++ fm_dirname_to dir /tmp/fm-azure-contract-qsr7zclv/state/task.pr-poll-merge-notified.lock
++++ local fm_path=/tmp/fm-azure-contract-qsr7zclv/state/task.pr-poll-merge-notified.lock
++++ case "$fm_path" in
++++ fm_path=/tmp/fm-azure-contract-qsr7zclv/state/task.pr-poll-merge-notified.lock
++++ case "$fm_path" in
++++ fm_path=/tmp/fm-azure-contract-qsr7zclv/state
++++ fm_path=/tmp/fm-azure-contract-qsr7zclv/state
++++ '[' -n /tmp/fm-azure-contract-qsr7zclv/state ']'
++++ '[' /tmp/fm-azure-contract-qsr7zclv/state '!=' /tmp/fm-azure-contract-qsr7zclv/state ']'
++++ printf -v dir %s /tmp/fm-azure-contract-qsr7zclv/state
++++ fm_basename_to base /tmp/fm-azure-contract-qsr7zclv/state/task.pr-poll-merge-notified.lock
++++ local fm_path=/tmp/fm-azure-contract-qsr7zclv/state/task.pr-poll-merge-notified.lock
++++ case "$fm_path" in
++++ fm_path=/tmp/fm-azure-contract-qsr7zclv/state/task.pr-poll-merge-notified.lock
++++ fm_path=task.pr-poll-merge-notified.lock
++++ '[' task.pr-poll-merge-notified.lock '!=' task.pr-poll-merge-notified.lock ']'
++++ printf -v base %s task.pr-poll-merge-notified.lock
+++++ cd /tmp/fm-azure-contract-qsr7zclv/state
+++++ pwd -P
++++ dir=/private/tmp/fm-azure-contract-qsr7zclv/state
++++ printf '%s/%s\n' /private/tmp/fm-azure-contract-qsr7zclv/state task.pr-poll-merge-notified.lock
+++ lock_abs=/private/tmp/fm-azure-contract-qsr7zclv/state/task.pr-poll-merge-notified.lock
+++ mktemp -d /private/tmp/fm-azure-contract-qsr7zclv/state/task.pr-poll-merge-notified.lock.owner.XXXXXX
++ ownerdir=/private/tmp/fm-azure-contract-qsr7zclv/state/task.pr-poll-merge-notified.lock.owner.1vpdRq
++ '[' -e /tmp/fm-azure-contract-qsr7zclv/state/task.pr-poll-merge-notified.lock ']'
++ '[' -L /tmp/fm-azure-contract-qsr7zclv/state/task.pr-poll-merge-notified.lock ']'
++ fm_lock_prepare_owner /private/tmp/fm-azure-contract-qsr7zclv/state/task.pr-poll-merge-notified.lock.owner.1vpdRq
++ local ownerdir=/private/tmp/fm-azure-contract-qsr7zclv/state/task.pr-poll-merge-notified.lock.owner.1vpdRq mypid back
++ fm_current_pid mypid
++ local fm_pid
+++ exec sh -c 'printf "%s\n" "$PPID"'
++ fm_pid=41872
++ case "$fm_pid" in
++ '[' 1 -gt 0 ']'
++ printf -v mypid %s 41872
++ printf '%s\n' 41872
+++ cat /private/tmp/fm-azure-contract-qsr7zclv/state/task.pr-poll-merge-notified.lock.owner.1vpdRq/pid
++ back=41872
++ '[' 41872 = 41872 ']'
++ ln -s /private/tmp/fm-azure-contract-qsr7zclv/state/task.pr-poll-merge-notified.lock.owner.1vpdRq /tmp/fm-azure-contract-qsr7zclv/state/task.pr-poll-merge-notified.lock
++ fm_lock_points_to_owner /tmp/fm-azure-contract-qsr7zclv/state/task.pr-poll-merge-notified.lock /private/tmp/fm-azure-contract-qsr7zclv/state/task.pr-poll-merge-notified.lock.owner.1vpdRq
++ local lockdir=/tmp/fm-azure-contract-qsr7zclv/state/task.pr-poll-merge-notified.lock ownerdir=/private/tmp/fm-azure-contract-qsr7zclv/state/task.pr-poll-merge-notified.lock.owner.1vpdRq actual
+++ readlink /tmp/fm-azure-contract-qsr7zclv/state/task.pr-poll-merge-notified.lock
++ actual=/private/tmp/fm-azure-contract-qsr7zclv/state/task.pr-poll-merge-notified.lock.owner.1vpdRq
++ '[' /private/tmp/fm-azure-contract-qsr7zclv/state/task.pr-poll-merge-notified.lock.owner.1vpdRq = /private/tmp/fm-azure-contract-qsr7zclv/state/task.pr-poll-merge-notified.lock.owner.1vpdRq ']'
++ fm_lock_claim /tmp/fm-azure-contract-qsr7zclv/state/task.pr-poll-merge-notified.lock /private/tmp/fm-azure-contract-qsr7zclv/state/task.pr-poll-merge-notified.lock.owner.1vpdRq ''
++ local lockdir=/tmp/fm-azure-contract-qsr7zclv/state/task.pr-poll-merge-notified.lock ownerdir=/private/tmp/fm-azure-contract-qsr7zclv/state/task.pr-poll-merge-notified.lock.owner.1vpdRq allowed_steal_owner= mypid back
++ fm_current_pid mypid
++ local fm_pid
+++ exec sh -c 'printf "%s\n" "$PPID"'
++ fm_pid=41872
++ case "$fm_pid" in
++ '[' 1 -gt 0 ']'
++ printf -v mypid %s 41872
+++ cat /private/tmp/fm-azure-contract-qsr7zclv/state/task.pr-poll-merge-notified.lock.owner.1vpdRq/pid
++ back=41872
++ '[' 41872 '!=' 41872 ']'
++ fm_lock_points_to_owner /tmp/fm-azure-contract-qsr7zclv/state/task.pr-poll-merge-notified.lock /private/tmp/fm-azure-contract-qsr7zclv/state/task.pr-poll-merge-notified.lock.owner.1vpdRq
++ local lockdir=/tmp/fm-azure-contract-qsr7zclv/state/task.pr-poll-merge-notified.lock ownerdir=/private/tmp/fm-azure-contract-qsr7zclv/state/task.pr-poll-merge-notified.lock.owner.1vpdRq actual
+++ readlink /tmp/fm-azure-contract-qsr7zclv/state/task.pr-poll-merge-notified.lock
++ actual=/private/tmp/fm-azure-contract-qsr7zclv/state/task.pr-poll-merge-notified.lock.owner.1vpdRq
++ '[' /private/tmp/fm-azure-contract-qsr7zclv/state/task.pr-poll-merge-notified.lock.owner.1vpdRq = /private/tmp/fm-azure-contract-qsr7zclv/state/task.pr-poll-merge-notified.lock.owner.1vpdRq ']'
++ fm_lock_claim_blocked_by_steal /tmp/fm-azure-contract-qsr7zclv/state/task.pr-poll-merge-notified.lock ''
++ local lockdir=/tmp/fm-azure-contract-qsr7zclv/state/task.pr-poll-merge-notified.lock allowed_steal_owner= steal
++ steal=/tmp/fm-azure-contract-qsr7zclv/state/task.pr-poll-merge-notified.lock.steal
++ '[' -e /tmp/fm-azure-contract-qsr7zclv/state/task.pr-poll-merge-notified.lock.steal ']'
++ '[' -L /tmp/fm-azure-contract-qsr7zclv/state/task.pr-poll-merge-notified.lock.steal ']'
++ return 1
++ return 0
++ FM_LOCK_OWNER_DIR=/private/tmp/fm-azure-contract-qsr7zclv/state/task.pr-poll-merge-notified.lock.owner.1vpdRq
++ return 0
++ return 0
++ fm_pr_poll_merge_already_notified /tmp/fm-azure-contract-qsr7zclv/state task azuredevops dev.azure.com example/Project/_git/repo 7
++ local state=/tmp/fm-azure-contract-qsr7zclv/state id=task provider=azuredevops host=dev.azure.com path=example/Project/_git/repo number=7 marker state_device
++ fm_pr_task_id_valid task
++ local id=task
++ fm_task_id_path_safe task
++ local id=task
++ local LC_ALL=C
++ case "$id" in
++ '[' -d /tmp/fm-azure-contract-qsr7zclv/state ']'
++ '[' '!' -L /tmp/fm-azure-contract-qsr7zclv/state ']'
+++ fm_pr_file_device /tmp/fm-azure-contract-qsr7zclv/state
++++ uname
+++ '[' Darwin = Darwin ']'
+++ /usr/bin/stat -f %d /tmp/fm-azure-contract-qsr7zclv/state
++ state_device=16777233
++ marker=/tmp/fm-azure-contract-qsr7zclv/state/task.pr-poll-merge-notified
++ fm_pr_poll_merge_marker_matches /tmp/fm-azure-contract-qsr7zclv/state/task.pr-poll-merge-notified 16777233 azuredevops dev.azure.com example/Project/_git/repo 7
++ local marker=/tmp/fm-azure-contract-qsr7zclv/state/task.pr-poll-merge-notified device=16777233 expected_provider=azuredevops expected_host=dev.azure.com expected_path=example/Project/_git/repo expected_number=7
++ local version provider host path number
++ fm_pr_private_file_valid /tmp/fm-azure-contract-qsr7zclv/state/task.pr-poll-merge-notified 600 16777233
++ local path=/tmp/fm-azure-contract-qsr7zclv/state/task.pr-poll-merge-notified mode=600 device=16777233
++ '[' -f /tmp/fm-azure-contract-qsr7zclv/state/task.pr-poll-merge-notified ']'
++ return 1
++ return 1
++ '[' -n '' ']'
++ '[' 0 -eq 0 ']'
++ '[' self = poll ']'
++ '[' -z '' ']'
++ fm_wake_append check merged-task-https://dev.azure.com/example/Project/_git/repo/pullrequest/7 'check: merge landed: task https://dev.azure.com/example/Project/_git/repo/pullrequest/7'
++ local status=0
++ fm_lock_acquire_wait /tmp/fm-azure-contract-qsr7zclv/state/.wake-queue.lock
++ local lockdir=/tmp/fm-azure-contract-qsr7zclv/state/.wake-queue.lock
++ fm_lock_try_acquire /tmp/fm-azure-contract-qsr7zclv/state/.wake-queue.lock
++ local lockdir=/tmp/fm-azure-contract-qsr7zclv/state/.wake-queue.lock pid steal cur rc steal_owner primary_owner current
++ FM_LOCK_HELD_PID=
++ FM_LOCK_OWNER_DIR=
++ FM_LOCK_RECOVERED_PID=
++ fm_lock_try_create /tmp/fm-azure-contract-qsr7zclv/state/.wake-queue.lock
++ local lockdir=/tmp/fm-azure-contract-qsr7zclv/state/.wake-queue.lock allowed_steal_owner= ownerdir
++ FM_LOCK_OWNER_DIR=
+++ fm_lock_owner_dir /tmp/fm-azure-contract-qsr7zclv/state/.wake-queue.lock
+++ local lockdir=/tmp/fm-azure-contract-qsr7zclv/state/.wake-queue.lock lock_abs
++++ fm_lock_abs_path /tmp/fm-azure-contract-qsr7zclv/state/.wake-queue.lock
++++ local path=/tmp/fm-azure-contract-qsr7zclv/state/.wake-queue.lock dir base
++++ fm_dirname_to dir /tmp/fm-azure-contract-qsr7zclv/state/.wake-queue.lock
++++ local fm_path=/tmp/fm-azure-contract-qsr7zclv/state/.wake-queue.lock
++++ case "$fm_path" in
++++ fm_path=/tmp/fm-azure-contract-qsr7zclv/state/.wake-queue.lock
++++ case "$fm_path" in
++++ fm_path=/tmp/fm-azure-contract-qsr7zclv/state
++++ fm_path=/tmp/fm-azure-contract-qsr7zclv/state
++++ '[' -n /tmp/fm-azure-contract-qsr7zclv/state ']'
++++ '[' /tmp/fm-azure-contract-qsr7zclv/state '!=' /tmp/fm-azure-contract-qsr7zclv/state ']'
++++ printf -v dir %s /tmp/fm-azure-contract-qsr7zclv/state
++++ fm_basename_to base /tmp/fm-azure-contract-qsr7zclv/state/.wake-queue.lock
++++ local fm_path=/tmp/fm-azure-contract-qsr7zclv/state/.wake-queue.lock
++++ case "$fm_path" in
++++ fm_path=/tmp/fm-azure-contract-qsr7zclv/state/.wake-queue.lock
++++ fm_path=.wake-queue.lock
++++ '[' .wake-queue.lock '!=' .wake-queue.lock ']'
++++ printf -v base %s .wake-queue.lock
+++++ cd /tmp/fm-azure-contract-qsr7zclv/state
+++++ pwd -P
++++ dir=/private/tmp/fm-azure-contract-qsr7zclv/state
++++ printf '%s/%s\n' /private/tmp/fm-azure-contract-qsr7zclv/state .wake-queue.lock
+++ lock_abs=/private/tmp/fm-azure-contract-qsr7zclv/state/.wake-queue.lock
+++ mktemp -d /private/tmp/fm-azure-contract-qsr7zclv/state/.wake-queue.lock.owner.XXXXXX
++ ownerdir=/private/tmp/fm-azure-contract-qsr7zclv/state/.wake-queue.lock.owner.I05vX1
++ '[' -e /tmp/fm-azure-contract-qsr7zclv/state/.wake-queue.lock ']'
++ '[' -L /tmp/fm-azure-contract-qsr7zclv/state/.wake-queue.lock ']'
++ fm_lock_prepare_owner /private/tmp/fm-azure-contract-qsr7zclv/state/.wake-queue.lock.owner.I05vX1
++ local ownerdir=/private/tmp/fm-azure-contract-qsr7zclv/state/.wake-queue.lock.owner.I05vX1 mypid back
++ fm_current_pid mypid
++ local fm_pid
+++ exec sh -c 'printf "%s\n" "$PPID"'
++ fm_pid=41872
++ case "$fm_pid" in
++ '[' 1 -gt 0 ']'
++ printf -v mypid %s 41872
++ printf '%s\n' 41872
+++ cat /private/tmp/fm-azure-contract-qsr7zclv/state/.wake-queue.lock.owner.I05vX1/pid
++ back=41872
++ '[' 41872 = 41872 ']'
++ ln -s /private/tmp/fm-azure-contract-qsr7zclv/state/.wake-queue.lock.owner.I05vX1 /tmp/fm-azure-contract-qsr7zclv/state/.wake-queue.lock
++ fm_lock_points_to_owner /tmp/fm-azure-contract-qsr7zclv/state/.wake-queue.lock /private/tmp/fm-azure-contract-qsr7zclv/state/.wake-queue.lock.owner.I05vX1
++ local lockdir=/tmp/fm-azure-contract-qsr7zclv/state/.wake-queue.lock ownerdir=/private/tmp/fm-azure-contract-qsr7zclv/state/.wake-queue.lock.owner.I05vX1 actual
+++ readlink /tmp/fm-azure-contract-qsr7zclv/state/.wake-queue.lock
++ actual=/private/tmp/fm-azure-contract-qsr7zclv/state/.wake-queue.lock.owner.I05vX1
++ '[' /private/tmp/fm-azure-contract-qsr7zclv/state/.wake-queue.lock.owner.I05vX1 = /private/tmp/fm-azure-contract-qsr7zclv/state/.wake-queue.lock.owner.I05vX1 ']'
++ fm_lock_claim /tmp/fm-azure-contract-qsr7zclv/state/.wake-queue.lock /private/tmp/fm-azure-contract-qsr7zclv/state/.wake-queue.lock.owner.I05vX1 ''
++ local lockdir=/tmp/fm-azure-contract-qsr7zclv/state/.wake-queue.lock ownerdir=/private/tmp/fm-azure-contract-qsr7zclv/state/.wake-queue.lock.owner.I05vX1 allowed_steal_owner= mypid back
++ fm_current_pid mypid
++ local fm_pid
+++ exec sh -c 'printf "%s\n" "$PPID"'
++ fm_pid=41872
++ case "$fm_pid" in
++ '[' 1 -gt 0 ']'
++ printf -v mypid %s 41872
+++ cat /private/tmp/fm-azure-contract-qsr7zclv/state/.wake-queue.lock.owner.I05vX1/pid
++ back=41872
++ '[' 41872 '!=' 41872 ']'
++ fm_lock_points_to_owner /tmp/fm-azure-contract-qsr7zclv/state/.wake-queue.lock /private/tmp/fm-azure-contract-qsr7zclv/state/.wake-queue.lock.owner.I05vX1
++ local lockdir=/tmp/fm-azure-contract-qsr7zclv/state/.wake-queue.lock ownerdir=/private/tmp/fm-azure-contract-qsr7zclv/state/.wake-queue.lock.owner.I05vX1 actual
+++ readlink /tmp/fm-azure-contract-qsr7zclv/state/.wake-queue.lock
++ actual=/private/tmp/fm-azure-contract-qsr7zclv/state/.wake-queue.lock.owner.I05vX1
++ '[' /private/tmp/fm-azure-contract-qsr7zclv/state/.wake-queue.lock.owner.I05vX1 = /private/tmp/fm-azure-contract-qsr7zclv/state/.wake-queue.lock.owner.I05vX1 ']'
++ fm_lock_claim_blocked_by_steal /tmp/fm-azure-contract-qsr7zclv/state/.wake-queue.lock ''
++ local lockdir=/tmp/fm-azure-contract-qsr7zclv/state/.wake-queue.lock allowed_steal_owner= steal
++ steal=/tmp/fm-azure-contract-qsr7zclv/state/.wake-queue.lock.steal
++ '[' -e /tmp/fm-azure-contract-qsr7zclv/state/.wake-queue.lock.steal ']'
++ '[' -L /tmp/fm-azure-contract-qsr7zclv/state/.wake-queue.lock.steal ']'
++ return 1
++ return 0
++ FM_LOCK_OWNER_DIR=/private/tmp/fm-azure-contract-qsr7zclv/state/.wake-queue.lock.owner.I05vX1
++ return 0
++ return 0
++ fm_wake_append_locked check merged-task-https://dev.azure.com/example/Project/_git/repo/pullrequest/7 'check: merge landed: task https://dev.azure.com/example/Project/_git/repo/pullrequest/7'
++ local kind=check key=merged-task-https://dev.azure.com/example/Project/_git/repo/pullrequest/7 'payload=check: merge landed: task https://dev.azure.com/example/Project/_git/repo/pullrequest/7' clean_key clean_payload epoch seq seq_file status
++ local recovery_marker
++ case "$kind" in
+++ printf %s merged-task-https://dev.azure.com/example/Project/_git/repo/pullrequest/7
+++ fm_wake_clean_field
+++ LC_ALL=C
+++ tr '\t\r\n' '   '
++ clean_key=merged-task-https://dev.azure.com/example/Project/_git/repo/pullrequest/7
+++ printf %s 'check: merge landed: task https://dev.azure.com/example/Project/_git/repo/pullrequest/7'
+++ fm_wake_clean_field
+++ LC_ALL=C
+++ tr '\t\r\n' '   '
++ clean_payload='check: merge landed: task https://dev.azure.com/example/Project/_git/repo/pullrequest/7'
+++ date +%s
++ epoch=1791330281
++ seq_file=/tmp/fm-azure-contract-qsr7zclv/state/.wake-queue.seq
++ recovery_marker=/tmp/fm-azure-contract-qsr7zclv/state/.watcher-down
++ status=0
++ _fm_recovery_marker_publish /tmp/fm-azure-contract-qsr7zclv/state/.watcher-down downtime '' append
++ local marker=/tmp/fm-azure-contract-qsr7zclv/state/.watcher-down kind=downtime bound= source=append
++ local lock saved_token generation= status=pending previous_append_token=
++ case "$kind" in
++ case "$source" in
++ '[' append = append ']'
++ FM_WAKE_APPEND_RECOVERY_PREVIOUS_TOKEN=
++ FM_WAKE_APPEND_RECOVERY_PUBLISHED_TOKEN=
++ lock=/tmp/fm-azure-contract-qsr7zclv/state/.watcher-down.lock
++ '[' -n '' ']'
++ fm_lock_acquire_wait /tmp/fm-azure-contract-qsr7zclv/state/.watcher-down.lock
++ local lockdir=/tmp/fm-azure-contract-qsr7zclv/state/.watcher-down.lock
++ fm_lock_try_acquire /tmp/fm-azure-contract-qsr7zclv/state/.watcher-down.lock
++ local lockdir=/tmp/fm-azure-contract-qsr7zclv/state/.watcher-down.lock pid steal cur rc steal_owner primary_owner current
++ FM_LOCK_HELD_PID=
++ FM_LOCK_OWNER_DIR=
++ FM_LOCK_RECOVERED_PID=
++ fm_lock_try_create /tmp/fm-azure-contract-qsr7zclv/state/.watcher-down.lock
++ local lockdir=/tmp/fm-azure-contract-qsr7zclv/state/.watcher-down.lock allowed_steal_owner= ownerdir
++ FM_LOCK_OWNER_DIR=
+++ fm_lock_owner_dir /tmp/fm-azure-contract-qsr7zclv/state/.watcher-down.lock
+++ local lockdir=/tmp/fm-azure-contract-qsr7zclv/state/.watcher-down.lock lock_abs
++++ fm_lock_abs_path /tmp/fm-azure-contract-qsr7zclv/state/.watcher-down.lock
++++ local path=/tmp/fm-azure-contract-qsr7zclv/state/.watcher-down.lock dir base
++++ fm_dirname_to dir /tmp/fm-azure-contract-qsr7zclv/state/.watcher-down.lock
++++ local fm_path=/tmp/fm-azure-contract-qsr7zclv/state/.watcher-down.lock
++++ case "$fm_path" in
++++ fm_path=/tmp/fm-azure-contract-qsr7zclv/state/.watcher-down.lock
++++ case "$fm_path" in
++++ fm_path=/tmp/fm-azure-contract-qsr7zclv/state
++++ fm_path=/tmp/fm-azure-contract-qsr7zclv/state
++++ '[' -n /tmp/fm-azure-contract-qsr7zclv/state ']'
++++ '[' /tmp/fm-azure-contract-qsr7zclv/state '!=' /tmp/fm-azure-contract-qsr7zclv/state ']'
++++ printf -v dir %s /tmp/fm-azure-contract-qsr7zclv/state
++++ fm_basename_to base /tmp/fm-azure-contract-qsr7zclv/state/.watcher-down.lock
++++ local fm_path=/tmp/fm-azure-contract-qsr7zclv/state/.watcher-down.lock
++++ case "$fm_path" in
++++ fm_path=/tmp/fm-azure-contract-qsr7zclv/state/.watcher-down.lock
++++ fm_path=.watcher-down.lock
++++ '[' .watcher-down.lock '!=' .watcher-down.lock ']'
++++ printf -v base %s .watcher-down.lock
+++++ cd /tmp/fm-azure-contract-qsr7zclv/state
+++++ pwd -P
++++ dir=/private/tmp/fm-azure-contract-qsr7zclv/state
++++ printf '%s/%s\n' /private/tmp/fm-azure-contract-qsr7zclv/state .watcher-down.lock
+++ lock_abs=/private/tmp/fm-azure-contract-qsr7zclv/state/.watcher-down.lock
+++ mktemp -d /private/tmp/fm-azure-contract-qsr7zclv/state/.watcher-down.lock.owner.XXXXXX
++ ownerdir=/private/tmp/fm-azure-contract-qsr7zclv/state/.watcher-down.lock.owner.8fPZ0Q
++ '[' -e /tmp/fm-azure-contract-qsr7zclv/state/.watcher-down.lock ']'
++ '[' -L /tmp/fm-azure-contract-qsr7zclv/state/.watcher-down.lock ']'
++ fm_lock_prepare_owner /private/tmp/fm-azure-contract-qsr7zclv/state/.watcher-down.lock.owner.8fPZ0Q
++ local ownerdir=/private/tmp/fm-azure-contract-qsr7zclv/state/.watcher-down.lock.owner.8fPZ0Q mypid back
++ fm_current_pid mypid
++ local fm_pid
+++ exec sh -c 'printf "%s\n" "$PPID"'
++ fm_pid=41872
++ case "$fm_pid" in
++ '[' 1 -gt 0 ']'
++ printf -v mypid %s 41872
++ printf '%s\n' 41872
+++ cat /private/tmp/fm-azure-contract-qsr7zclv/state/.watcher-down.lock.owner.8fPZ0Q/pid
++ back=41872
++ '[' 41872 = 41872 ']'
++ ln -s /private/tmp/fm-azure-contract-qsr7zclv/state/.watcher-down.lock.owner.8fPZ0Q /tmp/fm-azure-contract-qsr7zclv/state/.watcher-down.lock
++ fm_lock_points_to_owner /tmp/fm-azure-contract-qsr7zclv/state/.watcher-down.lock /private/tmp/fm-azure-contract-qsr7zclv/state/.watcher-down.lock.owner.8fPZ0Q
++ local lockdir=/tmp/fm-azure-contract-qsr7zclv/state/.watcher-down.lock ownerdir=/private/tmp/fm-azure-contract-qsr7zclv/state/.watcher-down.lock.owner.8fPZ0Q actual
+++ readlink /tmp/fm-azure-contract-qsr7zclv/state/.watcher-down.lock
++ actual=/private/tmp/fm-azure-contract-qsr7zclv/state/.watcher-down.lock.owner.8fPZ0Q
++ '[' /private/tmp/fm-azure-contract-qsr7zclv/state/.watcher-down.lock.owner.8fPZ0Q = /private/tmp/fm-azure-contract-qsr7zclv/state/.watcher-down.lock.owner.8fPZ0Q ']'
++ fm_lock_claim /tmp/fm-azure-contract-qsr7zclv/state/.watcher-down.lock /private/tmp/fm-azure-contract-qsr7zclv/state/.watcher-down.lock.owner.8fPZ0Q ''
++ local lockdir=/tmp/fm-azure-contract-qsr7zclv/state/.watcher-down.lock ownerdir=/private/tmp/fm-azure-contract-qsr7zclv/state/.watcher-down.lock.owner.8fPZ0Q allowed_steal_owner= mypid back
++ fm_current_pid mypid
++ local fm_pid
+++ exec sh -c 'printf "%s\n" "$PPID"'
++ fm_pid=41872
++ case "$fm_pid" in
++ '[' 1 -gt 0 ']'
++ printf -v mypid %s 41872
+++ cat /private/tmp/fm-azure-contract-qsr7zclv/state/.watcher-down.lock.owner.8fPZ0Q/pid
++ back=41872
++ '[' 41872 '!=' 41872 ']'
++ fm_lock_points_to_owner /tmp/fm-azure-contract-qsr7zclv/state/.watcher-down.lock /private/tmp/fm-azure-contract-qsr7zclv/state/.watcher-down.lock.owner.8fPZ0Q
++ local lockdir=/tmp/fm-azure-contract-qsr7zclv/state/.watcher-down.lock ownerdir=/private/tmp/fm-azure-contract-qsr7zclv/state/.watcher-down.lock.owner.8fPZ0Q actual
+++ readlink /tmp/fm-azure-contract-qsr7zclv/state/.watcher-down.lock
++ actual=/private/tmp/fm-azure-contract-qsr7zclv/state/.watcher-down.lock.owner.8fPZ0Q
++ '[' /private/tmp/fm-azure-contract-qsr7zclv/state/.watcher-down.lock.owner.8fPZ0Q = /private/tmp/fm-azure-contract-qsr7zclv/state/.watcher-down.lock.owner.8fPZ0Q ']'
++ fm_lock_claim_blocked_by_steal /tmp/fm-azure-contract-qsr7zclv/state/.watcher-down.lock ''
++ local lockdir=/tmp/fm-azure-contract-qsr7zclv/state/.watcher-down.lock allowed_steal_owner= steal
++ steal=/tmp/fm-azure-contract-qsr7zclv/state/.watcher-down.lock.steal
++ '[' -e /tmp/fm-azure-contract-qsr7zclv/state/.watcher-down.lock.steal ']'
++ '[' -L /tmp/fm-azure-contract-qsr7zclv/state/.watcher-down.lock.steal ']'
++ return 1
++ return 0
++ FM_LOCK_OWNER_DIR=/private/tmp/fm-azure-contract-qsr7zclv/state/.watcher-down.lock.owner.8fPZ0Q
++ return 0
++ return 0
++ '[' -d /tmp/fm-azure-contract-qsr7zclv/state/.watcher-down ']'
++ '[' downtime = downtime ']'
++ saved_token=
++ fm_recovery_marker_read /tmp/fm-azure-contract-qsr7zclv/state/.watcher-down
++ local marker=/tmp/fm-azure-contract-qsr7zclv/state/.watcher-down line extra
++ FM_RECOVERY_MARKER_TOKEN=
++ '[' -f /tmp/fm-azure-contract-qsr7zclv/state/.watcher-down ']'
++ return 1
++ FM_RECOVERY_MARKER_TOKEN=
++ _fm_recovery_marker_write_locked /tmp/fm-azure-contract-qsr7zclv/state/.watcher-down downtime '' pending
++ local marker=/tmp/fm-azure-contract-qsr7zclv/state/.watcher-down kind=downtime generation= status=pending tmp pid epoch token
++ FM_RECOVERY_MARKER_WRITTEN_TOKEN=
++ case "$kind" in
++ case "$status" in
+++ mktemp /tmp/fm-azure-contract-qsr7zclv/state/.watcher-down.tmp.XXXXXX
++ tmp=/tmp/fm-azure-contract-qsr7zclv/state/.watcher-down.tmp.MK1vvw
++ '[' -z '' ']'
++ fm_current_pid pid
++ local fm_pid
+++ exec sh -c 'printf "%s\n" "$PPID"'
++ fm_pid=41872
++ case "$fm_pid" in
++ '[' 1 -gt 0 ']'
++ printf -v pid %s 41872
+++ date +%s
++ epoch=1791330283
++ generation=41872.1791330283.MK1vvw
++ token=pending:downtime:41872.1791330283.MK1vvw
++ printf '%s\n' pending:downtime:41872.1791330283.MK1vvw
++ chmod 0600 /tmp/fm-azure-contract-qsr7zclv/state/.watcher-down.tmp.MK1vvw
++ _fm_atomic_replace /tmp/fm-azure-contract-qsr7zclv/state/.watcher-down.tmp.MK1vvw /tmp/fm-azure-contract-qsr7zclv/state/.watcher-down
++ mv -f -- /tmp/fm-azure-contract-qsr7zclv/state/.watcher-down.tmp.MK1vvw /tmp/fm-azure-contract-qsr7zclv/state/.watcher-down
++ FM_RECOVERY_MARKER_WRITTEN_TOKEN=pending:downtime:41872.1791330283.MK1vvw
++ '[' -n '' ']'
++ fm_lock_release /tmp/fm-azure-contract-qsr7zclv/state/.watcher-down.lock
++ local lockdir=/tmp/fm-azure-contract-qsr7zclv/state/.watcher-down.lock pid current ownerdir
++ fm_current_pid current
++ local fm_pid
+++ exec sh -c 'printf "%s\n" "$PPID"'
++ fm_pid=41872
++ case "$fm_pid" in
++ '[' 1 -gt 0 ']'
++ printf -v current %s 41872
++ '[' -L /tmp/fm-azure-contract-qsr7zclv/state/.watcher-down.lock ']'
+++ fm_lock_link_owner /tmp/fm-azure-contract-qsr7zclv/state/.watcher-down.lock
++ ownerdir=/private/tmp/fm-azure-contract-qsr7zclv/state/.watcher-down.lock.owner.8fPZ0Q
++ '[' -n /private/tmp/fm-azure-contract-qsr7zclv/state/.watcher-down.lock.owner.8fPZ0Q ']'
+++ cat /private/tmp/fm-azure-contract-qsr7zclv/state/.watcher-down.lock.owner.8fPZ0Q/pid
++ pid=41872
++ '[' 41872 = 41872 ']'
++ fm_lock_points_to_owner /tmp/fm-azure-contract-qsr7zclv/state/.watcher-down.lock /private/tmp/fm-azure-contract-qsr7zclv/state/.watcher-down.lock.owner.8fPZ0Q
++ local lockdir=/tmp/fm-azure-contract-qsr7zclv/state/.watcher-down.lock ownerdir=/private/tmp/fm-azure-contract-qsr7zclv/state/.watcher-down.lock.owner.8fPZ0Q actual
+++ readlink /tmp/fm-azure-contract-qsr7zclv/state/.watcher-down.lock
++ actual=/private/tmp/fm-azure-contract-qsr7zclv/state/.watcher-down.lock.owner.8fPZ0Q
++ '[' /private/tmp/fm-azure-contract-qsr7zclv/state/.watcher-down.lock.owner.8fPZ0Q = /private/tmp/fm-azure-contract-qsr7zclv/state/.watcher-down.lock.owner.8fPZ0Q ']'
++ rm -f /tmp/fm-azure-contract-qsr7zclv/state/.watcher-down.lock
++ fm_lock_discard_owner /private/tmp/fm-azure-contract-qsr7zclv/state/.watcher-down.lock.owner.8fPZ0Q
++ local ownerdir=/private/tmp/fm-azure-contract-qsr7zclv/state/.watcher-down.lock.owner.8fPZ0Q
++ '[' -n /private/tmp/fm-azure-contract-qsr7zclv/state/.watcher-down.lock.owner.8fPZ0Q ']'
++ fm_lock_clean_known_files /private/tmp/fm-azure-contract-qsr7zclv/state/.watcher-down.lock.owner.8fPZ0Q
++ local lockdir=/private/tmp/fm-azure-contract-qsr7zclv/state/.watcher-down.lock.owner.8fPZ0Q
++ rm -f /private/tmp/fm-azure-contract-qsr7zclv/state/.watcher-down.lock.owner.8fPZ0Q/pid /private/tmp/fm-azure-contract-qsr7zclv/state/.watcher-down.lock.owner.8fPZ0Q/fm-home /private/tmp/fm-azure-contract-qsr7zclv/state/.watcher-down.lock.owner.8fPZ0Q/pid-identity /private/tmp/fm-azure-contract-qsr7zclv/state/.watcher-down.lock.owner.8fPZ0Q/role /private/tmp/fm-azure-contract-qsr7zclv/state/.watcher-down.lock.owner.8fPZ0Q/watcher-path
++ rmdir /private/tmp/fm-azure-contract-qsr7zclv/state/.watcher-down.lock.owner.8fPZ0Q
++ return 0
++ '[' 0 -eq 0 ']'
+++ cat /tmp/fm-azure-contract-qsr7zclv/state/.wake-queue.seq
+++ echo 0
++ seq=0
++ case "$seq" in
++ seq=1
++ printf '%s\n' 1
++ '[' 0 -eq 0 ']'
++ printf '%s\t%s\t%s\t%s\t%s\n' 1791330281 1 check merged-task-https://dev.azure.com/example/Project/_git/repo/pullrequest/7 'check: merge landed: task https://dev.azure.com/example/Project/_git/repo/pullrequest/7'
++ '[' 0 -ne 0 ']'
++ FM_WAKE_APPEND_RECOVERY_PREVIOUS_TOKEN=
++ FM_WAKE_APPEND_RECOVERY_PUBLISHED_TOKEN=
++ return 0
++ fm_lock_release /tmp/fm-azure-contract-qsr7zclv/state/.wake-queue.lock
++ local lockdir=/tmp/fm-azure-contract-qsr7zclv/state/.wake-queue.lock pid current ownerdir
++ fm_current_pid current
++ local fm_pid
+++ exec sh -c 'printf "%s\n" "$PPID"'
++ fm_pid=41872
++ case "$fm_pid" in
++ '[' 1 -gt 0 ']'
++ printf -v current %s 41872
++ '[' -L /tmp/fm-azure-contract-qsr7zclv/state/.wake-queue.lock ']'
+++ fm_lock_link_owner /tmp/fm-azure-contract-qsr7zclv/state/.wake-queue.lock
++ ownerdir=/private/tmp/fm-azure-contract-qsr7zclv/state/.wake-queue.lock.owner.I05vX1
++ '[' -n /private/tmp/fm-azure-contract-qsr7zclv/state/.wake-queue.lock.owner.I05vX1 ']'
+++ cat /private/tmp/fm-azure-contract-qsr7zclv/state/.wake-queue.lock.owner.I05vX1/pid
++ pid=41872
++ '[' 41872 = 41872 ']'
++ fm_lock_points_to_owner /tmp/fm-azure-contract-qsr7zclv/state/.wake-queue.lock /private/tmp/fm-azure-contract-qsr7zclv/state/.wake-queue.lock.owner.I05vX1
++ local lockdir=/tmp/fm-azure-contract-qsr7zclv/state/.wake-queue.lock ownerdir=/private/tmp/fm-azure-contract-qsr7zclv/state/.wake-queue.lock.owner.I05vX1 actual
+++ readlink /tmp/fm-azure-contract-qsr7zclv/state/.wake-queue.lock
++ actual=/private/tmp/fm-azure-contract-qsr7zclv/state/.wake-queue.lock.owner.I05vX1
++ '[' /private/tmp/fm-azure-contract-qsr7zclv/state/.wake-queue.lock.owner.I05vX1 = /private/tmp/fm-azure-contract-qsr7zclv/state/.wake-queue.lock.owner.I05vX1 ']'
++ rm -f /tmp/fm-azure-contract-qsr7zclv/state/.wake-queue.lock
++ fm_lock_discard_owner /private/tmp/fm-azure-contract-qsr7zclv/state/.wake-queue.lock.owner.I05vX1
++ local ownerdir=/private/tmp/fm-azure-contract-qsr7zclv/state/.wake-queue.lock.owner.I05vX1
++ '[' -n /private/tmp/fm-azure-contract-qsr7zclv/state/.wake-queue.lock.owner.I05vX1 ']'
++ fm_lock_clean_known_files /private/tmp/fm-azure-contract-qsr7zclv/state/.wake-queue.lock.owner.I05vX1
++ local lockdir=/private/tmp/fm-azure-contract-qsr7zclv/state/.wake-queue.lock.owner.I05vX1
++ rm -f /private/tmp/fm-azure-contract-qsr7zclv/state/.wake-queue.lock.owner.I05vX1/pid /private/tmp/fm-azure-contract-qsr7zclv/state/.wake-queue.lock.owner.I05vX1/fm-home /private/tmp/fm-azure-contract-qsr7zclv/state/.wake-queue.lock.owner.I05vX1/pid-identity /private/tmp/fm-azure-contract-qsr7zclv/state/.wake-queue.lock.owner.I05vX1/role /private/tmp/fm-azure-contract-qsr7zclv/state/.wake-queue.lock.owner.I05vX1/watcher-path
++ rmdir /private/tmp/fm-azure-contract-qsr7zclv/state/.wake-queue.lock.owner.I05vX1
++ return 0
++ return 0
++ '[' 0 -eq 0 ']'
++ fm_pr_poll_merge_mark_notified /tmp/fm-azure-contract-qsr7zclv/state task azuredevops dev.azure.com example/Project/_git/repo 7
++ local state=/tmp/fm-azure-contract-qsr7zclv/state id=task provider=azuredevops host=dev.azure.com path=example/Project/_git/repo number=7 marker tmp state_device
++ fm_pr_task_id_valid task
++ local id=task
++ fm_task_id_path_safe task
++ local id=task
++ local LC_ALL=C
++ case "$id" in
++ '[' -d /tmp/fm-azure-contract-qsr7zclv/state ']'
++ '[' '!' -L /tmp/fm-azure-contract-qsr7zclv/state ']'
+++ fm_pr_file_device /tmp/fm-azure-contract-qsr7zclv/state
++++ uname
+++ '[' Darwin = Darwin ']'
+++ /usr/bin/stat -f %d /tmp/fm-azure-contract-qsr7zclv/state
++ state_device=16777233
++ marker=/tmp/fm-azure-contract-qsr7zclv/state/task.pr-poll-merge-notified
++ fm_pr_regular_destination_on_device_or_absent /tmp/fm-azure-contract-qsr7zclv/state/task.pr-poll-merge-notified 16777233
++ local path=/tmp/fm-azure-contract-qsr7zclv/state/task.pr-poll-merge-notified device=16777233
++ fm_pr_regular_destination_or_absent /tmp/fm-azure-contract-qsr7zclv/state/task.pr-poll-merge-notified
++ local path=/tmp/fm-azure-contract-qsr7zclv/state/task.pr-poll-merge-notified
++ '[' '!' -L /tmp/fm-azure-contract-qsr7zclv/state/task.pr-poll-merge-notified ']'
++ '[' -e /tmp/fm-azure-contract-qsr7zclv/state/task.pr-poll-merge-notified ']'
++ '[' '!' -e /tmp/fm-azure-contract-qsr7zclv/state/task.pr-poll-merge-notified ']'
++ umask 077
+++ mktemp /tmp/fm-azure-contract-qsr7zclv/state/.fm-pr-poll-merge-notified.XXXXXX
++ tmp=/tmp/fm-azure-contract-qsr7zclv/state/.fm-pr-poll-merge-notified.pfPdD0
++ printf '%s\n%s\n%s\n%s\n%s\n' fm-pr-poll-merge-notified-v1 azuredevops dev.azure.com example/Project/_git/repo 7
++ chmod 0600 /tmp/fm-azure-contract-qsr7zclv/state/.fm-pr-poll-merge-notified.pfPdD0
++ fm_pr_poll_merge_marker_matches /tmp/fm-azure-contract-qsr7zclv/state/.fm-pr-poll-merge-notified.pfPdD0 16777233 azuredevops dev.azure.com example/Project/_git/repo 7
++ local marker=/tmp/fm-azure-contract-qsr7zclv/state/.fm-pr-poll-merge-notified.pfPdD0 device=16777233 expected_provider=azuredevops expected_host=dev.azure.com expected_path=example/Project/_git/repo expected_number=7
++ local version provider host path number
++ fm_pr_private_file_valid /tmp/fm-azure-contract-qsr7zclv/state/.fm-pr-poll-merge-notified.pfPdD0 600 16777233
++ local path=/tmp/fm-azure-contract-qsr7zclv/state/.fm-pr-poll-merge-notified.pfPdD0 mode=600 device=16777233
++ '[' -f /tmp/fm-azure-contract-qsr7zclv/state/.fm-pr-poll-merge-notified.pfPdD0 ']'
++ '[' '!' -L /tmp/fm-azure-contract-qsr7zclv/state/.fm-pr-poll-merge-notified.pfPdD0 ']'
+++ fm_pr_file_mode /tmp/fm-azure-contract-qsr7zclv/state/.fm-pr-poll-merge-notified.pfPdD0
++++ uname
+++ '[' Darwin = Darwin ']'
+++ /usr/bin/stat -f %Lp /tmp/fm-azure-contract-qsr7zclv/state/.fm-pr-poll-merge-notified.pfPdD0
++ '[' 600 = 600 ']'
+++ fm_pr_file_device /tmp/fm-azure-contract-qsr7zclv/state/.fm-pr-poll-merge-notified.pfPdD0
++++ uname
+++ '[' Darwin = Darwin ']'
+++ /usr/bin/stat -f %d /tmp/fm-azure-contract-qsr7zclv/state/.fm-pr-poll-merge-notified.pfPdD0
++ '[' 16777233 = 16777233 ']'
+++ fm_pr_file_link_count /tmp/fm-azure-contract-qsr7zclv/state/.fm-pr-poll-merge-notified.pfPdD0
++++ uname
+++ '[' Darwin = Darwin ']'
+++ /usr/bin/stat -f %l /tmp/fm-azure-contract-qsr7zclv/state/.fm-pr-poll-merge-notified.pfPdD0
++ '[' 1 = 1 ']'
++ exec
++ IFS=
++ read -r version
++ IFS=
++ read -r provider
++ IFS=
++ read -r host
++ IFS=
++ read -r path
++ IFS=
++ read -r number
++ IFS=
++ read -r _extra
++ exec
++ '[' fm-pr-poll-merge-notified-v1 = fm-pr-poll-merge-notified-v1 ']'
++ '[' azuredevops = azuredevops ']'
++ '[' dev.azure.com = dev.azure.com ']'
++ '[' example/Project/_git/repo = example/Project/_git/repo ']'
++ '[' 7 = 7 ']'
++ fm_pr_regular_destination_on_device_or_absent /tmp/fm-azure-contract-qsr7zclv/state/task.pr-poll-merge-notified 16777233
++ local path=/tmp/fm-azure-contract-qsr7zclv/state/task.pr-poll-merge-notified device=16777233
++ fm_pr_regular_destination_or_absent /tmp/fm-azure-contract-qsr7zclv/state/task.pr-poll-merge-notified
++ local path=/tmp/fm-azure-contract-qsr7zclv/state/task.pr-poll-merge-notified
++ '[' '!' -L /tmp/fm-azure-contract-qsr7zclv/state/task.pr-poll-merge-notified ']'
++ '[' -e /tmp/fm-azure-contract-qsr7zclv/state/task.pr-poll-merge-notified ']'
++ '[' '!' -e /tmp/fm-azure-contract-qsr7zclv/state/task.pr-poll-merge-notified ']'
++ mv -f -- /tmp/fm-azure-contract-qsr7zclv/state/.fm-pr-poll-merge-notified.pfPdD0 /tmp/fm-azure-contract-qsr7zclv/state/task.pr-poll-merge-notified
++ fm_pr_poll_merge_marker_matches /tmp/fm-azure-contract-qsr7zclv/state/task.pr-poll-merge-notified 16777233 azuredevops dev.azure.com example/Project/_git/repo 7
++ local marker=/tmp/fm-azure-contract-qsr7zclv/state/task.pr-poll-merge-notified device=16777233 expected_provider=azuredevops expected_host=dev.azure.com expected_path=example/Project/_git/repo expected_number=7
++ local version provider host path number
++ fm_pr_private_file_valid /tmp/fm-azure-contract-qsr7zclv/state/task.pr-poll-merge-notified 600 16777233
++ local path=/tmp/fm-azure-contract-qsr7zclv/state/task.pr-poll-merge-notified mode=600 device=16777233
++ '[' -f /tmp/fm-azure-contract-qsr7zclv/state/task.pr-poll-merge-notified ']'
++ '[' '!' -L /tmp/fm-azure-contract-qsr7zclv/state/task.pr-poll-merge-notified ']'
+++ fm_pr_file_mode /tmp/fm-azure-contract-qsr7zclv/state/task.pr-poll-merge-notified
++++ uname
+++ '[' Darwin = Darwin ']'
+++ /usr/bin/stat -f %Lp /tmp/fm-azure-contract-qsr7zclv/state/task.pr-poll-merge-notified
++ '[' 600 = 600 ']'
+++ fm_pr_file_device /tmp/fm-azure-contract-qsr7zclv/state/task.pr-poll-merge-notified
++++ uname
+++ '[' Darwin = Darwin ']'
+++ /usr/bin/stat -f %d /tmp/fm-azure-contract-qsr7zclv/state/task.pr-poll-merge-notified
++ '[' 16777233 = 16777233 ']'
+++ fm_pr_file_link_count /tmp/fm-azure-contract-qsr7zclv/state/task.pr-poll-merge-notified
++++ uname
+++ '[' Darwin = Darwin ']'
+++ /usr/bin/stat -f %l /tmp/fm-azure-contract-qsr7zclv/state/task.pr-poll-merge-notified
++ '[' 1 = 1 ']'
++ exec
++ IFS=
++ read -r version
++ IFS=
++ read -r provider
++ IFS=
++ read -r host
++ IFS=
++ read -r path
++ IFS=
++ read -r number
++ IFS=
++ read -r _extra
++ exec
++ '[' fm-pr-poll-merge-notified-v1 = fm-pr-poll-merge-notified-v1 ']'
++ '[' azuredevops = azuredevops ']'
++ '[' dev.azure.com = dev.azure.com ']'
++ '[' example/Project/_git/repo = example/Project/_git/repo ']'
++ '[' 7 = 7 ']'
++ fm_lock_release /tmp/fm-azure-contract-qsr7zclv/state/task.pr-poll-merge-notified.lock
++ local lockdir=/tmp/fm-azure-contract-qsr7zclv/state/task.pr-poll-merge-notified.lock pid current ownerdir
++ fm_current_pid current
++ local fm_pid
+++ exec sh -c 'printf "%s\n" "$PPID"'
++ fm_pid=41872
++ case "$fm_pid" in
++ '[' 1 -gt 0 ']'
++ printf -v current %s 41872
++ '[' -L /tmp/fm-azure-contract-qsr7zclv/state/task.pr-poll-merge-notified.lock ']'
+++ fm_lock_link_owner /tmp/fm-azure-contract-qsr7zclv/state/task.pr-poll-merge-notified.lock
++ ownerdir=/private/tmp/fm-azure-contract-qsr7zclv/state/task.pr-poll-merge-notified.lock.owner.1vpdRq
++ '[' -n /private/tmp/fm-azure-contract-qsr7zclv/state/task.pr-poll-merge-notified.lock.owner.1vpdRq ']'
+++ cat /private/tmp/fm-azure-contract-qsr7zclv/state/task.pr-poll-merge-notified.lock.owner.1vpdRq/pid
++ pid=41872
++ '[' 41872 = 41872 ']'
++ fm_lock_points_to_owner /tmp/fm-azure-contract-qsr7zclv/state/task.pr-poll-merge-notified.lock /private/tmp/fm-azure-contract-qsr7zclv/state/task.pr-poll-merge-notified.lock.owner.1vpdRq
++ local lockdir=/tmp/fm-azure-contract-qsr7zclv/state/task.pr-poll-merge-notified.lock ownerdir=/private/tmp/fm-azure-contract-qsr7zclv/state/task.pr-poll-merge-notified.lock.owner.1vpdRq actual
+++ readlink /tmp/fm-azure-contract-qsr7zclv/state/task.pr-poll-merge-notified.lock
++ actual=/private/tmp/fm-azure-contract-qsr7zclv/state/task.pr-poll-merge-notified.lock.owner.1vpdRq
++ '[' /private/tmp/fm-azure-contract-qsr7zclv/state/task.pr-poll-merge-notified.lock.owner.1vpdRq = /private/tmp/fm-azure-contract-qsr7zclv/state/task.pr-poll-merge-notified.lock.owner.1vpdRq ']'
++ rm -f /tmp/fm-azure-contract-qsr7zclv/state/task.pr-poll-merge-notified.lock
++ fm_lock_discard_owner /private/tmp/fm-azure-contract-qsr7zclv/state/task.pr-poll-merge-notified.lock.owner.1vpdRq
++ local ownerdir=/private/tmp/fm-azure-contract-qsr7zclv/state/task.pr-poll-merge-notified.lock.owner.1vpdRq
++ '[' -n /private/tmp/fm-azure-contract-qsr7zclv/state/task.pr-poll-merge-notified.lock.owner.1vpdRq ']'
++ fm_lock_clean_known_files /private/tmp/fm-azure-contract-qsr7zclv/state/task.pr-poll-merge-notified.lock.owner.1vpdRq
++ local lockdir=/private/tmp/fm-azure-contract-qsr7zclv/state/task.pr-poll-merge-notified.lock.owner.1vpdRq
++ rm -f /private/tmp/fm-azure-contract-qsr7zclv/state/task.pr-poll-merge-notified.lock.owner.1vpdRq/pid /private/tmp/fm-azure-contract-qsr7zclv/state/task.pr-poll-merge-notified.lock.owner.1vpdRq/fm-home /private/tmp/fm-azure-contract-qsr7zclv/state/task.pr-poll-merge-notified.lock.owner.1vpdRq/pid-identity /private/tmp/fm-azure-contract-qsr7zclv/state/task.pr-poll-merge-notified.lock.owner.1vpdRq/role /private/tmp/fm-azure-contract-qsr7zclv/state/task.pr-poll-merge-notified.lock.owner.1vpdRq/watcher-path
++ rmdir /private/tmp/fm-azure-contract-qsr7zclv/state/task.pr-poll-merge-notified.lock.owner.1vpdRq
++ return 0
++ '[' '!' -e /tmp/fm-azure-contract-qsr7zclv/config/fleet-ledger ']'
++ return 0
++ case "$outcome_rc" in
++ merge_control_cleanup
++ '[' -z '' ']'
++ fm_afk_contract_lock_release
++ local lock=
++ '[' -n '' ']'
++ return 0
++ '[' -z '' ']'

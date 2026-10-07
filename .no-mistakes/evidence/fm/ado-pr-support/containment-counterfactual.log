@@ -1,0 +1,28 @@
+Exact review regression: B(f=0,g=0), C(f=1,g=0), U(f=0,g=1), M=merge(C,U), rewritten landing f=1,g=2.
+* ebe8bbe C local f
+* 7b8a922 upstream g2
+| *   1f71bd2 M merge U
+| |\  
+| |/  
+|/|   
+* | b5f8e0e U upstream g
+| * e1e05ee C local f
+|/  
+* 45b045d B
+
+Before R1 fix: ordinary rewritten history incorrectly refuses
+$ python3 /Users/martinstroher/dev/firstmate/data/ado-pr-support/nm/worktrees/324a78b3a755/01M49K3325XCG3AZXM5D4E3AZ6/test-proof-_a7n7fz_/before-r1.py /Users/martinstroher/dev/firstmate/data/ado-pr-support/nm/worktrees/324a78b3a755/01M49K3325XCG3AZXM5D4E3AZ6/test-proof-_a7n7fz_/repo ebe8bbe7e3c0d75678a202cac181ec9fec73edb3
+exit=1 expected=1
+
+Current: same history is proved contained
+$ python3 /Users/martinstroher/dev/firstmate/data/ado-pr-support/nm/worktrees/324a78b3a755/01M49K3325XCG3AZXM5D4E3AZ6/bin/fm-content-containment.py /Users/martinstroher/dev/firstmate/data/ado-pr-support/nm/worktrees/324a78b3a755/01M49K3325XCG3AZXM5D4E3AZ6/test-proof-_a7n7fz_/repo ebe8bbe7e3c0d75678a202cac181ec9fec73edb3
+exit=0 expected=0
+
+Current: later restoration still refuses
+$ python3 /Users/martinstroher/dev/firstmate/data/ado-pr-support/nm/worktrees/324a78b3a755/01M49K3325XCG3AZXM5D4E3AZ6/bin/fm-content-containment.py /Users/martinstroher/dev/firstmate/data/ado-pr-support/nm/worktrees/324a78b3a755/01M49K3325XCG3AZXM5D4E3AZ6/test-proof-_a7n7fz_/repo ebe8bbe7e3c0d75678a202cac181ec9fec73edb3
+exit=1 expected=1
+
+Current: missing intermediate tree is unknown, never safe
+$ python3 /Users/martinstroher/dev/firstmate/data/ado-pr-support/nm/worktrees/324a78b3a755/01M49K3325XCG3AZXM5D4E3AZ6/bin/fm-content-containment.py /Users/martinstroher/dev/firstmate/data/ado-pr-support/nm/worktrees/324a78b3a755/01M49K3325XCG3AZXM5D4E3AZ6/test-proof-_a7n7fz_/repo ebe8bbe7e3c0d75678a202cac181ec9fec73edb3
+containment unknown: Git could not read complete containment evidence
+exit=2 expected=2

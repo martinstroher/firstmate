@@ -1,0 +1,15 @@
+test_all_optimal_alignment_ties_against_enumerated_subsequences (__main__.ContainmentContract.test_all_optimal_alignment_ties_against_enumerated_subsequences) ... ok
+test_duplicate_line_ambiguity_never_chooses_convenient_location (__main__.ContainmentContract.test_duplicate_line_ambiguity_never_chooses_convenient_location) ... ok
+test_independent_history_slots_with_restoration_deletion_and_upstream (__main__.ContainmentContract.test_independent_history_slots_with_restoration_deletion_and_upstream) ... ok
+test_large_repeated_region_keeps_every_optimal_tie (__main__.ContainmentContract.test_large_repeated_region_keeps_every_optimal_tie) ... ok
+test_large_sparse_edits_keep_location_bound_obligations (__main__.ContainmentContract.test_large_sparse_edits_keep_location_bound_obligations) ... ok
+test_location_not_matching_text_elsewhere (__main__.ContainmentContract.test_location_not_matching_text_elsewhere) ... ok
+test_raw_binary_changes_are_not_rendered_text (__main__.ContainmentContract.test_raw_binary_changes_are_not_rendered_text) ... ok
+test_resource_limit_is_unknown_not_contained (__main__.ContainmentContract.test_resource_limit_is_unknown_not_contained) ... ok
+test_same_file_restoration_remains_an_obligation (__main__.ContainmentContract.test_same_file_restoration_remains_an_obligation) ... ok
+test_unlanded_deletion_and_file_boundaries (__main__.ContainmentContract.test_unlanded_deletion_and_file_boundaries) ... ok
+
+----------------------------------------------------------------------
+Ran 10 tests in 0.170s
+
+OK

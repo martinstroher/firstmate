@@ -1,0 +1,220 @@
+
+$ treehouse init
+Created /Users/martinstroher/dev/firstmate/data/ado-pr-support/nm/worktrees/324a78b3a755/01M49K3325XCG3AZXM5D4E3AZ6/test-live-setup/repo/treehouse.toml
+[exit 0]
+
+$ /Users/martinstroher/dev/firstmate/data/ado-pr-support/nm/worktrees/324a78b3a755/01M49K3325XCG3AZXM5D4E3AZ6/bin/fm-lab-home.sh create /Users/martinstroher/dev/firstmate/data/ado-pr-support/nm/worktrees/324a78b3a755/01M49K3325XCG3AZXM5D4E3AZ6/test-live-setup/lab
+/Users/martinstroher/dev/firstmate/data/ado-pr-support/nm/worktrees/324a78b3a755/01M49K3325XCG3AZXM5D4E3AZ6/test-live-setup/lab
+[exit 0]
+Isolation: marked disposable FM_HOME, fixture HOME, real executables, local bare origin; no live forge, agent, primary, or pipeline.
+
+$ /Users/martinstroher/dev/firstmate/data/ado-pr-support/nm/worktrees/324a78b3a755/01M49K3325XCG3AZXM5D4E3AZ6/bin/fm-brief.sh prefix-proof repo --mode no-mistakes --branch-prefix users/martinstroher/
+scaffolded: /Users/martinstroher/dev/firstmate/data/ado-pr-support/nm/worktrees/324a78b3a755/01M49K3325XCG3AZXM5D4E3AZ6/test-live-setup/lab/data/prefix-proof/brief.md (ship, mode=no-mistakes; replace {TASK} and {FIRSTMATE_SPEC})
+[exit 0]
+
+$ /Users/martinstroher/dev/firstmate/data/ado-pr-support/nm/worktrees/324a78b3a755/01M49K3325XCG3AZXM5D4E3AZ6/bin/fm-brief.sh default-proof repo --mode no-mistakes
+scaffolded: /Users/martinstroher/dev/firstmate/data/ado-pr-support/nm/worktrees/324a78b3a755/01M49K3325XCG3AZXM5D4E3AZ6/test-live-setup/lab/data/default-proof/brief.md (ship, mode=no-mistakes; replace {TASK} and {FIRSTMATE_SPEC})
+[exit 0]
+
+Generated branch/review contract prefix-proof:
+1. First action: create your branch: `git checkout -b users/martinstroher/prefix-proof --`
+Delivery contract: mode=no-mistakes
+Ship branch: users/martinstroher/prefix-proof
+Follow the guidance no-mistakes itself provides for the mechanics: it loads when you invoke /no-mistakes, and `no-mistakes axi run --help` plus the `help` lines in each `axi` response are authoritative and version-matched to the installed binary.
+Whenever a drive call returns without a gate or an outcome - its own wait elapsed, or it was killed or timed out - reattach at once by re-running `no-mistakes axi run` without flags, backgrounded the same way; once checks are green it returns `checks-passed` immediately, and if it refuses because no run is active, read the finished outcome from `no-mistakes axi status`.
+- NEVER pass `--yes` (or `-y`) to `no-mistakes axi run` or `no-mistakes axi respond`. It is banned fleet-wide.
+
+Generated branch/review contract default-proof:
+1. First action: create your branch: `git checkout -b fm/default-proof --`
+Delivery contract: mode=no-mistakes
+Ship branch: fm/default-proof
+Follow the guidance no-mistakes itself provides for the mechanics: it loads when you invoke /no-mistakes, and `no-mistakes axi run --help` plus the `help` lines in each `axi` response are authoritative and version-matched to the installed binary.
+Whenever a drive call returns without a gate or an outcome - its own wait elapsed, or it was killed or timed out - reattach at once by re-running `no-mistakes axi run` without flags, backgrounded the same way; once checks are green it returns `checks-passed` immediately, and if it refuses because no run is active, read the finished outcome from `no-mistakes axi status`.
+- NEVER pass `--yes` (or `-y`) to `no-mistakes axi run` or `no-mistakes axi respond`. It is banned fleet-wide.
+
+$ treehouse get --lease --json
+{"path":"/Users/martinstroher/dev/firstmate/data/ado-pr-support/nm/worktrees/324a78b3a755/01M49K3325XCG3AZXM5D4E3AZ6/test-live-setup/home/.treehouse/repo-9a6176/1/repo","lease_id":"9d9f1e832b03898ec347b45a72d742f0","lease_holder":"","leased_at":"2026-10-06T20:53:57.438058-03:00"}
+A new version of treehouse is available: v2.1.0 → v3.1.2
+Run "treehouse update" to update
+
+🌳 Setting up worktree...
+🌳 Leased worktree at ~/.treehouse/repo-9a6176/1/repo. Run 'treehouse return ~/.treehouse/repo-9a6176/1/repo' to release it.
+[exit 0]
+
+$ git -C /Users/martinstroher/dev/firstmate/data/ado-pr-support/nm/worktrees/324a78b3a755/01M49K3325XCG3AZXM5D4E3AZ6/test-live-setup/publication rebase main
+Rebasing (1/1)
+Successfully rebased and updated detached HEAD.
+[exit 0]
+
+$ git -C /Users/martinstroher/dev/firstmate/data/ado-pr-support/nm/worktrees/324a78b3a755/01M49K3325XCG3AZXM5D4E3AZ6/test-live-setup/repo merge --squash 4adaf7492d4488256c4895fe77dcc2d0ba863ceb
+Updating d2a5cbe..4adaf74
+Fast-forward
+Squash commit -- not updating HEAD
+ f.txt | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+[exit 0]
+
+=== Rebased squash with imported upstream content is contained ===
+
+$ git -C /Users/martinstroher/dev/firstmate/data/ado-pr-support/nm/worktrees/324a78b3a755/01M49K3325XCG3AZXM5D4E3AZ6/test-live-setup/home/.treehouse/repo-9a6176/1/repo log --all --oneline --graph -8
+* 9edb162 squash rebased publication
+| * 4adaf74 C local f=1
+|/  
+* d2a5cbe later upstream g=2
+| *   63ccc65 M import upstream U
+| |\  
+| |/  
+|/|   
+* | bd7f440 U upstream g=1
+| * 45dc5d6 C local f=1
+|/  
+* 12a975c B f=0 g=0
+* 970839e initial
+[exit 0]
+
+$ git -C /Users/martinstroher/dev/firstmate/data/ado-pr-support/nm/worktrees/324a78b3a755/01M49K3325XCG3AZXM5D4E3AZ6/test-live-setup/home/.treehouse/repo-9a6176/1/repo diff 9edb162ad0a8ba5e4061f60f1bbac61f1d3421c1 HEAD -- f.txt g.txt shared.txt
+diff --git a/g.txt b/g.txt
+index 0cfbf08..d00491f 100644
+--- a/g.txt
++++ b/g.txt
+@@ -1 +1 @@
+-2
++1
+[exit 0]
+
+$ python3 /Users/martinstroher/dev/firstmate/data/ado-pr-support/nm/worktrees/324a78b3a755/01M49K3325XCG3AZXM5D4E3AZ6/bin/fm-content-containment.py /Users/martinstroher/dev/firstmate/data/ado-pr-support/nm/worktrees/324a78b3a755/01M49K3325XCG3AZXM5D4E3AZ6/test-live-setup/home/.treehouse/repo-9a6176/1/repo 9edb162ad0a8ba5e4061f60f1bbac61f1d3421c1
+[exit 0]
+
+=== Later restoration must not disappear from local obligations ===
+
+$ git -C /Users/martinstroher/dev/firstmate/data/ado-pr-support/nm/worktrees/324a78b3a755/01M49K3325XCG3AZXM5D4E3AZ6/test-live-setup/home/.treehouse/repo-9a6176/1/repo log --all --oneline --graph -8
+* 63badb8 later unlanded restoration
+*   63ccc65 M import upstream U
+|\  
+* | 45dc5d6 C local f=1
+| | * 9edb162 squash rebased publication
+| | | * 4adaf74 C local f=1
+| | |/  
+| | * d2a5cbe later upstream g=2
+| |/  
+| * bd7f440 U upstream g=1
+|/  
+* 12a975c B f=0 g=0
+[exit 0]
+
+$ git -C /Users/martinstroher/dev/firstmate/data/ado-pr-support/nm/worktrees/324a78b3a755/01M49K3325XCG3AZXM5D4E3AZ6/test-live-setup/home/.treehouse/repo-9a6176/1/repo diff 9edb162ad0a8ba5e4061f60f1bbac61f1d3421c1 HEAD -- f.txt g.txt shared.txt
+diff --git a/f.txt b/f.txt
+index d00491f..573541a 100644
+--- a/f.txt
++++ b/f.txt
+@@ -1 +1 @@
+-1
++0
+diff --git a/g.txt b/g.txt
+index 0cfbf08..d00491f 100644
+--- a/g.txt
++++ b/g.txt
+@@ -1 +1 @@
+-2
++1
+[exit 0]
+
+$ python3 /Users/martinstroher/dev/firstmate/data/ado-pr-support/nm/worktrees/324a78b3a755/01M49K3325XCG3AZXM5D4E3AZ6/bin/fm-content-containment.py /Users/martinstroher/dev/firstmate/data/ado-pr-support/nm/worktrees/324a78b3a755/01M49K3325XCG3AZXM5D4E3AZ6/test-live-setup/home/.treehouse/repo-9a6176/1/repo 9edb162ad0a8ba5e4061f60f1bbac61f1d3421c1
+[exit 1]
+
+=== Real cleanup refuses later unmerged restoration ===
+
+$ /Users/martinstroher/dev/firstmate/data/ado-pr-support/nm/worktrees/324a78b3a755/01M49K3325XCG3AZXM5D4E3AZ6/bin/fm-teardown.sh proof
+fm-gate-refuse: gate agent lifecycle permitted only against lab home /Users/martinstroher/dev/firstmate/data/ado-pr-support/nm/worktrees/324a78b3a755/01M49K3325XCG3AZXM5D4E3AZ6/test-live-setup/lab
+●━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+●  WATCHER DOWN - SUPERVISION IS OFF
+●  1 task(s) in flight, but no watcher has a fresh beacon (last beat: never, grace 300s).
+●  Trust the emitted supervision protocol for this harness; do not use shell & for watcher repair.
+●  This is a supervision warning only; the guarded operation WILL still run.
+●  repair a missing or failed watcher cycle with the Pi tool fm_watch_arm_pi, or restart Pi with -e /Users/martinstroher/dev/firstmate/data/ado-pr-support/nm/worktrees/324a78b3a755/01M49K3325XCG3AZXM5D4E3AZ6/.pi/extensions/fm-primary-turnend-guard.ts -e /Users/martinstroher/dev/firstmate/data/ado-pr-support/nm/worktrees/324a78b3a755/01M49K3325XCG3AZXM5D4E3AZ6/.pi/extensions/fm-primary-pi-watch.ts if the extensions are not loaded.
+●━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+REFUSED: worktree /Users/martinstroher/dev/firstmate/data/ado-pr-support/nm/worktrees/324a78b3a755/01M49K3325XCG3AZXM5D4E3AZ6/test-live-setup/home/.treehouse/repo-9a6176/1/repo has work not on any remote and not landed.
+unpushed commits:
+63badb8 later unlanded restoration
+63ccc65 M import upstream U
+45dc5d6 C local f=1
+Push the branch, land its PR, or get the captain's explicit OK to discard, then --force.
+[exit 1]
+Observed: refusal preserves task metadata, HEAD and local files.
+
+=== Real cleanup refuses uncommitted local edits ===
+
+$ /Users/martinstroher/dev/firstmate/data/ado-pr-support/nm/worktrees/324a78b3a755/01M49K3325XCG3AZXM5D4E3AZ6/bin/fm-teardown.sh proof
+fm-gate-refuse: gate agent lifecycle permitted only against lab home /Users/martinstroher/dev/firstmate/data/ado-pr-support/nm/worktrees/324a78b3a755/01M49K3325XCG3AZXM5D4E3AZ6/test-live-setup/lab
+WARNING: watcher still down (same stale episode; last beat: never, grace 300s) - full banner already printed this episode.
+REFUSED: worktree /Users/martinstroher/dev/firstmate/data/ado-pr-support/nm/worktrees/324a78b3a755/01M49K3325XCG3AZXM5D4E3AZ6/test-live-setup/home/.treehouse/repo-9a6176/1/repo has uncommitted changes.
+uncommitted changes present (includes tracked edits)
+Commit them (or get the captain's explicit OK to discard, then --force).
+[exit 1]
+Observed: refusal preserves task metadata, HEAD and local files.
+
+=== Username-free Azure SCP origin requires a completed registered PR ===
+
+$ /Users/martinstroher/dev/firstmate/data/ado-pr-support/nm/worktrees/324a78b3a755/01M49K3325XCG3AZXM5D4E3AZ6/bin/fm-teardown.sh proof
+fm-gate-refuse: gate agent lifecycle permitted only against lab home /Users/martinstroher/dev/firstmate/data/ado-pr-support/nm/worktrees/324a78b3a755/01M49K3325XCG3AZXM5D4E3AZ6/test-live-setup/lab
+WARNING: watcher still down (same stale episode; last beat: never, grace 300s) - full banner already printed this episode.
+REFUSED: Azure task has no registered PR URL; completion cannot be confirmed.
+[exit 1]
+Observed: refusal preserves task metadata, HEAD and local files.
+
+=== Clean local task remains contained before automatic cleanup ===
+
+$ git -C /Users/martinstroher/dev/firstmate/data/ado-pr-support/nm/worktrees/324a78b3a755/01M49K3325XCG3AZXM5D4E3AZ6/test-live-setup/home/.treehouse/repo-9a6176/1/repo log --all --oneline --graph -8
+* 63badb8 later unlanded restoration
+*   63ccc65 M import upstream U
+|\  
+* | 45dc5d6 C local f=1
+| | * 9edb162 squash rebased publication
+| | | * 4adaf74 C local f=1
+| | |/  
+| | * d2a5cbe later upstream g=2
+| |/  
+| * bd7f440 U upstream g=1
+|/  
+* 12a975c B f=0 g=0
+[exit 0]
+
+$ git -C /Users/martinstroher/dev/firstmate/data/ado-pr-support/nm/worktrees/324a78b3a755/01M49K3325XCG3AZXM5D4E3AZ6/test-live-setup/home/.treehouse/repo-9a6176/1/repo diff 9edb162ad0a8ba5e4061f60f1bbac61f1d3421c1 HEAD -- f.txt g.txt shared.txt
+diff --git a/g.txt b/g.txt
+index 0cfbf08..d00491f 100644
+--- a/g.txt
++++ b/g.txt
+@@ -1 +1 @@
+-2
++1
+[exit 0]
+
+$ python3 /Users/martinstroher/dev/firstmate/data/ado-pr-support/nm/worktrees/324a78b3a755/01M49K3325XCG3AZXM5D4E3AZ6/bin/fm-content-containment.py /Users/martinstroher/dev/firstmate/data/ado-pr-support/nm/worktrees/324a78b3a755/01M49K3325XCG3AZXM5D4E3AZ6/test-live-setup/home/.treehouse/repo-9a6176/1/repo 9edb162ad0a8ba5e4061f60f1bbac61f1d3421c1
+[exit 0]
+
+$ /Users/martinstroher/dev/firstmate/data/ado-pr-support/nm/worktrees/324a78b3a755/01M49K3325XCG3AZXM5D4E3AZ6/bin/fm-remote-job-reap-orphans.sh --dry-run
+[exit 0]
+
+=== Real cleanup automatically returns rebased/squash-merged work ===
+
+$ /Users/martinstroher/dev/firstmate/data/ado-pr-support/nm/worktrees/324a78b3a755/01M49K3325XCG3AZXM5D4E3AZ6/bin/fm-teardown.sh proof
+A new version of treehouse is available: v2.1.0 → v3.1.2
+Run "treehouse update" to update
+
+🌳 Worktree returned to pool.
+/Users/martinstroher/dev/firstmate/data/ado-pr-support/nm/worktrees/324a78b3a755/01M49K3325XCG3AZXM5D4E3AZ6/test-live-setup/repo: already current
+teardown proof complete (window fm-lab:fm-proof, worktree /Users/martinstroher/dev/firstmate/data/ado-pr-support/nm/worktrees/324a78b3a755/01M49K3325XCG3AZXM5D4E3AZ6/test-live-setup/home/.treehouse/repo-9a6176/1/repo)
+Backlog: proof just finished (config/backlog-backend selects manual editing). Update /Users/martinstroher/dev/firstmate/data/ado-pr-support/nm/worktrees/324a78b3a755/01M49K3325XCG3AZXM5D4E3AZ6/test-live-setup/lab/data/backlog.md - move proof to Done, keep Done to the 10 most recent, then re-scan Queued and dispatch only work whose blockers are gone and date is due.
+fm-gate-refuse: gate agent lifecycle permitted only against lab home /Users/martinstroher/dev/firstmate/data/ado-pr-support/nm/worktrees/324a78b3a755/01M49K3325XCG3AZXM5D4E3AZ6/test-live-setup/lab
+WARNING: watcher still down (same stale episode; last beat: never, grace 300s) - full banner already printed this episode.
+[exit 0]
+Observed: task metadata retired after successful real Treehouse return.
+
+$ treehouse status
+A new version of treehouse is available: v2.1.0 → v3.1.2
+Run "treehouse update" to update
+
+🌳 No worktrees in pool.
+[exit 0]
+
+All live local scenarios passed; no Azure request, publication or production merge occurred.

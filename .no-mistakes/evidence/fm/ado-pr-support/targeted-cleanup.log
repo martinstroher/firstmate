@@ -1,0 +1,6 @@
+ok - a forced descendant with a missing adapter sibling refuses before cleanup
+..........
+----------------------------------------------------------------------
+Ran 10 tests in 0.200s
+
+OK
