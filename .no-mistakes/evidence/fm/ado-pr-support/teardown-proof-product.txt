@@ -1,0 +1,188 @@
+
+=== content-proof-conflict ===
+--- stdout ---
+
+--- stderr ---
+●━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+●  WATCHER DOWN - SUPERVISION IS OFF
+●  1 task(s) in flight, but no live watcher process holds this home lock (last beat: 8s ago).
+●  Trust the emitted supervision protocol for this harness; do not use shell & for watcher repair.
+●  This is a supervision warning only; the guarded operation WILL still run.
+●  repair a missing or failed watcher cycle with the Pi tool fm_watch_arm_pi, or restart Pi with -e /Users/martinstroher/dev/firstmate/data/ado-pr-support/nm/worktrees/324a78b3a755/01M6PM8Z12CR1T9WRTP3CZXSCJ/.pi/extensions/fm-primary-turnend-guard.ts -e /Users/martinstroher/dev/firstmate/data/ado-pr-support/nm/worktrees/324a78b3a755/01M6PM8Z12CR1T9WRTP3CZXSCJ/.pi/extensions/fm-primary-pi-watch.ts if the extensions are not loaded.
+●━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+REFUSED: worktree /Users/martinstroher/dev/firstmate/data/ado-pr-support/nm/worktrees/324a78b3a755/01M6PM8Z12CR1T9WRTP3CZXSCJ/state/test-validation/tmp/fm-teardown-tests.HsYCu6/content-proof-conflict/wt has work not on any remote and not landed.
+unpushed commits:
+b8fe260 add feature
+Push the branch, land its PR, or get the captain's explicit OK to discard, then --force.
+
+retained task record: True
+
+=== content-proof-contained ===
+--- stdout ---
+/Users/martinstroher/dev/firstmate/data/ado-pr-support/nm/worktrees/324a78b3a755/01M6PM8Z12CR1T9WRTP3CZXSCJ/state/test-validation/tmp/fm-teardown-tests.HsYCu6/content-proof-contained/project: synced e79d37f..a933342
+teardown task-x1 complete (window firstmate:fm-task-x1, worktree /Users/martinstroher/dev/firstmate/data/ado-pr-support/nm/worktrees/324a78b3a755/01M6PM8Z12CR1T9WRTP3CZXSCJ/state/test-validation/tmp/fm-teardown-tests.HsYCu6/content-proof-contained/wt)
+Backlog: task-x1 just finished (this home keeps no markdown backlog at /Users/martinstroher/dev/firstmate/data/ado-pr-support/nm/worktrees/324a78b3a755/01M6PM8Z12CR1T9WRTP3CZXSCJ/state/test-validation/tmp/fm-teardown-tests.HsYCu6/content-proof-contained/data/backlog.md). Update /Users/martinstroher/dev/firstmate/data/ado-pr-support/nm/worktrees/324a78b3a755/01M6PM8Z12CR1T9WRTP3CZXSCJ/state/test-validation/tmp/fm-teardown-tests.HsYCu6/content-proof-contained/data/backlog.md - move task-x1 to Done, keep Done to the 10 most recent, then re-scan Queued and dispatch only work whose blockers are gone and date is due.
+
+--- stderr ---
+●━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+●  WATCHER DOWN - SUPERVISION IS OFF
+●  1 task(s) in flight, but no live watcher process holds this home lock (last beat: 15s ago).
+●  Trust the emitted supervision protocol for this harness; do not use shell & for watcher repair.
+●  This is a supervision warning only; the guarded operation WILL still run.
+●  repair a missing or failed watcher cycle with the Pi tool fm_watch_arm_pi, or restart Pi with -e /Users/martinstroher/dev/firstmate/data/ado-pr-support/nm/worktrees/324a78b3a755/01M6PM8Z12CR1T9WRTP3CZXSCJ/.pi/extensions/fm-primary-turnend-guard.ts -e /Users/martinstroher/dev/firstmate/data/ado-pr-support/nm/worktrees/324a78b3a755/01M6PM8Z12CR1T9WRTP3CZXSCJ/.pi/extensions/fm-primary-pi-watch.ts if the extensions are not loaded.
+●━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+retained task record: False
+
+=== content-proof-error ===
+--- stdout ---
+
+--- stderr ---
+●━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+●  WATCHER DOWN - SUPERVISION IS OFF
+●  1 task(s) in flight, but no live watcher process holds this home lock (last beat: 17s ago).
+●  Trust the emitted supervision protocol for this harness; do not use shell & for watcher repair.
+●  This is a supervision warning only; the guarded operation WILL still run.
+●  repair a missing or failed watcher cycle with the Pi tool fm_watch_arm_pi, or restart Pi with -e /Users/martinstroher/dev/firstmate/data/ado-pr-support/nm/worktrees/324a78b3a755/01M6PM8Z12CR1T9WRTP3CZXSCJ/.pi/extensions/fm-primary-turnend-guard.ts -e /Users/martinstroher/dev/firstmate/data/ado-pr-support/nm/worktrees/324a78b3a755/01M6PM8Z12CR1T9WRTP3CZXSCJ/.pi/extensions/fm-primary-pi-watch.ts if the extensions are not loaded.
+●━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+containment unknown: Git could not read complete containment evidence
+REFUSED: content-landed proof unavailable for worktree /Users/martinstroher/dev/firstmate/data/ado-pr-support/nm/worktrees/324a78b3a755/01M6PM8Z12CR1T9WRTP3CZXSCJ/state/test-validation/tmp/fm-teardown-tests.HsYCu6/content-proof-error/wt: the final-content containment proof could not complete (exit 2).
+Restore the missing history or tools (Git, python3) and retry the content check.
+unpushed commits:
+89cbe54 add feature
+Push the branch, land its PR, or get the captain's explicit OK to discard, then --force.
+
+retained task record: True
+
+=== content-proof-pr-error-contained ===
+--- stdout ---
+/Users/martinstroher/dev/firstmate/data/ado-pr-support/nm/worktrees/324a78b3a755/01M6PM8Z12CR1T9WRTP3CZXSCJ/state/test-validation/tmp/fm-teardown-tests.HsYCu6/content-proof-pr-error-contained/project: synced e45369b..1c9519f
+teardown task-x1 complete (window firstmate:fm-task-x1, worktree /Users/martinstroher/dev/firstmate/data/ado-pr-support/nm/worktrees/324a78b3a755/01M6PM8Z12CR1T9WRTP3CZXSCJ/state/test-validation/tmp/fm-teardown-tests.HsYCu6/content-proof-pr-error-contained/wt)
+Backlog: task-x1 just finished (this home keeps no markdown backlog at /Users/martinstroher/dev/firstmate/data/ado-pr-support/nm/worktrees/324a78b3a755/01M6PM8Z12CR1T9WRTP3CZXSCJ/state/test-validation/tmp/fm-teardown-tests.HsYCu6/content-proof-pr-error-contained/data/backlog.md). Update /Users/martinstroher/dev/firstmate/data/ado-pr-support/nm/worktrees/324a78b3a755/01M6PM8Z12CR1T9WRTP3CZXSCJ/state/test-validation/tmp/fm-teardown-tests.HsYCu6/content-proof-pr-error-contained/data/backlog.md - move task-x1 to Done, keep Done to the 10 most recent, then re-scan Queued and dispatch only work whose blockers are gone and date is due.
+
+--- stderr ---
+●━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+●  WATCHER DOWN - SUPERVISION IS OFF
+●  1 task(s) in flight, but no live watcher process holds this home lock (last beat: 18s ago).
+●  Trust the emitted supervision protocol for this harness; do not use shell & for watcher repair.
+●  This is a supervision warning only; the guarded operation WILL still run.
+●  repair a missing or failed watcher cycle with the Pi tool fm_watch_arm_pi, or restart Pi with -e /Users/martinstroher/dev/firstmate/data/ado-pr-support/nm/worktrees/324a78b3a755/01M6PM8Z12CR1T9WRTP3CZXSCJ/.pi/extensions/fm-primary-turnend-guard.ts -e /Users/martinstroher/dev/firstmate/data/ado-pr-support/nm/worktrees/324a78b3a755/01M6PM8Z12CR1T9WRTP3CZXSCJ/.pi/extensions/fm-primary-pi-watch.ts if the extensions are not loaded.
+●━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+containment unknown: Git could not read complete containment evidence
+
+retained task record: False
+
+=== content-proof-pr-error-unavailable ===
+--- stdout ---
+
+--- stderr ---
+●━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+●  WATCHER DOWN - SUPERVISION IS OFF
+●  1 task(s) in flight, but no live watcher process holds this home lock (last beat: 14s ago).
+●  Trust the emitted supervision protocol for this harness; do not use shell & for watcher repair.
+●  This is a supervision warning only; the guarded operation WILL still run.
+●  repair a missing or failed watcher cycle with the Pi tool fm_watch_arm_pi, or restart Pi with -e /Users/martinstroher/dev/firstmate/data/ado-pr-support/nm/worktrees/324a78b3a755/01M6PM8Z12CR1T9WRTP3CZXSCJ/.pi/extensions/fm-primary-turnend-guard.ts -e /Users/martinstroher/dev/firstmate/data/ado-pr-support/nm/worktrees/324a78b3a755/01M6PM8Z12CR1T9WRTP3CZXSCJ/.pi/extensions/fm-primary-pi-watch.ts if the extensions are not loaded.
+●━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+containment unknown: Git could not read complete containment evidence
+REFUSED: content-landed proof unavailable for worktree /Users/martinstroher/dev/firstmate/data/ado-pr-support/nm/worktrees/324a78b3a755/01M6PM8Z12CR1T9WRTP3CZXSCJ/state/test-validation/tmp/fm-teardown-tests.HsYCu6/content-proof-pr-error-unavailable/wt: the final-content containment proof could not complete (exit 2).
+Restore the missing history or tools (Git, python3) and retry the content check.
+unpushed commits:
+c29b99c add feature
+Push the branch, land its PR, or get the captain's explicit OK to discard, then --force.
+
+retained task record: True
+
+=== content-proof-pr-error-unlanded ===
+--- stdout ---
+
+--- stderr ---
+●━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+●  WATCHER DOWN - SUPERVISION IS OFF
+●  1 task(s) in flight, but no live watcher process holds this home lock (last beat: 15s ago).
+●  Trust the emitted supervision protocol for this harness; do not use shell & for watcher repair.
+●  This is a supervision warning only; the guarded operation WILL still run.
+●  repair a missing or failed watcher cycle with the Pi tool fm_watch_arm_pi, or restart Pi with -e /Users/martinstroher/dev/firstmate/data/ado-pr-support/nm/worktrees/324a78b3a755/01M6PM8Z12CR1T9WRTP3CZXSCJ/.pi/extensions/fm-primary-turnend-guard.ts -e /Users/martinstroher/dev/firstmate/data/ado-pr-support/nm/worktrees/324a78b3a755/01M6PM8Z12CR1T9WRTP3CZXSCJ/.pi/extensions/fm-primary-pi-watch.ts if the extensions are not loaded.
+●━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+containment unknown: Git could not read complete containment evidence
+REFUSED: content-landed proof unavailable for worktree /Users/martinstroher/dev/firstmate/data/ado-pr-support/nm/worktrees/324a78b3a755/01M6PM8Z12CR1T9WRTP3CZXSCJ/state/test-validation/tmp/fm-teardown-tests.HsYCu6/content-proof-pr-error-unlanded/wt: the final-content containment proof could not complete (exit 2).
+Restore the missing history or tools (Git, python3) and retry the content check.
+unpushed commits:
+68b1607 add feature
+Push the branch, land its PR, or get the captain's explicit OK to discard, then --force.
+
+retained task record: True
+
+=== content-proof-unlanded ===
+--- stdout ---
+
+--- stderr ---
+●━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+●  WATCHER DOWN - SUPERVISION IS OFF
+●  1 task(s) in flight, but no live watcher process holds this home lock (last beat: 9s ago).
+●  Trust the emitted supervision protocol for this harness; do not use shell & for watcher repair.
+●  This is a supervision warning only; the guarded operation WILL still run.
+●  repair a missing or failed watcher cycle with the Pi tool fm_watch_arm_pi, or restart Pi with -e /Users/martinstroher/dev/firstmate/data/ado-pr-support/nm/worktrees/324a78b3a755/01M6PM8Z12CR1T9WRTP3CZXSCJ/.pi/extensions/fm-primary-turnend-guard.ts -e /Users/martinstroher/dev/firstmate/data/ado-pr-support/nm/worktrees/324a78b3a755/01M6PM8Z12CR1T9WRTP3CZXSCJ/.pi/extensions/fm-primary-pi-watch.ts if the extensions are not loaded.
+●━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+REFUSED: worktree /Users/martinstroher/dev/firstmate/data/ado-pr-support/nm/worktrees/324a78b3a755/01M6PM8Z12CR1T9WRTP3CZXSCJ/state/test-validation/tmp/fm-teardown-tests.HsYCu6/content-proof-unlanded/wt has work not on any remote and not landed.
+unpushed commits:
+5a30de5 add feature
+Push the branch, land its PR, or get the captain's explicit OK to discard, then --force.
+
+retained task record: True
+
+=== proof-path-provenance-created ===
+--- input.json ---
+{
+  "scenario": "path-provenance-created",
+  "base": "117eb02898e301ab0ee1ab932f47ef9b570d9604",
+  "local_head": "f04115e92a5b718eed6d84ba9a7582ebf47bbc3c",
+  "merged_head": "e5bb7fc9c3db534f89b447a904c993b3bbb013df",
+  "missing_tree_object": null
+}
+
+--- stdout ---
+/Users/martinstroher/dev/firstmate/data/ado-pr-support/nm/worktrees/324a78b3a755/01M6PM8Z12CR1T9WRTP3CZXSCJ/state/test-validation/tmp/fm-teardown-tests.HsYCu6/proof-path-provenance-created/project: already current
+teardown task-x1 complete (window firstmate:fm-task-x1, worktree /Users/martinstroher/dev/firstmate/data/ado-pr-support/nm/worktrees/324a78b3a755/01M6PM8Z12CR1T9WRTP3CZXSCJ/state/test-validation/tmp/fm-teardown-tests.HsYCu6/proof-path-provenance-created/wt)
+Backlog: task-x1 just finished (this home keeps no markdown backlog at /Users/martinstroher/dev/firstmate/data/ado-pr-support/nm/worktrees/324a78b3a755/01M6PM8Z12CR1T9WRTP3CZXSCJ/state/test-validation/tmp/fm-teardown-tests.HsYCu6/proof-path-provenance-created/data/backlog.md). Update /Users/martinstroher/dev/firstmate/data/ado-pr-support/nm/worktrees/324a78b3a755/01M6PM8Z12CR1T9WRTP3CZXSCJ/state/test-validation/tmp/fm-teardown-tests.HsYCu6/proof-path-provenance-created/data/backlog.md - move task-x1 to Done, keep Done to the 10 most recent, then re-scan Queued and dispatch only work whose blockers are gone and date is due.
+
+--- stderr ---
+●━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+●  WATCHER DOWN - SUPERVISION IS OFF
+●  1 task(s) in flight, but no live watcher process holds this home lock (last beat: 25s ago).
+●  Trust the emitted supervision protocol for this harness; do not use shell & for watcher repair.
+●  This is a supervision warning only; the guarded operation WILL still run.
+●  repair a missing or failed watcher cycle with the Pi tool fm_watch_arm_pi, or restart Pi with -e /Users/martinstroher/dev/firstmate/data/ado-pr-support/nm/worktrees/324a78b3a755/01M6PM8Z12CR1T9WRTP3CZXSCJ/.pi/extensions/fm-primary-turnend-guard.ts -e /Users/martinstroher/dev/firstmate/data/ado-pr-support/nm/worktrees/324a78b3a755/01M6PM8Z12CR1T9WRTP3CZXSCJ/.pi/extensions/fm-primary-pi-watch.ts if the extensions are not loaded.
+●━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+--- azure.log ---
+read
+read
+
+retained task record: False
+
+=== proof-path-provenance-restored ===
+--- input.json ---
+{
+  "scenario": "path-provenance-restored",
+  "base": "e0ad8b0eb12f8f8ed5e738750a959dff7f3ac8fc",
+  "local_head": "8eb60928f2578fc75fa2221d6967e8c037356423",
+  "merged_head": "e0fc88c56ca4a3d757176887cbbe996c093fcfad",
+  "missing_tree_object": null
+}
+
+--- stdout ---
+
+--- stderr ---
+●━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+●  WATCHER DOWN - SUPERVISION IS OFF
+●  1 task(s) in flight, but no live watcher process holds this home lock (last beat: 29s ago).
+●  Trust the emitted supervision protocol for this harness; do not use shell & for watcher repair.
+●  This is a supervision warning only; the guarded operation WILL still run.
+●  repair a missing or failed watcher cycle with the Pi tool fm_watch_arm_pi, or restart Pi with -e /Users/martinstroher/dev/firstmate/data/ado-pr-support/nm/worktrees/324a78b3a755/01M6PM8Z12CR1T9WRTP3CZXSCJ/.pi/extensions/fm-primary-turnend-guard.ts -e /Users/martinstroher/dev/firstmate/data/ado-pr-support/nm/worktrees/324a78b3a755/01M6PM8Z12CR1T9WRTP3CZXSCJ/.pi/extensions/fm-primary-pi-watch.ts if the extensions are not loaded.
+●━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+REFUSED: Azure PR completion and containment of local work are not confirmed; preserving work.
+
+--- azure.log ---
+read
+
+retained task record: True

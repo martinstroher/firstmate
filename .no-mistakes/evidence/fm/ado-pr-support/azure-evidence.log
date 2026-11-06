@@ -1,0 +1,6 @@
+$ python3 state/test-validation/azure-evidence.py
+test_matching_expected_head_completes_through_merge_entrypoint (azure.AzureContract.test_matching_expected_head_completes_through_merge_entrypoint) ... ok
+test_mismatched_expected_head_refuses_without_authority (azure.AzureContract.test_mismatched_expected_head_refuses_without_authority) ... ok
+test_expected_head_still_requires_policies (azure.AzureContract.test_expected_head_still_requires_policies) ... ok
+test_optional_checks_do_not_block_guarded_completion (azure.AzureContract.test_optional_checks_do_not_block_guarded_completion) ... ok
+test_registration_and_guarded_merge (azure.AzureContract.test_registration_and_guarded_merge) ... 

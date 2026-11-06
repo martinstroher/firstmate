@@ -1,0 +1,210 @@
+$ /Users/martinstroher/dev/firstmate/data/ado-pr-support/nm/worktrees/324a78b3a755/01M6PM8Z12CR1T9WRTP3CZXSCJ/bin/fm-lab-home.sh create /Users/martinstroher/dev/firstmate/data/ado-pr-support/nm/worktrees/324a78b3a755/01M6PM8Z12CR1T9WRTP3CZXSCJ/state/test-validation/live/lab
+/Users/martinstroher/dev/firstmate/data/ado-pr-support/nm/worktrees/324a78b3a755/01M6PM8Z12CR1T9WRTP3CZXSCJ/state/test-validation/live/lab
+exit=0
+
+=== Branch prefix selection and actual branch creation ===
+$ /Users/martinstroher/dev/firstmate/data/ado-pr-support/nm/worktrees/324a78b3a755/01M6PM8Z12CR1T9WRTP3CZXSCJ/bin/fm-brief.sh personal disposable-project --mode no-mistakes --branch-prefix users/example/
+scaffolded: /Users/martinstroher/dev/firstmate/data/ado-pr-support/nm/worktrees/324a78b3a755/01M6PM8Z12CR1T9WRTP3CZXSCJ/state/test-validation/live/lab/data/personal/brief.md (ship, mode=no-mistakes; replace {TASK} and {FIRSTMATE_SPEC})
+exit=0
+$ bash -c git checkout -b users/example/personal --
+Switched to a new branch 'users/example/personal'
+exit=0
+observed branch: users/example/personal
+$ /Users/martinstroher/dev/firstmate/data/ado-pr-support/nm/worktrees/324a78b3a755/01M6PM8Z12CR1T9WRTP3CZXSCJ/bin/fm-brief.sh default disposable-project --mode local-only
+scaffolded: /Users/martinstroher/dev/firstmate/data/ado-pr-support/nm/worktrees/324a78b3a755/01M6PM8Z12CR1T9WRTP3CZXSCJ/state/test-validation/live/lab/data/default/brief.md (ship, mode=local-only; replace {TASK} and {FIRSTMATE_SPEC})
+exit=0
+$ bash -c git checkout -b fm/default --
+Switched to a new branch 'fm/default'
+exit=0
+observed branch: fm/default
+$ /Users/martinstroher/dev/firstmate/data/ado-pr-support/nm/worktrees/324a78b3a755/01M6PM8Z12CR1T9WRTP3CZXSCJ/bin/fm-brief.sh local-opt-in disposable-project --mode local-only --branch-prefix users/example/
+scaffolded: /Users/martinstroher/dev/firstmate/data/ado-pr-support/nm/worktrees/324a78b3a755/01M6PM8Z12CR1T9WRTP3CZXSCJ/state/test-validation/live/lab/data/local-opt-in/brief.md (ship, mode=local-only; replace {TASK} and {FIRSTMATE_SPEC})
+exit=0
+$ bash -c git checkout -b users/example/local-opt-in --
+Switched to a new branch 'users/example/local-opt-in'
+exit=0
+observed branch: users/example/local-opt-in
+$ /Users/martinstroher/dev/firstmate/data/ado-pr-support/nm/worktrees/324a78b3a755/01M6PM8Z12CR1T9WRTP3CZXSCJ/bin/fm-brief.sh release disposable-project --mode direct-PR --branch-prefix users/example/ --base-branch release/1
+scaffolded: /Users/martinstroher/dev/firstmate/data/ado-pr-support/nm/worktrees/324a78b3a755/01M6PM8Z12CR1T9WRTP3CZXSCJ/state/test-validation/live/lab/data/release/brief.md (ship, mode=direct-PR; replace {TASK} and {FIRSTMATE_SPEC})
+exit=0
+$ bash -c git checkout -b users/example/release --
+Switched to a new branch 'users/example/release'
+exit=0
+observed branch: users/example/release
+$ /Users/martinstroher/dev/firstmate/data/ado-pr-support/nm/worktrees/324a78b3a755/01M6PM8Z12CR1T9WRTP3CZXSCJ/bin/fm-brief.sh invalid0 disposable-project --mode no-mistakes --branch-prefix ../bad/
+error: --branch-prefix and task id must form a valid git branch (got '../bad/invalid0')
+exit=1
+$ /Users/martinstroher/dev/firstmate/data/ado-pr-support/nm/worktrees/324a78b3a755/01M6PM8Z12CR1T9WRTP3CZXSCJ/bin/fm-brief.sh invalid1 disposable-project --mode no-mistakes --branch-prefix users//name/
+error: --branch-prefix and task id must form a valid git branch (got 'users//name/invalid1')
+exit=1
+$ /Users/martinstroher/dev/firstmate/data/ado-pr-support/nm/worktrees/324a78b3a755/01M6PM8Z12CR1T9WRTP3CZXSCJ/bin/fm-brief.sh invalid2 disposable-project --mode no-mistakes --branch-prefix users/name.lock/
+error: --branch-prefix and task id must form a valid git branch (got 'users/name.lock/invalid2')
+exit=1
+
+=== Review the recorded personal branch, not the current checkout ===
+$ /Users/martinstroher/dev/firstmate/data/ado-pr-support/nm/worktrees/324a78b3a755/01M6PM8Z12CR1T9WRTP3CZXSCJ/bin/fm-review-diff.sh review
+diff base: main
+ feature.txt | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+diff --git a/feature.txt b/feature.txt
+index df967b9..42838cd 100644
+--- a/feature.txt
++++ b/feature.txt
+@@ -1 +1 @@
+-base
++personal branch edit
+●━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+●  WATCHER DOWN - SUPERVISION IS OFF
+●  1 task(s) in flight, but no watcher has a fresh beacon (last beat: never, grace 300s).
+●  Trust the emitted supervision protocol for this harness; do not use shell & for watcher repair.
+●  This is a supervision warning only; the guarded operation WILL still run.
+●  repair missing watcher supervision according to the session-start block for this harness; do not use shell &.
+●━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+exit=0
+
+=== Final-content proof on real rewritten Git histories ===
+
+{"scenario": "unlanded-delete", "base": "fc6c28ab20a5386924591ee1ed5f1ceb91b64e2b", "local_head": "b3226f8ca24b3e681e6b25bf238cb5286a5b048d", "merged_head": "fc6c28ab20a5386924591ee1ed5f1ceb91b64e2b", "missing_tree_object": null}
+$ /opt/homebrew/opt/python@3.14/bin/python3.14 /Users/martinstroher/dev/firstmate/data/ado-pr-support/nm/worktrees/324a78b3a755/01M6PM8Z12CR1T9WRTP3CZXSCJ/bin/fm-content-containment.py /Users/martinstroher/dev/firstmate/data/ado-pr-support/nm/worktrees/324a78b3a755/01M6PM8Z12CR1T9WRTP3CZXSCJ/state/test-validation/live/unlanded-delete/wt fc6c28ab20a5386924591ee1ed5f1ceb91b64e2b
+exit=1
+
+{"scenario": "landed-delete", "base": "ea032e1769a7892aa4894eecfe3024c58bb912c0", "local_head": "8dfbd099dfb229e7085e8101af70d4a4ccc2756b", "merged_head": "4708b0021f52daf5df09a7e2529a99b64214f841", "missing_tree_object": null}
+$ /opt/homebrew/opt/python@3.14/bin/python3.14 /Users/martinstroher/dev/firstmate/data/ado-pr-support/nm/worktrees/324a78b3a755/01M6PM8Z12CR1T9WRTP3CZXSCJ/bin/fm-content-containment.py /Users/martinstroher/dev/firstmate/data/ado-pr-support/nm/worktrees/324a78b3a755/01M6PM8Z12CR1T9WRTP3CZXSCJ/state/test-validation/live/landed-delete/wt 4708b0021f52daf5df09a7e2529a99b64214f841
+exit=0
+
+{"scenario": "unlanded-replace", "base": "3f1547cc16c08002db9cc96ef00c319a6728438d", "local_head": "4a41e1818ec8b496e597c4a5645f2b2daf3b9c35", "merged_head": "3f1547cc16c08002db9cc96ef00c319a6728438d", "missing_tree_object": null}
+$ /opt/homebrew/opt/python@3.14/bin/python3.14 /Users/martinstroher/dev/firstmate/data/ado-pr-support/nm/worktrees/324a78b3a755/01M6PM8Z12CR1T9WRTP3CZXSCJ/bin/fm-content-containment.py /Users/martinstroher/dev/firstmate/data/ado-pr-support/nm/worktrees/324a78b3a755/01M6PM8Z12CR1T9WRTP3CZXSCJ/state/test-validation/live/unlanded-replace/wt 3f1547cc16c08002db9cc96ef00c319a6728438d
+exit=1
+
+{"scenario": "same-file-restoration", "base": "1084756914f6b8de7f79cb4358048c235f248b69", "local_head": "5015f6ad8716a2fea4a428f781309d7869ac51fe", "merged_head": "b4ff32424f56c70576a9292fa17a82f70eaef906", "missing_tree_object": null}
+$ /opt/homebrew/opt/python@3.14/bin/python3.14 /Users/martinstroher/dev/firstmate/data/ado-pr-support/nm/worktrees/324a78b3a755/01M6PM8Z12CR1T9WRTP3CZXSCJ/bin/fm-content-containment.py /Users/martinstroher/dev/firstmate/data/ado-pr-support/nm/worktrees/324a78b3a755/01M6PM8Z12CR1T9WRTP3CZXSCJ/state/test-validation/live/same-file-restoration/wt b4ff32424f56c70576a9292fa17a82f70eaef906
+exit=1
+
+{"scenario": "literal-path", "base": "abec39b2d149b0b40c458ca22dd0ba6da145eb7d", "local_head": "41710eea41e29ed43ffd2ecb5f12cbe08b5241f8", "merged_head": "b5f01ae59bdd8691ab9768c5c90627fe97b77822", "missing_tree_object": null}
+$ /opt/homebrew/opt/python@3.14/bin/python3.14 /Users/martinstroher/dev/firstmate/data/ado-pr-support/nm/worktrees/324a78b3a755/01M6PM8Z12CR1T9WRTP3CZXSCJ/bin/fm-content-containment.py /Users/martinstroher/dev/firstmate/data/ado-pr-support/nm/worktrees/324a78b3a755/01M6PM8Z12CR1T9WRTP3CZXSCJ/state/test-validation/live/literal-path/wt b5f01ae59bdd8691ab9768c5c90627fe97b77822
+exit=1
+
+{"scenario": "ordinary-path", "base": "5dd3faffb674464ef3f8c71e3dc1cf610ea7917c", "local_head": "0bd53a43c915e63b4dc55b0589fa1a0aa0e1690c", "merged_head": "4eb04ce3eee7ca0d63e7fac7f778cfee0fbb4aed", "missing_tree_object": null}
+$ /opt/homebrew/opt/python@3.14/bin/python3.14 /Users/martinstroher/dev/firstmate/data/ado-pr-support/nm/worktrees/324a78b3a755/01M6PM8Z12CR1T9WRTP3CZXSCJ/bin/fm-content-containment.py /Users/martinstroher/dev/firstmate/data/ado-pr-support/nm/worktrees/324a78b3a755/01M6PM8Z12CR1T9WRTP3CZXSCJ/state/test-validation/live/ordinary-path/wt 4eb04ce3eee7ca0d63e7fac7f778cfee0fbb4aed
+exit=1
+
+{"scenario": "successive-upstream", "base": "cc77a7c04f54a6ab7c866127eef95660e648de63", "local_head": "3e194f2c5a41cc4bb371c5028d14a6507a40339c", "merged_head": "297d5aca88dfc8a7ce24223ef24725a64af8e253", "missing_tree_object": null}
+$ /opt/homebrew/opt/python@3.14/bin/python3.14 /Users/martinstroher/dev/firstmate/data/ado-pr-support/nm/worktrees/324a78b3a755/01M6PM8Z12CR1T9WRTP3CZXSCJ/bin/fm-content-containment.py /Users/martinstroher/dev/firstmate/data/ado-pr-support/nm/worktrees/324a78b3a755/01M6PM8Z12CR1T9WRTP3CZXSCJ/state/test-validation/live/successive-upstream/wt 297d5aca88dfc8a7ce24223ef24725a64af8e253
+exit=0
+
+{"scenario": "one-upstream", "base": "15098e8529886ce05f61b3a255729a982908f1d6", "local_head": "1d7d8c6cd4eec584c16aed403eb44ee6abdaa0c1", "merged_head": "0dc9ecd689c47864b672399df39b24d8727ac93b", "missing_tree_object": null}
+$ /opt/homebrew/opt/python@3.14/bin/python3.14 /Users/martinstroher/dev/firstmate/data/ado-pr-support/nm/worktrees/324a78b3a755/01M6PM8Z12CR1T9WRTP3CZXSCJ/bin/fm-content-containment.py /Users/martinstroher/dev/firstmate/data/ado-pr-support/nm/worktrees/324a78b3a755/01M6PM8Z12CR1T9WRTP3CZXSCJ/state/test-validation/live/one-upstream/wt 0dc9ecd689c47864b672399df39b24d8727ac93b
+exit=0
+
+{"scenario": "partial-two-file", "base": "e4c068e881823819c4bf6a2eb73375243bf9d2c8", "local_head": "760e729a88538fa5dc98bde22a08222e9fed07b7", "merged_head": "81536e48972706944537ac5b0024e27b9667b71b", "missing_tree_object": null}
+$ /opt/homebrew/opt/python@3.14/bin/python3.14 /Users/martinstroher/dev/firstmate/data/ado-pr-support/nm/worktrees/324a78b3a755/01M6PM8Z12CR1T9WRTP3CZXSCJ/bin/fm-content-containment.py /Users/martinstroher/dev/firstmate/data/ado-pr-support/nm/worktrees/324a78b3a755/01M6PM8Z12CR1T9WRTP3CZXSCJ/state/test-validation/live/partial-two-file/wt 81536e48972706944537ac5b0024e27b9667b71b
+exit=1
+
+{"scenario": "whole-file-restoration", "base": "fca9d19db1f633bd3d8255a09fdb87b90fe680b2", "local_head": "28f8c4881ed38c6a670ab7037d54ec480fe6dfc4", "merged_head": "f9fafebd41df4fb8a13b327afe0668c99c7b6dd5", "missing_tree_object": null}
+$ /opt/homebrew/opt/python@3.14/bin/python3.14 /Users/martinstroher/dev/firstmate/data/ado-pr-support/nm/worktrees/324a78b3a755/01M6PM8Z12CR1T9WRTP3CZXSCJ/bin/fm-content-containment.py /Users/martinstroher/dev/firstmate/data/ado-pr-support/nm/worktrees/324a78b3a755/01M6PM8Z12CR1T9WRTP3CZXSCJ/state/test-validation/live/whole-file-restoration/wt f9fafebd41df4fb8a13b327afe0668c99c7b6dd5
+exit=1
+
+{"scenario": "missing-intermediate-tree", "base": "13421421d71074501e475851a8252487cac25227", "local_head": "5a394a9b460562aa857130e9f631fe412c10a37f", "merged_head": "fa7d555412727eec6fc8b4b9ce4e420d25a2fd70", "missing_tree_object": "/Users/martinstroher/dev/firstmate/data/ado-pr-support/nm/worktrees/324a78b3a755/01M6PM8Z12CR1T9WRTP3CZXSCJ/state/test-validation/live/missing-intermediate-tree/project/.git/objects/38/89944cf8402700e8ad61bff7918cadc64ed483"}
+$ /opt/homebrew/opt/python@3.14/bin/python3.14 /Users/martinstroher/dev/firstmate/data/ado-pr-support/nm/worktrees/324a78b3a755/01M6PM8Z12CR1T9WRTP3CZXSCJ/bin/fm-content-containment.py /Users/martinstroher/dev/firstmate/data/ado-pr-support/nm/worktrees/324a78b3a755/01M6PM8Z12CR1T9WRTP3CZXSCJ/state/test-validation/live/missing-intermediate-tree/wt fa7d555412727eec6fc8b4b9ce4e420d25a2fd70
+containment unknown: Git could not read complete containment evidence
+exit=2
+
+{"scenario": "complete-enumeration", "base": "54ac54c0dea1140c2db6b1f3d475b86039ae7c74", "local_head": "0b0ab2a96527ba22d44a66c8e58d5085c94bc676", "merged_head": "a4aa6cad132e9a77347479a4418d28504923f71b", "missing_tree_object": null}
+$ /opt/homebrew/opt/python@3.14/bin/python3.14 /Users/martinstroher/dev/firstmate/data/ado-pr-support/nm/worktrees/324a78b3a755/01M6PM8Z12CR1T9WRTP3CZXSCJ/bin/fm-content-containment.py /Users/martinstroher/dev/firstmate/data/ado-pr-support/nm/worktrees/324a78b3a755/01M6PM8Z12CR1T9WRTP3CZXSCJ/state/test-validation/live/complete-enumeration/wt a4aa6cad132e9a77347479a4418d28504923f71b
+exit=1
+
+{"scenario": "large-rebased-upstream", "base": "e39868d6950d859e30358df623efea50a8b43876", "local_head": "f106623715c970ed41b4362553a0b45f8730e292", "merged_head": "6eedf577ec0880d7872e61fe2483f0b38d94bea3", "missing_tree_object": null}
+$ /opt/homebrew/opt/python@3.14/bin/python3.14 /Users/martinstroher/dev/firstmate/data/ado-pr-support/nm/worktrees/324a78b3a755/01M6PM8Z12CR1T9WRTP3CZXSCJ/bin/fm-content-containment.py /Users/martinstroher/dev/firstmate/data/ado-pr-support/nm/worktrees/324a78b3a755/01M6PM8Z12CR1T9WRTP3CZXSCJ/state/test-validation/live/large-rebased-upstream/wt 6eedf577ec0880d7872e61fe2483f0b38d94bea3
+exit=0
+
+{"scenario": "large-rebased-unlanded", "base": "e56863f0529d34ac4932286b4f58135a2395f346", "local_head": "53de33ef5c09b4682a7c388ab2eac00ea8868bda", "merged_head": "bf4a805493e0da94c3d38686530f127ded26bc8e", "missing_tree_object": null}
+$ /opt/homebrew/opt/python@3.14/bin/python3.14 /Users/martinstroher/dev/firstmate/data/ado-pr-support/nm/worktrees/324a78b3a755/01M6PM8Z12CR1T9WRTP3CZXSCJ/bin/fm-content-containment.py /Users/martinstroher/dev/firstmate/data/ado-pr-support/nm/worktrees/324a78b3a755/01M6PM8Z12CR1T9WRTP3CZXSCJ/state/test-validation/live/large-rebased-unlanded/wt bf4a805493e0da94c3d38686530f127ded26bc8e
+exit=1
+
+{"scenario": "large-alignment-bound", "base": "8b5d592866f611ca0cff2b4108e27239ff0d0806", "local_head": "75fb8061dfb7ef4047c2c9b3283f2811172f71b4", "merged_head": "f931770475f7ce68b362eab425f595188677a434", "missing_tree_object": null}
+$ /opt/homebrew/opt/python@3.14/bin/python3.14 /Users/martinstroher/dev/firstmate/data/ado-pr-support/nm/worktrees/324a78b3a755/01M6PM8Z12CR1T9WRTP3CZXSCJ/bin/fm-content-containment.py /Users/martinstroher/dev/firstmate/data/ado-pr-support/nm/worktrees/324a78b3a755/01M6PM8Z12CR1T9WRTP3CZXSCJ/state/test-validation/live/large-alignment-bound/wt f931770475f7ce68b362eab425f595188677a434
+containment unknown: text alignment exceeds the exact-proof memory bound
+exit=2
+
+{"scenario": "merge-main-upstream", "base": "c354b17c388d1f327e4bdfb9a5be0094d1913015", "local_head": "ee35e2078e380842a13a91ff730889ef1f7460e0", "merged_head": "2e82cc38f367e3484224a5d8917463a6923efebf", "missing_tree_object": null}
+$ /opt/homebrew/opt/python@3.14/bin/python3.14 /Users/martinstroher/dev/firstmate/data/ado-pr-support/nm/worktrees/324a78b3a755/01M6PM8Z12CR1T9WRTP3CZXSCJ/bin/fm-content-containment.py /Users/martinstroher/dev/firstmate/data/ado-pr-support/nm/worktrees/324a78b3a755/01M6PM8Z12CR1T9WRTP3CZXSCJ/state/test-validation/live/merge-main-upstream/wt 2e82cc38f367e3484224a5d8917463a6923efebf
+exit=0
+
+{"scenario": "merge-main-same-file", "base": "08c27643a89172d999ab980a8c3fa81da216a4fc", "local_head": "9f99ead4faa0185b9121346a8d8c9f5d21ca8666", "merged_head": "258ac5884322e60f5639df145cef9d34addb4b2c", "missing_tree_object": null}
+$ /opt/homebrew/opt/python@3.14/bin/python3.14 /Users/martinstroher/dev/firstmate/data/ado-pr-support/nm/worktrees/324a78b3a755/01M6PM8Z12CR1T9WRTP3CZXSCJ/bin/fm-content-containment.py /Users/martinstroher/dev/firstmate/data/ado-pr-support/nm/worktrees/324a78b3a755/01M6PM8Z12CR1T9WRTP3CZXSCJ/state/test-validation/live/merge-main-same-file/wt 258ac5884322e60f5639df145cef9d34addb4b2c
+exit=0
+
+{"scenario": "merge-main-resolution", "base": "cb0a093bd1a29105f4ad29f6754a1aec926de695", "local_head": "e37f202a5fef7e362b3d244e04b346eab74b29a3", "merged_head": "39a7f2e23f2d4c3d2e000696dfcd301e1a2ae859", "missing_tree_object": null}
+$ /opt/homebrew/opt/python@3.14/bin/python3.14 /Users/martinstroher/dev/firstmate/data/ado-pr-support/nm/worktrees/324a78b3a755/01M6PM8Z12CR1T9WRTP3CZXSCJ/bin/fm-content-containment.py /Users/martinstroher/dev/firstmate/data/ado-pr-support/nm/worktrees/324a78b3a755/01M6PM8Z12CR1T9WRTP3CZXSCJ/state/test-validation/live/merge-main-resolution/wt 39a7f2e23f2d4c3d2e000696dfcd301e1a2ae859
+exit=1
+
+{"scenario": "merge-main-merge-restoration", "base": "f57c2b041fae5236a64eaecdda7634fe44fafe72", "local_head": "ce6f1fb345a3cf6d45a26f539d35e554ae668149", "merged_head": "a413a5752ef2604abd1f5118f1cf2c5dbc414443", "missing_tree_object": null}
+$ /opt/homebrew/opt/python@3.14/bin/python3.14 /Users/martinstroher/dev/firstmate/data/ado-pr-support/nm/worktrees/324a78b3a755/01M6PM8Z12CR1T9WRTP3CZXSCJ/bin/fm-content-containment.py /Users/martinstroher/dev/firstmate/data/ado-pr-support/nm/worktrees/324a78b3a755/01M6PM8Z12CR1T9WRTP3CZXSCJ/state/test-validation/live/merge-main-merge-restoration/wt a413a5752ef2604abd1f5118f1cf2c5dbc414443
+exit=1
+
+{"scenario": "merge-main-local-restoration", "base": "4c3c33bd962c145a01dca4e98f7de70200fdc588", "local_head": "e02a90939adbb770a4bc26f523abd47e5b2a0704", "merged_head": "ce7bc9b1d332dd6bd01b07cad3e1c276c431693c", "missing_tree_object": null}
+$ /opt/homebrew/opt/python@3.14/bin/python3.14 /Users/martinstroher/dev/firstmate/data/ado-pr-support/nm/worktrees/324a78b3a755/01M6PM8Z12CR1T9WRTP3CZXSCJ/bin/fm-content-containment.py /Users/martinstroher/dev/firstmate/data/ado-pr-support/nm/worktrees/324a78b3a755/01M6PM8Z12CR1T9WRTP3CZXSCJ/state/test-validation/live/merge-main-local-restoration/wt ce7bc9b1d332dd6bd01b07cad3e1c276c431693c
+exit=1
+
+{"scenario": "path-provenance-created", "base": "6fad3d87ccfcd3edb3bcacde25b02dab4818c7e4", "local_head": "02cd9552dd97cec0f5762f16bab6b626b3891833", "merged_head": "6e52212a4932f1924643ebe1803753bbd65c7670", "missing_tree_object": null}
+$ /opt/homebrew/opt/python@3.14/bin/python3.14 /Users/martinstroher/dev/firstmate/data/ado-pr-support/nm/worktrees/324a78b3a755/01M6PM8Z12CR1T9WRTP3CZXSCJ/bin/fm-content-containment.py /Users/martinstroher/dev/firstmate/data/ado-pr-support/nm/worktrees/324a78b3a755/01M6PM8Z12CR1T9WRTP3CZXSCJ/state/test-validation/live/path-provenance-created/wt 6e52212a4932f1924643ebe1803753bbd65c7670
+exit=0
+02cd9552dd97cec0f5762f16bab6b626b3891833:f.txt
+one
+6e52212a4932f1924643ebe1803753bbd65c7670:f.txt
+one
+02cd9552dd97cec0f5762f16bab6b626b3891833:g.txt
+one
+anchor
+tail0
+6e52212a4932f1924643ebe1803753bbd65c7670:g.txt
+one
+anchor
+tail1
+
+{"scenario": "path-provenance-replaced", "base": "dc0a4d9e11f85492b00a5f6a90ca829009068676", "local_head": "6e4b0dd54acb84547b33eed91ffd24426c453004", "merged_head": "545b257a0ef73816190939f2137a1dd05c479834", "missing_tree_object": null}
+$ /opt/homebrew/opt/python@3.14/bin/python3.14 /Users/martinstroher/dev/firstmate/data/ado-pr-support/nm/worktrees/324a78b3a755/01M6PM8Z12CR1T9WRTP3CZXSCJ/bin/fm-content-containment.py /Users/martinstroher/dev/firstmate/data/ado-pr-support/nm/worktrees/324a78b3a755/01M6PM8Z12CR1T9WRTP3CZXSCJ/state/test-validation/live/path-provenance-replaced/wt 545b257a0ef73816190939f2137a1dd05c479834
+exit=0
+6e4b0dd54acb84547b33eed91ffd24426c453004:f.txt
+one
+545b257a0ef73816190939f2137a1dd05c479834:f.txt
+one
+6e4b0dd54acb84547b33eed91ffd24426c453004:g.txt
+one
+anchor
+tail0
+545b257a0ef73816190939f2137a1dd05c479834:g.txt
+one
+anchor
+tail1
+
+{"scenario": "path-provenance-restored", "base": "f9f84e2c50a877f41656e08716a605aac718b308", "local_head": "50474f103ded74b92581f28a02c27c2b44968aec", "merged_head": "c1ee25116aef2bedefdd54180506f3734635112c", "missing_tree_object": null}
+$ /opt/homebrew/opt/python@3.14/bin/python3.14 /Users/martinstroher/dev/firstmate/data/ado-pr-support/nm/worktrees/324a78b3a755/01M6PM8Z12CR1T9WRTP3CZXSCJ/bin/fm-content-containment.py /Users/martinstroher/dev/firstmate/data/ado-pr-support/nm/worktrees/324a78b3a755/01M6PM8Z12CR1T9WRTP3CZXSCJ/state/test-validation/live/path-provenance-restored/wt c1ee25116aef2bedefdd54180506f3734635112c
+exit=1
+50474f103ded74b92581f28a02c27c2b44968aec:f.txt
+one
+c1ee25116aef2bedefdd54180506f3734635112c:f.txt
+one
+50474f103ded74b92581f28a02c27c2b44968aec:g.txt
+zero
+anchor
+tail0
+c1ee25116aef2bedefdd54180506f3734635112c:g.txt
+one
+anchor
+tail1
+
+{"scenario": "path-provenance-deleted", "base": "bc9ae9171fc4b0e2cac2681b026085fa47c420b9", "local_head": "ee2e2544dba52956e5cc1b516f5b95a9971bceaa", "merged_head": "d1df9f1d3fdc08b8018524026364f904d9b2665b", "missing_tree_object": null}
+$ /opt/homebrew/opt/python@3.14/bin/python3.14 /Users/martinstroher/dev/firstmate/data/ado-pr-support/nm/worktrees/324a78b3a755/01M6PM8Z12CR1T9WRTP3CZXSCJ/bin/fm-content-containment.py /Users/martinstroher/dev/firstmate/data/ado-pr-support/nm/worktrees/324a78b3a755/01M6PM8Z12CR1T9WRTP3CZXSCJ/state/test-validation/live/path-provenance-deleted/wt d1df9f1d3fdc08b8018524026364f904d9b2665b
+exit=1
+ee2e2544dba52956e5cc1b516f5b95a9971bceaa:f.txt
+one
+d1df9f1d3fdc08b8018524026364f904d9b2665b:f.txt
+one
+ee2e2544dba52956e5cc1b516f5b95a9971bceaa:g.txt
+fatal: path 'g.txt' does not exist in 'ee2e2544dba52956e5cc1b516f5b95a9971bceaa'
+d1df9f1d3fdc08b8018524026364f904d9b2665b:g.txt
+one
+anchor
+tail1

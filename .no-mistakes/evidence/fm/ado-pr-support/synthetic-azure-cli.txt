@@ -1,0 +1,213 @@
+Synthetic Azure transport: these are real Firstmate entrypoints, NOT live Azure service evidence.
+
+$ bin/fm-pr-merge.sh task https://dev.azure.com/example/Project/_git/repo/pullrequest/7 --expected-head aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
+armed: state/task.check.sh
+accepted
+merged
+exit=0
+patch: {"status": "completed", "lastMergeSourceCommit": {"commitId": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa"}, "completionOptions": {"mergeStrategy": "squash", "bypassPolicy": false, "deleteSourceBranch": false, "transitionWorkItems": false}}
+state/task.meta: kind=ship
+mode=no-mistakes
+yolo=off
+pr=https://dev.azure.com/example/Project/_git/repo/pullrequest/7
+pr_head=aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
+
+state/task.pr-poll: azuredevops
+https://dev.azure.com/example/Project/_git/repo/pullrequest/7
+dev.azure.com
+example/Project/_git/repo
+7
+
+state/task.merge-authority: fm-merge-authority-v1
+azuredevops
+dev.azure.com
+example/Project/_git/repo
+7
+attended
+
+
+$ bin/fm-pr-merge.sh task https://dev.azure.com/example/Project/_git/repo/pullrequest/7 --expected-head bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb
+armed: state/task.check.sh
+error: Azure source revision does not match the expected head
+exit=1
+patch: ABSENT
+state/task.meta: kind=ship
+mode=no-mistakes
+yolo=off
+pr=https://dev.azure.com/example/Project/_git/repo/pullrequest/7
+pr_head=aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
+
+state/task.pr-poll: azuredevops
+https://dev.azure.com/example/Project/_git/repo/pullrequest/7
+dev.azure.com
+example/Project/_git/repo
+7
+
+state/task.merge-authority: ABSENT
+
+$ bin/fm-pr-merge.sh task https://dev.azure.com/example/Project/_git/repo/pullrequest/7 --expected-head aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
+armed: state/task.check.sh
+error: mandatory Azure policy is pending, rejected, broken or unreadable
+exit=1
+patch: ABSENT
+state/task.meta: kind=ship
+mode=no-mistakes
+yolo=off
+pr=https://dev.azure.com/example/Project/_git/repo/pullrequest/7
+pr_head=aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
+
+state/task.pr-poll: azuredevops
+https://dev.azure.com/example/Project/_git/repo/pullrequest/7
+dev.azure.com
+example/Project/_git/repo
+7
+
+state/task.merge-authority: ABSENT
+
+$ bin/fm-pr-merge.sh task https://dev.azure.com/example/Project/_git/repo/pullrequest/7
+armed: state/task.check.sh
+accepted
+merged
+exit=0
+patch: {"status": "completed", "lastMergeSourceCommit": {"commitId": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa"}, "completionOptions": {"mergeStrategy": "squash", "bypassPolicy": false, "deleteSourceBranch": false, "transitionWorkItems": false}}
+state/task.meta: kind=ship
+mode=no-mistakes
+yolo=off
+pr=https://dev.azure.com/example/Project/_git/repo/pullrequest/7
+pr_head=aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
+
+state/task.pr-poll: azuredevops
+https://dev.azure.com/example/Project/_git/repo/pullrequest/7
+dev.azure.com
+example/Project/_git/repo
+7
+
+state/task.merge-authority: fm-merge-authority-v1
+azuredevops
+dev.azure.com
+example/Project/_git/repo
+7
+attended
+
+
+$ bin/fm-pr-merge.sh task https://dev.azure.com/example/Project/_git/repo/pullrequest/7
+armed: state/task.check.sh
+accepted
+merged
+exit=0
+patch: {"status": "completed", "lastMergeSourceCommit": {"commitId": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa"}, "completionOptions": {"mergeStrategy": "squash", "bypassPolicy": false, "deleteSourceBranch": false, "transitionWorkItems": false}}
+state/task.meta: kind=ship
+mode=no-mistakes
+yolo=off
+pr=https://dev.azure.com/example/Project/_git/repo/pullrequest/7
+pr_head=aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
+
+state/task.pr-poll: azuredevops
+https://dev.azure.com/example/Project/_git/repo/pullrequest/7
+dev.azure.com
+example/Project/_git/repo
+7
+
+state/task.merge-authority: fm-merge-authority-v1
+azuredevops
+dev.azure.com
+example/Project/_git/repo
+7
+attended
+
+
+$ bin/fm-pr-merge.sh task https://dev.azure.com/example/Project/_git/repo/pullrequest/7
+armed: state/task.check.sh
+accepted
+merged
+exit=0
+patch: {"status": "completed", "lastMergeSourceCommit": {"commitId": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa"}, "completionOptions": {"mergeStrategy": "squash", "bypassPolicy": false, "deleteSourceBranch": false, "transitionWorkItems": false}}
+state/task.meta: kind=ship
+mode=no-mistakes
+yolo=off
+pr=https://dev.azure.com/example/Project/_git/repo/pullrequest/7
+pr_head=aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
+
+state/task.pr-poll: azuredevops
+https://dev.azure.com/example/Project/_git/repo/pullrequest/7
+dev.azure.com
+example/Project/_git/repo
+7
+
+state/task.merge-authority: fm-merge-authority-v1
+azuredevops
+dev.azure.com
+example/Project/_git/repo
+7
+attended
+
+
+$ bin/fm-pr-merge.sh task https://dev.azure.com/example/Project/_git/repo/pullrequest/7
+armed: state/task.check.sh
+accepted
+merged
+exit=0
+patch: {"status": "completed", "lastMergeSourceCommit": {"commitId": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa"}, "completionOptions": {"mergeStrategy": "squash", "bypassPolicy": false, "deleteSourceBranch": false, "transitionWorkItems": false}}
+state/task.meta: kind=ship
+mode=no-mistakes
+yolo=off
+pr=https://dev.azure.com/example/Project/_git/repo/pullrequest/7
+pr_head=aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
+
+state/task.pr-poll: azuredevops
+https://dev.azure.com/example/Project/_git/repo/pullrequest/7
+dev.azure.com
+example/Project/_git/repo
+7
+
+state/task.merge-authority: fm-merge-authority-v1
+azuredevops
+dev.azure.com
+example/Project/_git/repo
+7
+attended
+
+
+$ bin/fm-pr-merge.sh task https://dev.azure.com/example/Project/_git/repo/pullrequest/7
+armed: state/task.check.sh
+accepted
+merged
+exit=0
+patch: {"status": "completed", "lastMergeSourceCommit": {"commitId": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa"}, "completionOptions": {"mergeStrategy": "squash", "bypassPolicy": false, "deleteSourceBranch": false, "transitionWorkItems": false}}
+state/task.meta: kind=ship
+mode=no-mistakes
+yolo=off
+pr=https://dev.azure.com/example/Project/_git/repo/pullrequest/7
+pr_head=aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
+
+state/task.pr-poll: azuredevops
+https://dev.azure.com/example/Project/_git/repo/pullrequest/7
+dev.azure.com
+example/Project/_git/repo
+7
+
+state/task.merge-authority: fm-merge-authority-v1
+azuredevops
+dev.azure.com
+example/Project/_git/repo
+7
+attended
+
+
+$ bin/fm-pr-check.sh task https://dev.azure.com/example/Project/_git/repo/pullrequest/7
+armed: state/task.check.sh
+exit=0
+patch: ABSENT
+state/task.meta: kind=ship
+mode=no-mistakes
+yolo=off
+pr=https://dev.azure.com/example/Project/_git/repo/pullrequest/7
+pr_head=aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
+
+state/task.pr-poll: azuredevops
+https://dev.azure.com/example/Project/_git/repo/pullrequest/7
+dev.azure.com
+example/Project/_git/repo
+7
+
+state/task.merge-authority: ABSENT

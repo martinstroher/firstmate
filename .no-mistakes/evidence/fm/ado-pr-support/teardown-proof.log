@@ -1,0 +1,8 @@
+$ bash state/test-validation/teardown-proof.sh
+ok - content fallback distinguishes an unavailable proof from containment, conflicts, and unlanded content
+Preparing worktree (detached HEAD f04115e)
+ok - path-provenance-created: public teardown exit 0
+Preparing worktree (detached HEAD ee7db1f)
+ok - path-provenance-restored: public teardown exit 1
+
+exit=0 elapsed_seconds=476.5

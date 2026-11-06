@@ -1,0 +1,130 @@
+[
+  {
+    "scenario": "prefix-contract",
+    "result": "pass"
+  },
+  {
+    "scenario": "review-recorded-branch",
+    "result": "pass"
+  },
+  {
+    "scenario": "unlanded-delete",
+    "result": "pass",
+    "expected_exit": 1
+  },
+  {
+    "scenario": "landed-delete",
+    "result": "pass",
+    "expected_exit": 0
+  },
+  {
+    "scenario": "unlanded-replace",
+    "result": "pass",
+    "expected_exit": 1
+  },
+  {
+    "scenario": "same-file-restoration",
+    "result": "pass",
+    "expected_exit": 1
+  },
+  {
+    "scenario": "literal-path",
+    "result": "pass",
+    "expected_exit": 1
+  },
+  {
+    "scenario": "ordinary-path",
+    "result": "pass",
+    "expected_exit": 1
+  },
+  {
+    "scenario": "successive-upstream",
+    "result": "pass",
+    "expected_exit": 0
+  },
+  {
+    "scenario": "one-upstream",
+    "result": "pass",
+    "expected_exit": 0
+  },
+  {
+    "scenario": "partial-two-file",
+    "result": "pass",
+    "expected_exit": 1
+  },
+  {
+    "scenario": "whole-file-restoration",
+    "result": "pass",
+    "expected_exit": 1
+  },
+  {
+    "scenario": "missing-intermediate-tree",
+    "result": "pass",
+    "expected_exit": 2
+  },
+  {
+    "scenario": "complete-enumeration",
+    "result": "pass",
+    "expected_exit": 1
+  },
+  {
+    "scenario": "large-rebased-upstream",
+    "result": "pass",
+    "expected_exit": 0
+  },
+  {
+    "scenario": "large-rebased-unlanded",
+    "result": "pass",
+    "expected_exit": 1
+  },
+  {
+    "scenario": "large-alignment-bound",
+    "result": "pass",
+    "expected_exit": 2
+  },
+  {
+    "scenario": "merge-main-upstream",
+    "result": "pass",
+    "expected_exit": 0
+  },
+  {
+    "scenario": "merge-main-same-file",
+    "result": "pass",
+    "expected_exit": 0
+  },
+  {
+    "scenario": "merge-main-resolution",
+    "result": "pass",
+    "expected_exit": 1
+  },
+  {
+    "scenario": "merge-main-merge-restoration",
+    "result": "pass",
+    "expected_exit": 1
+  },
+  {
+    "scenario": "merge-main-local-restoration",
+    "result": "pass",
+    "expected_exit": 1
+  },
+  {
+    "scenario": "path-provenance-created",
+    "result": "pass",
+    "expected_exit": 0
+  },
+  {
+    "scenario": "path-provenance-replaced",
+    "result": "pass",
+    "expected_exit": 0
+  },
+  {
+    "scenario": "path-provenance-restored",
+    "result": "pass",
+    "expected_exit": 1
+  },
+  {
+    "scenario": "path-provenance-deleted",
+    "result": "pass",
+    "expected_exit": 1
+  }
+]

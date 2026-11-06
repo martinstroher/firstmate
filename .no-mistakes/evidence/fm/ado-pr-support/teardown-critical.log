@@ -1,0 +1,8 @@
+$ bash state/test-validation/teardown-critical.sh
+ok - Azure completion protects records, monitors and backlog even without an owned copy
+warning: You appear to have cloned an empty repository.
+warning: You appear to have cloned an empty repository.
+warning: You appear to have cloned an empty repository.
+ok - nested tracked and hidden untracked work survives cleanup while clean modules permit it
+
+exit=0 elapsed_seconds=524.1

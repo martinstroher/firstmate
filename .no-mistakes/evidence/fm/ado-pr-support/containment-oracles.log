@@ -1,3 +1,4 @@
+$ python3 tests/containment-contract.py -v
 test_all_optimal_alignment_ties_against_enumerated_subsequences (__main__.ContainmentContract.test_all_optimal_alignment_ties_against_enumerated_subsequences) ... ok
 test_duplicate_line_ambiguity_never_chooses_convenient_location (__main__.ContainmentContract.test_duplicate_line_ambiguity_never_chooses_convenient_location) ... ok
 test_independent_history_slots_with_restoration_deletion_and_upstream (__main__.ContainmentContract.test_independent_history_slots_with_restoration_deletion_and_upstream) ... ok
@@ -10,6 +11,8 @@ test_same_file_restoration_remains_an_obligation (__main__.ContainmentContract.t
 test_unlanded_deletion_and_file_boundaries (__main__.ContainmentContract.test_unlanded_deletion_and_file_boundaries) ... ok
 
 ----------------------------------------------------------------------
-Ran 10 tests in 0.170s
+Ran 10 tests in 0.182s
 
 OK
+
+exit=0 elapsed_seconds=2.4

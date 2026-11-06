@@ -1,0 +1,3 @@
+$ bash state/test-validation/teardown-selected.sh
+ok - teardown leaves opencode's busy plugin in the returned pool worktree as on main
+ok - Azure cleanup requires completed PR and contained clean local work, even after push
